@@ -7,6 +7,7 @@
 //
 
 #import "ProtoMainViewController.h"
+#import "JSON.h"
 
 @implementation ProtoMainViewController
 
@@ -36,6 +37,52 @@
 }
 */
 
+- (IBAction) translate:(id)sender {
+	NSLog(@"the text to translate is: %@", translateTextField.text);
+}
+
+#
+#pragma mark UITextFieldDelegate
+#
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	[textField resignFirstResponder];
+	NSLog(@"The text to translate: %@", textField.text);
+	
+	NSMutableString* translateURLString = [NSMutableString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&langpair="];
+	[translateURLString appendString:@"en"];
+	[translateURLString appendString:@"%7C"];
+	[translateURLString appendString:@"ja"];
+	[translateURLString appendString:@"&q="];
+	[translateURLString appendString:[textField.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	NSLog(@"The request url is %@", translateURLString);
+	
+	NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:translateURLString]];
+	NSURLResponse* resp = [[NSURLResponse alloc] init];
+	NSData* dataResp = [NSURLConnection sendSynchronousRequest:req returningResponse:&resp error:nil];
+	NSString* respString = [[NSString alloc] initWithData:dataResp encoding:NSUTF8StringEncoding];
+	
+	NSLog(@"the data is %@", respString);
+	NSLog(@"The response is %@", resp);
+	
+	NSString* translatedText = [[[respString JSONValue] objectForKey:@"responseData"] objectForKey:@"translatedText"];
+	[translateDestTextField setText:translatedText];
+//	NSURLConnection* connect = [NSURLConnection connectionWithRequest:req delegate:self];
+//	[connect start];
+//	[translateDestTextField setText:translateURLString];
+	return YES;
+}
+
+#
+#pragma mark NSURLConnection Delegate
+#
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+	NSLog(@"The data looks like %@", data);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	NSLog(@"We finished connecting..");
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

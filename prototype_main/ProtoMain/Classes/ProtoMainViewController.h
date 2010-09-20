@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProtoMainViewController : UIViewController {
-
+@interface ProtoMainViewController : UIViewController <UITextFieldDelegate> {
+	IBOutlet UITextField* translateTextField;
+	IBOutlet UITextField* translateDestTextField;
 }
+
+- (IBAction) translate:(id)sender;
 
 @end
 
