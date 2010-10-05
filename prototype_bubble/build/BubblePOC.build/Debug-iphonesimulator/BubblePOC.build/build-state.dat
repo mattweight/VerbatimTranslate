@@ -1,0 +1,356 @@
+TBubblePOC
+v7
+r0
+t307957497.424328
+cCheck dependencies
+cProcessInfoPlistFile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/Info.plist BubblePOC-Info.plist
+cCompileXIB /Users/mweight/Projects/VerbatimSolutions/BubblePOC/MainWindow.xib
+cCompileXIB /Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOCViewController.xib
+cCpResource build/Debug-iphonesimulator/BubblePOC.app/proto-word-bubble.png proto-word-bubble.png
+cCompileXIB /Users/mweight/Projects/VerbatimSolutions/BubblePOC/WordBubbleController.xib
+cProcessPCH /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch.gch BubblePOC_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/main.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCAppDelegate.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCViewController.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleController.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleView.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC normal i386
+cGenerateDSYMFile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app.dSYM /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC
+cTouch /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk
+c000000004C6C30170000000000000110
+t1282158615
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004C5A4DB60000000000295900
+t1280986550
+s2709760
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C5A4DB0000000000029D580
+t1280986544
+s2741632
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C5A4DA10000000000001466
+t1280986529
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C6241ED00000000000009CD
+t1281507821
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C6242840000000001E228C0
+t1281507972
+s31598784
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOCViewController.xib
+c000000004CAAD225000000000000480F
+t1286263333
+s18447
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOC_Prefix.pch
+c000000004CAAC4A900000000000000BB
+t1286259881
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCAppDelegate.h
+c000000004CAAC4A900000000000001E2
+t1286259881
+s482
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCAppDelegate.m
+c000000004CAAC4A90000000000000A8C
+t1286259881
+s2700
+i"BubblePOCAppDelegate.h"
+i"BubblePOCViewController.h"
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCViewController.h
+c000000004CAAD5D000000000000001A0
+t1286264272
+s416
+i<UIKit/UIKit.h>
+i"WordBubbleController.h"
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCViewController.m
+c000000004CAAD5F300000000000007CA
+t1286264307
+s1994
+i"BubblePOCViewController.h"
+i"WordBubbleView.h"
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleController.h
+c000000004CAAD5960000000000000110
+t1286264214
+s272
+i<UIKit/UIKit.h>
+i"WordBubbleView.h"
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleController.m
+c000000004CAAD76A0000000000000801
+t1286264682
+s2049
+i"WordBubbleController.h"
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleView.h
+c000000004CAAD6760000000000000150
+t1286264438
+s336
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleView.m
+c000000004CAAD7750000000000000411
+t1286264693
+s1041
+i"WordBubbleView.h"
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/MainWindow.xib
+c000000004CAAC4A90000000000004E41
+t1286259881
+s20033
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/WordBubbleController.xib
+c000000004CAACED1000000000000453B
+t1286262481
+s17723
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOC.LinkFileList
+c000000004CAAD77700000000000002F4
+t1286264695
+s756
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCAppDelegate.o
+t1286264697
+s48076
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCViewController.o
+t1286264697
+s39244
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleController.o
+t1286264697
+s38580
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleView.o
+t1286264697
+s37640
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/main.o
+t1286264697
+s6328
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app
+t1286264697
+s306
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app.dSYM
+t1286264697
+s102
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC
+t1286264697
+s25536
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOCViewController.nib
+t1286264696
+s2486
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/Info.plist
+t1286264696
+s599
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/MainWindow.nib
+t1286264696
+s1685
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/PkgInfo
+t1286264696
+s8
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/WordBubbleController.nib
+t1286264696
+s1935
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/proto-word-bubble.png
+t1286264696
+s4026
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/main.m
+c000000004CAAC4A90000000000000162
+t1286259881
+s354
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/VerbatimSolutions/BubblePOC/proto-word-bubble.png
+c000000004CAABAD40000000000000FBA
+t1286257364
+s4026
+
+N/var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch.gch
+t1286264697
+s15211536
+
+NBubblePOC-Info.plist
+c000000004CAAC4A9000000000000038D
+t1286259881
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies307957495#307957495#0(0"0(0#1#0"8633492224#0"0#
+
+CCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCAppDelegate.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s307957497.245720
+e307957497.343934
+r1
+xCompileC
+xbuild/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCAppDelegate.o
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCAppDelegate.m307957497#307957497#0(0"0(0#0#82"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCAppDelegate.m8645074816#2137"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-generated-files.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-own-target-headers.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-all-target-headers.hmap -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-project-headers.hmap -F/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/include -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources/i386 -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources -include /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch -c /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCAppDelegate.m -o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCAppDelegate.o0#
+
+CCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCViewController.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s307957497.247261
+e307957497.347582
+r1
+xCompileC
+xbuild/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCViewController.o
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@93"Compile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCViewController.m307957497#307957497#0(0"0(0#0#85"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCViewController.m8634670912#2143"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-generated-files.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-own-target-headers.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-all-target-headers.hmap -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-project-headers.hmap -F/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/include -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources/i386 -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources -include /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch -c /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/BubblePOCViewController.m -o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOCViewController.o0#
+
+CCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleController.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s307957497.248640
+e307957497.342331
+r1
+xCompileC
+xbuild/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleController.o
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleController.m307957497#307957497#0(0"0(0#0#82"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleController.m8633960128#2137"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-generated-files.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-own-target-headers.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-all-target-headers.hmap -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-project-headers.hmap -F/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/include -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources/i386 -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources -include /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch -c /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleController.m -o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleController.o0#
+
+CCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleView.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s307957497.311245
+e307957497.384164
+r1
+xCompileC
+xbuild/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleView.o
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleView.m307957497#307957497#0(0"0(0#0#76"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleView.m8632891200#2125"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-generated-files.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-own-target-headers.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-all-target-headers.hmap -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-project-headers.hmap -F/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/include -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources/i386 -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources -include /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch -c /Users/mweight/Projects/VerbatimSolutions/BubblePOC/Classes/WordBubbleView.m -o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/WordBubbleView.o0#
+
+CCompileC build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/main.o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s307957497.243781
+e307957497.311085
+r1
+xCompileC
+xbuild/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/main.o
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/main.m307957497#307957497#0(0"0(0#0#58"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/main.m8662382336#2097"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-generated-files.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-own-target-headers.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-all-target-headers.hmap -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-project-headers.hmap -F/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/include -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources/i386 -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources -include /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch -c /Users/mweight/Projects/VerbatimSolutions/BubblePOC/main.m -o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOCViewController.xib
+s307957496.004113
+e307957496.431217
+r1
+xCompileXIB
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOCViewController.xib
+lSLF07#2@38"CompileXIB BubblePOCViewController.xib307957496#307957496#0(0"0(0#0#79"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOCViewController.xib8633143616#637"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOCViewController.nib /Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOCViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/mweight/Projects/VerbatimSolutions/BubblePOC/MainWindow.xib
+s307957496.003347
+e307957496.406736
+r1
+xCompileXIB
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib307957496#307957496#0(0"0(0#0#66"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/MainWindow.xib8633684224#611"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/MainWindow.nib /Users/mweight/Projects/VerbatimSolutions/BubblePOC/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/mweight/Projects/VerbatimSolutions/BubblePOC/WordBubbleController.xib
+s307957496.005642
+e307957496.429662
+r1
+xCompileXIB
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/WordBubbleController.xib
+lSLF07#2@35"CompileXIB WordBubbleController.xib307957496#307957496#0(0"0(0#0#76"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/WordBubbleController.xib8629468704#631"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/WordBubbleController.nib /Users/mweight/Projects/VerbatimSolutions/BubblePOC/WordBubbleController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCpResource build/Debug-iphonesimulator/BubblePOC.app/proto-word-bubble.png proto-word-bubble.png
+s307957496.004804
+e307957496.011532
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/BubblePOC.app/proto-word-bubble.png
+xproto-word-bubble.png
+lSLF07#2@26"Copy proto-word-bubble.png307957496#307957496#0(0"0(0#0#73"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/proto-word-bubble.png8631009216#506"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/mweight/Projects/VerbatimSolutions/BubblePOC/proto-word-bubble.png /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app0#
+
+CGenerateDSYMFile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app.dSYM /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC
+s307957497.404404
+e307957497.421020
+r1
+xGenerateDSYMFile
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app.dSYM
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC
+lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/BubblePOC.app.dSYM build/Debug-iphonesimulator/BubblePOC.app/BubblePOC307957497#307957497#0(0"0(0#0#103"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC8630608352#428"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC -o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app.dSYM0#
+
+CLd /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC normal i386
+s307957497.384256
+e307957497.404304
+r1
+xLd
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC
+xnormal
+xi386
+lSLF07#2@108"Link /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC307957497#307957497#0(0"0(0#0#0"8628310784#975"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -L/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator -F/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator -filelist /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/Objects-normal/i386/BubblePOC.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/BubblePOC0#
+
+CProcessInfoPlistFile /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/Info.plist BubblePOC-Info.plist
+s307957495.999465
+e307957496.003265
+r1
+xProcessInfoPlistFile
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/Info.plist
+xBubblePOC-Info.plist
+lSLF07#2@28"Process BubblePOC-Info.plist307957495#307957496#0(0"0(0#0#72"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOC-Info.plist8634919008#524"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility BubblePOC-Info.plist -genpkginfo /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app/Info.plist0#
+
+CProcessPCH /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch.gch BubblePOC_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s307957496.431314
+e307957497.243514
+r1
+xProcessPCH
+x/var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch.gch
+xBubblePOC_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile BubblePOC_Prefix.pch307957496#307957497#0(0"0(0#0#72"/Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOC_Prefix.pch8632288864#1974"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-generated-files.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-own-target-headers.hmap -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-all-target-headers.hmap -iquote /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/BubblePOC-project-headers.hmap -F/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/include -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources/i386 -I/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/BubblePOC.build/Debug-iphonesimulator/BubblePOC.build/DerivedSources -c /Users/mweight/Projects/VerbatimSolutions/BubblePOC/BubblePOC_Prefix.pch -o /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/BubblePOC_Prefix-ggovhpswizdxsfeljbfaewvcycvl/BubblePOC_Prefix.pch.gch0#
+
+CTouch /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app
+s307957497.421122
+e307957497.424242
+r1
+xTouch
+x/Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app
+lSLF07#2@99"Touch /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app307957497#307957497#0(0"0(0#0#0"8630238528#306"    cd /Users/mweight/Projects/VerbatimSolutions/BubblePOC    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/mweight/Projects/VerbatimSolutions/BubblePOC/build/Debug-iphonesimulator/BubblePOC.app0#
+
