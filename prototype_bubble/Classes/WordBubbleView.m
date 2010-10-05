@@ -12,6 +12,7 @@
 @implementation WordBubbleView
 
 @synthesize bubbleImgView;
+@synthesize bubbleTextView;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -24,7 +25,7 @@
 - (void)animate {
 	CGFloat scaleAmount;
 	if (!isSmall) {
-		scaleAmount = 0.03;
+		scaleAmount = 0.001;
 		isSmall = YES;
 	}
 	else {

@@ -11,10 +11,12 @@
 
 @interface WordBubbleView : UIView {
 	IBOutlet UIImageView* bubbleImgView;
+	IBOutlet UITextView* bubbleTextView;
 	BOOL isSmall;
 }
 
 @property (nonatomic, retain) UIImageView* bubbleImgView;
+@property (nonatomic, retain) UITextView* bubbleTextView;
 
 - (void)animate;
 - (void)finalizeAnimation;

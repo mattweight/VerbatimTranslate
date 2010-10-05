@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WordBubbleView.h"
 
-@interface WordBubbleController : UIViewController {
+@interface WordBubbleController : UIViewController <UITextViewDelegate> {
 }
 
 - (void)animate;

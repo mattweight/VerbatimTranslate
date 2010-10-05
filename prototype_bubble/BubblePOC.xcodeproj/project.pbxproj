@@ -15,6 +15,7 @@
 		2899E5220DE3E06400AC0155 /* BubblePOCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* BubblePOCViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* BubblePOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* BubblePOCViewController.m */; };
+		70DCD2D1125BA47D00D315F5 /* optimus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70DCD2D0125BA47D00D315F5 /* optimus.jpg */; };
 		70E88F29125AFC5200D5F1AF /* proto-word-bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E88F28125AFC5200D5F1AF /* proto-word-bubble.png */; };
 		70E88F2C125AFEF900D5F1AF /* WordBubbleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E88F2B125AFEF900D5F1AF /* WordBubbleController.m */; };
 		70E88F2F125AFF1700D5F1AF /* WordBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E88F2E125AFF1700D5F1AF /* WordBubbleView.m */; };
@@ -34,6 +35,7 @@
 		28D7ACF70DDB3853001CB0EB /* BubblePOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubblePOCViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* BubblePOC_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubblePOC_Prefix.pch; sourceTree = "<group>"; };
+		70DCD2D0125BA47D00D315F5 /* optimus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = optimus.jpg; sourceTree = "<group>"; };
 		70E88F28125AFC5200D5F1AF /* proto-word-bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proto-word-bubble.png"; sourceTree = "<group>"; };
 		70E88F2A125AFEF900D5F1AF /* WordBubbleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordBubbleController.h; sourceTree = "<group>"; };
 		70E88F2B125AFEF900D5F1AF /* WordBubbleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordBubbleController.m; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				70DCD2D0125BA47D00D315F5 /* optimus.jpg */,
 				70E88F28125AFC5200D5F1AF /* proto-word-bubble.png */,
 				70E88F30125B001200D5F1AF /* WordBubbleController.xib */,
 				2899E5210DE3E06400AC0155 /* BubblePOCViewController.xib */,
@@ -176,6 +179,7 @@
 				2899E5220DE3E06400AC0155 /* BubblePOCViewController.xib in Resources */,
 				70E88F29125AFC5200D5F1AF /* proto-word-bubble.png in Resources */,
 				70E88F31125B001200D5F1AF /* WordBubbleController.xib in Resources */,
+				70DCD2D1125BA47D00D315F5 /* optimus.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +205,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matt WEIGHT";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matt WEIGHT";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -208,6 +214,8 @@
 				GCC_PREFIX_HEADER = BubblePOC_Prefix.pch;
 				INFOPLIST_FILE = "BubblePOC-Info.plist";
 				PRODUCT_NAME = BubblePOC;
+				PROVISIONING_PROFILE = "CDC2578A-5DD5-48E5-8B1B-D98F7C65DB26";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CDC2578A-5DD5-48E5-8B1B-D98F7C65DB26";
 			};
 			name = Debug;
 		};
@@ -228,11 +236,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matt WEIGHT";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matt WEIGHT";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				PROVISIONING_PROFILE = "CDC2578A-5DD5-48E5-8B1B-D98F7C65DB26";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CDC2578A-5DD5-48E5-8B1B-D98F7C65DB26";
 				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;

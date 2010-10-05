@@ -1,4 +1,4 @@
-    //
+//
 //  WordBubbleController.m
 //  BubblePOC
 //
@@ -18,7 +18,9 @@
 		WordBubbleView* bubbleView = (WordBubbleView*)self.view;
 		[bubbleView setBackgroundColor:[UIColor clearColor]];
 		[bubbleView.bubbleImgView setBackgroundColor:[UIColor clearColor]];
-		[bubbleView setCenter:CGPointMake(160.0, 200.0)];
+		[bubbleView setCenter:CGPointMake(181.0, 105.0)];
+		[bubbleView.bubbleTextView setAlpha:0.8];
+		[bubbleView setAlpha:0.8];
 		[bubbleView animate];
         // Custom initialization
     }
@@ -48,6 +50,11 @@
 	NSLog(@"The word bubble controller view is going to appear");
 }
 */
+
+#
+#pragma mark UITextViewDelegate
+#
+
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
