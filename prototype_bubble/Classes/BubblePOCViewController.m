@@ -40,10 +40,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	WordBubbleController* aController = [[WordBubbleController alloc] initWithNibName:@"WordBubbleController" bundle:nil];
+	[aController.view setHidden:YES];
 	[self.view addSubview:aController.view];
 	wordController = [aController retain];
 	[aController release];
 	aController = nil;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[wordController.view setHidden:NO];
 }
 
 - (IBAction)animateBubble:(id)sender {

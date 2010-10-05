@@ -7,18 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#include "VerbatimConstants.h"
 
 @interface WordBubbleView : UIView {
 	IBOutlet UIImageView* bubbleImgView;
 	IBOutlet UITextView* bubbleTextView;
-	BOOL isSmall;
+	ANIMATION_STEP animationStep;
+	BOOL forceStop;
 }
 
 @property (nonatomic, retain) UIImageView* bubbleImgView;
 @property (nonatomic, retain) UITextView* bubbleTextView;
 
 - (void)animate;
-- (void)finalizeAnimation;
+
+- (void)setAnimationStep:(ANIMATION_STEP)currentStep;
+- (ANIMATION_STEP)getAnimationStep;
+
+- (void)setForceStop:(BOOL)shouldStop;
+- (BOOL)getForceStop;
 
 @end

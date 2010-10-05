@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "WordBubbleView.h"
 
+#include "VerbatimConstants.h"
+
 @interface WordBubbleController : UIViewController <UITextViewDelegate> {
 }
 

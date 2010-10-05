@@ -14,14 +14,19 @@
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-		NSLog(@"We've just loaded a NIB");
 		WordBubbleView* bubbleView = (WordBubbleView*)self.view;
 		[bubbleView setBackgroundColor:[UIColor clearColor]];
 		[bubbleView.bubbleImgView setBackgroundColor:[UIColor clearColor]];
+		// TODO this will be driven by the serialized animation schema.
 		[bubbleView setCenter:CGPointMake(181.0, 105.0)];
-		[bubbleView.bubbleTextView setAlpha:0.8];
-		[bubbleView setAlpha:0.8];
-		[bubbleView animate];
+		[bubbleView setAnimationStep:0]; // Starting point means shorties
+		[bubbleView setForceStop:YES];
+		[bubbleView.bubbleTextView setBackgroundColor:[UIColor clearColor]];
+		[bubbleView setAlpha:0.7];
+		
+		// TODO Just to keep the aspect ration full-sized, so we shrink instead of grow the first time
+		//      Need to do this the more correct way.
+		[bubbleView animate]; 
         // Custom initialization
     }
     return self;
@@ -29,7 +34,19 @@
 
 - (void)animate {
 	NSLog(@"Controller animate");
-	[(WordBubbleView*)self.view animate];
+	WordBubbleView* theView = (WordBubbleView*)self.view;
+
+	// Already large
+	if ([theView getAnimationStep] >= MAX_ANIMATION_STEP) {
+		[theView setAnimationStep:0];
+		[theView setForceStop:YES];
+	}
+	else if ([theView getAnimationStep] == 0) {
+		// Use the first step AFTER the zero-size
+		[theView setAnimationStep:1];
+		[theView setForceStop:NO];
+	}
+	[theView animate];
 }
 
 /*
