@@ -17,5 +17,6 @@
 @property (nonatomic, retain) UIImageView* bubbleImgView;
 
 - (void)animate;
+- (void)finalizeAnimation;
 
 @end

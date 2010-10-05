@@ -47,7 +47,7 @@
 					20,
 					1162,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -62,23 +62,53 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 307952681;
-			PBXWorkspaceStateSaveDate = 307952681;
+			PBXPerProjectTemplateStateSaveDate = 307991395;
+			PBXWorkspaceStateSaveDate = 307991395;
 		};
 		perUserProjectItems = {
+			70CA45F5125B935E00D55A29 /* PBXTextBookmark */ = 70CA45F5125B935E00D55A29 /* PBXTextBookmark */;
+			70CA45F7125B935E00D55A29 /* PBXTextBookmark */ = 70CA45F7125B935E00D55A29 /* PBXTextBookmark */;
+			70CA4621125B941000D55A29 /* PBXTextBookmark */ = 70CA4621125B941000D55A29 /* PBXTextBookmark */;
 			70E88F32125B001E00D5F1AF /* PBXBookmark */ = 70E88F32125B001E00D5F1AF /* PBXBookmark */;
 			70E88F33125B001E00D5F1AF /* PBXTextBookmark */ = 70E88F33125B001E00D5F1AF /* PBXTextBookmark */;
 			70E89091125B0D6800D5F1AF /* PBXTextBookmark */ = 70E89091125B0D6800D5F1AF /* PBXTextBookmark */;
 			70E8909A125B0D8A00D5F1AF /* PBXTextBookmark */ = 70E8909A125B0D8A00D5F1AF /* PBXTextBookmark */;
-			70E890A5125B0E5F00D5F1AF /* PBXTextBookmark */ = 70E890A5125B0E5F00D5F1AF /* PBXTextBookmark */;
 			70E890AE125B0E8900D5F1AF /* PBXTextBookmark */ = 70E890AE125B0E8900D5F1AF /* PBXTextBookmark */;
 			70E890C6125B0EF900D5F1AF /* PBXTextBookmark */ = 70E890C6125B0EF900D5F1AF /* PBXTextBookmark */;
-			70E890C7125B0EF900D5F1AF /* PBXTextBookmark */ = 70E890C7125B0EF900D5F1AF /* PBXTextBookmark */;
-			70E890CB125B0F0D00D5F1AF /* PBXTextBookmark */ = 70E890CB125B0F0D00D5F1AF /* PBXTextBookmark */;
 		};
 		sourceControlManager = 70E88F25125AFC3A00D5F1AF /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	70CA45F5125B935E00D55A29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 70E88F2D125AFF1700D5F1AF /* WordBubbleView.h */;
+		name = "WordBubbleView.h: 20";
+		rLen = 0;
+		rLoc = 356;
+		rType = 0;
+		vrLen = 363;
+		vrLoc = 0;
+	};
+	70CA45F7125B935E00D55A29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 70E88F2E125AFF1700D5F1AF /* WordBubbleView.m */;
+		name = "WordBubbleView.m: 45";
+		rLen = 0;
+		rLoc = 992;
+		rType = 0;
+		vrLen = 954;
+		vrLoc = 491;
+	};
+	70CA4621125B941000D55A29 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 70E88F2E125AFF1700D5F1AF /* WordBubbleView.m */;
+		name = "WordBubbleView.m: 27";
+		rLen = 0;
+		rLoc = 473;
+		rType = 0;
+		vrLen = 767;
+		vrLoc = 134;
 	};
 	70E88F1A125AFC2900D5F1AF /* BubblePOC */ = {
 		isa = PBXExecutable;
@@ -138,16 +168,16 @@
 	};
 	70E88F2D125AFF1700D5F1AF /* WordBubbleView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1340, 462}}";
-			sepNavSelRange = "{249, 0}";
-			sepNavVisRange = "{0, 336}";
+			sepNavIntBoundsRect = "{{0, 0}, {1340, 704}}";
+			sepNavSelRange = "{356, 0}";
+			sepNavVisRange = "{0, 363}";
 		};
 	};
 	70E88F2E125AFF1700D5F1AF /* WordBubbleView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {951, 1071}}";
-			sepNavSelRange = "{795, 0}";
-			sepNavVisRange = "{544, 255}";
+			sepNavIntBoundsRect = "{{0, 0}, {1340, 1512}}";
+			sepNavSelRange = "{473, 0}";
+			sepNavVisRange = "{134, 767}";
 		};
 	};
 	70E88F32125B001E00D5F1AF /* PBXBookmark */ = {
@@ -184,16 +214,6 @@
 		vrLen = 662;
 		vrLoc = 867;
 	};
-	70E890A5125B0E5F00D5F1AF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 70E88F2D125AFF1700D5F1AF /* WordBubbleView.h */;
-		name = "WordBubbleView.h: 14";
-		rLen = 0;
-		rLoc = 249;
-		rType = 0;
-		vrLen = 336;
-		vrLoc = 0;
-	};
 	70E890AE125B0E8900D5F1AF /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 70E88F2A125AFEF900D5F1AF /* WordBubbleController.h */;
@@ -213,25 +233,5 @@
 		rType = 0;
 		vrLen = 882;
 		vrLoc = 218;
-	};
-	70E890C7125B0EF900D5F1AF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 70E88F2E125AFF1700D5F1AF /* WordBubbleView.m */;
-		name = "WordBubbleView.m: 30";
-		rLen = 0;
-		rLoc = 501;
-		rType = 0;
-		vrLen = 457;
-		vrLoc = 339;
-	};
-	70E890CB125B0F0D00D5F1AF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 70E88F2E125AFF1700D5F1AF /* WordBubbleView.m */;
-		name = "WordBubbleView.m: 38";
-		rLen = 0;
-		rLoc = 714;
-		rType = 0;
-		vrLen = 458;
-		vrLoc = 339;
 	};
 }
