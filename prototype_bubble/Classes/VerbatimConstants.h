@@ -15,7 +15,7 @@ typedef unsigned short ANIMATION_STEP;
 
 // This changes the number of times we "bounce" the
 // word bubble. It needs to be an even number.
-#define MAX_ANIMATION_STEP 4
+#define MAX_ANIMATION_STEP 6
 
 // This is the maximum number of bounces allowed
 #define MAX_BUBBLE_BOUNCE 1.4

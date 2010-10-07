@@ -13,12 +13,12 @@
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nil])) {
 		WordBubbleView* bubbleView = (WordBubbleView*)self.view;
 		[bubbleView setBackgroundColor:[UIColor clearColor]];
 		[bubbleView.bubbleImgView setBackgroundColor:[UIColor clearColor]];
+										
 		// TODO this will be driven by the serialized animation schema.
-		[bubbleView setCenter:CGPointMake(181.0, 105.0)];
 		[bubbleView setAnimationStep:0]; // Starting point means shorties
 		[bubbleView setForceStop:YES];
 		[bubbleView.bubbleTextView setBackgroundColor:[UIColor clearColor]];
@@ -71,7 +71,14 @@
 #
 #pragma mark UITextViewDelegate
 #
+- (BOOL)textViewShouldEndEditing:(UITextView *)textView {
+	[textView resignFirstResponder];
+	return YES;
+}
 
+- (void)textViewDidEndEditing:(UITextView *)textView {
+	[textView resignFirstResponder];
+}
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
