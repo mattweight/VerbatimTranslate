@@ -60,8 +60,6 @@
 		duration = 0.10;
 	}
 	else if ((animationStep % 2) == 1) {
-		// Every odd needs to grow so every even can shrink..
-		//scaleAmount = 1.20;
 		if (animationStep == 1) {
 			duration = 0.20;
 		}

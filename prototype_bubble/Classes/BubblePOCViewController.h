@@ -11,12 +11,17 @@
 
 
 @interface BubblePOCViewController : UIViewController {
-	WordBubbleController* wordController;
+	WordBubbleController* wordInputController;
+	WordBubbleController* wordOutputController;
+	IBOutlet UIImageView* sillyImgView;
 }
 
-@property (nonatomic, retain) WordBubbleController* wordController;
+@property (nonatomic, retain) WordBubbleController* wordInputController;
+@property (nonatomic, retain) WordBubbleController* wordOutputController;
+@property (nonatomic, retain) UIImageView* sillyImgView;
 
 - (IBAction)animateBubble:(id)sender;
+- (void)animateOutputBubble:(id)sender;
 
 @end
 

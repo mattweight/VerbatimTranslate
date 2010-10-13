@@ -11,7 +11,9 @@
 
 @implementation BubblePOCViewController
 
-@synthesize wordController;
+@synthesize wordInputController;
+@synthesize wordOutputController;
+@synthesize sillyImgView;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -39,25 +41,59 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-	WordBubbleController* aController = [[WordBubbleController alloc] initWithNibName:@"WordBubbleController" bundle:nil];
-	[aController.view setHidden:YES];
-	[self.view addSubview:aController.view];
-	wordController = [aController retain];
-	[aController release];
-	aController = nil;
+	WordBubbleController* inController = [[WordBubbleController alloc] initWithNibName:@"WordBubbleInputController" bundle:nil];
+	[inController.view setHidden:YES];
+	[inController.view setCenter:CGPointMake(186, 112)];
+//	[inController.view setFrame:CGRectMake(43, 42, 285, 141)];
+	NSLog(@"(1) current point is %02.f", inController.view.center.x);
+	NSLog(@"(1) current point is %02.f", inController.view.center.y);
+
+	[self.view addSubview:inController.view];
+	wordInputController = [inController retain];
+	[inController release];
+	inController = nil;
+	
+	WordBubbleController* outController = [[WordBubbleController alloc] initWithNibName:@"WordBubbleOutputController" bundle:nil];
+	[outController.view setHidden:YES];
+	[outController.view setCenter:CGPointMake(132, 374)];
+//	[outController.view setFrame:CGRectMake(10, 304, 285, 141)];
+	NSLog(@"(2) current point is %02.f", outController.view.center.x);
+	NSLog(@"(2) current point is %02.f", outController.view.center.y);
+	[self.view addSubview:outController.view];
+	wordOutputController = [outController retain];
+	[outController release];
+	outController = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-	[wordController.view setHidden:NO];
+//	[wordInputController.view setHidden:NO];
+//	[wordOutputController.view setHidden:NO];
 }
 
 - (IBAction)animateBubble:(id)sender {
+	if ([wordInputController.view isHidden]) {
+		[wordInputController.view setHidden:NO];
+	}
+	if ([wordOutputController.view isHidden]) {
+		[wordOutputController.view setHidden:NO];
+	}
 	NSLog(@"animateBubble called!");
-	[wordController animate];
-//	WordBubbleView* viewRef = (WordBubbleView*)wordController.view;
+	[wordInputController animate];
+	if (![sillyImgView isHidden]) {
+		[wordOutputController animate];
+		[sillyImgView setHidden:YES];
+	}
+	else {
+		[self performSelector:@selector(animateOutputBubble:) withObject:nil afterDelay:2.0];
+	}
+//	WordBubbleView* viewRef = (WordBubbleView*)wordInputController.view;
 //	[viewRef animate];
 }
 
+- (void)animateOutputBubble:(id)sender {
+	[sillyImgView setHidden:NO];
+	[wordOutputController animate];
+}
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -79,6 +115,11 @@
 
 
 - (void)dealloc {
+	[wordInputController release];
+	wordInputController = nil;
+	[wordOutputController release];
+	wordOutputController = nil;
+	
     [super dealloc];
 }
 
