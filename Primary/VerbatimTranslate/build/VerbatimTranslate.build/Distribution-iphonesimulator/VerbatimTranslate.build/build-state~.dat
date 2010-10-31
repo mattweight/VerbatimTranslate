@@ -1,0 +1,1376 @@
+TVerbatimTranslate
+v7
+r0
+t310252915.790393
+cCheck dependencies
+cProcessInfoPlistFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Info.plist VerbatimTranslate-Info.plist
+cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FlipsideView.xib
+cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainView.xib
+cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainWindow.xib
+cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.xib
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/mariachi.png mariachi.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/panda.png panda.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseSimplified30.png ChineseSimplified30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseSimplified40.png ChineseSimplified40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseTraditional30.png ChineseTraditional30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseTraditional40.png ChineseTraditional40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Czech30.png Czech30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Czech40.png Czech40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Danish30.png Danish30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Danish40.png Danish40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Dutch30.png Dutch30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Dutch40.png Dutch40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUK30.png EnglishUK30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUK40.png EnglishUK40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUS30.png EnglishUS30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUS40.png EnglishUS40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Finnish30.png Finnish30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Finnish40.png Finnish40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchCA30.png FrenchCA30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchCA40.png FrenchCA40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchEU30.png FrenchEU30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchEU40.png FrenchEU40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/German30.png German30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/German40.png German40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Hungarian30.png Hungarian30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Hungarian40.png Hungarian40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Italian30.png Italian30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Italian40.png Italian40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Japanese30.png Japanese30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Japanese40.png Japanese40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Korean30.png Korean30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Korean40.png Korean40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Norwegian30.png Norwegian30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Norwegian40.png Norwegian40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Polish30.png Polish30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Polish40.png Polish40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseBrazil30.png PortugueseBrazil30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseBrazil40.png PortugueseBrazil40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseEU30.png PortugueseEU30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseEU40.png PortugueseEU40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Russian30.png Russian30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Russian40.png Russian40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Slovak30.png Slovak30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Slovak40.png Slovak40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishEU30.png SpanishEU30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishEU40.png SpanishEU40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishLatinAmerica30.png SpanishLatinAmerica30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishLatinAmerica40.png SpanishLatinAmerica40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Swedish30.png Swedish30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Swedish40.png Swedish40.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Turkey30.png Turkey30.png
+cCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Turkey40.png Turkey40.png
+cProcessPCH /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch.gch VerbatimTranslate_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/main.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/VerbatimTranslateAppDelegate.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/MainViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/FlipsideViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordView.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate normal i386
+cGenerateDSYMFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app.dSYM /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate
+cTouch /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk
+c000000004C6C30170000000000000110
+t1282158615
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004C5A4DB60000000000295900
+t1280986550
+s2709760
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C5A4DB0000000000029D580
+t1280986544
+s2741632
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C5A4DA10000000000001466
+t1280986529
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C6241ED00000000000009CD
+t1281507821
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C6242840000000001E228C0
+t1281507972
+s31598784
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/Availability.h
+c000000004C57A0390000000000001A5C
+t1280811065
+s6748
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseSimplified30.png
+c000000004CCDDA3D0000000000000A1D
+t1288559165
+s2589
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseSimplified40.png
+c000000004CCDDA3D0000000000000A1D
+t1288559165
+s2589
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseTraditional30.png
+c000000004CCDDA3D00000000000006C8
+t1288559165
+s1736
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseTraditional40.png
+c000000004CCDDA3D00000000000009D2
+t1288559165
+s2514
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.h
+c000000004CCDDD56000000000000023B
+t1288559958
+s571
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m
+c000000004CCDDB280000000000000460
+t1288559400
+s1120
+i"FlipsideViewController.h"
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.h
+c000000004CCDDB28000000000000013E
+t1288559400
+s318
+i"FlipsideViewController.h"
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m
+c000000004CCDDB2800000000000005DD
+t1288559400
+s1501
+i"MainViewController.h"
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.h
+c000000004CCDDB2900000000000001FC
+t1288559401
+s508
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m
+c000000004CCDDB870000000000000AC3
+t1288559495
+s2755
+i"VerbatimTranslateAppDelegate.h"
+i"MainViewController.h"
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Czech30.png
+c000000004CCDDA3D00000000000006B8
+t1288559165
+s1720
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Czech40.png
+c000000004CCDDA3D00000000000009C3
+t1288559165
+s2499
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Danish30.png
+c000000004CCDDA3D0000000000000751
+t1288559165
+s1873
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Danish40.png
+c000000004CCDDA3D0000000000000AB1
+t1288559165
+s2737
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Dutch30.png
+c000000004CCDDA3D000000000000059B
+t1288559165
+s1435
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Dutch40.png
+c000000004CCDDA3D00000000000007FD
+t1288559165
+s2045
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUK30.png
+c000000004CCDDA3D000000000000077C
+t1288559165
+s1916
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUK40.png
+c000000004CCDDA3D0000000000000BB5
+t1288559165
+s2997
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUS30.png
+c000000004CCDDA3D000000000000077A
+t1288559165
+s1914
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUS40.png
+c000000004CCDDA3D0000000000000B5F
+t1288559165
+s2911
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Finnish30.png
+c000000004CCDDA3D000000000000064C
+t1288559165
+s1612
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Finnish40.png
+c000000004CCDDA3D0000000000000916
+t1288559165
+s2326
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FlipsideView.xib
+c000000004CCDDB290000000000004C68
+t1288559401
+s19560
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchCA30.png
+c000000004CCDDA3D000000000000071B
+t1288559165
+s1819
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchCA40.png
+c000000004CCDDA3D0000000000000A76
+t1288559165
+s2678
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchEU30.png
+c000000004CCDDA3D0000000000000638
+t1288559165
+s1592
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchEU40.png
+c000000004CCDDA3D00000000000008ED
+t1288559165
+s2285
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/German30.png
+c000000004CCDDA3D0000000000000640
+t1288559165
+s1600
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/German40.png
+c000000004CCDDA3D0000000000000944
+t1288559165
+s2372
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Hungarian30.png
+c000000004CCDDA3D00000000000005D2
+t1288559165
+s1490
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Hungarian40.png
+c000000004CCDDA3D000000000000085E
+t1288559165
+s2142
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Italian30.png
+c000000004CCDDA3D0000000000000632
+t1288559165
+s1586
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Italian40.png
+c000000004CCDDA3D00000000000008D6
+t1288559165
+s2262
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Japanese30.png
+c000000004CCDDA3D000000000000061E
+t1288559165
+s1566
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Japanese40.png
+c000000004CCDDA3D00000000000008F2
+t1288559165
+s2290
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Korean30.png
+c000000004CCDDA3D0000000000000691
+t1288559165
+s1681
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Korean40.png
+c000000004CCDDA3D00000000000009DD
+t1288559165
+s2525
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainView.xib
+c000000004CCDDB290000000000004656
+t1288559401
+s18006
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainWindow.xib
+c000000004CCDDB2900000000000050C0
+t1288559401
+s20672
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Norwegian30.png
+c000000004CCDDA3D0000000000000782
+t1288559165
+s1922
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Norwegian40.png
+c000000004CCDDA3D0000000000000B26
+t1288559165
+s2854
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Polish30.png
+c000000004CCDDA3D00000000000005FE
+t1288559165
+s1534
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Polish40.png
+c000000004CCDDA3D00000000000008E2
+t1288559165
+s2274
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseBrazil30.png
+c000000004CCDDA3D0000000000000712
+t1288559165
+s1810
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseBrazil40.png
+c000000004CCDDA3D0000000000000A31
+t1288559165
+s2609
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseEU30.png
+c000000004CCDDA3D000000000000072C
+t1288559165
+s1836
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseEU40.png
+c000000004CCDDA3D0000000000000A9C
+t1288559165
+s2716
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Russian30.png
+c000000004CCDDA3D00000000000005F5
+t1288559165
+s1525
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Russian40.png
+c000000004CCDDA3D00000000000008CD
+t1288559165
+s2253
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Slovak30.png
+c000000004CCDDA3D00000000000006F3
+t1288559165
+s1779
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Slovak40.png
+c000000004CCDDA3D0000000000000A97
+t1288559165
+s2711
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishEU30.png
+c000000004CCDDA3D00000000000005E4
+t1288559165
+s1508
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishEU40.png
+c000000004CCDDA3D00000000000008C8
+t1288559165
+s2248
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishLatinAmerica30.png
+c000000004CCDDA3D000000000000071F
+t1288559165
+s1823
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishLatinAmerica40.png
+c000000004CCDDA3D0000000000000AD4
+t1288559165
+s2772
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Swedish30.png
+c000000004CCDDA3D0000000000000713
+t1288559165
+s1811
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Swedish40.png
+c000000004CCDDA3D0000000000000A46
+t1288559165
+s2630
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Turkey30.png
+c000000004CCDDA3D00000000000006DA
+t1288559165
+s1754
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Turkey40.png
+c000000004CCDDA3D0000000000000A12
+t1288559165
+s2578
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/VerbatimTranslate_Prefix.pch
+c000000004CCDDB290000000000000154
+t1288559401
+s340
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordView.h
+c000000004CCDDD8500000000000000D4
+t1288560005
+s212
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordView.m
+c000000004CCDDD850000000000000243
+t1288560005
+s579
+i"WordView.h"
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.h
+c000000004CCDDD9B00000000000000F2
+t1288560027
+s242
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.m
+c000000004CCDDD9000000000000005AC
+t1288560016
+s1452
+i"WordViewController.h"
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.xib
+c000000004CCDDD900000000000001871
+t1288560016
+s6257
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app
+t1288560115
+s2074
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app.dSYM
+t1288560115
+s102
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseSimplified30.png
+t1288560114
+s2589
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseSimplified40.png
+t1288560114
+s2589
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseTraditional30.png
+t1288560114
+s1736
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseTraditional40.png
+t1288560114
+s2514
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Czech30.png
+t1288560114
+s1720
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Czech40.png
+t1288560114
+s2499
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Danish30.png
+t1288560114
+s1873
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Danish40.png
+t1288560114
+s2737
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Dutch30.png
+t1288560114
+s1435
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Dutch40.png
+t1288560114
+s2045
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUK30.png
+t1288560114
+s1916
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUK40.png
+t1288560114
+s2997
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUS30.png
+t1288560114
+s1914
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUS40.png
+t1288560114
+s2911
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Finnish30.png
+t1288560114
+s1612
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Finnish40.png
+t1288560114
+s2326
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/FlipsideView.nib
+t1288560114
+s2077
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchCA30.png
+t1288560114
+s1819
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchCA40.png
+t1288560114
+s2678
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchEU30.png
+t1288560114
+s1592
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchEU40.png
+t1288560114
+s2285
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/German30.png
+t1288560114
+s1600
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/German40.png
+t1288560114
+s2372
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Hungarian30.png
+t1288560114
+s1490
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Hungarian40.png
+t1288560114
+s2142
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Info.plist
+t1288560114
+s626
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Italian30.png
+t1288560114
+s1586
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Italian40.png
+t1288560114
+s2262
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Japanese30.png
+t1288560114
+s1566
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Japanese40.png
+t1288560114
+s2290
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Korean30.png
+t1288560114
+s1681
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Korean40.png
+t1288560114
+s2525
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/MainView.nib
+t1288560114
+s2345
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/MainWindow.nib
+t1288560114
+s1719
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Norwegian30.png
+t1288560114
+s1922
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Norwegian40.png
+t1288560114
+s2854
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/PkgInfo
+t1288560114
+s8
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Polish30.png
+t1288560114
+s1534
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Polish40.png
+t1288560114
+s2274
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseBrazil30.png
+t1288560114
+s1810
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseBrazil40.png
+t1288560114
+s2609
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseEU30.png
+t1288560114
+s1836
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseEU40.png
+t1288560114
+s2716
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Russian30.png
+t1288560114
+s1525
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Russian40.png
+t1288560114
+s2253
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Slovak30.png
+t1288560114
+s1779
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Slovak40.png
+t1288560114
+s2711
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishEU30.png
+t1288560114
+s1508
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishEU40.png
+t1288560114
+s2248
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishLatinAmerica30.png
+t1288560114
+s1823
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishLatinAmerica40.png
+t1288560114
+s2772
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Swedish30.png
+t1288560114
+s1811
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Swedish40.png
+t1288560114
+s2630
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Turkey30.png
+t1288560114
+s1754
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Turkey40.png
+t1288560114
+s2578
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate
+t1288560115
+s21328
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/WordViewController.nib
+t1288560114
+s1231
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/mariachi.png
+t1288560114
+s293901
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/panda.png
+t1288560114
+s301201
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/FlipsideViewController.o
+t1288560115
+s37504
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/MainViewController.o
+t1288560115
+s37192
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/VerbatimTranslate.LinkFileList
+c000000004CCDDDF20000000000000440
+t1288560114
+s1088
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/VerbatimTranslateAppDelegate.o
+t1288560115
+s47984
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordView.o
+t1288560115
+s33876
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordViewController.o
+t1288560115
+s34476
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/main.o
+t1288560115
+s6328
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m
+c000000004CCDDB290000000000000173
+t1288559401
+s371
+i<UIKit/UIKit.h>
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/mariachi.png
+c000000004CCDDA3D0000000000047C0D
+t1288559165
+s293901
+
+N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/panda.png
+c000000004CCDDA3D0000000000049891
+t1288559165
+s301201
+
+N/var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch.gch
+t1288560115
+s14871568
+
+NVerbatimTranslate-Info.plist
+c000000004CCDDC6E0000000000000372
+t1288559726
+s882
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies310252914#310252914#0(0"0(0#1#0"8615336480#0"0#
+
+CCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/FlipsideViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310252915.597536
+e310252915.687426
+r1
+xCompileC
+xbuild/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/FlipsideViewController.o
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@99"Compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m310252915#310252915#0(0"0(0#0#91"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m8609828032#2482"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-generated-files.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-own-target-headers.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-all-target-headers.hmap -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-project-headers.hmap -F/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/include -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources/i386 -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch -c /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/FlipsideViewController.o0#
+
+CCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/MainViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310252915.596581
+e310252915.681712
+r1
+xCompileC
+xbuild/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/MainViewController.o
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m310252915#310252915#0(0"0(0#0#87"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m8610070304#2474"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-generated-files.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-own-target-headers.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-all-target-headers.hmap -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-project-headers.hmap -F/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/include -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources/i386 -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch -c /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/MainViewController.o0#
+
+CCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/VerbatimTranslateAppDelegate.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310252915.595775
+e310252915.694950
+r1
+xCompileC
+xbuild/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/VerbatimTranslateAppDelegate.o
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@105"Compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m310252915#310252915#0(0"0(0#0#97"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m8610194944#2494"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-generated-files.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-own-target-headers.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-all-target-headers.hmap -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-project-headers.hmap -F/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/include -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources/i386 -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch -c /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/VerbatimTranslateAppDelegate.o0#
+
+CCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordView.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310252915.658329
+e310252915.720809
+r1
+xCompileC
+xbuild/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordView.o
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@77"Compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordView.m310252915#310252915#0(0"0(0#0#69"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordView.m8615455936#2446"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-generated-files.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-own-target-headers.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-all-target-headers.hmap -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-project-headers.hmap -F/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/include -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources/i386 -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch -c /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordView.m -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordView.o0#
+
+CCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310252915.681844
+e310252915.745271
+r1
+xCompileC
+xbuild/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordViewController.o
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.m310252915#310252915#0(0"0(0#0#79"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.m8615076576#2466"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-generated-files.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-own-target-headers.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-all-target-headers.hmap -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-project-headers.hmap -F/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/include -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources/i386 -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch -c /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.m -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/WordViewController.o0#
+
+CCompileC build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/main.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310252915.594747
+e310252915.658205
+r1
+xCompileC
+xbuild/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/main.o
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m310252915#310252915#0(0"0(0#0#65"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m8610478048#2438"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-generated-files.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-own-target-headers.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-all-target-headers.hmap -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-project-headers.hmap -F/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/include -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources/i386 -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch -c /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FlipsideView.xib
+s310252914.569607
+e310252914.968185
+r1
+xCompileXIB
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FlipsideView.xib
+lSLF07#2@27"CompileXIB FlipsideView.xib310252914#310252914#0(0"0(0#0#75"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FlipsideView.xib8610631296#651"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/FlipsideView.nib /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FlipsideView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainView.xib
+s310252914.570256
+e310252914.980207
+r1
+xCompileXIB
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainView.xib
+lSLF07#2@23"CompileXIB MainView.xib310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainView.xib8610263168#643"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/MainView.nib /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainWindow.xib
+s310252914.570898
+e310252914.956081
+r1
+xCompileXIB
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib310252914#310252914#0(0"0(0#0#73"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainWindow.xib8610019392#647"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/MainWindow.nib /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.xib
+s310252914.571454
+e310252914.946450
+r1
+xCompileXIB
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.xib
+lSLF07#2@33"CompileXIB WordViewController.xib310252914#310252914#0(0"0(0#0#81"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.xib8609725536#663"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/WordViewController.nib /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseSimplified30.png ChineseSimplified30.png
+s310252914.573257
+e310252914.600343
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseSimplified30.png
+xChineseSimplified30.png
+lSLF07#2@28"Copy ChineseSimplified30.png310252914#310252914#0(0"0(0#0#82"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseSimplified30.png8608232864#565"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseSimplified30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseSimplified40.png ChineseSimplified40.png
+s310252914.573826
+e310252914.599275
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseSimplified40.png
+xChineseSimplified40.png
+lSLF07#2@28"Copy ChineseSimplified40.png310252914#310252914#0(0"0(0#0#82"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseSimplified40.png8602265888#565"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseSimplified40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseTraditional30.png ChineseTraditional30.png
+s310252914.574368
+e310252914.600465
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseTraditional30.png
+xChineseTraditional30.png
+lSLF07#2@29"Copy ChineseTraditional30.png310252914#310252914#0(0"0(0#0#83"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseTraditional30.png8607904768#566"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseTraditional30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseTraditional40.png ChineseTraditional40.png
+s310252914.574961
+e310252914.600597
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/ChineseTraditional40.png
+xChineseTraditional40.png
+lSLF07#2@29"Copy ChineseTraditional40.png310252914#310252914#0(0"0(0#0#83"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseTraditional40.png8613182720#566"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ChineseTraditional40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Czech30.png Czech30.png
+s310252914.599418
+e310252914.605604
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Czech30.png
+xCzech30.png
+lSLF07#2@16"Copy Czech30.png310252914#310252914#0(0"0(0#0#70"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Czech30.png8615486720#553"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Czech30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Czech40.png Czech40.png
+s310252914.600655
+e310252914.607952
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Czech40.png
+xCzech40.png
+lSLF07#2@16"Copy Czech40.png310252914#310252914#0(0"0(0#0#70"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Czech40.png8614982848#553"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Czech40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Danish30.png Danish30.png
+s310252914.601290
+e310252914.610670
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Danish30.png
+xDanish30.png
+lSLF07#2@17"Copy Danish30.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Danish30.png8614761920#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Danish30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Danish40.png Danish40.png
+s310252914.601948
+e310252914.608077
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Danish40.png
+xDanish40.png
+lSLF07#2@17"Copy Danish40.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Danish40.png8614711040#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Danish40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Dutch30.png Dutch30.png
+s310252914.604507
+e310252914.612592
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Dutch30.png
+xDutch30.png
+lSLF07#2@16"Copy Dutch30.png310252914#310252914#0(0"0(0#0#70"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Dutch30.png8614517856#553"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Dutch30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Dutch40.png Dutch40.png
+s310252914.605823
+e310252914.612446
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Dutch40.png
+xDutch40.png
+lSLF07#2@16"Copy Dutch40.png310252914#310252914#0(0"0(0#0#70"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Dutch40.png8614477056#553"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Dutch40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUK30.png EnglishUK30.png
+s310252914.606788
+e310252914.614403
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUK30.png
+xEnglishUK30.png
+lSLF07#2@20"Copy EnglishUK30.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUK30.png8614354272#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUK30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUK40.png EnglishUK40.png
+s310252914.608149
+e310252914.614267
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUK40.png
+xEnglishUK40.png
+lSLF07#2@20"Copy EnglishUK40.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUK40.png8614096768#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUK40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUS30.png EnglishUS30.png
+s310252914.608811
+e310252914.616120
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUS30.png
+xEnglishUS30.png
+lSLF07#2@20"Copy EnglishUS30.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUS30.png8613972096#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUS30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUS40.png EnglishUS40.png
+s310252914.610821
+e310252914.617550
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/EnglishUS40.png
+xEnglishUS40.png
+lSLF07#2@20"Copy EnglishUS40.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUS40.png8613941312#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/EnglishUS40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Finnish30.png Finnish30.png
+s310252914.612743
+e310252914.619028
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Finnish30.png
+xFinnish30.png
+lSLF07#2@18"Copy Finnish30.png310252914#310252914#0(0"0(0#0#72"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Finnish30.png8613871424#555"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Finnish30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Finnish40.png Finnish40.png
+s310252914.613522
+e310252914.621316
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Finnish40.png
+xFinnish40.png
+lSLF07#2@18"Copy Finnish40.png310252914#310252914#0(0"0(0#0#72"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Finnish40.png8613771168#555"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Finnish40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchCA30.png FrenchCA30.png
+s310252914.614462
+e310252914.622211
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchCA30.png
+xFrenchCA30.png
+lSLF07#2@19"Copy FrenchCA30.png310252914#310252914#0(0"0(0#0#73"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchCA30.png8613649184#556"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchCA30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchCA40.png FrenchCA40.png
+s310252914.615239
+e310252914.622339
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchCA40.png
+xFrenchCA40.png
+lSLF07#2@19"Copy FrenchCA40.png310252914#310252914#0(0"0(0#0#73"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchCA40.png8613511392#556"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchCA40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchEU30.png FrenchEU30.png
+s310252914.616182
+e310252914.625572
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchEU30.png
+xFrenchEU30.png
+lSLF07#2@19"Copy FrenchEU30.png310252914#310252914#0(0"0(0#0#73"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchEU30.png8613439520#556"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchEU30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchEU40.png FrenchEU40.png
+s310252914.617651
+e310252914.623670
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/FrenchEU40.png
+xFrenchEU40.png
+lSLF07#2@19"Copy FrenchEU40.png310252914#310252914#0(0"0(0#0#73"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchEU40.png8613378752#556"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FrenchEU40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/German30.png German30.png
+s310252914.619217
+e310252914.625436
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/German30.png
+xGerman30.png
+lSLF07#2@17"Copy German30.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/German30.png8613287136#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/German30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/German40.png German40.png
+s310252914.621400
+e310252914.634707
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/German40.png
+xGerman40.png
+lSLF07#2@17"Copy German40.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/German40.png8613144000#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/German40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Hungarian30.png Hungarian30.png
+s310252914.622402
+e310252914.628440
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Hungarian30.png
+xHungarian30.png
+lSLF07#2@20"Copy Hungarian30.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Hungarian30.png8610643456#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Hungarian30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Hungarian40.png Hungarian40.png
+s310252914.622993
+e310252914.636419
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Hungarian40.png
+xHungarian40.png
+lSLF07#2@20"Copy Hungarian40.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Hungarian40.png8610244288#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Hungarian40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Italian30.png Italian30.png
+s310252914.623808
+e310252914.632762
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Italian30.png
+xItalian30.png
+lSLF07#2@18"Copy Italian30.png310252914#310252914#0(0"0(0#0#72"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Italian30.png8609986496#555"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Italian30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Italian40.png Italian40.png
+s310252914.625647
+e310252914.636062
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Italian40.png
+xItalian40.png
+lSLF07#2@18"Copy Italian40.png310252914#310252914#0(0"0(0#0#72"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Italian40.png8609620800#555"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Italian40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Japanese30.png Japanese30.png
+s310252914.626340
+e310252914.641078
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Japanese30.png
+xJapanese30.png
+lSLF07#2@19"Copy Japanese30.png310252914#310252914#0(0"0(0#0#73"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Japanese30.png8609254304#556"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Japanese30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Japanese40.png Japanese40.png
+s310252914.628699
+e310252914.639415
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Japanese40.png
+xJapanese40.png
+lSLF07#2@19"Copy Japanese40.png310252914#310252914#0(0"0(0#0#73"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Japanese40.png8608781376#556"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Japanese40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Korean30.png Korean30.png
+s310252914.632885
+e310252914.642891
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Korean30.png
+xKorean30.png
+lSLF07#2@17"Copy Korean30.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Korean30.png8608613120#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Korean30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Korean40.png Korean40.png
+s310252914.634822
+e310252914.642746
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Korean40.png
+xKorean40.png
+lSLF07#2@17"Copy Korean40.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Korean40.png8608372512#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Korean40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Norwegian30.png Norwegian30.png
+s310252914.636545
+e310252914.649619
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Norwegian30.png
+xNorwegian30.png
+lSLF07#2@20"Copy Norwegian30.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Norwegian30.png8608220960#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Norwegian30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Norwegian40.png Norwegian40.png
+s310252914.638476
+e310252914.648537
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Norwegian40.png
+xNorwegian40.png
+lSLF07#2@20"Copy Norwegian40.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Norwegian40.png8606610336#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Norwegian40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Polish30.png Polish30.png
+s310252914.639566
+e310252914.654574
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Polish30.png
+xPolish30.png
+lSLF07#2@17"Copy Polish30.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Polish30.png8604547040#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Polish30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Polish40.png Polish40.png
+s310252914.641170
+e310252914.654807
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Polish40.png
+xPolish40.png
+lSLF07#2@17"Copy Polish40.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Polish40.png8600596576#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Polish40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseBrazil30.png PortugueseBrazil30.png
+s310252914.642977
+e310252914.652949
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseBrazil30.png
+xPortugueseBrazil30.png
+lSLF07#2@27"Copy PortugueseBrazil30.png310252914#310252914#0(0"0(0#0#81"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseBrazil30.png8610881216#564"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseBrazil30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseBrazil40.png PortugueseBrazil40.png
+s310252914.643804
+e310252914.650410
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseBrazil40.png
+xPortugueseBrazil40.png
+lSLF07#2@27"Copy PortugueseBrazil40.png310252914#310252914#0(0"0(0#0#81"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseBrazil40.png8610394816#564"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseBrazil40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseEU30.png PortugueseEU30.png
+s310252914.648645
+e310252914.657175
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseEU30.png
+xPortugueseEU30.png
+lSLF07#2@23"Copy PortugueseEU30.png310252914#310252914#0(0"0(0#0#77"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseEU30.png8609420192#560"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseEU30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseEU40.png PortugueseEU40.png
+s310252914.649686
+e310252914.660402
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/PortugueseEU40.png
+xPortugueseEU40.png
+lSLF07#2@23"Copy PortugueseEU40.png310252914#310252914#0(0"0(0#0#77"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseEU40.png8606329728#560"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/PortugueseEU40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Russian30.png Russian30.png
+s310252914.650468
+e310252914.657297
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Russian30.png
+xRussian30.png
+lSLF07#2@18"Copy Russian30.png310252914#310252914#0(0"0(0#0#72"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Russian30.png8609618528#555"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Russian30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Russian40.png Russian40.png
+s310252914.653039
+e310252914.659567
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Russian40.png
+xRussian40.png
+lSLF07#2@18"Copy Russian40.png310252914#310252914#0(0"0(0#0#72"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Russian40.png8608138752#555"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Russian40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Slovak30.png Slovak30.png
+s310252914.654885
+e310252914.665474
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Slovak30.png
+xSlovak30.png
+lSLF07#2@17"Copy Slovak30.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Slovak30.png8615507456#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Slovak30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Slovak40.png Slovak40.png
+s310252914.656272
+e310252914.662565
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Slovak40.png
+xSlovak40.png
+lSLF07#2@17"Copy Slovak40.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Slovak40.png8615058624#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Slovak40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishEU30.png SpanishEU30.png
+s310252914.657353
+e310252914.669087
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishEU30.png
+xSpanishEU30.png
+lSLF07#2@20"Copy SpanishEU30.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishEU30.png8613984704#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishEU30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishEU40.png SpanishEU40.png
+s310252914.657929
+e310252914.670188
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishEU40.png
+xSpanishEU40.png
+lSLF07#2@20"Copy SpanishEU40.png310252914#310252914#0(0"0(0#0#74"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishEU40.png8613220352#557"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishEU40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishLatinAmerica30.png SpanishLatinAmerica30.png
+s310252914.659634
+e310252914.667335
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishLatinAmerica30.png
+xSpanishLatinAmerica30.png
+lSLF07#2@30"Copy SpanishLatinAmerica30.png310252914#310252914#0(0"0(0#0#84"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishLatinAmerica30.png8609938944#567"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishLatinAmerica30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishLatinAmerica40.png SpanishLatinAmerica40.png
+s310252914.660460
+e310252914.670044
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/SpanishLatinAmerica40.png
+xSpanishLatinAmerica40.png
+lSLF07#2@30"Copy SpanishLatinAmerica40.png310252914#310252914#0(0"0(0#0#84"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishLatinAmerica40.png8615494848#567"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SpanishLatinAmerica40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Swedish30.png Swedish30.png
+s310252914.662734
+e310252914.670751
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Swedish30.png
+xSwedish30.png
+lSLF07#2@18"Copy Swedish30.png310252914#310252914#0(0"0(0#0#72"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Swedish30.png8608747488#555"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Swedish30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Swedish40.png Swedish40.png
+s310252914.665630
+e310252914.672275
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Swedish40.png
+xSwedish40.png
+lSLF07#2@18"Copy Swedish40.png310252914#310252914#0(0"0(0#0#72"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Swedish40.png8610685472#555"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Swedish40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Turkey30.png Turkey30.png
+s310252914.667476
+e310252914.677639
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Turkey30.png
+xTurkey30.png
+lSLF07#2@17"Copy Turkey30.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Turkey30.png8615516896#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Turkey30.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/Turkey40.png Turkey40.png
+s310252914.669169
+e310252914.677907
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/Turkey40.png
+xTurkey40.png
+lSLF07#2@17"Copy Turkey40.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Turkey40.png8613329312#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Turkey40.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/mariachi.png mariachi.png
+s310252914.572040
+e310252914.605486
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/mariachi.png
+xmariachi.png
+lSLF07#2@17"Copy mariachi.png310252914#310252914#0(0"0(0#0#71"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/mariachi.png8609129952#554"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/mariachi.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CCpResource build/Distribution-iphonesimulator/VerbatimTranslate.app/panda.png panda.png
+s310252914.572674
+e310252914.604399
+r1
+xCpResource
+xbuild/Distribution-iphonesimulator/VerbatimTranslate.app/panda.png
+xpanda.png
+lSLF07#2@14"Copy panda.png310252914#310252914#0(0"0(0#0#68"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/panda.png8608656672#551"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/panda.png /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
+CGenerateDSYMFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app.dSYM /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate
+s310252915.766945
+e310252915.785243
+r1
+xGenerateDSYMFile
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app.dSYM
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate
+lSLF07#2@153"GenerateDSYMFile build/Distribution-iphonesimulator/VerbatimTranslate.app.dSYM build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate310252915#310252915#0(0"0(0#0#133"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate8615235488#487"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app.dSYM0#
+
+CLd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate normal i386
+s310252915.745352
+e310252915.766846
+r1
+xLd
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate
+xnormal
+xi386
+lSLF07#2@138"Link /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate310252915#310252915#0(0"0(0#0#0"8615518624#1078"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -L/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -F/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -filelist /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/Objects-normal/i386/VerbatimTranslate.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/VerbatimTranslate0#
+
+CProcessInfoPlistFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Info.plist VerbatimTranslate-Info.plist
+s310252914.566494
+e310252914.569546
+r1
+xProcessInfoPlistFile
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Info.plist
+xVerbatimTranslate-Info.plist
+lSLF07#2@36"Process VerbatimTranslate-Info.plist310252914#310252914#0(0"0(0#0#87"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/VerbatimTranslate-Info.plist8604404896#583"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility VerbatimTranslate-Info.plist -genpkginfo /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app/Info.plist0#
+
+CProcessPCH /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch.gch VerbatimTranslate_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s310252914.980350
+e310252915.594652
+r1
+xProcessPCH
+x/var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch.gch
+xVerbatimTranslate_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Precompile VerbatimTranslate_Prefix.pch310252914#310252915#0(0"0(0#0#87"/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/VerbatimTranslate_Prefix.pch8614952416#2293"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-generated-files.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-own-target-headers.hmap -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-all-target-headers.hmap -iquote /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/VerbatimTranslate-project-headers.hmap -F/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/include -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources/i386 -I/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphonesimulator/VerbatimTranslate.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/VerbatimTranslate_Prefix.pch -o /var/folders/wh/whdtzcQZE1SCVDxofpYpf++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-fjormmzgbrttpeauqtmfondfjycy/VerbatimTranslate_Prefix.pch.gch0#
+
+CTouch /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app
+s310252915.785324
+e310252915.790345
+r1
+xTouch
+x/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app
+lSLF07#2@121"Touch /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app310252915#310252915#0(0"0(0#0#0"8614943808#335"    cd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphonesimulator/VerbatimTranslate.app0#
+
