@@ -21,6 +21,9 @@
 		70981BD9125DB011007BEB79 /* georgem.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70981BD8125DB011007BEB79 /* georgem.jpg */; };
 		70981BF7125DB0EC007BEB79 /* WordBubbleInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70981BF6125DB0EC007BEB79 /* WordBubbleInputController.xib */; };
 		70981C00125DB110007BEB79 /* WordBubbleOutputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70981BFF125DB110007BEB79 /* WordBubbleOutputController.xib */; };
+		70D76332127E09E100909034 /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D76330127E09E100909034 /* WordViewController.m */; };
+		70D76333127E09E100909034 /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70D76331127E09E100909034 /* WordViewController.xib */; };
+		70D76336127E09E900909034 /* WordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D76335127E09E900909034 /* WordView.m */; };
 		70DCD2D1125BA47D00D315F5 /* optimus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70DCD2D0125BA47D00D315F5 /* optimus.jpg */; };
 		70E88F29125AFC5200D5F1AF /* proto-word-bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E88F28125AFC5200D5F1AF /* proto-word-bubble.png */; };
 		70E88F2C125AFEF900D5F1AF /* WordBubbleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E88F2B125AFEF900D5F1AF /* WordBubbleController.m */; };
@@ -48,6 +51,11 @@
 		70981BD8125DB011007BEB79 /* georgem.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = georgem.jpg; sourceTree = "<group>"; };
 		70981BF6125DB0EC007BEB79 /* WordBubbleInputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordBubbleInputController.xib; sourceTree = "<group>"; };
 		70981BFF125DB110007BEB79 /* WordBubbleOutputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordBubbleOutputController.xib; sourceTree = "<group>"; };
+		70D7632F127E09E100909034 /* WordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordViewController.h; sourceTree = "<group>"; };
+		70D76330127E09E100909034 /* WordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordViewController.m; sourceTree = "<group>"; };
+		70D76331127E09E100909034 /* WordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WordViewController.xib; path = Classes/WordViewController.xib; sourceTree = "<group>"; };
+		70D76334127E09E900909034 /* WordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordView.h; sourceTree = "<group>"; };
+		70D76335127E09E900909034 /* WordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordView.m; sourceTree = "<group>"; };
 		70DCD2D0125BA47D00D315F5 /* optimus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = optimus.jpg; sourceTree = "<group>"; };
 		70E88F28125AFC5200D5F1AF /* proto-word-bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proto-word-bubble.png"; sourceTree = "<group>"; };
 		70E88F2A125AFEF900D5F1AF /* WordBubbleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordBubbleController.h; sourceTree = "<group>"; };
@@ -84,6 +92,10 @@
 				70E88F2D125AFF1700D5F1AF /* WordBubbleView.h */,
 				70E88F2E125AFF1700D5F1AF /* WordBubbleView.m */,
 				704E4264125BAD8D00F56E34 /* VerbatimConstants.h */,
+				70D7632F127E09E100909034 /* WordViewController.h */,
+				70D76330127E09E100909034 /* WordViewController.m */,
+				70D76334127E09E900909034 /* WordView.h */,
+				70D76335127E09E900909034 /* WordView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -122,6 +134,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				70D76331127E09E100909034 /* WordViewController.xib */,
 				70981BD8125DB011007BEB79 /* georgem.jpg */,
 				70981B8F125DAB5D007BEB79 /* proto-word-bubble-rev.png */,
 				70981B6F125DAA09007BEB79 /* tigerbg.jpg */,
@@ -206,6 +219,7 @@
 				70981BD9125DB011007BEB79 /* georgem.jpg in Resources */,
 				70981BF7125DB0EC007BEB79 /* WordBubbleInputController.xib in Resources */,
 				70981C00125DB110007BEB79 /* WordBubbleOutputController.xib in Resources */,
+				70D76333127E09E100909034 /* WordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +235,8 @@
 				28D7ACF80DDB3853001CB0EB /* BubblePOCViewController.m in Sources */,
 				70E88F2C125AFEF900D5F1AF /* WordBubbleController.m in Sources */,
 				70E88F2F125AFF1700D5F1AF /* WordBubbleView.m in Sources */,
+				70D76332127E09E100909034 /* WordViewController.m in Sources */,
+				70D76336127E09E900909034 /* WordView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
