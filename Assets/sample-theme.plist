@@ -5,12 +5,21 @@
 	<key>background-image</key>
 	<string>mariachi.png</string>
 	<key>input-controller</key>
-	<dict/>
+	<dict>
+		<key>arrow-center-x</key>
+		<string>50.0</string>
+		<key>arrow-center-y</key>
+		<string>0.0</string>
+		<key>center-x</key>
+		<string>200.0</string>
+		<key>center-y</key>
+		<string>300.0</string>
+	</dict>
 	<key>input-language</key>
 	<dict>
-		<key>input-language</key>
+		<key>human-readable</key>
 		<string>English (US)</string>
-		<key>input-language-web-service</key>
+		<key>services</key>
 		<dict>
 			<key>babelfish</key>
 			<string>en</string>
@@ -21,12 +30,21 @@
 		</dict>
 	</dict>
 	<key>output-controller</key>
-	<dict/>
+	<dict>
+		<key>arrow-center-x</key>
+		<string>300.0</string>
+		<key>arrow-center-y</key>
+		<string>40.0</string>
+		<key>center-x</key>
+		<string>400.0</string>
+		<key>center-y</key>
+		<string>400.0</string>
+	</dict>
 	<key>output-language</key>
 	<dict>
-		<key>input-language</key>
-		<string>English (US)</string>
-		<key>input-language-web-service</key>
+		<key>human-readable</key>
+		<string>Spanish (MX)</string>
+		<key>services</key>
 		<dict>
 			<key>babelfish</key>
 			<string>en</string>
