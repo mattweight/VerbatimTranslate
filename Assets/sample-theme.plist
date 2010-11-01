@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>background-image</key>
+	<string>mariachi.png</string>
+	<key>input-controller</key>
+	<dict/>
+	<key>input-language</key>
+	<dict>
+		<key>input-language</key>
+		<string>English (US)</string>
+		<key>input-language-web-service</key>
+		<dict>
+			<key>babelfish</key>
+			<string>en</string>
+			<key>google-translate</key>
+			<string>en</string>
+			<key>yahoo-translate</key>
+			<string>en</string>
+		</dict>
+	</dict>
+	<key>output-controller</key>
+	<dict/>
+	<key>output-language</key>
+	<dict>
+		<key>input-language</key>
+		<string>English (US)</string>
+		<key>input-language-web-service</key>
+		<dict>
+			<key>babelfish</key>
+			<string>en</string>
+			<key>google-translate</key>
+			<string>en</string>
+			<key>yahoo-translate</key>
+			<string>en</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
