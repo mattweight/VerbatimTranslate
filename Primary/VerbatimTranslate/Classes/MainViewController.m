@@ -11,23 +11,32 @@
 
 @implementation MainViewController
 
+@synthesize bgImageView;
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+/*
 - (void)viewDidLoad {
 	[super viewDidLoad];
 }
 */
 
+- (void)viewWillAppear:(BOOL)animated {
+	ThemeController* theme = [ThemeController sharedController];
+	[bgImageView setImage:[UIImage imageNamed:theme.backgroundImageFile]];
+	[bgImageView addSubview:theme.inputBubbleController.view];
+	[theme.inputBubbleController.bubbleTextView setEditable:YES];
+	[theme.inputBubbleController.bubbleTextView setUserInteractionEnabled:YES];
+	[theme.inputBubbleController.bubbleTextView setText:@"Tap here to begin typing.."];
+	[theme.inputBubbleController animate];
+//	[theme.outputBubbleController animate];
+}
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
-    
 	[self dismissModalViewControllerAnimated:YES];
 }
 
-
-- (IBAction)showInfo:(id)sender {    
-	
+- (IBAction)showInfo:(id)sender {
 	FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
 	controller.delegate = self;
 	

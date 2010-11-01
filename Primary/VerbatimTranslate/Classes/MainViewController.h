@@ -7,9 +7,13 @@
 //
 
 #import "FlipsideViewController.h"
+#import "ThemeController.h"
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
+	IBOutlet UIImageView* bgImageView;
 }
+
+@property (nonatomic, retain) UIImageView* bgImageView;
 
 - (IBAction)showInfo:(id)sender;
 

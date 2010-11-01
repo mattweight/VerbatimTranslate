@@ -17,8 +17,6 @@
 		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
 		289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */; };
-		7023B94D127E1505008FCABE /* WordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7023B94C127E1505008FCABE /* WordView.m */; };
-		7023B951127E1510008FCABE /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7023B94F127E1510008FCABE /* WordViewController.m */; };
 		7023B952127E1510008FCABE /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7023B950127E1510008FCABE /* WordViewController.xib */; };
 		7023B956127E1526008FCABE /* mariachi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B954127E1526008FCABE /* mariachi.png */; };
 		7023B957127E1526008FCABE /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B955127E1526008FCABE /* panda.png */; };
@@ -72,6 +70,14 @@
 		7023B9B9127E1538008FCABE /* Swedish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B987127E1538008FCABE /* Swedish40.png */; };
 		7023B9BA127E1538008FCABE /* Turkey30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B988127E1538008FCABE /* Turkey30.png */; };
 		7023B9BB127E1538008FCABE /* Turkey40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B989127E1538008FCABE /* Turkey40.png */; };
+		7028DFB9127E19B50034EE04 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028DFB7127E19B50034EE04 /* ThemeController.m */; };
+		7028E027127E1F870034EE04 /* WordBubbleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028E024127E1F870034EE04 /* WordBubbleController.m */; };
+		7028E028127E1F870034EE04 /* WordBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028E026127E1F870034EE04 /* WordBubbleView.m */; };
+		70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E85048127EA62C000FCCA8 /* default-theme.plist */; };
+		70E8506A127EA8F5000FCCA8 /* WordBubbleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */; };
+		70E85071127EA93B000FCCA8 /* wordbubblearrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */; };
+		70E85072127EA93B000FCCA8 /* wordbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E85070127EA93B000FCCA8 /* wordbubble.png */; };
+		70E850CB127EAF53000FCCA8 /* wordbubblearrowreverse.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E850CA127EAF53000FCCA8 /* wordbubblearrowreverse.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,10 +97,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* VerbatimTranslate_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimTranslate_Prefix.pch; sourceTree = "<group>"; };
 		7023B935127E1444008FCABE /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		7023B94B127E1505008FCABE /* WordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordView.h; sourceTree = "<group>"; };
-		7023B94C127E1505008FCABE /* WordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordView.m; sourceTree = "<group>"; };
-		7023B94E127E1510008FCABE /* WordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordViewController.h; sourceTree = "<group>"; };
-		7023B94F127E1510008FCABE /* WordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordViewController.m; sourceTree = "<group>"; };
 		7023B950127E1510008FCABE /* WordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordViewController.xib; sourceTree = "<group>"; };
 		7023B954127E1526008FCABE /* mariachi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariachi.png; sourceTree = "<group>"; };
 		7023B955127E1526008FCABE /* panda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda.png; sourceTree = "<group>"; };
@@ -148,6 +150,18 @@
 		7023B987127E1538008FCABE /* Swedish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swedish40.png; sourceTree = "<group>"; };
 		7023B988127E1538008FCABE /* Turkey30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turkey30.png; sourceTree = "<group>"; };
 		7023B989127E1538008FCABE /* Turkey40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turkey40.png; sourceTree = "<group>"; };
+		7028DFB6127E19B50034EE04 /* ThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeController.h; sourceTree = "<group>"; };
+		7028DFB7127E19B50034EE04 /* ThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeController.m; sourceTree = "<group>"; };
+		7028E023127E1F870034EE04 /* WordBubbleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordBubbleController.h; sourceTree = "<group>"; };
+		7028E024127E1F870034EE04 /* WordBubbleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordBubbleController.m; sourceTree = "<group>"; };
+		7028E025127E1F870034EE04 /* WordBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordBubbleView.h; sourceTree = "<group>"; };
+		7028E026127E1F870034EE04 /* WordBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordBubbleView.m; sourceTree = "<group>"; };
+		70E84F14127E8099000FCCA8 /* VerbatimConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimConstants.h; sourceTree = "<group>"; };
+		70E85048127EA62C000FCCA8 /* default-theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "default-theme.plist"; sourceTree = "<group>"; };
+		70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordBubbleController.xib; sourceTree = "<group>"; };
+		70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wordbubblearrow.png; sourceTree = "<group>"; };
+		70E85070127EA93B000FCCA8 /* wordbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wordbubble.png; sourceTree = "<group>"; };
+		70E850CA127EAF53000FCCA8 /* wordbubblearrowreverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wordbubblearrowreverse.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VerbatimTranslate-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,14 +199,14 @@
 		289233A00DB2D0730083E9F9 /* Main View */ = {
 			isa = PBXGroup;
 			children = (
+				7028E029127E1F960034EE04 /* Word Bubble */,
 				1D3623240D0F684500981E51 /* VerbatimTranslateAppDelegate.h */,
 				1D3623250D0F684500981E51 /* VerbatimTranslateAppDelegate.m */,
 				289233A80DB2D0DB0083E9F9 /* MainViewController.h */,
 				289233A90DB2D0DB0083E9F9 /* MainViewController.m */,
-				7023B94B127E1505008FCABE /* WordView.h */,
-				7023B94C127E1505008FCABE /* WordView.m */,
-				7023B94E127E1510008FCABE /* WordViewController.h */,
-				7023B94F127E1510008FCABE /* WordViewController.m */,
+				7028DFB6127E19B50034EE04 /* ThemeController.h */,
+				7028DFB7127E19B50034EE04 /* ThemeController.m */,
+				70E84F14127E8099000FCCA8 /* VerbatimConstants.h */,
 			);
 			name = "Main View";
 			sourceTree = "<group>";
@@ -222,8 +236,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				70E85034127EA3FD000FCCA8 /* Theme PLists */,
 				7023BA83127E1549008FCABE /* Backgrounds */,
 				7023B9BC127E153C008FCABE /* Flags */,
+				70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */,
+				70E85070127EA93B000FCCA8 /* wordbubble.png */,
+				70E850CA127EAF53000FCCA8 /* wordbubblearrowreverse.png */,
+				70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */,
 				7023B950127E1510008FCABE /* WordViewController.xib */,
 				280E754A0DD40C5E005A515E /* FlipsideView.xib */,
 				280E754B0DD40C5E005A515E /* MainView.xib */,
@@ -308,6 +327,25 @@
 				7023B955127E1526008FCABE /* panda.png */,
 			);
 			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		7028E029127E1F960034EE04 /* Word Bubble */ = {
+			isa = PBXGroup;
+			children = (
+				7028E023127E1F870034EE04 /* WordBubbleController.h */,
+				7028E024127E1F870034EE04 /* WordBubbleController.m */,
+				7028E025127E1F870034EE04 /* WordBubbleView.h */,
+				7028E026127E1F870034EE04 /* WordBubbleView.m */,
+			);
+			name = "Word Bubble";
+			sourceTree = "<group>";
+		};
+		70E85034127EA3FD000FCCA8 /* Theme PLists */ = {
+			isa = PBXGroup;
+			children = (
+				70E85048127EA62C000FCCA8 /* default-theme.plist */,
+			);
+			name = "Theme PLists";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +454,11 @@
 				7023B9B9127E1538008FCABE /* Swedish40.png in Resources */,
 				7023B9BA127E1538008FCABE /* Turkey30.png in Resources */,
 				7023B9BB127E1538008FCABE /* Turkey40.png in Resources */,
+				70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */,
+				70E8506A127EA8F5000FCCA8 /* WordBubbleController.xib in Resources */,
+				70E85071127EA93B000FCCA8 /* wordbubblearrow.png in Resources */,
+				70E85072127EA93B000FCCA8 /* wordbubble.png in Resources */,
+				70E850CB127EAF53000FCCA8 /* wordbubblearrowreverse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,8 +473,9 @@
 				1D3623260D0F684500981E51 /* VerbatimTranslateAppDelegate.m in Sources */,
 				289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */,
 				289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */,
-				7023B94D127E1505008FCABE /* WordView.m in Sources */,
-				7023B951127E1510008FCABE /* WordViewController.m in Sources */,
+				7028DFB9127E19B50034EE04 /* ThemeController.m in Sources */,
+				7028E027127E1F870034EE04 /* WordBubbleController.m in Sources */,
+				7028E028127E1F870034EE04 /* WordBubbleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
