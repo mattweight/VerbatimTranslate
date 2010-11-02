@@ -104,8 +104,13 @@
 	[textViewRef setBackgroundColor:[UIColor whiteColor]];
 	[textViewRef setAlpha:1.0];
 	[textViewRef setText:@""];
-	[self setFrame:CGRectMake(0.0, 0.0, 320.0, 60.0)]; // textFrame.size.width + 40.0, textFrame.size.height + 40.0)];
-	[textViewRef setFrame:CGRectMake(0.0, 0.0, 320.0, 60.0)]; // textFrame.size.width + 40.0, textFrame.size.height + 40.0)];
+
+	// textFrame.size.width + 40.0, textFrame.size.height + 40.0)];
+	[self setFrame:CGRectMake(0.0, 0.0, 320.0, 60.0)];
+
+	// textFrame.size.width + 40.0, textFrame.size.height + 40.0)];
+	[textViewRef setFrame:CGRectMake(0.0, 0.0, 320.0, 60.0)];
+
 	[UIView commitAnimations];
 }
 

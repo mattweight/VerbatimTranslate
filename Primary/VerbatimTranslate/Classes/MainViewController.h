@@ -11,10 +11,13 @@
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
 	IBOutlet UIImageView* bgImageView;
+	ThemeController* themeController;
 }
 
 @property (nonatomic, retain) UIImageView* bgImageView;
+@property (nonatomic, retain) ThemeController* themeController;
 
 - (IBAction)showInfo:(id)sender;
+- (void)displayTranslation:(id)sender;
 
 @end

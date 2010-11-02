@@ -13,6 +13,7 @@
 
 #import "AutoSuggestProtoViewController.h"
 #import "AutoSuggestManager.h"
+#import "JSON.h"
 
 @implementation AutoSuggestProtoViewController
 
@@ -60,13 +61,39 @@
 }
 
 - (void)submitText:(NSString *)text {
-	NSString * message = [NSString stringWithFormat:@"\"%@\" will now be placed in the translation bubble, and then translated.", text];
-	UIAlertView * alert = [[[UIAlertView alloc] initWithTitle:@"Verbatim" message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil] autorelease];
-	[alert show];
+	NSMutableString* translateURLString = [NSMutableString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&langpair="];
+	[translateURLString appendString:@"en"];
+	[translateURLString appendString:@"%7C"];
+	[translateURLString appendString:@"es"];
+	[translateURLString appendString:@"&q="];
+	[translateURLString appendString:[text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	NSLog(@"The request url is %@", translateURLString);
 	
+	NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:translateURLString]];
+	NSURLResponse* resp = [[NSURLResponse alloc] init];
+	NSData* dataResp = [NSURLConnection sendSynchronousRequest:req returningResponse:&resp error:nil];
+	NSString* respString = [[NSString alloc] initWithData:dataResp encoding:NSUTF8StringEncoding];
+
+	NSLog(@"the data is %@", respString);
+	NSLog(@"The response is %@", resp);
+
+	NSString* message = [[[respString JSONValue] objectForKey:@"responseData"] objectForKey:@"translatedText"];
+	//NSString * message = [NSString stringWithFormat:@"\"%@\" will now be placed in the translation bubble, and then translated.", text];
+	//UIAlertView * alert = [[[UIAlertView alloc] initWithTitle:@"Verbatim" message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil] autorelease];
+	//[alert show];
+	
+	// FIXME - Time to cheat. Too late tonight to do it right..
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	[defaults setObject:message forKey:@"__VERBATIM_DIGITAL_TRANSLATED_TEXT__"];
+	[defaults setObject:text forKey:@"__VERBATIM_DIGITAL_ORIGINAL_TEXT__"];
+	[defaults synchronize];
+
 	// add text to history
-	AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
-	[autoSuggest addToHistory:text to:nil toLanguage:nil];	
+	AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
+	[autoSuggest addToHistory:text to:nil toLanguage:nil];
+	
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"__TRANSLATE_COMPLETE__" 
+																						 object:nil]];
 }
 
 - (void)alertView:(UIAlertView *)alert_view clickedButtonAtIndex:(NSInteger)button_index {

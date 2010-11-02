@@ -83,6 +83,9 @@
 		70E85071127EA93B000FCCA8 /* wordbubblearrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */; };
 		70E85072127EA93B000FCCA8 /* wordbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E85070127EA93B000FCCA8 /* wordbubble.png */; };
 		70E850CB127EAF53000FCCA8 /* wordbubblearrowreverse.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E850CA127EAF53000FCCA8 /* wordbubblearrowreverse.png */; };
+		70E8EED0127FFE1500323D92 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECB127FFE1500323D92 /* NSObject+SBJSON.m */; };
+		70E8EED1127FFE1500323D92 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECD127FFE1500323D92 /* NSString+SBJSON.m */; };
+		70E8EED2127FFE1500323D92 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECF127FFE1500323D92 /* SBJSON.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +177,13 @@
 		70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wordbubblearrow.png; sourceTree = "<group>"; };
 		70E85070127EA93B000FCCA8 /* wordbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wordbubble.png; sourceTree = "<group>"; };
 		70E850CA127EAF53000FCCA8 /* wordbubblearrowreverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wordbubblearrowreverse.png; sourceTree = "<group>"; };
+		70E8EEC9127FFE1500323D92 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		70E8EECA127FFE1500323D92 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		70E8EECB127FFE1500323D92 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		70E8EECC127FFE1500323D92 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		70E8EECD127FFE1500323D92 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		70E8EECE127FFE1500323D92 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		70E8EECF127FFE1500323D92 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VerbatimTranslate-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +222,7 @@
 		289233A00DB2D0730083E9F9 /* Main View */ = {
 			isa = PBXGroup;
 			children = (
+				70E8EED3127FFE1A00323D92 /* JSON */,
 				702C61BF127F897D002BB9C6 /* Auto Suggest */,
 				7028E029127E1F960034EE04 /* Word Bubble */,
 				1D3623240D0F684500981E51 /* VerbatimTranslateAppDelegate.h */,
@@ -376,6 +387,20 @@
 			name = "Theme PLists";
 			sourceTree = "<group>";
 		};
+		70E8EED3127FFE1A00323D92 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				70E8EEC9127FFE1500323D92 /* JSON.h */,
+				70E8EECA127FFE1500323D92 /* NSObject+SBJSON.h */,
+				70E8EECB127FFE1500323D92 /* NSObject+SBJSON.m */,
+				70E8EECC127FFE1500323D92 /* NSString+SBJSON.h */,
+				70E8EECD127FFE1500323D92 /* NSString+SBJSON.m */,
+				70E8EECE127FFE1500323D92 /* SBJSON.h */,
+				70E8EECF127FFE1500323D92 /* SBJSON.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -508,6 +533,9 @@
 				7028E028127E1F870034EE04 /* WordBubbleView.m in Sources */,
 				702C61BB127F895F002BB9C6 /* AutoSuggestManager.m in Sources */,
 				702C61BC127F895F002BB9C6 /* AutoSuggestProtoViewController.m in Sources */,
+				70E8EED0127FFE1500323D92 /* NSObject+SBJSON.m in Sources */,
+				70E8EED1127FFE1500323D92 /* NSString+SBJSON.m in Sources */,
+				70E8EED2127FFE1500323D92 /* SBJSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 @implementation MainViewController
 
 @synthesize bgImageView;
+@synthesize themeController;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -22,18 +23,74 @@
 */
 
 - (void)viewWillAppear:(BOOL)animated {
-	ThemeController* theme = [ThemeController sharedController];
+	ThemeController* theme = [[ThemeController alloc] init]; //[ThemeController sharedController];
 	[bgImageView setImage:[UIImage imageNamed:theme.backgroundImageFile]];
 	[bgImageView addSubview:theme.inputBubbleController.view];
-//	[theme.inputBubbleController.bubbleTextView setEditable:YES];
-//	[theme.inputBubbleController.bubbleTextView setUserInteractionEnabled:YES];
 	[theme.inputBubbleController.bubbleTextView setText:@"Tap here to begin typing.."];
 	[theme.inputBubbleController animate];
+	themeController = [theme retain];
+	[theme release];
+	theme = nil;
 //	[theme.outputBubbleController animate];
+
+	NSLog(@"You two are something else or what?");
+	[[NSNotificationCenter defaultCenter] addObserver:self 
+											 selector:@selector(displayTranslation:)
+												 name:@"__TRANSLATE_COMPLETE__"
+											   object:nil];
 }
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
 	[self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)displayTranslation:(id)sender {
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	NSString* origText = (NSString*)[defaults stringForKey:@"__VERBATIM_DIGITAL_ORIGINAL_TEXT__"];
+	NSString* transText = (NSString*)[defaults stringForKey:@"__VERBATIM_DIGITAL_TRANSLATED_TEXT__"];
+	
+	NSLog(@"Original text is: %@", origText);
+	NSLog(@"Translated text is: %@", transText);
+	
+	[themeController.inputBubbleController.view removeFromSuperview];
+	[themeController.inputBubbleController.autoSuggestController.view removeFromSuperview];
+	[themeController.outputBubbleController.view removeFromSuperview];
+	[themeController.outputBubbleController.autoSuggestController.view removeFromSuperview];
+	
+	[themeController release];
+	themeController = nil;
+
+	ThemeController* newTheme = [[ThemeController alloc] init];
+	[newTheme.inputBubbleController.bubbleTextView setText:origText];
+	[newTheme.outputBubbleController.bubbleTextView setText:transText];
+	
+	[bgImageView addSubview:newTheme.inputBubbleController.view];
+	[bgImageView addSubview:newTheme.outputBubbleController.view];
+	
+	[newTheme.inputBubbleController animate];
+	[newTheme.outputBubbleController animate];
+	themeController = [newTheme retain];
+	[newTheme release];
+	newTheme = nil;
+
+	/*
+	[(WordBubbleView*)themeController.inputBubbleController.view setAnimationStep:1];
+	[themeController.inputBubbleController.bubbleTextView setText:origText];
+	
+	[(WordBubbleView*)themeController.outputBubbleController.view setAnimationStep:1];
+	[themeController.outputBubbleController.bubbleTextView setText:transText];
+
+	[self.view addSubview:themeController.inputBubbleController.view];
+	[self.view addSubview:themeController.outputBubbleController.view];
+	
+	[themeController.inputBubbleController animate];
+	[themeController.outputBubbleController animate];
+	*/
+	/*
+	themeController = [newTheme retain];
+	[newTheme release];
+	newTheme = nil;
+	*/
 }
 
 - (IBAction)showInfo:(id)sender {
