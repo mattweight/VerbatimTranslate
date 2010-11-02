@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "WordBubbleView.h"
-
+#import "AutoSuggestProtoViewController.h"
 #include "VerbatimConstants.h"
 
 @interface WordBubbleController : UIViewController <UITextViewDelegate> {
 	IBOutlet UIImageView* bubbleImageView;
 	IBOutlet UIImageView* topArrowImageView;
 	IBOutlet UIImageView* bottomArrowImageView;
-	IBOutlet UITextView* bubbleTextView;
+ 	IBOutlet UITextView* bubbleTextView;
+	AutoSuggestProtoViewController* autoSuggestController;
 	CGFloat arrowX;
 }
 
@@ -23,6 +24,10 @@
 @property (nonatomic, retain) UIImageView* topArrowImageView;
 @property (nonatomic, retain) UIImageView* bubbleImageView;
 @property (nonatomic, retain) UITextView* bubbleTextView;
+@property (nonatomic, retain) AutoSuggestProtoViewController* autoSuggestController;
+
+- (IBAction)expandTextInput:(id)sender;
+- (void)displayAutoSuggestView:(id)sender;
 
 - (void)animate;
 

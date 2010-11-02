@@ -7,6 +7,7 @@
 //
 
 #import "WordBubbleController.h"
+#import "AutoSuggestProtoViewController.h"
 
 
 @implementation WordBubbleController
@@ -15,6 +16,7 @@
 @synthesize topArrowImageView;
 @synthesize bottomArrowImageView;
 @synthesize bubbleImageView;
+@synthesize autoSuggestController;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -32,9 +34,31 @@
 		// TODO Just to keep the aspect ration full-sized, so we shrink instead of grow the first time
 		//      Need to do this the more correct way.
 		[bubbleView animate]; 
+		[bubbleView setCaller:self];
         // Custom initialization
     }
     return self;
+}
+
+- (IBAction)expandTextInput:(id)sender {
+	AutoSuggestProtoViewController* autoController = [[AutoSuggestProtoViewController alloc] initWithNibName:@"AutoSuggestProtoViewController" bundle:nil];
+	[autoController.view setHidden:YES];
+//	[autoController.view setCenter:[[self.view superview] center]];
+	[[self.view superview] addSubview:autoController.view];
+	autoSuggestController = [autoController retain];
+	[autoController release];
+	autoController = nil;
+
+	NSLog(@"Something else here with the ROPE!");
+	NSLog(@"There is something here: %@", autoSuggestController.view.frame);
+//	NSLog(@"auto frame: %02f", autoSuggestController.view.frame.size.width);
+	[(WordBubbleView*)self.view expandTextViewToFrame:autoSuggestController.view.frame];
+}
+
+- (void)displayAutoSuggestView:(id)sender {
+	NSLog(@"We are showing it RIGHT NOW!");
+	[autoSuggestController.view setHidden:NO];
+	[self.view removeFromSuperview];
 }
 
 - (void)animate {

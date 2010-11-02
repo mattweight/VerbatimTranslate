@@ -11,6 +11,12 @@
 
 @implementation WordBubbleView
 
+@synthesize caller;
+@synthesize textViewRef;
+@synthesize imgView;
+@synthesize topArrowView;
+@synthesize bottomArrowView;
+
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
@@ -79,6 +85,42 @@
 	[UIView commitAnimations];
 
 	animationStep++;
+}
+
+- (void)expandTextViewToFrame:(CGRect)textFrame {
+	NSLog(@"Expanding text view here: %.02f", textFrame.size.width);
+	[topArrowView setHidden:YES];
+	[bottomArrowView setHidden:YES];
+	[imgView setHidden:YES];
+	[self setBackgroundColor:[UIColor whiteColor]];
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationDidStopSelector:@selector(finalizeExpanding)];
+	[imgView setBackgroundColor:[UIColor whiteColor]];
+	[self setAlpha:1.0];
+	[self setBackgroundColor:[UIColor whiteColor]];
+	[textViewRef setBackgroundColor:[UIColor whiteColor]];
+	[textViewRef setAlpha:1.0];
+	[textViewRef setText:@""];
+	[self setFrame:CGRectMake(0.0, 0.0, 320.0, 60.0)]; // textFrame.size.width + 40.0, textFrame.size.height + 40.0)];
+	[textViewRef setFrame:CGRectMake(0.0, 0.0, 320.0, 60.0)]; // textFrame.size.width + 40.0, textFrame.size.height + 40.0)];
+	[UIView commitAnimations];
+}
+
+- (void)finalizeExpanding {
+	NSLog(@"Should be displaying auto-suggest");
+	if (caller != nil && [caller respondsToSelector:@selector(displayAutoSuggestView:)]) {
+		[caller displayAutoSuggestView:nil];
+	}
+}
+
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
+	NSLog(@"The touches began NOW and not later.");
+	if (caller != nil && [caller respondsToSelector:@selector(expandTextInput:)]) {
+		[caller expandTextInput:nil];
+	}
 }
 
 /*

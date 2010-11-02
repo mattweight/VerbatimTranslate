@@ -73,6 +73,11 @@
 		7028DFB9127E19B50034EE04 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028DFB7127E19B50034EE04 /* ThemeController.m */; };
 		7028E027127E1F870034EE04 /* WordBubbleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028E024127E1F870034EE04 /* WordBubbleController.m */; };
 		7028E028127E1F870034EE04 /* WordBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028E026127E1F870034EE04 /* WordBubbleView.m */; };
+		702C61BB127F895F002BB9C6 /* AutoSuggestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C61B8127F895F002BB9C6 /* AutoSuggestManager.m */; };
+		702C61BC127F895F002BB9C6 /* AutoSuggestProtoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C61BA127F895F002BB9C6 /* AutoSuggestProtoViewController.m */; };
+		702C61BE127F8970002BB9C6 /* AutoSuggestProtoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C61BD127F8970002BB9C6 /* AutoSuggestProtoViewController.xib */; };
+		702C61D3127F89E1002BB9C6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702C61D2127F89E1002BB9C6 /* libsqlite3.0.dylib */; };
+		702C61D9127F8A1B002BB9C6 /* verbatim.sql in Resources */ = {isa = PBXBuildFile; fileRef = 702C61D8127F8A1B002BB9C6 /* verbatim.sql */; };
 		70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E85048127EA62C000FCCA8 /* default-theme.plist */; };
 		70E8506A127EA8F5000FCCA8 /* WordBubbleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */; };
 		70E85071127EA93B000FCCA8 /* wordbubblearrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */; };
@@ -156,6 +161,13 @@
 		7028E024127E1F870034EE04 /* WordBubbleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordBubbleController.m; sourceTree = "<group>"; };
 		7028E025127E1F870034EE04 /* WordBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordBubbleView.h; sourceTree = "<group>"; };
 		7028E026127E1F870034EE04 /* WordBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordBubbleView.m; sourceTree = "<group>"; };
+		702C61B7127F895F002BB9C6 /* AutoSuggestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSuggestManager.h; sourceTree = "<group>"; };
+		702C61B8127F895F002BB9C6 /* AutoSuggestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSuggestManager.m; sourceTree = "<group>"; };
+		702C61B9127F895F002BB9C6 /* AutoSuggestProtoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSuggestProtoViewController.h; sourceTree = "<group>"; };
+		702C61BA127F895F002BB9C6 /* AutoSuggestProtoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSuggestProtoViewController.m; sourceTree = "<group>"; };
+		702C61BD127F8970002BB9C6 /* AutoSuggestProtoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoSuggestProtoViewController.xib; sourceTree = "<group>"; };
+		702C61D2127F89E1002BB9C6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		702C61D8127F8A1B002BB9C6 /* verbatim.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = verbatim.sql; sourceTree = "<group>"; };
 		70E84F14127E8099000FCCA8 /* VerbatimConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimConstants.h; sourceTree = "<group>"; };
 		70E85048127EA62C000FCCA8 /* default-theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "default-theme.plist"; sourceTree = "<group>"; };
 		70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordBubbleController.xib; sourceTree = "<group>"; };
@@ -173,6 +185,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */,
+				702C61D3127F89E1002BB9C6 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +212,7 @@
 		289233A00DB2D0730083E9F9 /* Main View */ = {
 			isa = PBXGroup;
 			children = (
+				702C61BF127F897D002BB9C6 /* Auto Suggest */,
 				7028E029127E1F960034EE04 /* Word Bubble */,
 				1D3623240D0F684500981E51 /* VerbatimTranslateAppDelegate.h */,
 				1D3623250D0F684500981E51 /* VerbatimTranslateAppDelegate.m */,
@@ -242,6 +256,8 @@
 				70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */,
 				70E85070127EA93B000FCCA8 /* wordbubble.png */,
 				70E850CA127EAF53000FCCA8 /* wordbubblearrowreverse.png */,
+				702C61D8127F8A1B002BB9C6 /* verbatim.sql */,
+				702C61BD127F8970002BB9C6 /* AutoSuggestProtoViewController.xib */,
 				70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */,
 				7023B950127E1510008FCABE /* WordViewController.xib */,
 				280E754A0DD40C5E005A515E /* FlipsideView.xib */,
@@ -259,6 +275,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765580DF743DE002DB57D /* CoreGraphics.framework */,
+				702C61D2127F89E1002BB9C6 /* libsqlite3.0.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -338,6 +355,17 @@
 				7028E026127E1F870034EE04 /* WordBubbleView.m */,
 			);
 			name = "Word Bubble";
+			sourceTree = "<group>";
+		};
+		702C61BF127F897D002BB9C6 /* Auto Suggest */ = {
+			isa = PBXGroup;
+			children = (
+				702C61B9127F895F002BB9C6 /* AutoSuggestProtoViewController.h */,
+				702C61BA127F895F002BB9C6 /* AutoSuggestProtoViewController.m */,
+				702C61B7127F895F002BB9C6 /* AutoSuggestManager.h */,
+				702C61B8127F895F002BB9C6 /* AutoSuggestManager.m */,
+			);
+			name = "Auto Suggest";
 			sourceTree = "<group>";
 		};
 		70E85034127EA3FD000FCCA8 /* Theme PLists */ = {
@@ -459,6 +487,8 @@
 				70E85071127EA93B000FCCA8 /* wordbubblearrow.png in Resources */,
 				70E85072127EA93B000FCCA8 /* wordbubble.png in Resources */,
 				70E850CB127EAF53000FCCA8 /* wordbubblearrowreverse.png in Resources */,
+				702C61BE127F8970002BB9C6 /* AutoSuggestProtoViewController.xib in Resources */,
+				702C61D9127F8A1B002BB9C6 /* verbatim.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +506,8 @@
 				7028DFB9127E19B50034EE04 /* ThemeController.m in Sources */,
 				7028E027127E1F870034EE04 /* WordBubbleController.m in Sources */,
 				7028E028127E1F870034EE04 /* WordBubbleView.m in Sources */,
+				702C61BB127F895F002BB9C6 /* AutoSuggestManager.m in Sources */,
+				702C61BC127F895F002BB9C6 /* AutoSuggestProtoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

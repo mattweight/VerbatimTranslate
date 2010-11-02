@@ -10,9 +10,20 @@
 #include "VerbatimConstants.h"
 
 @interface WordBubbleView : UIView {
+	IBOutlet UITextView* textViewRef;
+	IBOutlet UIImageView* imgView;
+	IBOutlet UIImageView* topArrowView;
+	IBOutlet UIImageView* bottomArrowView;
 	ANIMATION_STEP animationStep;
 	BOOL forceStop;
+	NSObject* caller;
 }
+
+@property (nonatomic, retain) NSObject* caller;
+@property (nonatomic, retain) UITextView* textViewRef;
+@property (nonatomic, retain) UIImageView* imgView;
+@property (nonatomic, retain) UIImageView* topArrowView;
+@property (nonatomic, retain) UIImageView* bottomArrowView;
 
 - (void)animate;
 
@@ -21,5 +32,8 @@
 
 - (void)setForceStop:(BOOL)shouldStop;
 - (BOOL)getForceStop;
+
+- (void)expandTextViewToFrame:(CGRect)textFrame;
+- (void)finalizeExpanding;
 
 @end

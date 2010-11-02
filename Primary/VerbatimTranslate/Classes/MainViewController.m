@@ -25,8 +25,8 @@
 	ThemeController* theme = [ThemeController sharedController];
 	[bgImageView setImage:[UIImage imageNamed:theme.backgroundImageFile]];
 	[bgImageView addSubview:theme.inputBubbleController.view];
-	[theme.inputBubbleController.bubbleTextView setEditable:YES];
-	[theme.inputBubbleController.bubbleTextView setUserInteractionEnabled:YES];
+//	[theme.inputBubbleController.bubbleTextView setEditable:YES];
+//	[theme.inputBubbleController.bubbleTextView setUserInteractionEnabled:YES];
 	[theme.inputBubbleController.bubbleTextView setText:@"Tap here to begin typing.."];
 	[theme.inputBubbleController animate];
 //	[theme.outputBubbleController animate];

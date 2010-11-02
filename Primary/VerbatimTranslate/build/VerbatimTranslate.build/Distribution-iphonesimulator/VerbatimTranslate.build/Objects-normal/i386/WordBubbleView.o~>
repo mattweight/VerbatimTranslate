@@ -1,0 +1,7 @@
+/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m: In function '-[WordBubbleView finalizeExpanding]':
+/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m:115: warning: 'NSObject' may not respond to '-displayAutoSuggestView:'
+/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m:115: warning: (Messages without a matching method signature
+/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m:115: warning: will be assumed to return 'id' and accept
+/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m:115: warning: '...' as arguments.)
+/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m: In function '-[WordBubbleView touchesBegan:withEvent:]':
+/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m:122: warning: 'NSObject' may not respond to '-expandTextInput:'
