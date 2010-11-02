@@ -78,6 +78,7 @@
 		702C61BE127F8970002BB9C6 /* AutoSuggestProtoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C61BD127F8970002BB9C6 /* AutoSuggestProtoViewController.xib */; };
 		702C61D3127F89E1002BB9C6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702C61D2127F89E1002BB9C6 /* libsqlite3.0.dylib */; };
 		702C61D9127F8A1B002BB9C6 /* verbatim.sql in Resources */ = {isa = PBXBuildFile; fileRef = 702C61D8127F8A1B002BB9C6 /* verbatim.sql */; };
+		70C1073912801072007BA298 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C1073812801072007BA298 /* Icon.png */; };
 		70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E85048127EA62C000FCCA8 /* default-theme.plist */; };
 		70E8506A127EA8F5000FCCA8 /* WordBubbleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */; };
 		70E85071127EA93B000FCCA8 /* wordbubblearrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */; };
@@ -171,6 +172,7 @@
 		702C61BD127F8970002BB9C6 /* AutoSuggestProtoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoSuggestProtoViewController.xib; sourceTree = "<group>"; };
 		702C61D2127F89E1002BB9C6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		702C61D8127F8A1B002BB9C6 /* verbatim.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = verbatim.sql; sourceTree = "<group>"; };
+		70C1073812801072007BA298 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		70E84F14127E8099000FCCA8 /* VerbatimConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimConstants.h; sourceTree = "<group>"; };
 		70E85048127EA62C000FCCA8 /* default-theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "default-theme.plist"; sourceTree = "<group>"; };
 		70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordBubbleController.xib; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				7023BA83127E1549008FCABE /* Backgrounds */,
 				7023B9BC127E153C008FCABE /* Flags */,
 				70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */,
+				70C1073812801072007BA298 /* Icon.png */,
 				70E85070127EA93B000FCCA8 /* wordbubble.png */,
 				70E850CA127EAF53000FCCA8 /* wordbubblearrowreverse.png */,
 				702C61D8127F8A1B002BB9C6 /* verbatim.sql */,
@@ -514,6 +517,7 @@
 				70E850CB127EAF53000FCCA8 /* wordbubblearrowreverse.png in Resources */,
 				702C61BE127F8970002BB9C6 /* AutoSuggestProtoViewController.xib in Resources */,
 				702C61D9127F8A1B002BB9C6 /* verbatim.sql in Resources */,
+				70C1073912801072007BA298 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

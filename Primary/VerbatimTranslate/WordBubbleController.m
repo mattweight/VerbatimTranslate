@@ -24,7 +24,7 @@
 		WordBubbleView* bubbleView = (WordBubbleView*)self.view;
 		[bubbleView setBackgroundColor:[UIColor clearColor]];
 		[bubbleImageView setBackgroundColor:[UIColor clearColor]];
-										
+
 		// TODO this will be driven by the serialized animation schema.
 		[bubbleView setAnimationStep:0]; // Starting point means shorties
 		[bubbleView setForceStop:YES];
@@ -33,7 +33,7 @@
 		
 		// TODO Just to keep the aspect ration full-sized, so we shrink instead of grow the first time
 		//      Need to do this the more correct way.
-		[bubbleView animate]; 
+		[bubbleView animate];
 		[bubbleView setCaller:self];
         // Custom initialization
     }
