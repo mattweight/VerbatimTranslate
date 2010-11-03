@@ -1,109 +1,8 @@
 TVerbatimTranslate
 v7
 r0
-t310412657.363944
+t310453857.775426
 cCheck dependencies
-cCpResource build/Distribution-iphoneos/VerbatimTranslate.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/ResourceRules.plist
-cProcessInfoPlistFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Info.plist VerbatimTranslate-Info.plist
-cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/FlipsideView.xib
-cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainView.xib
-cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/MainWindow.xib
-cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordViewController.xib
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/mariachi.png mariachi.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/panda.png panda.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ChineseSimplified30.png ChineseSimplified30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ChineseSimplified40.png ChineseSimplified40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ChineseTraditional30.png ChineseTraditional30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ChineseTraditional40.png ChineseTraditional40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Czech30.png Czech30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Czech40.png Czech40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Danish30.png Danish30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Danish40.png Danish40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Dutch30.png Dutch30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Dutch40.png Dutch40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/EnglishUK30.png EnglishUK30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/EnglishUK40.png EnglishUK40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/EnglishUS30.png EnglishUS30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/EnglishUS40.png EnglishUS40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Finnish30.png Finnish30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Finnish40.png Finnish40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FrenchCA30.png FrenchCA30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FrenchCA40.png FrenchCA40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FrenchEU30.png FrenchEU30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FrenchEU40.png FrenchEU40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/German30.png German30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/German40.png German40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Hungarian30.png Hungarian30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Hungarian40.png Hungarian40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Italian30.png Italian30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Italian40.png Italian40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Japanese30.png Japanese30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Japanese40.png Japanese40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Korean30.png Korean30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Korean40.png Korean40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Norwegian30.png Norwegian30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Norwegian40.png Norwegian40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Polish30.png Polish30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Polish40.png Polish40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PortugueseBrazil30.png PortugueseBrazil30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PortugueseBrazil40.png PortugueseBrazil40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PortugueseEU30.png PortugueseEU30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PortugueseEU40.png PortugueseEU40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Russian30.png Russian30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Russian40.png Russian40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Slovak30.png Slovak30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Slovak40.png Slovak40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/SpanishEU30.png SpanishEU30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/SpanishEU40.png SpanishEU40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/SpanishLatinAmerica30.png SpanishLatinAmerica30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/SpanishLatinAmerica40.png SpanishLatinAmerica40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Swedish30.png Swedish30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Swedish40.png Swedish40.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Turkey30.png Turkey30.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Turkey40.png Turkey40.png
-cCopyPlistFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/default-theme.plist default-theme.plist
-cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleController.xib
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/wordbubblearrow.png wordbubblearrow.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/wordbubble.png wordbubble.png
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/wordbubblearrowreverse.png wordbubblearrowreverse.png
-cCompileXIB /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/AutoSuggestProtoViewController.xib
-cCpResource build/Distribution-iphoneos/VerbatimTranslate.app/verbatim.sql verbatim.sql
-cCopyPNGFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Icon.png Icon.png
-cProcessPCH /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-flcjizysdzlomocmktzrninrbkjd/VerbatimTranslate_Prefix.pch.gch VerbatimTranslate_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-cProcessPCH /var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-gsknlkihwtmfdxemlqavngthqosb/VerbatimTranslate_Prefix.pch.gch VerbatimTranslate_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/main.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/VerbatimTranslateAppDelegate.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/MainViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/FlipsideViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/ThemeController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ThemeController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/WordBubbleController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/WordBubbleView.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/AutoSuggestManager.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/AutoSuggestManager.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/AutoSuggestProtoViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/AutoSuggestProtoViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/NSObject+SBJSON.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/NSObject+SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/NSString+SBJSON.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/NSString+SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/SBJSON.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SBJSON.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/main.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/VerbatimTranslateAppDelegate.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/VerbatimTranslateAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/MainViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/FlipsideViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Classes/FlipsideViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/ThemeController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/ThemeController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/WordBubbleController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/WordBubbleView.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/WordBubbleView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/AutoSuggestManager.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/AutoSuggestManager.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/AutoSuggestProtoViewController.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/AutoSuggestProtoViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/NSObject+SBJSON.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/NSObject+SBJSON.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/NSString+SBJSON.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/NSString+SBJSON.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/VerbatimTranslate normal armv6
-cCompileC build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/SBJSON.o /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/SBJSON.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/VerbatimTranslate normal armv7
-cCreateUniversalBinary /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/VerbatimTranslate normal "armv6 armv7"
-cGenerateDSYMFile /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app.dSYM /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/VerbatimTranslate
-cProcessProductPackaging "/Users/mweight/Library/MobileDevice/Provisioning Profiles/51954C3E-8BBB-44C9-9E11-BA1CD3D983E1.mobileprovision" /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/embedded.mobileprovision
-cTouch /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app
-cProcessProductPackaging /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/Entitlements.plist /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/VerbatimTranslate.xcent
-cCodeSign /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app
-cValidate /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app
 
 N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk
 c000000004C6DE9E30000000000000110
@@ -617,406 +516,406 @@ t1288560549
 s6257
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app
-t1288719857
-s2482
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app.dSYM
-t1288719856
-s102
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/AutoSuggestProtoViewController.nib
-t1288719853
-s3091
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ChineseSimplified30.png
-t1288719852
-s2512
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ChineseSimplified40.png
-t1288719852
-s2512
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ChineseTraditional30.png
-t1288719852
-s1678
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ChineseTraditional40.png
-t1288719852
-s2447
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Czech30.png
-t1288719852
-s1680
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Czech40.png
-t1288719852
-s2514
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Danish30.png
-t1288719852
-s1793
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Danish40.png
-t1288719852
-s2689
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Dutch30.png
-t1288719852
-s1497
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Dutch40.png
-t1288719852
-s2106
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/EnglishUK30.png
-t1288719852
-s1868
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/EnglishUK40.png
-t1288719852
-s2892
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/EnglishUS30.png
-t1288719852
-s1801
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/EnglishUS40.png
-t1288719852
-s2799
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Finnish30.png
-t1288719852
-s1656
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Finnish40.png
-t1288719852
-s2449
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FlipsideView.nib
-t1288719851
-s2077
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FrenchCA30.png
-t1288719852
-s1825
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FrenchCA40.png
-t1288719852
-s2710
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FrenchEU30.png
-t1288719852
-s1665
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/FrenchEU40.png
-t1288719852
-s2404
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/German30.png
-t1288719852
-s1569
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/German40.png
-t1288719852
-s2371
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Hungarian30.png
-t1288719852
-s1464
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Hungarian40.png
-t1288719852
-s2161
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Icon.png
-t1288719852
-s1936
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Info.plist
-t1288719850
-s761
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Italian30.png
-t1288719852
-s1643
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Italian40.png
-t1288719852
-s2376
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Japanese30.png
-t1288719852
-s1700
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Japanese40.png
-t1288719852
-s2457
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Korean30.png
-t1288719852
-s1823
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Korean40.png
-t1288719852
-s2661
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/MainView.nib
-t1288719851
-s2558
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/MainWindow.nib
-t1288719851
-s1719
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Norwegian30.png
-t1288719852
-s1811
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Norwegian40.png
-t1288719852
-s2777
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PkgInfo
-t1288719850
-s8
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Polish30.png
-t1288719852
-s1551
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Polish40.png
-t1288719852
-s2339
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PortugueseBrazil30.png
-t1288719852
-s1766
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PortugueseBrazil40.png
-t1288719852
-s2592
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PortugueseEU30.png
-t1288719852
-s1744
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/PortugueseEU40.png
-t1288719852
-s2599
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/ResourceRules.plist
-t1288719850
-s485
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Russian30.png
-t1288719852
-s1548
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Russian40.png
-t1288719852
-s2297
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Slovak30.png
-t1288719852
-s1731
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Slovak40.png
-t1288719852
-s2684
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/SpanishEU30.png
-t1288719852
-s1517
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/SpanishEU40.png
-t1288719852
-s2215
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/SpanishLatinAmerica30.png
-t1288719852
-s1787
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/SpanishLatinAmerica40.png
-t1288719852
-s2703
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Swedish30.png
-t1288719852
-s1754
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Swedish40.png
-t1288719852
-s2604
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Turkey30.png
-t1288719852
-s1712
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/Turkey40.png
-t1288719852
-s2545
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/VerbatimTranslate
-t1288719856
-s190800
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/WordBubbleController.nib
-t1288719853
-s3580
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/WordViewController.nib
-t1288719851
-s1231
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/default-theme.plist
-t1288719852
-s477
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/embedded.mobileprovision
-t1288719856
-s8372
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/mariachi.png
-t1288719852
-s354806
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/panda.png
-t1288719852
-s366881
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/verbatim.sql
-t1288719852
-s6144
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/wordbubble.png
-t1288719852
-s3696
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/wordbubblearrow.png
-t1288719852
-s1935
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app/wordbubblearrowreverse.png
-t1288719852
-s2683
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/AutoSuggestManager.o
-t1288719855
-s22088
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/AutoSuggestProtoViewController.o
-t1288719855
-s64600
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/FlipsideViewController.o
-t1288719854
-s37288
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/MainViewController.o
-t1288719855
-s45484
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/NSObject+SBJSON.o
-t1288719855
-s8276
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/NSString+SBJSON.o
-t1288719855
-s8244
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/SBJSON.o
-t1288719856
-s44056
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/ThemeController.o
-t1288719855
-s51176
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/VerbatimTranslate
-t1288719856
-s86528
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/VerbatimTranslate.LinkFileList
-c000000004CD04DEA0000000000000841
-t1288719850
-s2113
+c00000000000000000000000000000000
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/VerbatimTranslateAppDelegate.o
-t1288719854
-s49220
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/WordBubbleController.o
-t1288719855
-s50900
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/WordBubbleView.o
-t1288719855
-s47168
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv6/main.o
-t1288719854
-s6484
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/AutoSuggestManager.o
-t1288719856
-s21988
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/AutoSuggestProtoViewController.o
-t1288719856
-s64608
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/FlipsideViewController.o
-t1288719855
-s37300
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/MainViewController.o
-t1288719855
-s45420
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/NSObject+SBJSON.o
-t1288719855
-s8320
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/NSString+SBJSON.o
-t1288719856
-s8288
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/SBJSON.o
-t1288719856
-s43984
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/ThemeController.o
-t1288719855
-s51164
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/VerbatimTranslate
-t1288719856
-s86220
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/VerbatimTranslate.LinkFileList
-c000000004CD04DEA0000000000000841
-t1288719850
-s2113
+c00000000000000000000000000000000
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/VerbatimTranslateAppDelegate.o
-t1288719855
-s49224
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/WordBubbleController.o
-t1288719855
-s50888
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/WordBubbleView.o
-t1288719855
-s46776
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/Objects-normal/armv7/main.o
-t1288719855
-s6464
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/VerbatimTranslate.xcent
-t1288719856
-s419
+t2
+s0
 
 N/Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/VerbatimTranslate.build/Distribution-iphoneos/VerbatimTranslate.build/com.apple.build-tools.platform.validate
 t2
@@ -1064,12 +963,12 @@ t1288599493
 s3360
 
 N/var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-flcjizysdzlomocmktzrninrbkjd/VerbatimTranslate_Prefix.pch.gch
-t1288719854
-s9639472
+t2
+s0
 
 N/var/folders/7T/7TduGnk+FnWWxrMsM686tE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/VerbatimTranslate_Prefix-gsknlkihwtmfdxemlqavngthqosb/VerbatimTranslate_Prefix.pch.gch
-t1288719854
-s10094128
+t2
+s0
 
 NVerbatimTranslate-Info.plist
 c000000004CCFD9070000000000000372
@@ -1078,7 +977,7 @@ s882
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies310412650#310412650#0(0"0(0#1#0"8645851328#0"0#
+lSLF07#2@18"Check dependencies310453857#310453857#0(0"0(0#1#0"8612339136#0"0#
 
 CCodeSign /Users/mweight/Projects/Verbatim/Primary/VerbatimTranslate/build/Distribution-iphoneos/VerbatimTranslate.app
 s310412656.677270
