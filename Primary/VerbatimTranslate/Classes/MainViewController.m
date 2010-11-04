@@ -8,12 +8,11 @@
 
 #import "MainViewController.h"
 
-
 @implementation MainViewController
 
 @synthesize bgImageView;
 @synthesize themeController;
-
+@synthesize flagController;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 /*
@@ -32,6 +31,13 @@
 	[theme release];
 	theme = nil;
 //	[theme.outputBubbleController animate];
+	
+	FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+	[fController.view setCenter:CGPointMake(-120.0, 40.0)];
+	[self.view addSubview:fController.view];
+	flagController = [fController retain];
+	[fController release];
+	fController = nil;
 
 	NSLog(@"You two are something else or what?");
 	[[NSNotificationCenter defaultCenter] addObserver:self 

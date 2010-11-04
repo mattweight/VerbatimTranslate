@@ -20,56 +20,6 @@
 		7023B952127E1510008FCABE /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7023B950127E1510008FCABE /* WordViewController.xib */; };
 		7023B956127E1526008FCABE /* mariachi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B954127E1526008FCABE /* mariachi.png */; };
 		7023B957127E1526008FCABE /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B955127E1526008FCABE /* panda.png */; };
-		7023B98A127E1538008FCABE /* ChineseSimplified30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B958127E1538008FCABE /* ChineseSimplified30.png */; };
-		7023B98B127E1538008FCABE /* ChineseSimplified40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B959127E1538008FCABE /* ChineseSimplified40.png */; };
-		7023B98C127E1538008FCABE /* ChineseTraditional30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B95A127E1538008FCABE /* ChineseTraditional30.png */; };
-		7023B98D127E1538008FCABE /* ChineseTraditional40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B95B127E1538008FCABE /* ChineseTraditional40.png */; };
-		7023B98E127E1538008FCABE /* Czech30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B95C127E1538008FCABE /* Czech30.png */; };
-		7023B98F127E1538008FCABE /* Czech40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B95D127E1538008FCABE /* Czech40.png */; };
-		7023B990127E1538008FCABE /* Danish30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B95E127E1538008FCABE /* Danish30.png */; };
-		7023B991127E1538008FCABE /* Danish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B95F127E1538008FCABE /* Danish40.png */; };
-		7023B992127E1538008FCABE /* Dutch30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B960127E1538008FCABE /* Dutch30.png */; };
-		7023B993127E1538008FCABE /* Dutch40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B961127E1538008FCABE /* Dutch40.png */; };
-		7023B994127E1538008FCABE /* EnglishUK30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B962127E1538008FCABE /* EnglishUK30.png */; };
-		7023B995127E1538008FCABE /* EnglishUK40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B963127E1538008FCABE /* EnglishUK40.png */; };
-		7023B996127E1538008FCABE /* EnglishUS30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B964127E1538008FCABE /* EnglishUS30.png */; };
-		7023B997127E1538008FCABE /* EnglishUS40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B965127E1538008FCABE /* EnglishUS40.png */; };
-		7023B998127E1538008FCABE /* Finnish30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B966127E1538008FCABE /* Finnish30.png */; };
-		7023B999127E1538008FCABE /* Finnish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B967127E1538008FCABE /* Finnish40.png */; };
-		7023B99A127E1538008FCABE /* FrenchCA30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B968127E1538008FCABE /* FrenchCA30.png */; };
-		7023B99B127E1538008FCABE /* FrenchCA40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B969127E1538008FCABE /* FrenchCA40.png */; };
-		7023B99C127E1538008FCABE /* FrenchEU30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B96A127E1538008FCABE /* FrenchEU30.png */; };
-		7023B99D127E1538008FCABE /* FrenchEU40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B96B127E1538008FCABE /* FrenchEU40.png */; };
-		7023B99E127E1538008FCABE /* German30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B96C127E1538008FCABE /* German30.png */; };
-		7023B99F127E1538008FCABE /* German40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B96D127E1538008FCABE /* German40.png */; };
-		7023B9A0127E1538008FCABE /* Hungarian30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B96E127E1538008FCABE /* Hungarian30.png */; };
-		7023B9A1127E1538008FCABE /* Hungarian40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B96F127E1538008FCABE /* Hungarian40.png */; };
-		7023B9A2127E1538008FCABE /* Italian30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B970127E1538008FCABE /* Italian30.png */; };
-		7023B9A3127E1538008FCABE /* Italian40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B971127E1538008FCABE /* Italian40.png */; };
-		7023B9A4127E1538008FCABE /* Japanese30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B972127E1538008FCABE /* Japanese30.png */; };
-		7023B9A5127E1538008FCABE /* Japanese40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B973127E1538008FCABE /* Japanese40.png */; };
-		7023B9A6127E1538008FCABE /* Korean30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B974127E1538008FCABE /* Korean30.png */; };
-		7023B9A7127E1538008FCABE /* Korean40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B975127E1538008FCABE /* Korean40.png */; };
-		7023B9A8127E1538008FCABE /* Norwegian30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B976127E1538008FCABE /* Norwegian30.png */; };
-		7023B9A9127E1538008FCABE /* Norwegian40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B977127E1538008FCABE /* Norwegian40.png */; };
-		7023B9AA127E1538008FCABE /* Polish30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B978127E1538008FCABE /* Polish30.png */; };
-		7023B9AB127E1538008FCABE /* Polish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B979127E1538008FCABE /* Polish40.png */; };
-		7023B9AC127E1538008FCABE /* PortugueseBrazil30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B97A127E1538008FCABE /* PortugueseBrazil30.png */; };
-		7023B9AD127E1538008FCABE /* PortugueseBrazil40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B97B127E1538008FCABE /* PortugueseBrazil40.png */; };
-		7023B9AE127E1538008FCABE /* PortugueseEU30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B97C127E1538008FCABE /* PortugueseEU30.png */; };
-		7023B9AF127E1538008FCABE /* PortugueseEU40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B97D127E1538008FCABE /* PortugueseEU40.png */; };
-		7023B9B0127E1538008FCABE /* Russian30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B97E127E1538008FCABE /* Russian30.png */; };
-		7023B9B1127E1538008FCABE /* Russian40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B97F127E1538008FCABE /* Russian40.png */; };
-		7023B9B2127E1538008FCABE /* Slovak30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B980127E1538008FCABE /* Slovak30.png */; };
-		7023B9B3127E1538008FCABE /* Slovak40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B981127E1538008FCABE /* Slovak40.png */; };
-		7023B9B4127E1538008FCABE /* SpanishEU30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B982127E1538008FCABE /* SpanishEU30.png */; };
-		7023B9B5127E1538008FCABE /* SpanishEU40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B983127E1538008FCABE /* SpanishEU40.png */; };
-		7023B9B6127E1538008FCABE /* SpanishLatinAmerica30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B984127E1538008FCABE /* SpanishLatinAmerica30.png */; };
-		7023B9B7127E1538008FCABE /* SpanishLatinAmerica40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B985127E1538008FCABE /* SpanishLatinAmerica40.png */; };
-		7023B9B8127E1538008FCABE /* Swedish30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B986127E1538008FCABE /* Swedish30.png */; };
-		7023B9B9127E1538008FCABE /* Swedish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B987127E1538008FCABE /* Swedish40.png */; };
-		7023B9BA127E1538008FCABE /* Turkey30.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B988127E1538008FCABE /* Turkey30.png */; };
-		7023B9BB127E1538008FCABE /* Turkey40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B989127E1538008FCABE /* Turkey40.png */; };
 		7028DFB9127E19B50034EE04 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028DFB7127E19B50034EE04 /* ThemeController.m */; };
 		7028E027127E1F870034EE04 /* WordBubbleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028E024127E1F870034EE04 /* WordBubbleController.m */; };
 		7028E028127E1F870034EE04 /* WordBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028E026127E1F870034EE04 /* WordBubbleView.m */; };
@@ -78,6 +28,58 @@
 		702C61BE127F8970002BB9C6 /* AutoSuggestProtoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702C61BD127F8970002BB9C6 /* AutoSuggestProtoViewController.xib */; };
 		702C61D3127F89E1002BB9C6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 702C61D2127F89E1002BB9C6 /* libsqlite3.0.dylib */; };
 		702C61D9127F8A1B002BB9C6 /* verbatim.sql in Resources */ = {isa = PBXBuildFile; fileRef = 702C61D8127F8A1B002BB9C6 /* verbatim.sql */; };
+		7037479512828EA600421C51 /* FlagsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037479312828EA600421C51 /* FlagsTableViewController.m */; };
+		70374900128296A400421C51 /* Turkey40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748CE128296A400421C51 /* Turkey40.png */; };
+		70374901128296A400421C51 /* Turkey30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748CF128296A400421C51 /* Turkey30.png */; };
+		70374902128296A400421C51 /* Swedish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D0128296A400421C51 /* Swedish40.png */; };
+		70374903128296A400421C51 /* Swedish30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D1128296A400421C51 /* Swedish30.png */; };
+		70374904128296A400421C51 /* SpanishLatinAmerica40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D2128296A400421C51 /* SpanishLatinAmerica40.png */; };
+		70374905128296A400421C51 /* SpanishLatinAmerica30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D3128296A400421C51 /* SpanishLatinAmerica30.png */; };
+		70374906128296A400421C51 /* SpanishEU40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D4128296A400421C51 /* SpanishEU40.png */; };
+		70374907128296A400421C51 /* SpanishEU30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D5128296A400421C51 /* SpanishEU30.png */; };
+		70374908128296A400421C51 /* Slovak40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D6128296A400421C51 /* Slovak40.png */; };
+		70374909128296A400421C51 /* Slovak30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D7128296A400421C51 /* Slovak30.png */; };
+		7037490A128296A400421C51 /* Russian40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D8128296A400421C51 /* Russian40.png */; };
+		7037490B128296A400421C51 /* Russian30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748D9128296A400421C51 /* Russian30.png */; };
+		7037490C128296A400421C51 /* PortugueseEU40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748DA128296A400421C51 /* PortugueseEU40.png */; };
+		7037490D128296A400421C51 /* PortugueseEU30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748DB128296A400421C51 /* PortugueseEU30.png */; };
+		7037490E128296A400421C51 /* PortugueseBrazil40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748DC128296A400421C51 /* PortugueseBrazil40.png */; };
+		7037490F128296A400421C51 /* PortugueseBrazil30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748DD128296A400421C51 /* PortugueseBrazil30.png */; };
+		70374910128296A400421C51 /* Polish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748DE128296A400421C51 /* Polish40.png */; };
+		70374911128296A400421C51 /* Polish30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748DF128296A400421C51 /* Polish30.png */; };
+		70374912128296A400421C51 /* Norwegian40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E0128296A400421C51 /* Norwegian40.png */; };
+		70374913128296A400421C51 /* Norwegian30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E1128296A400421C51 /* Norwegian30.png */; };
+		70374914128296A400421C51 /* Korean40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E2128296A400421C51 /* Korean40.png */; };
+		70374915128296A400421C51 /* Korean30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E3128296A400421C51 /* Korean30.png */; };
+		70374916128296A400421C51 /* Japanese40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E4128296A400421C51 /* Japanese40.png */; };
+		70374917128296A400421C51 /* Japanese30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E5128296A400421C51 /* Japanese30.png */; };
+		70374918128296A400421C51 /* Italian40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E6128296A400421C51 /* Italian40.png */; };
+		70374919128296A400421C51 /* Italian30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E7128296A400421C51 /* Italian30.png */; };
+		7037491A128296A400421C51 /* Hungarian40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E8128296A400421C51 /* Hungarian40.png */; };
+		7037491B128296A400421C51 /* Hungarian30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748E9128296A400421C51 /* Hungarian30.png */; };
+		7037491C128296A400421C51 /* German40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748EA128296A400421C51 /* German40.png */; };
+		7037491D128296A400421C51 /* German30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748EB128296A400421C51 /* German30.png */; };
+		7037491E128296A400421C51 /* FrenchEU40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748EC128296A400421C51 /* FrenchEU40.png */; };
+		7037491F128296A400421C51 /* FrenchEU30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748ED128296A400421C51 /* FrenchEU30.png */; };
+		70374920128296A400421C51 /* FrenchCA40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748EE128296A400421C51 /* FrenchCA40.png */; };
+		70374921128296A400421C51 /* FrenchCA30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748EF128296A400421C51 /* FrenchCA30.png */; };
+		70374922128296A400421C51 /* Finnish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F0128296A400421C51 /* Finnish40.png */; };
+		70374923128296A400421C51 /* Finnish30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F1128296A400421C51 /* Finnish30.png */; };
+		70374924128296A400421C51 /* EnglishUS40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F2128296A400421C51 /* EnglishUS40.png */; };
+		70374925128296A400421C51 /* EnglishUS30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F3128296A400421C51 /* EnglishUS30.png */; };
+		70374926128296A400421C51 /* EnglishUK40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F4128296A400421C51 /* EnglishUK40.png */; };
+		70374927128296A400421C51 /* EnglishUK30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F5128296A400421C51 /* EnglishUK30.png */; };
+		70374928128296A400421C51 /* Dutch40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F6128296A400421C51 /* Dutch40.png */; };
+		70374929128296A400421C51 /* Dutch30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F7128296A400421C51 /* Dutch30.png */; };
+		7037492A128296A400421C51 /* Danish40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F8128296A400421C51 /* Danish40.png */; };
+		7037492B128296A400421C51 /* Danish30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748F9128296A400421C51 /* Danish30.png */; };
+		7037492C128296A400421C51 /* Czech40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748FA128296A400421C51 /* Czech40.png */; };
+		7037492D128296A400421C51 /* Czech30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748FB128296A400421C51 /* Czech30.png */; };
+		7037492E128296A400421C51 /* ChineseTraditional40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748FC128296A400421C51 /* ChineseTraditional40.png */; };
+		7037492F128296A400421C51 /* ChineseTraditional30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748FD128296A400421C51 /* ChineseTraditional30.png */; };
+		70374930128296A400421C51 /* ChineseSimplified40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748FE128296A400421C51 /* ChineseSimplified40.png */; };
+		70374931128296A400421C51 /* ChineseSimplified30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748FF128296A400421C51 /* ChineseSimplified30.png */; };
+		7037498F128299C600421C51 /* FlagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037498E128299C600421C51 /* FlagTableViewCell.m */; };
 		70C1073912801072007BA298 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C1073812801072007BA298 /* Icon.png */; };
 		70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E85048127EA62C000FCCA8 /* default-theme.plist */; };
 		70E8506A127EA8F5000FCCA8 /* WordBubbleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */; };
@@ -109,56 +111,6 @@
 		7023B950127E1510008FCABE /* WordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordViewController.xib; sourceTree = "<group>"; };
 		7023B954127E1526008FCABE /* mariachi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariachi.png; sourceTree = "<group>"; };
 		7023B955127E1526008FCABE /* panda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda.png; sourceTree = "<group>"; };
-		7023B958127E1538008FCABE /* ChineseSimplified30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseSimplified30.png; sourceTree = "<group>"; };
-		7023B959127E1538008FCABE /* ChineseSimplified40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseSimplified40.png; sourceTree = "<group>"; };
-		7023B95A127E1538008FCABE /* ChineseTraditional30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseTraditional30.png; sourceTree = "<group>"; };
-		7023B95B127E1538008FCABE /* ChineseTraditional40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseTraditional40.png; sourceTree = "<group>"; };
-		7023B95C127E1538008FCABE /* Czech30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Czech30.png; sourceTree = "<group>"; };
-		7023B95D127E1538008FCABE /* Czech40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Czech40.png; sourceTree = "<group>"; };
-		7023B95E127E1538008FCABE /* Danish30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Danish30.png; sourceTree = "<group>"; };
-		7023B95F127E1538008FCABE /* Danish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Danish40.png; sourceTree = "<group>"; };
-		7023B960127E1538008FCABE /* Dutch30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dutch30.png; sourceTree = "<group>"; };
-		7023B961127E1538008FCABE /* Dutch40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dutch40.png; sourceTree = "<group>"; };
-		7023B962127E1538008FCABE /* EnglishUK30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnglishUK30.png; sourceTree = "<group>"; };
-		7023B963127E1538008FCABE /* EnglishUK40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnglishUK40.png; sourceTree = "<group>"; };
-		7023B964127E1538008FCABE /* EnglishUS30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnglishUS30.png; sourceTree = "<group>"; };
-		7023B965127E1538008FCABE /* EnglishUS40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnglishUS40.png; sourceTree = "<group>"; };
-		7023B966127E1538008FCABE /* Finnish30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finnish30.png; sourceTree = "<group>"; };
-		7023B967127E1538008FCABE /* Finnish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finnish40.png; sourceTree = "<group>"; };
-		7023B968127E1538008FCABE /* FrenchCA30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrenchCA30.png; sourceTree = "<group>"; };
-		7023B969127E1538008FCABE /* FrenchCA40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrenchCA40.png; sourceTree = "<group>"; };
-		7023B96A127E1538008FCABE /* FrenchEU30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrenchEU30.png; sourceTree = "<group>"; };
-		7023B96B127E1538008FCABE /* FrenchEU40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrenchEU40.png; sourceTree = "<group>"; };
-		7023B96C127E1538008FCABE /* German30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = German30.png; sourceTree = "<group>"; };
-		7023B96D127E1538008FCABE /* German40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = German40.png; sourceTree = "<group>"; };
-		7023B96E127E1538008FCABE /* Hungarian30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hungarian30.png; sourceTree = "<group>"; };
-		7023B96F127E1538008FCABE /* Hungarian40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hungarian40.png; sourceTree = "<group>"; };
-		7023B970127E1538008FCABE /* Italian30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Italian30.png; sourceTree = "<group>"; };
-		7023B971127E1538008FCABE /* Italian40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Italian40.png; sourceTree = "<group>"; };
-		7023B972127E1538008FCABE /* Japanese30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japanese30.png; sourceTree = "<group>"; };
-		7023B973127E1538008FCABE /* Japanese40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japanese40.png; sourceTree = "<group>"; };
-		7023B974127E1538008FCABE /* Korean30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Korean30.png; sourceTree = "<group>"; };
-		7023B975127E1538008FCABE /* Korean40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Korean40.png; sourceTree = "<group>"; };
-		7023B976127E1538008FCABE /* Norwegian30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Norwegian30.png; sourceTree = "<group>"; };
-		7023B977127E1538008FCABE /* Norwegian40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Norwegian40.png; sourceTree = "<group>"; };
-		7023B978127E1538008FCABE /* Polish30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polish30.png; sourceTree = "<group>"; };
-		7023B979127E1538008FCABE /* Polish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polish40.png; sourceTree = "<group>"; };
-		7023B97A127E1538008FCABE /* PortugueseBrazil30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortugueseBrazil30.png; sourceTree = "<group>"; };
-		7023B97B127E1538008FCABE /* PortugueseBrazil40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortugueseBrazil40.png; sourceTree = "<group>"; };
-		7023B97C127E1538008FCABE /* PortugueseEU30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortugueseEU30.png; sourceTree = "<group>"; };
-		7023B97D127E1538008FCABE /* PortugueseEU40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortugueseEU40.png; sourceTree = "<group>"; };
-		7023B97E127E1538008FCABE /* Russian30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Russian30.png; sourceTree = "<group>"; };
-		7023B97F127E1538008FCABE /* Russian40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Russian40.png; sourceTree = "<group>"; };
-		7023B980127E1538008FCABE /* Slovak30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slovak30.png; sourceTree = "<group>"; };
-		7023B981127E1538008FCABE /* Slovak40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slovak40.png; sourceTree = "<group>"; };
-		7023B982127E1538008FCABE /* SpanishEU30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpanishEU30.png; sourceTree = "<group>"; };
-		7023B983127E1538008FCABE /* SpanishEU40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpanishEU40.png; sourceTree = "<group>"; };
-		7023B984127E1538008FCABE /* SpanishLatinAmerica30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpanishLatinAmerica30.png; sourceTree = "<group>"; };
-		7023B985127E1538008FCABE /* SpanishLatinAmerica40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpanishLatinAmerica40.png; sourceTree = "<group>"; };
-		7023B986127E1538008FCABE /* Swedish30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swedish30.png; sourceTree = "<group>"; };
-		7023B987127E1538008FCABE /* Swedish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swedish40.png; sourceTree = "<group>"; };
-		7023B988127E1538008FCABE /* Turkey30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turkey30.png; sourceTree = "<group>"; };
-		7023B989127E1538008FCABE /* Turkey40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turkey40.png; sourceTree = "<group>"; };
 		7028DFB6127E19B50034EE04 /* ThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeController.h; sourceTree = "<group>"; };
 		7028DFB7127E19B50034EE04 /* ThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeController.m; sourceTree = "<group>"; };
 		7028E023127E1F870034EE04 /* WordBubbleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordBubbleController.h; sourceTree = "<group>"; };
@@ -172,6 +124,60 @@
 		702C61BD127F8970002BB9C6 /* AutoSuggestProtoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoSuggestProtoViewController.xib; sourceTree = "<group>"; };
 		702C61D2127F89E1002BB9C6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		702C61D8127F8A1B002BB9C6 /* verbatim.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = verbatim.sql; sourceTree = "<group>"; };
+		7037479212828EA600421C51 /* FlagsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlagsTableViewController.h; sourceTree = "<group>"; };
+		7037479312828EA600421C51 /* FlagsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlagsTableViewController.m; sourceTree = "<group>"; };
+		703748CE128296A400421C51 /* Turkey40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turkey40.png; sourceTree = "<group>"; };
+		703748CF128296A400421C51 /* Turkey30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turkey30.png; sourceTree = "<group>"; };
+		703748D0128296A400421C51 /* Swedish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swedish40.png; sourceTree = "<group>"; };
+		703748D1128296A400421C51 /* Swedish30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swedish30.png; sourceTree = "<group>"; };
+		703748D2128296A400421C51 /* SpanishLatinAmerica40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpanishLatinAmerica40.png; sourceTree = "<group>"; };
+		703748D3128296A400421C51 /* SpanishLatinAmerica30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpanishLatinAmerica30.png; sourceTree = "<group>"; };
+		703748D4128296A400421C51 /* SpanishEU40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpanishEU40.png; sourceTree = "<group>"; };
+		703748D5128296A400421C51 /* SpanishEU30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpanishEU30.png; sourceTree = "<group>"; };
+		703748D6128296A400421C51 /* Slovak40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slovak40.png; sourceTree = "<group>"; };
+		703748D7128296A400421C51 /* Slovak30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slovak30.png; sourceTree = "<group>"; };
+		703748D8128296A400421C51 /* Russian40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Russian40.png; sourceTree = "<group>"; };
+		703748D9128296A400421C51 /* Russian30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Russian30.png; sourceTree = "<group>"; };
+		703748DA128296A400421C51 /* PortugueseEU40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortugueseEU40.png; sourceTree = "<group>"; };
+		703748DB128296A400421C51 /* PortugueseEU30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortugueseEU30.png; sourceTree = "<group>"; };
+		703748DC128296A400421C51 /* PortugueseBrazil40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortugueseBrazil40.png; sourceTree = "<group>"; };
+		703748DD128296A400421C51 /* PortugueseBrazil30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortugueseBrazil30.png; sourceTree = "<group>"; };
+		703748DE128296A400421C51 /* Polish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polish40.png; sourceTree = "<group>"; };
+		703748DF128296A400421C51 /* Polish30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polish30.png; sourceTree = "<group>"; };
+		703748E0128296A400421C51 /* Norwegian40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Norwegian40.png; sourceTree = "<group>"; };
+		703748E1128296A400421C51 /* Norwegian30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Norwegian30.png; sourceTree = "<group>"; };
+		703748E2128296A400421C51 /* Korean40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Korean40.png; sourceTree = "<group>"; };
+		703748E3128296A400421C51 /* Korean30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Korean30.png; sourceTree = "<group>"; };
+		703748E4128296A400421C51 /* Japanese40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japanese40.png; sourceTree = "<group>"; };
+		703748E5128296A400421C51 /* Japanese30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japanese30.png; sourceTree = "<group>"; };
+		703748E6128296A400421C51 /* Italian40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Italian40.png; sourceTree = "<group>"; };
+		703748E7128296A400421C51 /* Italian30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Italian30.png; sourceTree = "<group>"; };
+		703748E8128296A400421C51 /* Hungarian40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hungarian40.png; sourceTree = "<group>"; };
+		703748E9128296A400421C51 /* Hungarian30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hungarian30.png; sourceTree = "<group>"; };
+		703748EA128296A400421C51 /* German40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = German40.png; sourceTree = "<group>"; };
+		703748EB128296A400421C51 /* German30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = German30.png; sourceTree = "<group>"; };
+		703748EC128296A400421C51 /* FrenchEU40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrenchEU40.png; sourceTree = "<group>"; };
+		703748ED128296A400421C51 /* FrenchEU30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrenchEU30.png; sourceTree = "<group>"; };
+		703748EE128296A400421C51 /* FrenchCA40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrenchCA40.png; sourceTree = "<group>"; };
+		703748EF128296A400421C51 /* FrenchCA30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrenchCA30.png; sourceTree = "<group>"; };
+		703748F0128296A400421C51 /* Finnish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finnish40.png; sourceTree = "<group>"; };
+		703748F1128296A400421C51 /* Finnish30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finnish30.png; sourceTree = "<group>"; };
+		703748F2128296A400421C51 /* EnglishUS40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnglishUS40.png; sourceTree = "<group>"; };
+		703748F3128296A400421C51 /* EnglishUS30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnglishUS30.png; sourceTree = "<group>"; };
+		703748F4128296A400421C51 /* EnglishUK40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnglishUK40.png; sourceTree = "<group>"; };
+		703748F5128296A400421C51 /* EnglishUK30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnglishUK30.png; sourceTree = "<group>"; };
+		703748F6128296A400421C51 /* Dutch40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dutch40.png; sourceTree = "<group>"; };
+		703748F7128296A400421C51 /* Dutch30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dutch30.png; sourceTree = "<group>"; };
+		703748F8128296A400421C51 /* Danish40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Danish40.png; sourceTree = "<group>"; };
+		703748F9128296A400421C51 /* Danish30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Danish30.png; sourceTree = "<group>"; };
+		703748FA128296A400421C51 /* Czech40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Czech40.png; sourceTree = "<group>"; };
+		703748FB128296A400421C51 /* Czech30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Czech30.png; sourceTree = "<group>"; };
+		703748FC128296A400421C51 /* ChineseTraditional40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseTraditional40.png; sourceTree = "<group>"; };
+		703748FD128296A400421C51 /* ChineseTraditional30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseTraditional30.png; sourceTree = "<group>"; };
+		703748FE128296A400421C51 /* ChineseSimplified40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseSimplified40.png; sourceTree = "<group>"; };
+		703748FF128296A400421C51 /* ChineseSimplified30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseSimplified30.png; sourceTree = "<group>"; };
+		7037498D128299C600421C51 /* FlagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlagTableViewCell.h; sourceTree = "<group>"; };
+		7037498E128299C600421C51 /* FlagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlagTableViewCell.m; sourceTree = "<group>"; };
 		70C1073812801072007BA298 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		70E84F14127E8099000FCCA8 /* VerbatimConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimConstants.h; sourceTree = "<group>"; };
 		70E85048127EA62C000FCCA8 /* default-theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "default-theme.plist"; sourceTree = "<group>"; };
@@ -234,6 +240,10 @@
 				7028DFB6127E19B50034EE04 /* ThemeController.h */,
 				7028DFB7127E19B50034EE04 /* ThemeController.m */,
 				70E84F14127E8099000FCCA8 /* VerbatimConstants.h */,
+				7037479212828EA600421C51 /* FlagsTableViewController.h */,
+				7037479312828EA600421C51 /* FlagsTableViewController.m */,
+				7037498D128299C600421C51 /* FlagTableViewCell.h */,
+				7037498E128299C600421C51 /* FlagTableViewCell.m */,
 			);
 			name = "Main View";
 			sourceTree = "<group>";
@@ -297,56 +307,56 @@
 		7023B9BC127E153C008FCABE /* Flags */ = {
 			isa = PBXGroup;
 			children = (
-				7023B958127E1538008FCABE /* ChineseSimplified30.png */,
-				7023B959127E1538008FCABE /* ChineseSimplified40.png */,
-				7023B95A127E1538008FCABE /* ChineseTraditional30.png */,
-				7023B95B127E1538008FCABE /* ChineseTraditional40.png */,
-				7023B95C127E1538008FCABE /* Czech30.png */,
-				7023B95D127E1538008FCABE /* Czech40.png */,
-				7023B95E127E1538008FCABE /* Danish30.png */,
-				7023B95F127E1538008FCABE /* Danish40.png */,
-				7023B960127E1538008FCABE /* Dutch30.png */,
-				7023B961127E1538008FCABE /* Dutch40.png */,
-				7023B962127E1538008FCABE /* EnglishUK30.png */,
-				7023B963127E1538008FCABE /* EnglishUK40.png */,
-				7023B964127E1538008FCABE /* EnglishUS30.png */,
-				7023B965127E1538008FCABE /* EnglishUS40.png */,
-				7023B966127E1538008FCABE /* Finnish30.png */,
-				7023B967127E1538008FCABE /* Finnish40.png */,
-				7023B968127E1538008FCABE /* FrenchCA30.png */,
-				7023B969127E1538008FCABE /* FrenchCA40.png */,
-				7023B96A127E1538008FCABE /* FrenchEU30.png */,
-				7023B96B127E1538008FCABE /* FrenchEU40.png */,
-				7023B96C127E1538008FCABE /* German30.png */,
-				7023B96D127E1538008FCABE /* German40.png */,
-				7023B96E127E1538008FCABE /* Hungarian30.png */,
-				7023B96F127E1538008FCABE /* Hungarian40.png */,
-				7023B970127E1538008FCABE /* Italian30.png */,
-				7023B971127E1538008FCABE /* Italian40.png */,
-				7023B972127E1538008FCABE /* Japanese30.png */,
-				7023B973127E1538008FCABE /* Japanese40.png */,
-				7023B974127E1538008FCABE /* Korean30.png */,
-				7023B975127E1538008FCABE /* Korean40.png */,
-				7023B976127E1538008FCABE /* Norwegian30.png */,
-				7023B977127E1538008FCABE /* Norwegian40.png */,
-				7023B978127E1538008FCABE /* Polish30.png */,
-				7023B979127E1538008FCABE /* Polish40.png */,
-				7023B97A127E1538008FCABE /* PortugueseBrazil30.png */,
-				7023B97B127E1538008FCABE /* PortugueseBrazil40.png */,
-				7023B97C127E1538008FCABE /* PortugueseEU30.png */,
-				7023B97D127E1538008FCABE /* PortugueseEU40.png */,
-				7023B97E127E1538008FCABE /* Russian30.png */,
-				7023B97F127E1538008FCABE /* Russian40.png */,
-				7023B980127E1538008FCABE /* Slovak30.png */,
-				7023B981127E1538008FCABE /* Slovak40.png */,
-				7023B982127E1538008FCABE /* SpanishEU30.png */,
-				7023B983127E1538008FCABE /* SpanishEU40.png */,
-				7023B984127E1538008FCABE /* SpanishLatinAmerica30.png */,
-				7023B985127E1538008FCABE /* SpanishLatinAmerica40.png */,
-				7023B986127E1538008FCABE /* Swedish30.png */,
-				7023B987127E1538008FCABE /* Swedish40.png */,
-				7023B988127E1538008FCABE /* Turkey30.png */,
-				7023B989127E1538008FCABE /* Turkey40.png */,
+				703748CE128296A400421C51 /* Turkey40.png */,
+				703748CF128296A400421C51 /* Turkey30.png */,
+				703748D0128296A400421C51 /* Swedish40.png */,
+				703748D1128296A400421C51 /* Swedish30.png */,
+				703748D2128296A400421C51 /* SpanishLatinAmerica40.png */,
+				703748D3128296A400421C51 /* SpanishLatinAmerica30.png */,
+				703748D4128296A400421C51 /* SpanishEU40.png */,
+				703748D5128296A400421C51 /* SpanishEU30.png */,
+				703748D6128296A400421C51 /* Slovak40.png */,
+				703748D7128296A400421C51 /* Slovak30.png */,
+				703748D8128296A400421C51 /* Russian40.png */,
+				703748D9128296A400421C51 /* Russian30.png */,
+				703748DA128296A400421C51 /* PortugueseEU40.png */,
+				703748DB128296A400421C51 /* PortugueseEU30.png */,
+				703748DC128296A400421C51 /* PortugueseBrazil40.png */,
+				703748DD128296A400421C51 /* PortugueseBrazil30.png */,
+				703748DE128296A400421C51 /* Polish40.png */,
+				703748DF128296A400421C51 /* Polish30.png */,
+				703748E0128296A400421C51 /* Norwegian40.png */,
+				703748E1128296A400421C51 /* Norwegian30.png */,
+				703748E2128296A400421C51 /* Korean40.png */,
+				703748E3128296A400421C51 /* Korean30.png */,
+				703748E4128296A400421C51 /* Japanese40.png */,
+				703748E5128296A400421C51 /* Japanese30.png */,
+				703748E6128296A400421C51 /* Italian40.png */,
+				703748E7128296A400421C51 /* Italian30.png */,
+				703748E8128296A400421C51 /* Hungarian40.png */,
+				703748E9128296A400421C51 /* Hungarian30.png */,
+				703748EA128296A400421C51 /* German40.png */,
+				703748EB128296A400421C51 /* German30.png */,
+				703748EC128296A400421C51 /* FrenchEU40.png */,
+				703748ED128296A400421C51 /* FrenchEU30.png */,
+				703748EE128296A400421C51 /* FrenchCA40.png */,
+				703748EF128296A400421C51 /* FrenchCA30.png */,
+				703748F0128296A400421C51 /* Finnish40.png */,
+				703748F1128296A400421C51 /* Finnish30.png */,
+				703748F2128296A400421C51 /* EnglishUS40.png */,
+				703748F3128296A400421C51 /* EnglishUS30.png */,
+				703748F4128296A400421C51 /* EnglishUK40.png */,
+				703748F5128296A400421C51 /* EnglishUK30.png */,
+				703748F6128296A400421C51 /* Dutch40.png */,
+				703748F7128296A400421C51 /* Dutch30.png */,
+				703748F8128296A400421C51 /* Danish40.png */,
+				703748F9128296A400421C51 /* Danish30.png */,
+				703748FA128296A400421C51 /* Czech40.png */,
+				703748FB128296A400421C51 /* Czech30.png */,
+				703748FC128296A400421C51 /* ChineseTraditional40.png */,
+				703748FD128296A400421C51 /* ChineseTraditional30.png */,
+				703748FE128296A400421C51 /* ChineseSimplified40.png */,
+				703748FF128296A400421C51 /* ChineseSimplified30.png */,
 			);
 			name = Flags;
 			sourceTree = "<group>";
@@ -460,56 +470,6 @@
 				7023B952127E1510008FCABE /* WordViewController.xib in Resources */,
 				7023B956127E1526008FCABE /* mariachi.png in Resources */,
 				7023B957127E1526008FCABE /* panda.png in Resources */,
-				7023B98A127E1538008FCABE /* ChineseSimplified30.png in Resources */,
-				7023B98B127E1538008FCABE /* ChineseSimplified40.png in Resources */,
-				7023B98C127E1538008FCABE /* ChineseTraditional30.png in Resources */,
-				7023B98D127E1538008FCABE /* ChineseTraditional40.png in Resources */,
-				7023B98E127E1538008FCABE /* Czech30.png in Resources */,
-				7023B98F127E1538008FCABE /* Czech40.png in Resources */,
-				7023B990127E1538008FCABE /* Danish30.png in Resources */,
-				7023B991127E1538008FCABE /* Danish40.png in Resources */,
-				7023B992127E1538008FCABE /* Dutch30.png in Resources */,
-				7023B993127E1538008FCABE /* Dutch40.png in Resources */,
-				7023B994127E1538008FCABE /* EnglishUK30.png in Resources */,
-				7023B995127E1538008FCABE /* EnglishUK40.png in Resources */,
-				7023B996127E1538008FCABE /* EnglishUS30.png in Resources */,
-				7023B997127E1538008FCABE /* EnglishUS40.png in Resources */,
-				7023B998127E1538008FCABE /* Finnish30.png in Resources */,
-				7023B999127E1538008FCABE /* Finnish40.png in Resources */,
-				7023B99A127E1538008FCABE /* FrenchCA30.png in Resources */,
-				7023B99B127E1538008FCABE /* FrenchCA40.png in Resources */,
-				7023B99C127E1538008FCABE /* FrenchEU30.png in Resources */,
-				7023B99D127E1538008FCABE /* FrenchEU40.png in Resources */,
-				7023B99E127E1538008FCABE /* German30.png in Resources */,
-				7023B99F127E1538008FCABE /* German40.png in Resources */,
-				7023B9A0127E1538008FCABE /* Hungarian30.png in Resources */,
-				7023B9A1127E1538008FCABE /* Hungarian40.png in Resources */,
-				7023B9A2127E1538008FCABE /* Italian30.png in Resources */,
-				7023B9A3127E1538008FCABE /* Italian40.png in Resources */,
-				7023B9A4127E1538008FCABE /* Japanese30.png in Resources */,
-				7023B9A5127E1538008FCABE /* Japanese40.png in Resources */,
-				7023B9A6127E1538008FCABE /* Korean30.png in Resources */,
-				7023B9A7127E1538008FCABE /* Korean40.png in Resources */,
-				7023B9A8127E1538008FCABE /* Norwegian30.png in Resources */,
-				7023B9A9127E1538008FCABE /* Norwegian40.png in Resources */,
-				7023B9AA127E1538008FCABE /* Polish30.png in Resources */,
-				7023B9AB127E1538008FCABE /* Polish40.png in Resources */,
-				7023B9AC127E1538008FCABE /* PortugueseBrazil30.png in Resources */,
-				7023B9AD127E1538008FCABE /* PortugueseBrazil40.png in Resources */,
-				7023B9AE127E1538008FCABE /* PortugueseEU30.png in Resources */,
-				7023B9AF127E1538008FCABE /* PortugueseEU40.png in Resources */,
-				7023B9B0127E1538008FCABE /* Russian30.png in Resources */,
-				7023B9B1127E1538008FCABE /* Russian40.png in Resources */,
-				7023B9B2127E1538008FCABE /* Slovak30.png in Resources */,
-				7023B9B3127E1538008FCABE /* Slovak40.png in Resources */,
-				7023B9B4127E1538008FCABE /* SpanishEU30.png in Resources */,
-				7023B9B5127E1538008FCABE /* SpanishEU40.png in Resources */,
-				7023B9B6127E1538008FCABE /* SpanishLatinAmerica30.png in Resources */,
-				7023B9B7127E1538008FCABE /* SpanishLatinAmerica40.png in Resources */,
-				7023B9B8127E1538008FCABE /* Swedish30.png in Resources */,
-				7023B9B9127E1538008FCABE /* Swedish40.png in Resources */,
-				7023B9BA127E1538008FCABE /* Turkey30.png in Resources */,
-				7023B9BB127E1538008FCABE /* Turkey40.png in Resources */,
 				70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */,
 				70E8506A127EA8F5000FCCA8 /* WordBubbleController.xib in Resources */,
 				70E85071127EA93B000FCCA8 /* wordbubblearrow.png in Resources */,
@@ -518,6 +478,56 @@
 				702C61BE127F8970002BB9C6 /* AutoSuggestProtoViewController.xib in Resources */,
 				702C61D9127F8A1B002BB9C6 /* verbatim.sql in Resources */,
 				70C1073912801072007BA298 /* Icon.png in Resources */,
+				70374900128296A400421C51 /* Turkey40.png in Resources */,
+				70374901128296A400421C51 /* Turkey30.png in Resources */,
+				70374902128296A400421C51 /* Swedish40.png in Resources */,
+				70374903128296A400421C51 /* Swedish30.png in Resources */,
+				70374904128296A400421C51 /* SpanishLatinAmerica40.png in Resources */,
+				70374905128296A400421C51 /* SpanishLatinAmerica30.png in Resources */,
+				70374906128296A400421C51 /* SpanishEU40.png in Resources */,
+				70374907128296A400421C51 /* SpanishEU30.png in Resources */,
+				70374908128296A400421C51 /* Slovak40.png in Resources */,
+				70374909128296A400421C51 /* Slovak30.png in Resources */,
+				7037490A128296A400421C51 /* Russian40.png in Resources */,
+				7037490B128296A400421C51 /* Russian30.png in Resources */,
+				7037490C128296A400421C51 /* PortugueseEU40.png in Resources */,
+				7037490D128296A400421C51 /* PortugueseEU30.png in Resources */,
+				7037490E128296A400421C51 /* PortugueseBrazil40.png in Resources */,
+				7037490F128296A400421C51 /* PortugueseBrazil30.png in Resources */,
+				70374910128296A400421C51 /* Polish40.png in Resources */,
+				70374911128296A400421C51 /* Polish30.png in Resources */,
+				70374912128296A400421C51 /* Norwegian40.png in Resources */,
+				70374913128296A400421C51 /* Norwegian30.png in Resources */,
+				70374914128296A400421C51 /* Korean40.png in Resources */,
+				70374915128296A400421C51 /* Korean30.png in Resources */,
+				70374916128296A400421C51 /* Japanese40.png in Resources */,
+				70374917128296A400421C51 /* Japanese30.png in Resources */,
+				70374918128296A400421C51 /* Italian40.png in Resources */,
+				70374919128296A400421C51 /* Italian30.png in Resources */,
+				7037491A128296A400421C51 /* Hungarian40.png in Resources */,
+				7037491B128296A400421C51 /* Hungarian30.png in Resources */,
+				7037491C128296A400421C51 /* German40.png in Resources */,
+				7037491D128296A400421C51 /* German30.png in Resources */,
+				7037491E128296A400421C51 /* FrenchEU40.png in Resources */,
+				7037491F128296A400421C51 /* FrenchEU30.png in Resources */,
+				70374920128296A400421C51 /* FrenchCA40.png in Resources */,
+				70374921128296A400421C51 /* FrenchCA30.png in Resources */,
+				70374922128296A400421C51 /* Finnish40.png in Resources */,
+				70374923128296A400421C51 /* Finnish30.png in Resources */,
+				70374924128296A400421C51 /* EnglishUS40.png in Resources */,
+				70374925128296A400421C51 /* EnglishUS30.png in Resources */,
+				70374926128296A400421C51 /* EnglishUK40.png in Resources */,
+				70374927128296A400421C51 /* EnglishUK30.png in Resources */,
+				70374928128296A400421C51 /* Dutch40.png in Resources */,
+				70374929128296A400421C51 /* Dutch30.png in Resources */,
+				7037492A128296A400421C51 /* Danish40.png in Resources */,
+				7037492B128296A400421C51 /* Danish30.png in Resources */,
+				7037492C128296A400421C51 /* Czech40.png in Resources */,
+				7037492D128296A400421C51 /* Czech30.png in Resources */,
+				7037492E128296A400421C51 /* ChineseTraditional40.png in Resources */,
+				7037492F128296A400421C51 /* ChineseTraditional30.png in Resources */,
+				70374930128296A400421C51 /* ChineseSimplified40.png in Resources */,
+				70374931128296A400421C51 /* ChineseSimplified30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +550,8 @@
 				70E8EED0127FFE1500323D92 /* NSObject+SBJSON.m in Sources */,
 				70E8EED1127FFE1500323D92 /* NSString+SBJSON.m in Sources */,
 				70E8EED2127FFE1500323D92 /* SBJSON.m in Sources */,
+				7037479512828EA600421C51 /* FlagsTableViewController.m in Sources */,
+				7037498F128299C600421C51 /* FlagTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
