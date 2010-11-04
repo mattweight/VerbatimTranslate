@@ -22,7 +22,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 		UITableView* tabView = (UITableView*)self.view;
 		[tabView setFrame:CGRectMake(0.0, 0.0, 40.0, 320.0)];
 		[tabView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-		[tabView setBackgroundColor:[UIColor darkGrayColor]];
+		[tabView setBackgroundColor:[UIColor lightGrayColor]];
 		[tabView setAlpha:0.8];
 		[tabView setTransform:CGAffineTransformMakeRotation(radians(90))];
 	}
@@ -163,6 +163,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	//NSLog([NSString stringWithFormat:@"table view origin: %02f X %02f", tableView.frame.origin.x, tableView.frame.origin.y]);
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
 	if (tableView.frame.origin.x != 0.0) {
 		origPoint = CGPointMake(tableView.frame.origin.x, tableView.frame.origin.y);

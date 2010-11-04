@@ -29,7 +29,7 @@
 		[bubbleView setAnimationStep:0]; // Starting point means shorties
 		[bubbleView setForceStop:YES];
 		[bubbleTextView setBackgroundColor:[UIColor clearColor]];
-		[bubbleView setAlpha:0.80];
+		[bubbleView setAlpha:0.90];
 		
 		// TODO Just to keep the aspect ration full-sized, so we shrink instead of grow the first time
 		//      Need to do this the more correct way.

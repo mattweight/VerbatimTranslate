@@ -35,6 +35,6 @@
 // The mainCenter is where the whole view will be positioned on the super view
 // and the arrowCenter is where the arrow portion of the bubble should be centered
 // on the bubble view
-- (id)initWithCenter:(CGPoint)mainCenter arrowCenter:(CGPoint)aCenter;
+//- (id)initWithCenter:(CGPoint)mainCenter arrowCenter:(CGPoint)aCenter;
 
 @end

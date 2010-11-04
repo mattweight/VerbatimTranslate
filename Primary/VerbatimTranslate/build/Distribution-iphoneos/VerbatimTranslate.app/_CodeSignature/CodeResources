@@ -4,9 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Arrow1.png</key>
+		<data>
+		Vhiludpv5rvDZQ9GscSqyWCHQeI=
+		</data>
+		<key>Arrow1_nostroke.png</key>
+		<data>
+		C3jsyzDkXRWRUB7NBgNzNJFXLOA=
+		</data>
+		<key>Arrow2.png</key>
+		<data>
+		a6cjAXWuUaUOsdmeeRogslfDIhk=
+		</data>
+		<key>Arrow2_nostroke.png</key>
+		<data>
+		uydHHxu37ryijkjjrUe5ii4JRSc=
+		</data>
 		<key>AutoSuggestProtoViewController.nib</key>
 		<data>
-		bd67iE72AqzN2FsNK/dIMlhcjHs=
+		wuZtv5hA54mirndcHNY46LKG0Fk=
+		</data>
+		<key>Bubble.png</key>
+		<data>
+		IBPfIIRZtPq8i87OniP/SHp8IDs=
+		</data>
+		<key>Bubble_nostroke.png</key>
+		<data>
+		UqlyhhP5ZxQymSQcLz2wZZYS+oQ=
 		</data>
 		<key>ChineseSimplified30.png</key>
 		<data>
@@ -74,7 +98,7 @@
 		</data>
 		<key>FlipsideView.nib</key>
 		<data>
-		eXUVU6UVU6TMThN41iZZ3ErSLGc=
+		VSsjstmJ/JVBItb79ylnwzmmA8g=
 		</data>
 		<key>FrenchCA30.png</key>
 		<data>
@@ -142,7 +166,7 @@
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
-		TLuRg5Qi6rduvflAQxETr4KWdQA=
+		ULDL6oinhZjAKD3lsWTybIaf4JI=
 		</data>
 		<key>Norwegian30.png</key>
 		<data>
@@ -230,7 +254,7 @@
 		</data>
 		<key>WordBubbleController.nib</key>
 		<data>
-		Xz2nRgoJXAUcbbAkFvZgaTh4Qlk=
+		D3ynyEGGs/Lyzb9GSierj4btjSM=
 		</data>
 		<key>WordViewController.nib</key>
 		<data>

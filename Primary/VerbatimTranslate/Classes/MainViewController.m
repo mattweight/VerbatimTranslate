@@ -30,10 +30,9 @@
 	themeController = [theme retain];
 	[theme release];
 	theme = nil;
-//	[theme.outputBubbleController animate];
 	
 	FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
-	[fController.view setCenter:CGPointMake(-120.0, 40.0)];
+	[fController.view setCenter:CGPointMake(-120.0, 400.0)];
 	[self.view addSubview:fController.view];
 	flagController = [fController retain];
 	[fController release];
