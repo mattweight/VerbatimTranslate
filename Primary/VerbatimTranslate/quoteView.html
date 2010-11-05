@@ -1,0 +1,624 @@
+<html>
+<body>
+<style>
+html { 
+  padding:0px;
+  margin:0px;
+}
+body {
+	background-color: #e1e1e1;
+	font-size: 11px;
+	font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+	color:#666666;
+	padding:0px;
+	margin:0px;
+	background-image: url(../images/bg_page.gif);
+	background-repeat: repeat-y;
+}
+p, h2, pre {
+	margin: 0px; 
+	padding: 5px 20px 5px 20px; 
+}
+a { 
+	color: #003366;
+	font-size: 11px;
+	background-color:transparent;
+	text-decoration: none; 
+}
+pre { 
+	color: #666666;
+	font-size: 11px;
+	background-color:transparent;
+	font-family: Courier, Monaco, Monospace;
+}
+.alignright {
+	margin-top: 0; 
+	text-align: right;
+	font-size: 10px;
+}
+h2 {
+	font-size:9px;
+	padding-top:5px;
+	color: #FFFFFF;
+	background-color: #004284;
+	font-weight: bold;
+	padding-bottom: 5px;
+	}
+#menu {
+	display: block;
+}
+strong { 
+	font-size: 13px;
+}
+/*  positioning-layers statisch und absolut */
+#left {
+	position: absolute;
+	left: 0px;
+	width: 190px;
+	color: #666666;
+	margin: 0px; 
+	padding: 0px;
+}
+#content {
+	margin: 0px 190px 0px 191px;
+	padding: 0px;
+	background-color: #ffffff;
+}
+#qpaycontent {
+	margin: 0px 10px 0px 191px;
+	padding: 0px;
+	background-color: #ffffff;
+	z-index:1;
+}
+#qpaycontent {
+	clear: left;
+	color: #666;
+}
+#right {
+  position: absolute;
+  left: 820px;
+	width: 198px;
+	color: #666666;
+	margin-right: -1px;
+}
+#news {
+	border: 1px solid #ccc;
+	margin:10px;
+	background-image: url(../images/paper.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-right: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+#news ul {
+	font-size: 9px;
+	color: #666666;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#news li {
+	margin: 8px 10px;
+}
+#news a {
+	color: #008000;
+}
+#news h2 a {
+	color: #FFFFFF;
+	font-size: 9px;
+}
+ul.sidemenu {
+	margin: 0px;
+	padding: 5px;
+	list-style-type: none;
+}
+ul.sidemenu li {
+	margin: 2px 20px;
+}
+ul.sidemenu a {
+	color: #FFFFFF;
+	font-size: 9px;
+}
+h2 a {
+	color: #FFFFFF;
+	font-size: 9px;
+}
+h3 {
+	color: #666666;
+	margin: 10px;
+	padding: 0px;
+	font-size: 11px;
+	font-weight: bold;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	border-left-color: #666666;
+}
+.label {
+	margin-top: 6px;
+	display: block;
+	padding: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+input, select {
+	font-size: 9px;
+}
+
+textarea {
+    font-size: 10px;
+}
+
+#splash {
+	background-image: url(../images/bg_cans.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-color: #D1D1D1;
+	padding: 20px 140px 20px 20px;
+	margin: 0px;
+}
+#splash2
+{
+    background-image: url(../images/top_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #2d2e2a;
+    margin: 0px;
+    height: 165px;
+    text-align: right;
+    padding-right: 15px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 15px;
+}
+ul.gem {
+	margin: 0px;
+	padding: 6px;
+	list-style-type: none;
+}
+ul.gem li {
+	margin: 6px 20px 5px;
+	padding-left: 14px;
+	background-image: url(../images/bullet_green.gif);
+	background-repeat: no-repeat;
+	background-position: 0px center;
+}
+ul.sidemenu a:hover {
+	color: #DAAE00;
+}
+#news a:hover {
+	text-decoration: underline;
+}
+#header {
+	background-color: #FFFFFF;
+	background-image: url(../images/bg_header.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	height: 70px;
+    width: 1018px;
+}
+#nav, #nav ul { /* all lists */
+	background:#333;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+	height: 25px;
+    width: 1018px;
+}
+
+#nav a {
+	display: block;
+	width: 90px;
+	background: #333;
+	color: #fff;
+	padding: 7px;
+}
+
+#nav li { /* all list items */
+	float: left;
+	width: 90px; /* width needed or else Opera goes nuts */
+	border-right: 1px solid #666;
+}
+
+#nav li ul { /* second-level lists */
+	position: absolute;
+	width: 90px;
+	left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+}
+
+#nav li:hover ul, #nav li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+	z-index: 999;
+}
+
+#nav li a {
+	background: #333;
+}
+
+#nav li a:hover {
+	background: #666;
+}
+
+#content {
+/*
+	clear: left;
+*/
+    width: 630px;
+	color: #666;
+}
+#content h2 {
+	margin-bottom:10px;
+}
+#footer {
+	padding: 0;
+	margin-top: 20px;
+	margin-left: 190px;
+	font-size: 9px;
+	border 0 1px solid #999;
+    width: 560px;
+}
+.testi {
+	height: 100px;
+}
+.testi img {
+	margin: 0 10px 0 0;
+	float: left;
+	border:1px solid #ccc;
+}
+#content h1 {
+	font-size: 14px;
+	color: #333333;
+	padding:0px 5px 10px 0px;
+	font-weight: bold;
+	margin: 20px;
+	border-bottom: 1px solid #333333;
+	text-transform: uppercase;
+}
+#splash h1 {
+	font-size: 18px;
+	color: #666666;
+	padding:0px;
+	font-weight: normal;
+	margin: 0px;
+	border: none;
+	text-transform: none;
+}
+#splash2 h1
+{
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: normal;
+    margin: 0px;
+    border: none;
+    text-transform: none;
+    padding-right: 0px;
+    padding-left: 50%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: right;
+}
+label {
+	font-size: 10px;
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 2px;
+}
+fieldset {
+
+	margin-bottom: 10px;
+}
+.zf_news {
+	margin: 20px 0;
+}
+.zf_channel {
+	margin: 20px 0;
+}
+#content h4
+{
+	margin: 0px 5px 10px 20px;
+}
+#content h5
+{
+	margin: 0px 5px 10px 20px;
+}
+</style>
+<div id="qform" style="margin:0;padding:18px;background-color:#e1e1e1;font-size:11px;"> 
+    <form id='quickquote' name='quickquote' action='http://www.verbatimsolutions.com/submit.php' method='post' style="margin:0" onsubmit="return checkForm(this)" class="secure"> 
+    <span class='label'><B>Name: </B></span> 
+      <input type='text' name='name' size='20' style="width:100%;" onchange="triggerWarning();"> 
+      <span class='label'><B>Email: </B></span> 
+      <input type='text' name='email' size='20' style="width:100%;" onchange="triggerWarning();"> 
+      <span class='label'><B>Phone: </B></span> 
+      <input type='text' name='phone' size='15' style="width:100%;" onchange="triggerWarning();"> 
+      <br> 
+      <span class='label'><B>Source Language:</B></span> 
+      <select name='sourcelang' style="width:100%;" onchange="triggerWarning();"> 
+        <option value='English'>English</option> 
+        <option value='Spanish'>Spanish</option> 
+        <option value='German'>German</option> 
+        <option value='Chinese'>Chinese</option> 
+        <option value='French'>French</option> 
+        <option value='Italian'>Italian</option> 
+        <option value='Portuguese'>Portuguese</option> 
+        <option value='Russian'>Russian</option> 
+        <option value='Japanese'>Japanese</option> 
+        <option value='Korean'>Korean</option> 
+        <option value='Dutch'>Dutch</option> 
+        <option value='Danish'>Danish</option> 
+        <option value='Swedish'>Swedish</option> 
+        <option value='__________'>__________</option> 
+        <option value=''></option> 
+        <option value='Afrikaans'>Afrikaans</option> 
+        <option value='Albanian'>Albanian</option> 
+        <option value='Amharic'>Amharic</option> 
+        <option value='Arabic'>Arabic</option> 
+        <option value='Azerbaijani'>Azerbaijani</option> 
+        <option value='Aztec'>Aztec</option> 
+        <option value='Basque'>Basque</option> 
+        <option value='Bengali'>Bengali</option> 
+        <option value='Bosnian'>Bosnian</option> 
+        <option value='Breton'>Breton</option> 
+        <option value='Bulgarian'>Bulgarian</option> 
+        <option value='Byelorussian'>Byelorussian</option> 
+        <option value='Catalan'>Catalan</option> 
+        <option value='Chechen'>Chechen</option> 
+        <option value='Chinese'>Chinese</option> 
+        <option value='Creek'>Creek</option> 
+        <option value='Croatian'>Croatian</option> 
+        <option value='Czech'>Czech</option> 
+        <option value='Dakota'>Dakota</option> 
+        <option value='Danish'>Danish</option> 
+        <option value='Dinka'>Dinka</option> 
+        <option value='Dutch'>Dutch</option> 
+        <option value='English'>English</option> 
+        <option value='Esperanto'>Esperanto</option> 
+        <option value='Estonian'>Estonian</option> 
+        <option value='Farsi'>Farsi</option> 
+        <option value='Finnish'>Finnish</option> 
+        <option value='Flemish'>Flemish</option> 
+        <option value='French'>French</option> 
+        <option value='Gaelic'>Gaelic</option> 
+        <option value='Georgian'>Georgian</option> 
+        <option value='German'>German</option> 
+        <option value='Greek'>Greek</option> 
+        <option value='Guarani'>Guarani</option> 
+        <option value='Gujarati'>Gujarati</option> 
+        <option value='Haitian-Creole'>Haitian-Creole</option> 
+        <option value='Hausa'>Hausa</option> 
+        <option value='Hebrew'>Hebrew</option> 
+        <option value='Herero'>Herero</option> 
+        <option value='Hindi'>Hindi</option> 
+        <option value='Hmong'>Hmong</option> 
+        <option value='Hungarian'>Hungarian</option> 
+        <option value='Icelandic'>Icelandic</option> 
+        <option value='Igbo'>Igbo</option> 
+        <option value='Indonesian'>Indonesian</option> 
+        <option value='Irish'>Irish</option> 
+        <option value='Italian'>Italian</option> 
+        <option value='Japanese'>Japanese</option> 
+        <option value='Javanese'>Javanese</option> 
+        <option value='Kabyle'>Kabyle</option> 
+        <option value='Khmer'>Khmer</option> 
+        <option value='Korean'>Korean</option> 
+        <option value='Kurdish'>Kurdish</option> 
+        <option value='Latin'>Latin</option> 
+        <option value='Latvian'>Latvian</option> 
+        <option value='Lithuanian'>Lithuanian</option> 
+        <option value='Macedonian'>Macedonian</option> 
+        <option value='Malagasy'>Malagasy</option> 
+        <option value='Malay'>Malay</option> 
+        <option value='Malayalam'>Malayalam</option> 
+        <option value='Maltese'>Maltese</option> 
+        <option value='Maori'>Maori</option> 
+        <option value='Marathi'>Marathi</option> 
+        <option value='Masai'>Masai</option> 
+        <option value='Mayan'>Mayan</option> 
+        <option value='Mongolian'>Mongolian</option> 
+        <option value='Ndebele'>Ndebele</option> 
+        <option value='North'>North</option> 
+        <option value='Ndebele'>Ndebele</option> 
+        <option value='South Nepali'>South Nepali</option> 
+        <option value='Norwegian'>Norwegian</option> 
+        <option value='Panjabi'>Panjabi</option> 
+        <option value='Persian'>Persian</option> 
+        <option value='Polish'>Polish</option> 
+        <option value='Portuguese'>Portuguese</option> 
+        <option value='Pushto'>Pushto</option> 
+        <option value='Rajasthani'>Rajasthani</option> 
+        <option value='Romanian'>Romanian</option> 
+        <option value='Russian'>Russian</option> 
+        <option value='Sanskrit'>Sanskrit</option> 
+        <option value='Serbian'>Serbian</option> 
+        <option value='Serbo-Croat'>Serbo-Croat</option> 
+        <option value='Sesotho/S. Sotho'>Sesotho/S. Sotho</option> 
+        <option value='Shona'>Shona</option> 
+        <option value='Sign Language'>Sign Language</option> 
+        <option value='Singhalese'>Singhalese</option> 
+        <option value='Sino-Tibetan'>Sino-Tibetan</option> 
+        <option value='Si'>Si</option> 
+        <option value='Swati/Swazi'>Swati/Swazi</option> 
+        <option value='Slovak'>Slovak</option> 
+        <option value='Slovenian'>Slovenian</option> 
+        <option value='Spanish'>Spanish</option> 
+        <option value='Swahili'>Swahili</option> 
+        <option value='Swedish'>Swedish</option> 
+        <option value='Tagalog'>Tagalog</option> 
+        <option value='Tahitian'>Tahitian</option> 
+        <option value='Tamil'>Tamil</option> 
+        <option value='Tatar'>Tatar</option> 
+        <option value='Telugu'>Telugu</option> 
+        <option value='Thai'>Thai</option> 
+        <option value='Tibetan'>Tibetan</option> 
+        <option value='Tsonga'>Tsonga</option> 
+        <option value='Tswana'>Tswana</option> 
+        <option value='Turkish'>Turkish</option> 
+        <option value='Ukrainian'>Ukrainian</option> 
+        <option value='Urdu'>Urdu</option> 
+        <option value='Venda'>Venda</option> 
+        <option value='Vietnamese'>Vietnamese</option> 
+        <option value='Welsh'>Welsh</option> 
+        <option value='Yiddish'>Yiddish</option> 
+        <option value='Yoruba'>Yoruba</option> 
+        <option value='Zhuang/Chuang'>Zhuang/Chuang</option> 
+        <option value='Zuluzzz'>Zuluzzz</option> 
+        <option value='Other'>Other</option> 
+      </select> 
+      <br> 
+      <span class='label'><B>Target Language:</B></span>
+      <select name='targetlang[]' style="width:100%;" multiple="multiple" size="4" onchange="triggerWarning();"> 
+        <option value='English'>English</option> 
+        <option value='Spanish'>Spanish</option> 
+        <option value='German'>German</option> 
+        <option value='Chinese'>Chinese</option> 
+        <option value='French'>French</option> 
+        <option value='Italian'>Italian</option> 
+        <option value='Portuguese'>Portuguese</option> 
+        <option value='Russian'>Russian</option> 
+        <option value='Japanese'>Japanese</option> 
+        <option value='Korean'>Korean</option> 
+        <option value='Dutch'>Dutch</option> 
+        <option value='Danish'>Danish</option> 
+        <option value='Swedish'>Swedish</option> 
+        <option value='__________'>__________</option> 
+        <option value=''></option> 
+        <option value='Afrikaans'>Afrikaans</option> 
+        <option value='Albanian'>Albanian</option> 
+        <option value='Amharic'>Amharic</option> 
+        <option value='Arabic'>Arabic</option> 
+        <option value='Azerbaijani'>Azerbaijani</option> 
+        <option value='Aztec'>Aztec</option> 
+        <option value='Basque'>Basque</option> 
+        <option value='Bengali'>Bengali</option> 
+        <option value='Bosnian'>Bosnian</option> 
+        <option value='Breton'>Breton</option> 
+        <option value='Bulgarian'>Bulgarian</option> 
+        <option value='Byelorussian'>Byelorussian</option> 
+        <option value='Catalan'>Catalan</option> 
+        <option value='Chechen'>Chechen</option> 
+        <option value='Chinese'>Chinese</option> 
+        <option value='Creek'>Creek</option> 
+        <option value='Croatian'>Croatian</option> 
+        <option value='Czech'>Czech</option> 
+        <option value='Dakota'>Dakota</option> 
+        <option value='Danish'>Danish</option> 
+        <option value='Dinka'>Dinka</option> 
+        <option value='Dutch'>Dutch</option> 
+        <option value='English'>English</option> 
+        <option value='Esperanto'>Esperanto</option> 
+        <option value='Estonian'>Estonian</option> 
+        <option value='Farsi'>Farsi</option> 
+        <option value='Finnish'>Finnish</option> 
+        <option value='Flemish'>Flemish</option> 
+        <option value='French'>French</option> 
+        <option value='Gaelic'>Gaelic</option> 
+        <option value='Georgian'>Georgian</option> 
+        <option value='German'>German</option> 
+        <option value='Greek'>Greek</option> 
+        <option value='Guarani'>Guarani</option> 
+        <option value='Gujarati'>Gujarati</option> 
+        <option value='Haitian-Creole'>Haitian-Creole</option> 
+        <option value='Hausa'>Hausa</option> 
+        <option value='Hebrew'>Hebrew</option> 
+        <option value='Herero'>Herero</option> 
+        <option value='Hindi'>Hindi</option> 
+        <option value='Hmong'>Hmong</option> 
+        <option value='Hungarian'>Hungarian</option> 
+        <option value='Icelandic'>Icelandic</option> 
+        <option value='Igbo'>Igbo</option> 
+        <option value='Indonesian'>Indonesian</option> 
+        <option value='Irish'>Irish</option> 
+        <option value='Italian'>Italian</option> 
+        <option value='Japanese'>Japanese</option> 
+        <option value='Javanese'>Javanese</option> 
+        <option value='Kabyle'>Kabyle</option> 
+        <option value='Khmer'>Khmer</option> 
+        <option value='Korean'>Korean</option> 
+        <option value='Kurdish'>Kurdish</option> 
+        <option value='Latin'>Latin</option> 
+        <option value='Latvian'>Latvian</option> 
+        <option value='Lithuanian'>Lithuanian</option> 
+        <option value='Macedonian'>Macedonian</option> 
+        <option value='Malagasy'>Malagasy</option> 
+        <option value='Malay'>Malay</option> 
+        <option value='Malayalam'>Malayalam</option> 
+        <option value='Maltese'>Maltese</option> 
+        <option value='Maori'>Maori</option> 
+        <option value='Marathi'>Marathi</option> 
+        <option value='Masai'>Masai</option> 
+        <option value='Mayan'>Mayan</option> 
+        <option value='Mongolian'>Mongolian</option> 
+        <option value='Ndebele'>Ndebele</option> 
+        <option value='North'>North</option> 
+        <option value='Ndebele'>Ndebele</option> 
+        <option value='South Nepali'>South Nepali</option> 
+        <option value='Norwegian'>Norwegian</option> 
+        <option value='Panjabi'>Panjabi</option> 
+        <option value='Persian'>Persian</option> 
+        <option value='Polish'>Polish</option> 
+        <option value='Portuguese'>Portuguese</option> 
+        <option value='Pushto'>Pushto</option> 
+        <option value='Rajasthani'>Rajasthani</option> 
+        <option value='Romanian'>Romanian</option> 
+        <option value='Russian'>Russian</option> 
+        <option value='Sanskrit'>Sanskrit</option> 
+        <option value='Serbian'>Serbian</option> 
+        <option value='Serbo-Croat'>Serbo-Croat</option> 
+        <option value='Sesotho/S. Sotho'>Sesotho/S. Sotho</option> 
+        <option value='Shona'>Shona</option> 
+        <option value='Sign Language'>Sign Language</option> 
+        <option value='Singhalese'>Singhalese</option> 
+        <option value='Sino-Tibetan'>Sino-Tibetan</option> 
+        <option value='Si'>Si</option> 
+        <option value='Swati/Swazi'>Swati/Swazi</option> 
+        <option value='Slovak'>Slovak</option> 
+        <option value='Slovenian'>Slovenian</option> 
+        <option value='Spanish'>Spanish</option> 
+        <option value='Swahili'>Swahili</option> 
+        <option value='Swedish'>Swedish</option> 
+        <option value='Tagalog'>Tagalog</option> 
+        <option value='Tahitian'>Tahitian</option> 
+        <option value='Tamil'>Tamil</option> 
+        <option value='Tatar'>Tatar</option> 
+        <option value='Telugu'>Telugu</option> 
+        <option value='Thai'>Thai</option> 
+        <option value='Tibetan'>Tibetan</option> 
+        <option value='Tsonga'>Tsonga</option> 
+        <option value='Tswana'>Tswana</option> 
+        <option value='Turkish'>Turkish</option> 
+        <option value='Ukrainian'>Ukrainian</option> 
+        <option value='Urdu'>Urdu</option> 
+        <option value='Venda'>Venda</option> 
+        <option value='Vietnamese'>Vietnamese</option> 
+        <option value='Welsh'>Welsh</option> 
+        <option value='Yiddish'>Yiddish</option> 
+        <option value='Yoruba'>Yoruba</option> 
+        <option value='Zhuang/Chuang'>Zhuang/Chuang</option> 
+        <option value='Zuluzzz'>Zuluzzz</option> 
+        <option value='Other'>Other</option> 
+      </select> 
+      <br>
+      <span class='label'><B> Comments:</B></span> 
+      <textarea name='projinfo' rows='3' cols='18' wrap=physical style="width:100%;" onchange="triggerWarning();"></textarea> 
+      <input TYPE='hidden' NAME='subject' value='Quick Quote'> 
+      <input type='hidden' name='env_report' value='75.169.119.10,Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3,http://www.google.com/search?sourceid=chrome&ie=UTF-8&q=verbatim+solutions'> 
+            <input name="random" type="hidden" value="asd434566j" /> 
+      <input name="ts" type="hidden" value="" /> 
+	  <center>
+		<input name="submit" type="image" src="http://www.verbatimsolutions.com/inc/QuoteButton.gif" onclick="unTriggerWarning();" /> 
+	  </center>
+    </form>
+  </div>
+</body>
+</html>
