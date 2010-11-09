@@ -6,11 +6,10 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "FlipsideViewController.h"
 #import "ThemeController.h"
 #import "FlagsTableViewController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
+@interface MainViewController : UIViewController {
 	IBOutlet UIImageView* bgImageView;
 	ThemeController* themeController;
 	FlagsTableViewController* flagController;

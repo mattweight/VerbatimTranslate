@@ -11,7 +11,6 @@
 
 @interface InfoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource> {
 	UITableView * _tableView;
-	UIBarButtonItem * _doneButton;
 	UIPickerView * _languagePicker;
 	UIToolbar * _languageToolbar;
 	UIBarButtonItem * _setLanguageButton;
@@ -21,7 +20,6 @@
 }
 
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem * doneButton;
 @property (nonatomic, retain) IBOutlet UIPickerView * languagePicker;
 @property (nonatomic, retain) IBOutlet UIToolbar * languageToolbar;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem * setLanguageButton;

@@ -1,0 +1,305 @@
+TInfoProto
+v7
+r0
+t310544891.634137
+cCheck dependencies
+cProcessInfoPlistFile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/Info.plist InfoProto-Info.plist
+cCompileXIB /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/MainWindow.xib
+cCompileXIB /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProtoViewController.xib
+cCompileXIB /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.xib
+cProcessPCH /var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch.gch InfoProto_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/main.o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoAppDelegate.o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoViewController.o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoViewController.o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto normal i386
+cGenerateDSYMFile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app.dSYM /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto
+cTouch /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk
+c000000004C6C30170000000000000110
+t1282158615
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004C5A4DB60000000000295900
+t1280986550
+s2709760
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C5A4DB0000000000029D580
+t1280986544
+s2741632
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C5A4DA10000000000001466
+t1280986529
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C6241ED00000000000009CD
+t1281507821
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C6242840000000001E228C0
+t1281507972
+s31598784
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoAppDelegate.h
+c000000004CC3A73600000000000001EE
+t1287890742
+s494
+i<UIKit/UIKit.h>
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoAppDelegate.m
+c000000004CCAD9D30000000000000AC9
+t1288362451
+s2761
+i"InfoProtoAppDelegate.h"
+i"InfoProtoViewController.h"
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoViewController.h
+c000000004CCA4DBA000000000000017F
+t1288326586
+s383
+i<UIKit/UIKit.h>
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoViewController.m
+c000000004CCA67E20000000000000731
+t1288333282
+s1841
+i"InfoProtoViewController.h"
+i"InfoViewController.h"
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.h
+c000000004CCAF291000000000000047E
+t1288368785
+s1150
+i<UIKit/UIKit.h>
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.m
+c000000004CCAF81A0000000000001AC2
+t1288370202
+s6850
+i"InfoViewController.h"
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.xib
+c000000004CCAF2E500000000000CB646
+t1288368869
+s833094
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProtoViewController.xib
+c000000004CCA593900000000000051CD
+t1288329529
+s20941
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProto_Prefix.pch
+c000000004CC3A73600000000000000BB
+t1287890742
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/MainWindow.xib
+c000000004CD2526700000000000054E9
+t1288852071
+s21737
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app
+t1288852091
+s272
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app.dSYM
+t1288852091
+s102
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/Info.plist
+t1288852088
+s654
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto
+t1288852091
+s32360
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProtoViewController.nib
+t1288852089
+s3330
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoViewController.nib
+t1288852089
+s5811
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/MainWindow.nib
+t1288852089
+s1685
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/PkgInfo
+t1288852088
+s8
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProto.LinkFileList
+c000000004CD252780000000000000299
+t1288852088
+s665
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoAppDelegate.o
+t1288852091
+s48748
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoViewController.o
+t1288852091
+s39616
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoViewController.o
+t1288852091
+s72512
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/main.o
+t1288852091
+s6360
+
+N/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/main.m
+c000000004CC3A736000000000000016E
+t1287890742
+s366
+i<UIKit/UIKit.h>
+
+N/var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch.gch
+t1288852090
+s15240208
+
+NInfoProto-Info.plist
+c000000004CCADA5800000000000003DC
+t1288362584
+s988
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies310544888#310544888#0(0"0(0#1#0"8613945120#0"0#
+
+CCompileC build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoAppDelegate.o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310544891.243289
+e310544891.367305
+r1
+xCompileC
+xbuild/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoAppDelegate.o
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@105"Compile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoAppDelegate.m310544891#310544891#0(0"0(0#0#97"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoAppDelegate.m8609721216#2302"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-generated-files.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-own-target-headers.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-all-target-headers.hmap -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-project-headers.hmap -F/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/include -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources/i386 -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources -include /var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch -c /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoAppDelegate.m -o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoAppDelegate.o0#
+
+CCompileC build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoViewController.o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310544891.326437
+e310544891.444850
+r1
+xCompileC
+xbuild/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoViewController.o
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@108"Compile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoViewController.m310544891#310544891#0(0"0(0#0#100"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoViewController.m8613602560#2308"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-generated-files.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-own-target-headers.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-all-target-headers.hmap -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-project-headers.hmap -F/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/include -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources/i386 -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources -include /var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch -c /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoProtoViewController.m -o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProtoViewController.o0#
+
+CCompileC build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoViewController.o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310544891.367443
+e310544891.554723
+r1
+xCompileC
+xbuild/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoViewController.o
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@103"Compile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.m310544891#310544891#0(0"0(0#0#95"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.m8610702528#2298"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-generated-files.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-own-target-headers.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-all-target-headers.hmap -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-project-headers.hmap -F/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/include -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources/i386 -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources -include /var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch -c /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.m -o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoViewController.o0#
+
+CCompileC build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/main.o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s310544891.241894
+e310544891.326297
+r1
+xCompileC
+xbuild/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/main.o
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/main.m310544891#310544891#0(0"0(0#0#73"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/main.m8614235456#2262"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-generated-files.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-own-target-headers.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-all-target-headers.hmap -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-project-headers.hmap -F/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/include -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources/i386 -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources -include /var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch -c /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/main.m -o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.xib
+s310544889.212762
+e310544889.928317
+r1
+xCompileXIB
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.xib
+lSLF07#2@41"CompileXIB Classes/InfoViewController.xib310544889#310544889#0(0"0(0#0#97"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.xib8611495520#680"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoViewController.nib /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/Classes/InfoViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProtoViewController.xib
+s310544888.618287
+e310544889.282246
+r1
+xCompileXIB
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProtoViewController.xib
+lSLF07#2@38"CompileXIB InfoProtoViewController.xib310544888#310544889#0(0"0(0#0#94"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProtoViewController.xib8609741472#682"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProtoViewController.nib /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProtoViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CCompileXIB /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/MainWindow.xib
+s310544888.616553
+e310544889.212644
+r1
+xCompileXIB
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib310544888#310544889#0(0"0(0#0#81"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/MainWindow.xib8610155008#656"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/MainWindow.nib /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk0#
+
+CGenerateDSYMFile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app.dSYM /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto
+s310544891.605273
+e310544891.629748
+r1
+xGenerateDSYMFile
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app.dSYM
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto
+lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/InfoProto.app.dSYM build/Debug-iphonesimulator/InfoProto.app/InfoProto310544891#310544891#0(0"0(0#0#118"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto8613817792#473"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto -o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app.dSYM0#
+
+CLd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto normal i386
+s310544891.554843
+e310544891.605134
+r1
+xLd
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto
+xnormal
+xi386
+lSLF07#2@123"Link /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto310544891#310544891#0(0"0(0#0#0"8602832320#1050"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -L/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator -F/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator -filelist /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/Objects-normal/i386/InfoProto.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/InfoProto0#
+
+CProcessInfoPlistFile /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/Info.plist InfoProto-Info.plist
+s310544888.572666
+e310544888.616402
+r1
+xProcessInfoPlistFile
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/Info.plist
+xInfoProto-Info.plist
+lSLF07#2@28"Process InfoProto-Info.plist310544888#310544888#0(0"0(0#0#87"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProto-Info.plist8611687232#569"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility InfoProto-Info.plist -genpkginfo /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app/Info.plist0#
+
+CProcessPCH /var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch.gch InfoProto_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s310544889.928483
+e310544891.241690
+r1
+xProcessPCH
+x/var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch.gch
+xInfoProto_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile InfoProto_Prefix.pch310544889#310544891#0(0"0(0#0#87"/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProto_Prefix.pch8599594720#2124"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-generated-files.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-own-target-headers.hmap -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-all-target-headers.hmap -iquote /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/InfoProto-project-headers.hmap -F/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/include -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources/i386 -I/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/InfoProto.build/Debug-iphonesimulator/InfoProto.build/DerivedSources -c /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/InfoProto_Prefix.pch -o /var/folders/EX/EXYwH9GaFne-LiuzsQhDAU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/InfoProto_Prefix-gzqagvtxcpzqsbezuxmcbnsabpoz/InfoProto_Prefix.pch.gch0#
+
+CTouch /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app
+s310544891.629864
+e310544891.634078
+r1
+xTouch
+x/Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app
+lSLF07#2@114"Touch /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app310544891#310544891#0(0"0(0#0#0"8613055712#336"    cd /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/bgeorge/Documents/verbatim/VerbatimTranslate/prototype_info/build/Debug-iphonesimulator/InfoProto.app0#
+

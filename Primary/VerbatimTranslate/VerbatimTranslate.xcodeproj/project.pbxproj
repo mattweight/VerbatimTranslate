@@ -11,12 +11,10 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		280E754D0DD40C5E005A515E /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754A0DD40C5E005A515E /* FlipsideView.xib */; };
 		280E754E0DD40C5E005A515E /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754B0DD40C5E005A515E /* MainView.xib */; };
 		280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754C0DD40C5E005A515E /* MainWindow.xib */; };
 		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
-		289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */; };
 		7023B952127E1510008FCABE /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7023B950127E1510008FCABE /* WordViewController.xib */; };
 		7023B956127E1526008FCABE /* mariachi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B954127E1526008FCABE /* mariachi.png */; };
 		7023B957127E1526008FCABE /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B955127E1526008FCABE /* panda.png */; };
@@ -95,6 +93,11 @@
 		70E8EED0127FFE1500323D92 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECB127FFE1500323D92 /* NSObject+SBJSON.m */; };
 		70E8EED1127FFE1500323D92 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECD127FFE1500323D92 /* NSString+SBJSON.m */; };
 		70E8EED2127FFE1500323D92 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECF127FFE1500323D92 /* SBJSON.m */; };
+		CA668C1112845AF900B52C92 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA668C0D12845AF900B52C92 /* InfoViewController.m */; };
+		CA668C1212845AF900B52C92 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA668C0E12845AF900B52C92 /* InfoViewController.xib */; };
+		CA668C1312845AF900B52C92 /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA668C1012845AF900B52C92 /* QuoteViewController.m */; };
+		CA668C1612845B3A00B52C92 /* quoteView.html in Resources */ = {isa = PBXBuildFile; fileRef = CA668C1412845B3A00B52C92 /* quoteView.html */; };
+		CA668C1712845B3A00B52C92 /* QuoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA668C1512845B3A00B52C92 /* QuoteViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,14 +106,11 @@
 		1D3623250D0F684500981E51 /* VerbatimTranslateAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VerbatimTranslateAppDelegate.m; path = Classes/VerbatimTranslateAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* VerbatimTranslate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerbatimTranslate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		280E754A0DD40C5E005A515E /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
 		280E754B0DD40C5E005A515E /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		280E754C0DD40C5E005A515E /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		288765580DF743DE002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		289233A80DB2D0DB0083E9F9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
 		289233A90DB2D0DB0083E9F9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
-		289233AC0DB2D0DB0083E9F9 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipsideViewController.h; path = Classes/FlipsideViewController.h; sourceTree = "<group>"; };
-		289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipsideViewController.m; path = Classes/FlipsideViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* VerbatimTranslate_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimTranslate_Prefix.pch; sourceTree = "<group>"; };
 		7023B935127E1444008FCABE /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
@@ -205,6 +205,13 @@
 		70E8EECE127FFE1500323D92 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
 		70E8EECF127FFE1500323D92 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VerbatimTranslate-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CA668C0C12845AF900B52C92 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		CA668C0D12845AF900B52C92 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		CA668C0E12845AF900B52C92 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		CA668C0F12845AF900B52C92 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
+		CA668C1012845AF900B52C92 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
+		CA668C1412845B3A00B52C92 /* quoteView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = quoteView.html; sourceTree = "<group>"; };
+		CA668C1512845B3A00B52C92 /* QuoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,8 +240,10 @@
 		281C6CD70DB2D82200F60ACC /* Flipside View */ = {
 			isa = PBXGroup;
 			children = (
-				289233AC0DB2D0DB0083E9F9 /* FlipsideViewController.h */,
-				289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */,
+				CA668C0C12845AF900B52C92 /* InfoViewController.h */,
+				CA668C0D12845AF900B52C92 /* InfoViewController.m */,
+				CA668C0F12845AF900B52C92 /* QuoteViewController.h */,
+				CA668C1012845AF900B52C92 /* QuoteViewController.m */,
 			);
 			name = "Flipside View";
 			sourceTree = "<group>";
@@ -302,11 +311,13 @@
 				702C61BD127F8970002BB9C6 /* AutoSuggestProtoViewController.xib */,
 				70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */,
 				7023B950127E1510008FCABE /* WordViewController.xib */,
-				280E754A0DD40C5E005A515E /* FlipsideView.xib */,
+				CA668C1512845B3A00B52C92 /* QuoteViewController.xib */,
+				CA668C0E12845AF900B52C92 /* InfoViewController.xib */,
 				280E754B0DD40C5E005A515E /* MainView.xib */,
 				280E754C0DD40C5E005A515E /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */,
 				7023B935127E1444008FCABE /* Entitlements.plist */,
+				CA668C1412845B3A00B52C92 /* quoteView.html */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -482,7 +493,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280E754D0DD40C5E005A515E /* FlipsideView.xib in Resources */,
 				280E754E0DD40C5E005A515E /* MainView.xib in Resources */,
 				280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */,
 				7023B952127E1510008FCABE /* WordViewController.xib in Resources */,
@@ -552,6 +562,9 @@
 				703539FA1282A4C600B9A8BE /* Bubble_nostroke.png in Resources */,
 				703539FB1282A4C600B9A8BE /* Arrow2_nostroke.png in Resources */,
 				703539FC1282A4C600B9A8BE /* Arrow1_nostroke.png in Resources */,
+				CA668C1212845AF900B52C92 /* InfoViewController.xib in Resources */,
+				CA668C1612845B3A00B52C92 /* quoteView.html in Resources */,
+				CA668C1712845B3A00B52C92 /* QuoteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +578,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* VerbatimTranslateAppDelegate.m in Sources */,
 				289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */,
-				289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */,
 				7028DFB9127E19B50034EE04 /* ThemeController.m in Sources */,
 				7028E027127E1F870034EE04 /* WordBubbleController.m in Sources */,
 				7028E028127E1F870034EE04 /* WordBubbleView.m in Sources */,
@@ -576,6 +588,8 @@
 				70E8EED2127FFE1500323D92 /* SBJSON.m in Sources */,
 				7037479512828EA600421C51 /* FlagsTableViewController.m in Sources */,
 				7037498F128299C600421C51 /* FlagTableViewCell.m in Sources */,
+				CA668C1112845AF900B52C92 /* InfoViewController.m in Sources */,
+				CA668C1312845AF900B52C92 /* QuoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

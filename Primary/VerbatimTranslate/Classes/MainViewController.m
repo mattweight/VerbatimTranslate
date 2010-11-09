@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "InfoViewController.h"
 
 @implementation MainViewController
 
@@ -43,10 +44,6 @@
 											 selector:@selector(displayTranslation:)
 												 name:@"__TRANSLATE_COMPLETE__"
 											   object:nil];
-}
-
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
-	[self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)displayTranslation:(id)sender {
@@ -99,15 +96,18 @@
 }
 
 - (IBAction)showInfo:(id)sender {
-	FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
-	controller.delegate = self;
+	InfoViewController * infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
+	infoController.title = @"Verbatim Translate";	// TODO - do in IB
 	
-	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[self presentModalViewController:controller animated:YES];
+	// TODO - do in IB
+	UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:infoController];
+    navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	[self presentModalViewController:navController animated:YES];
 	
-	[controller release];
+	[navController release];
+	[infoController release];
 }
-
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

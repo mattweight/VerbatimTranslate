@@ -14,10 +14,17 @@
 @synthesize infoButton = _infoButton;
 
 - (IBAction)showInfoView:(id)sender {
-	InfoViewController * vc = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
-	vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[self presentModalViewController:vc animated:YES];
-	[vc release];
+	InfoViewController * infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
+	infoController.title = @"Verbatim Translate";	// TODO - do in IB
+	
+	// TODO - do in IB
+	UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:infoController];
+    navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	[self presentModalViewController:navController animated:YES];
+	
+	[navController release];
+	[infoController release];
 }
 
 /*

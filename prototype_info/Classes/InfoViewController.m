@@ -7,6 +7,7 @@
 //
 
 #import "InfoViewController.h"
+#import "QuoteViewController.h"
 
 #define kSettingsRequestQuote	0
 #define kSettingsSetLanguage	1
@@ -15,7 +16,6 @@
 @implementation InfoViewController
 
 @synthesize tableView = _tableView;
-@synthesize doneButton = _doneButton;
 @synthesize languageToolbar = _languageToolbar;
 @synthesize setLanguageButton = _setLanguageButton;
 @synthesize languagePicker = _languagePicker;
@@ -80,13 +80,10 @@
 }
 
 - (void)showQuoteView {
-/*	UIViewController * vc = [[UIViewController alloc] init];
-	UIView *v = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-	v.backgroundColor = [UIColor greenColor];
-	vc.view = v;
-	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
-	[v release];	*/
+	QuoteViewController * quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:[NSBundle mainBundle]];
+	quoteViewController.title = @"Pro Quote";
+	[self.navigationController pushViewController:quoteViewController animated:YES];
+	[quoteViewController release];
 }
 
 - (void)showLanguagePicker {
@@ -114,7 +111,7 @@
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.5];
 	
-	// TODO - should be in it's own view/vc
+	// TODO - should be in it's own view/vc; something is wrong with math...; sometimes does not reset correctly
 	
 	float moveValue = self.languagePicker.bounds.size.height + self.languageToolbar.bounds.size.height;
 	
@@ -161,8 +158,8 @@
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-		_settings = [[NSArray arrayWithObjects:@"Request Professional Quote", @"Set App Language", @"Clear Translation History", nil] retain];
-		_languages = [[NSArray arrayWithObjects:@"English", @"Spanish", @"Korean", nil] retain];
+		_settings = [[NSArray arrayWithObjects:@"Request Professional Quote", @"Set Viewable Language", @"Clear Translation History", nil] retain];
+		_languages = [[NSArray arrayWithObjects:@"English", @"Spanish", @"Korean", @"Japanese", @"Chinese", nil] retain];
 		_appLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@"appLanguage"];
 		if (!_appLanguage) {
 			_appLanguage = @"English";
@@ -183,7 +180,24 @@
 	}
     [self.languagePicker selectRow:index inComponent:0 animated:NO];
     
+	// TODO - do in IB
+	UIBarButtonItem * doneButton = [[UIBarButtonItem alloc]
+									initWithTitle:@"Done"
+									style:UIBarButtonItemStyleBordered
+									target:self
+									action:@selector(showMainView:)];
+	self.navigationItem.leftBarButtonItem = doneButton;
+	[doneButton release];
+	
 	[super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	// deselect previous selection
+	NSIndexPath * table_selection = [self.tableView indexPathForSelectedRow];
+	[self.tableView deselectRowAtIndexPath:table_selection animated:NO];
+
+	[super viewWillAppear:animated];
 }
 
 /*
@@ -210,7 +224,6 @@
 
 - (void)dealloc {
 	[_tableView release];
-	[_doneButton release];
 	[_languagePicker release];
 	[_settings release];
     [_languages release];
