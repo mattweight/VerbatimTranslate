@@ -85,6 +85,8 @@
 		70374931128296A400421C51 /* ChineseSimplified30.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748FF128296A400421C51 /* ChineseSimplified30.png */; };
 		7037498F128299C600421C51 /* FlagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037498E128299C600421C51 /* FlagTableViewCell.m */; };
 		70C1073912801072007BA298 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C1073812801072007BA298 /* Icon.png */; };
+		70C61BC51289325E00F0E0BE /* ChineseSimplified40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */; };
+		70C61C5612893CB500F0E0BE /* SpanishLatinAmerica40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */; };
 		70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E85048127EA62C000FCCA8 /* default-theme.plist */; };
 		70E8506A127EA8F5000FCCA8 /* WordBubbleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */; };
 		70E85071127EA93B000FCCA8 /* wordbubblearrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E8506F127EA93B000FCCA8 /* wordbubblearrow.png */; };
@@ -191,6 +193,8 @@
 		7037498D128299C600421C51 /* FlagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlagTableViewCell.h; sourceTree = "<group>"; };
 		7037498E128299C600421C51 /* FlagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlagTableViewCell.m; sourceTree = "<group>"; };
 		70C1073812801072007BA298 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChineseSimplified40.plist; sourceTree = "<group>"; };
+		70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpanishLatinAmerica40.plist; sourceTree = "<group>"; };
 		70E84F14127E8099000FCCA8 /* VerbatimConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimConstants.h; sourceTree = "<group>"; };
 		70E85048127EA62C000FCCA8 /* default-theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "default-theme.plist"; sourceTree = "<group>"; };
 		70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordBubbleController.xib; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 		70E85034127EA3FD000FCCA8 /* Theme PLists */ = {
 			isa = PBXGroup;
 			children = (
+				70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */,
+				70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */,
 				70E85048127EA62C000FCCA8 /* default-theme.plist */,
 			);
 			name = "Theme PLists";
@@ -565,6 +571,8 @@
 				CA668C1212845AF900B52C92 /* InfoViewController.xib in Resources */,
 				CA668C1612845B3A00B52C92 /* quoteView.html in Resources */,
 				CA668C1712845B3A00B52C92 /* QuoteViewController.xib in Resources */,
+				70C61BC51289325E00F0E0BE /* ChineseSimplified40.plist in Resources */,
+				70C61C5612893CB500F0E0BE /* SpanishLatinAmerica40.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

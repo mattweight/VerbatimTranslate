@@ -44,6 +44,14 @@ static ThemeController* singletonController = nil;
 	return singletonController;
 }
 
+- (BOOL)getNeedsThemeUpdate {
+	return needsThemeUpdate;
+}
+
+- (void)setNeedsThemeUpdate:(BOOL)updateStatus {
+	needsThemeUpdate = updateStatus;
+}
+
 - (void)genSampleDict {
 	NSMutableDictionary* langDict = [[NSMutableDictionary alloc] init];
 	[langDict setObject:@"en" forKey:@"google-translate"];
@@ -88,9 +96,12 @@ static ThemeController* singletonController = nil;
 	NSFileManager* fMan = [NSFileManager defaultManager];
 	NSString* mainPath = [[NSBundle mainBundle] resourcePath];
 	
+	NSLog(@"I am updating with: %@", [updateDictionary description]);
+	
 	if (updateDictionary == nil) {
 		NSString* dictFile = [[NSUserDefaults standardUserDefaults] stringForKey:THEME_PLIST_FILENAME_KEY];
-		if (dictFile != nil && [fMan fileExistsAtPath:[mainPath stringByAppendingPathComponent:dictFile]]) {
+		NSLog(@"Updating with dictFile: %@", dictFile);
+		if (dictFile != nil && ![fMan fileExistsAtPath:[mainPath stringByAppendingPathComponent:dictFile]]) {
 			dictFile = nil;
 		}
 		
@@ -116,7 +127,8 @@ static ThemeController* singletonController = nil;
 	if (! [fMan fileExistsAtPath:[mainPath stringByAppendingPathComponent:bgImgFile]]) {
 		NSLog(@"Background image '%@' does not exist!", bgImgFile);
 		exit(1);
-	}	
+	}
+	NSLog(@"Setting up background image to: %@", bgImgFile);
 	[self setBackgroundImageFile:bgImgFile];
 	
 	NSDictionary* inputDictionary = (NSDictionary*)[updateDictionary objectForKey:LOOKUP_INPUT_LANGUAGE_DICTIONARY];

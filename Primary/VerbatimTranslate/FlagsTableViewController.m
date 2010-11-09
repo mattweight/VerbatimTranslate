@@ -8,6 +8,11 @@
 
 #import "FlagsTableViewController.h"
 #import "FlagTableViewCell.h"
+#import "ThemeController.h"
+
+#import "VerbatimTranslateAppDelegate.h"
+#import "MainViewController.h"
+
 #import "math.h"
 
 static inline double radians (double degrees) {return degrees * M_PI/180;}
@@ -101,14 +106,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     }
     
     // Configure the cell...
-	if (!(indexPath.row % 4)) {
-		[[(FlagTableViewCell*)cell flagImageView] setImage:[UIImage imageNamed:@"Norwegian40.png"]];
-	}
-	else if (!(indexPath.row % 3)) {
-		[[(FlagTableViewCell*)cell flagImageView] setImage:[UIImage imageNamed:@"Japanese40.png"]];
-	}
-	else if (!(indexPath.row % 2)) {
-		[[(FlagTableViewCell*)cell flagImageView] setImage:[UIImage imageNamed:@"Polish40.png"]];
+	if (!(indexPath.row % 2)) {
+		[[(FlagTableViewCell*)cell flagImageView] setImage:[UIImage imageNamed:@"ChineseSimplified40.png"]];
 	}
 	else {
 		[[(FlagTableViewCell*)cell flagImageView] setImage:[UIImage imageNamed:@"SpanishLatinAmerica40.png"]];
@@ -171,21 +170,32 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 									   tableView.frame.origin.y, 
 									   tableView.frame.size.width,
 									   tableView.frame.size.height)];
+		[tableView setScrollEnabled:YES];
+		// Do not do any of the reloading stuff.
+		return;
 	}
 	else {
 		[tableView setFrame:CGRectMake(origPoint.x, 
 									   origPoint.y, 
 									   tableView.frame.size.width,
 									   tableView.frame.size.height)];
+		[tableView setScrollEnabled:NO];
 	}
-    // Navigation logic may go here. Create and push another view controller.
-	/*
-	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
-	 */
+	
+	VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)[[UIApplication sharedApplication] delegate];
+	MainViewController* mainController = (MainViewController*)appDelegate.mainViewController;
+	[mainController.themeController setNeedsThemeUpdate:YES];
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	
+	if (!(indexPath.row % 2)) {
+		[defaults setObject:@"ChineseSimplified40.plist" forKey:THEME_PLIST_FILENAME_KEY];
+	}
+	else {
+		[defaults setObject:@"SpanishLatinAmerica40.plist" forKey:THEME_PLIST_FILENAME_KEY];
+	}
+	
+	[defaults synchronize];
+	[mainController viewWillAppear:YES];
 }
 
 

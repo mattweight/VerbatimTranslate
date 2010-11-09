@@ -15,6 +15,10 @@
 #import "AutoSuggestManager.h"
 #import "JSON.h"
 
+#import "VerbatimTranslateAppDelegate.h"
+#import "MainViewController.h"
+#import "ThemeController.h"
+
 @implementation AutoSuggestProtoViewController
 
 @synthesize textInput = _textInput;
@@ -61,10 +65,17 @@
 }
 
 - (void)submitText:(NSString *)text {
+	// Get the web service language keyword..
+	VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)[[UIApplication sharedApplication] delegate];
+	MainViewController* mainController = (MainViewController*)appDelegate.mainViewController;
+	NSDictionary* outService = (NSDictionary*)[(NSDictionary*)mainController.themeController.outputLanguage objectForKey:@"services"];
+	NSString* outputKeyword = [outService objectForKey:@"google-translate"];
+	NSLog(@"Output keyword is: %@", outputKeyword);
+	
 	NSMutableString* translateURLString = [NSMutableString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&langpair="];
 	[translateURLString appendString:@"en"];
 	[translateURLString appendString:@"%7C"];
-	[translateURLString appendString:@"es"];
+	[translateURLString appendString:outputKeyword];
 	[translateURLString appendString:@"&q="];
 	[translateURLString appendString:[text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	NSLog(@"The request url is %@", translateURLString);

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>background-image</key>
+	<string>panda.png</string>
+	<key>input-controller</key>
+	<dict>
+		<key>arrow-top</key>
+		<string>0</string>
+		<key>arrow-center-x</key>
+		<string>124.0</string>
+		<key>arrow-center-y</key>
+		<string>0.0</string>
+		<key>center-x</key>
+		<string>160.0</string>
+		<key>center-y</key>
+		<string>65.0</string>
+	</dict>
+	<key>input-language</key>
+	<dict>
+		<key>human-readable</key>
+		<string>English (US)</string>
+		<key>services</key>
+		<dict>
+			<key>babelfish</key>
+			<string>en</string>
+			<key>google-translate</key>
+			<string>en</string>
+			<key>yahoo-translate</key>
+			<string>en</string>
+		</dict>
+	</dict>
+	<key>output-controller</key>
+	<dict>
+		<key>arrow-top</key>
+		<string>1</string>
+		<key>arrow-center-x</key>
+		<string>62</string>
+		<key>arrow-center-y</key>
+		<string>40.0</string>
+		<key>center-x</key>
+		<string>160.0</string>
+		<key>center-y</key>
+		<string>364.0</string>
+	</dict>
+	<key>output-language</key>
+	<dict>
+		<key>human-readable</key>
+		<string>Chinese (Simplified)</string>
+		<key>services</key>
+		<dict>
+			<key>babelfish</key>
+			<string>zh-CN</string>
+			<key>google-translate</key>
+			<string>zh-CN</string>
+			<key>yahoo-translate</key>
+			<string>zh-CN</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

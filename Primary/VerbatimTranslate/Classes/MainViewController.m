@@ -23,28 +23,51 @@
 */
 
 - (void)viewWillAppear:(BOOL)animated {
-	ThemeController* theme = [[ThemeController alloc] init]; //[ThemeController sharedController];
-	[bgImageView setImage:[UIImage imageNamed:theme.backgroundImageFile]];
-	[bgImageView addSubview:theme.inputBubbleController.view];
-	[theme.inputBubbleController.bubbleTextView setText:@"Tap here to begin typing.."];
-	[theme.inputBubbleController animate];
-	themeController = [theme retain];
-	[theme release];
-	theme = nil;
-	
-	FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
-	[fController.view setCenter:CGPointMake(-120.0, 400.0)];
-	[self.view addSubview:fController.view];
-	flagController = [fController retain];
-	[fController release];
-	fController = nil;
+	if (themeController == nil || (themeController != nil && [themeController getNeedsThemeUpdate])) {
+		if (themeController != nil && [themeController.inputBubbleController isViewLoaded]) {
+			[themeController.inputBubbleController.view removeFromSuperview];
+		}
+		if (themeController != nil && [themeController.outputBubbleController isViewLoaded]) {
+			[themeController.outputBubbleController.view removeFromSuperview];
+		}
+		
+		ThemeController* theme = [[ThemeController alloc] init]; //[ThemeController sharedController];
+		[bgImageView setImage:[UIImage imageNamed:theme.backgroundImageFile]];
+		[bgImageView addSubview:theme.inputBubbleController.view];
+		themeController = [theme retain];
+		[theme release];
+		theme = nil;
+		
+		[themeController.inputBubbleController.bubbleTextView setText:@"Tap here to begin typing.."];
+		[themeController.inputBubbleController animate];
+	}
 
+	if (flagController == nil) {
+		FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+		[fController.view setCenter:CGPointMake(-120.0, 400.0)];
+		[self.view addSubview:fController.view];
+		flagController = [fController retain];
+		[fController release];
+		fController = nil;
+	}
+		
 	NSLog(@"You two are something else or what?");
 	[[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(displayTranslation:)
 												 name:@"__TRANSLATE_COMPLETE__"
 											   object:nil];
 }
+
+/*
+- (void)viewWillDisappear:(BOOL)animated {
+	[themeController.inputBubbleController release];
+	[themeController.outputBubbleController release];
+	[themeController release];
+	themeController = nil;
+	[flagController release];
+	flagController = nil;
+}
+*/
 
 - (void)displayTranslation:(id)sender {
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
@@ -74,25 +97,6 @@
 	themeController = [newTheme retain];
 	[newTheme release];
 	newTheme = nil;
-
-	/*
-	[(WordBubbleView*)themeController.inputBubbleController.view setAnimationStep:1];
-	[themeController.inputBubbleController.bubbleTextView setText:origText];
-	
-	[(WordBubbleView*)themeController.outputBubbleController.view setAnimationStep:1];
-	[themeController.outputBubbleController.bubbleTextView setText:transText];
-
-	[self.view addSubview:themeController.inputBubbleController.view];
-	[self.view addSubview:themeController.outputBubbleController.view];
-	
-	[themeController.inputBubbleController animate];
-	[themeController.outputBubbleController animate];
-	*/
-	/*
-	themeController = [newTheme retain];
-	[newTheme release];
-	newTheme = nil;
-	*/
 }
 
 - (IBAction)showInfo:(id)sender {

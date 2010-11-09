@@ -22,6 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.  
+	//[(MainViewController*)mainViewController initViews];
 
     // Add the main view controller's view to the window and display.
     [window addSubview:mainViewController.view];

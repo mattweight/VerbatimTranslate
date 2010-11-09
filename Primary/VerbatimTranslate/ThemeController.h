@@ -15,6 +15,7 @@
 	WordBubbleController* outputBubbleController;
 	NSDictionary* inputLanguage;
 	NSDictionary* outputLanguage;
+	BOOL needsThemeUpdate;
 
 	// For the moment, I am just setting everything using this abstraction, 
 	// but in the future we could use themeID as an index lookup and push
@@ -33,5 +34,8 @@
 
 - (void)updateUsing:(NSDictionary*)updateDictionary;
 - (void)genSampleDict;
+
+- (BOOL)getNeedsThemeUpdate;
+- (void)setNeedsThemeUpdate:(BOOL)updateStatus;
 
 @end
