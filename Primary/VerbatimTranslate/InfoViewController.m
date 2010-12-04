@@ -80,8 +80,18 @@
 }
 
 - (void)showQuoteView {
+	// setup view controller
 	QuoteViewController * quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:[NSBundle mainBundle]];
-	quoteViewController.title = @"Pro Quote";
+	quoteViewController.title = @"Professional Quote";
+	UIBarButtonItem * backButton = [[UIBarButtonItem alloc]
+									 initWithTitle:@"Back"
+									 style:UIBarButtonItemStyleBordered
+									 target:nil
+									 action:nil];
+	self.navigationItem.backBarButtonItem = backButton;
+	[backButton release];
+	
+	// push view controller
 	[self.navigationController pushViewController:quoteViewController animated:YES];
 	[quoteViewController release];
 }
@@ -111,7 +121,9 @@
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.5];
 	
-	// TODO - should be in it's own view/vc; something is wrong with math...; sometimes does not reset correctly
+	// TODO - should be in it's own view/vc
+	// TODO - should be merged with above method (very similar)
+	// TODO - in .xib, button is currently centered by fixed left spacer (will not work when words are localized)
 	
 	float moveValue = self.languagePicker.bounds.size.height + self.languageToolbar.bounds.size.height;
 	
@@ -158,7 +170,7 @@
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-		_settings = [[NSArray arrayWithObjects:@"Request Professional Quote", @"Set Viewable Language", @"Clear Translation History", nil] retain];
+		_settings = [[NSArray arrayWithObjects:@"Request Professional Quote", @"Set Interface Language", @"Clear Translation History", nil] retain];
 		_languages = [[NSArray arrayWithObjects:@"English", @"Spanish", @"Korean", @"Japanese", @"Chinese", nil] retain];
 		_appLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@"appLanguage"];
 		if (!_appLanguage) {

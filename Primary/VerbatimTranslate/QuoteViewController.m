@@ -8,6 +8,8 @@
 
 #import "QuoteViewController.h"
 
+#define kSubmissionTimeoutSeconds	30
+#define kSpinnerSize				100
 
 @implementation QuoteViewController
 
@@ -25,13 +27,77 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-//	self.scrollView.contentSize = CGSizeMake(320, 800);
-
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"quoteView" ofType:@"html"]isDirectory:NO]]];
-	
+	_webView.delegate = self;
+	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"quoteView" ofType:@"html"] isDirectory:NO]]];
 	[super viewDidLoad];
 }
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+	NSString * pageName = request.URL.lastPathComponent;
+	
+	if ([pageName rangeOfString:@"native|"].location == 0) {	// check for native alert callback (protocol is "native|<message>")
+		NSString * message = [pageName substringFromIndex:7];
+		[self _displayErrorMessage:message];
+		return NO;
+	} else if ([pageName isEqualToString:@"quoteView.html"] || [pageName isEqualToString:@"thankyou.html"]) {	// local html load - allow
+		return YES;
+	} else if ([pageName isEqualToString:@"submit.php"]) {		// about to submit form - show spinner/setup timeout
+		[self _showSpinner];
+		_timeoutTimer = [[NSTimer scheduledTimerWithTimeInterval:kSubmissionTimeoutSeconds target:self selector:@selector(_submissionTimeout:) userInfo:nil repeats:NO] retain];
+		return YES;
+	} else if ([pageName isEqualToString:@"thankyou.php"]) {	// successful submission - show custom thank you page (not default thank you page)
+		[self _clearSpinner];
+		[self _clearTimer];
+		[webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"thankyou" ofType:@"html"] isDirectory:NO]]];
+		return NO;
+	} else {	// anything else - error out
+		[self _clearSpinner];
+		[self _clearTimer];
+		[self _displayDefaultErrorMessage];
+		return NO;
+	}
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+	// TODO - add error handling here just in case something doesn't load correctly?  If something is added here, whenever the request is stopped (thankyou.php, timeout) an error is displayed...
+}
+
+- (void)_displayErrorMessage:(NSString *)message {
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Verbatim Translate" message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+	[alert show];
+	[alert release];	
+}
+
+- (void)_displayDefaultErrorMessage {
+	[self _displayErrorMessage:@"We're sorry, an error has occurred.  Please try again."];
+}
+
+- (void)_showSpinner {
+	_spinnerView = [[SpinnerView alloc] initWithFrame:CGRectMake(self.view.center.x - (kSpinnerSize / 2), self.view.center.y - (kSpinnerSize / 2), kSpinnerSize, kSpinnerSize)];
+	[self.view addSubview:_spinnerView];	
+}
+
+- (void)_clearSpinner {
+	if (_spinnerView) {
+		[_spinnerView removeFromSuperview];
+		[_spinnerView release];
+		_spinnerView = nil;
+	}
+}
+
+- (void)_clearTimer {
+	if (_timeoutTimer) {
+		[_timeoutTimer invalidate];
+		[_timeoutTimer release];
+		_timeoutTimer = nil;
+	}
+}
+
+- (void)_submissionTimeout:(NSTimer *)timer {
+	[_webView stopLoading];
+	[self _clearSpinner];
+	[self _displayDefaultErrorMessage];
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -54,9 +120,11 @@
     // e.g. self.myOutlet = nil;
 }
 
-
 - (void)dealloc {
+	_webView.delegate = nil;	// supposed to do this before releasing the UIWebView
 	[_webView release];
+	[self _clearSpinner];
+	[self _clearTimer];
     [super dealloc];
 }
 
