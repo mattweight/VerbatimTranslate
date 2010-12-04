@@ -8,10 +8,13 @@
 
 #import "InfoViewController.h"
 #import "QuoteViewController.h"
+#import "AutoSuggestManager.h"
 
-#define kSettingsRequestQuote	0
-#define kSettingsSetLanguage	1
-#define kSettingsClearHistory	2
+#define kSettingsRequestQuote			0
+#define kSettingsSetLanguage			1
+#define kSettingsClearHistory			2
+#define kAlertViewTagClearHistory		1
+#define kAlertViewButtonClearHistoryOK	1
 
 @implementation InfoViewController
 
@@ -141,15 +144,32 @@
 }
 
 - (void)showHistoryWarning {
-	// deselect selection
-	NSIndexPath * table_selection = [self.tableView indexPathForSelectedRow];
-	[self.tableView deselectRowAtIndexPath:table_selection animated:NO];	
-	
 	// show warning
 	NSString * message = @"Are you sure you want to clear all translation history?  Your previous translations will not show up as suggestions anymore.";
 	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Verbatim Translate" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+	alert.tag = kAlertViewTagClearHistory;
 	[alert show];
-	[alert release];	
+	[alert release];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (alertView.tag == kAlertViewTagClearHistory && buttonIndex == kAlertViewButtonClearHistoryOK) {
+		// clear history
+		AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
+		[autoSuggest clearHistory];
+		
+		// show confirmation message
+		NSString * message = @"All translation history has been cleared.";
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Verbatim Translate" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[alert show];
+		[alert release];
+		return;
+	}
+	
+	// deselect selection
+	NSIndexPath * tableSelection = [self.tableView indexPathForSelectedRow];
+	[self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView;

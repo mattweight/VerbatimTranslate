@@ -22,6 +22,7 @@
 	sqlite3_stmt * _checkPhraseStatement;
 	sqlite3_stmt * _updateToHistoryStatement;
 	sqlite3_stmt * _addHistoryStatement;
+	sqlite3_stmt * _clearHistoryStatement;
 }
 
 @property (nonatomic, retain) NSString * language;
@@ -34,5 +35,6 @@
 - (NSMutableArray *)getAllPhrases;
 - (NSMutableArray *)getHistory;
 - (NSString *)getHistoryTranslation:(NSString *)from;
+- (void)clearHistory;
 
 @end

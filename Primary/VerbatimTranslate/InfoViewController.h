@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface InfoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface InfoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate> {
 	UITableView * _tableView;
 	UIPickerView * _languagePicker;
 	UIToolbar * _languageToolbar;

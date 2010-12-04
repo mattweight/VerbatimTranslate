@@ -29,6 +29,7 @@
 // TODO - method for compiling statements (streamlined)
 // TODO - finish addToHistory/implement getHistoryTranslation (id based instead of string based?) - optimize addToHistory as update and insert ignore? (maybe)
 // TODO - add a timestamp field to phrases table so we can cutoff old entries and make the most recent ones showup at the top? anything else to sort on (alphabetical, etc)?
+// TODO - having to supply language on singleton is odd -- figure this out
 // TODO - tons of error handling (on all sql calls -- open, close, prepare, etc -- check for errors and fail gracefully)
 
 @implementation AutoSuggestManager
@@ -167,6 +168,22 @@
 	return nil;
 }
 
+- (void)clearHistory {
+	// compile statement if necessary
+	if (_clearHistoryStatement == nil) {
+		// TODO - only delete history types or common phrases too?  If only history types, do we restore common phrases that are history types back to common phrase types?
+		// TODO - current language, or all languages? (probably all, but it doesn't really matter)
+		// TODO - need to also delete history tables
+		NSString * sql = [NSString stringWithFormat:@"DELETE FROM phrases_%@", self.language];
+		if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_clearHistoryStatement, NULL) != SQLITE_OK) {
+			// TODO - add preparation error
+		}
+	}
+	
+	sqlite3_step(_clearHistoryStatement);
+	sqlite3_reset(_clearHistoryStatement);	
+}
+
 // private methods
 
 - (NSString *)_getWritableDBPath {
@@ -220,6 +237,11 @@
         sqlite3_finalize(_addHistoryStatement);
         _addHistoryStatement = nil;
     }
+
+	if (_clearHistoryStatement) {
+        sqlite3_finalize(_clearHistoryStatement);
+        _clearHistoryStatement = nil;
+    }	
 }
 
 - (void)dealloc {
