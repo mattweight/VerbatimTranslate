@@ -23,14 +23,6 @@
 
 @end
 
-// TODO - need to create phrase/history tables (if necessary) - probably on language change
-// TODO - nuke the precompiled statements when language is changed
-// TODO - method for compiling statements (streamlined)
-// TODO - finish addToHistory/implement getHistoryTranslation (id based instead of string based?) - optimize addToHistory as update and insert ignore? (maybe)
-// TODO - add a timestamp field to phrases table so we can cutoff old entries and make the most recent ones showup at the top? anything else to sort on (alphabetical, etc)?
-// TODO - having to supply language on singleton is odd -- figure this out
-// TODO - tons of error handling (on all sql calls -- open, close, prepare, etc -- check for errors and fail gracefully)
-
 @implementation AutoSuggestManager
 
 @synthesize language = _language;
@@ -66,7 +58,7 @@
 
 	// compile statement if necessary
     if (_checkPhraseStatement == nil) {
-		NSString * sql = [NSString stringWithFormat:@"SELECT rowid, type FROM phrases_%@ WHERE phrase = ?", self.language];
+		NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM phrases_%@ WHERE phrase = ?", self.language];
         if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_checkPhraseStatement, NULL) != SQLITE_OK) {
 			// TODO - add preparation error
         }
@@ -76,24 +68,22 @@
 	sqlite3_bind_text(_checkPhraseStatement, 1, [from UTF8String], -1, SQLITE_TRANSIENT);	// TODO - "transient" correct?
 	if (sqlite3_step(_checkPhraseStatement) == SQLITE_ROW) {
 		int rowid = sqlite3_column_int(_checkPhraseStatement, 0);
-		int phraseType = sqlite3_column_int(_checkPhraseStatement, 1);
-		if (phraseType == kPhraseTypeCommon) {
-			// compile statement if necessary
-			if (_updateToHistoryStatement == nil) {
-				NSString * sql = [NSString stringWithFormat:@"UPDATE phrases_%@ SET type = %d WHERE rowid = ?", self.language, kPhraseTypeHistory];
-				if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_updateToHistoryStatement, NULL) != SQLITE_OK) {
-					// TODO - add preparation error
-				}
+
+		// compile statement if necessary
+		if (_updateToHistoryStatement == nil) {
+			NSString * sql = [NSString stringWithFormat:@"UPDATE phrases_%@ SET type = %d, time = strftime('%%s','now') WHERE rowid = ?", self.language, kPhraseTypeHistory];
+			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_updateToHistoryStatement, NULL) != SQLITE_OK) {
+				// TODO - add preparation error
 			}
-			
-			sqlite3_bind_int(_updateToHistoryStatement, 1, rowid);
-			sqlite3_step(_updateToHistoryStatement);
-			sqlite3_reset(_updateToHistoryStatement);			
 		}
+		
+		sqlite3_bind_int(_updateToHistoryStatement, 1, rowid);
+		sqlite3_step(_updateToHistoryStatement);
+		sqlite3_reset(_updateToHistoryStatement);			
 	} else {
 		// compile statement if necessary
 		if (_addHistoryStatement == nil) {
-			NSString * sql = [NSString stringWithFormat:@"INSERT INTO phrases_%@ VALUES (?, %d)", self.language, kPhraseTypeHistory];
+			NSString * sql = [NSString stringWithFormat:@"INSERT INTO phrases_%@ VALUES (?, %d, strftime('%%s','now'))", self.language, kPhraseTypeHistory];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_addHistoryStatement, NULL) != SQLITE_OK) {
 				// TODO - add preparation error
 			}
@@ -121,7 +111,7 @@
 	
 	// compile statement if necessary
     if (_getAllPhrasesStatement == nil) {
-		NSString * sql = [NSString stringWithFormat:@"SELECT phrase FROM phrases_%@ WHERE phrase LIKE ? ORDER BY type ASC, LENGTH(phrase) ASC LIMIT %d", self.language, kPhraseLimit];
+		NSString * sql = [NSString stringWithFormat:@"SELECT phrase,type,time FROM phrases_%@ WHERE phrase LIKE ? ORDER BY type ASC, time DESC LIMIT %d", self.language, kPhraseLimit];
         if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_getAllPhrasesStatement, NULL) != SQLITE_OK) {
 			// TODO - add preparation error
         }
@@ -133,6 +123,10 @@
 
     // execute the query
 	while (sqlite3_step(_getAllPhrasesStatement) == SQLITE_ROW) {
+		
+		//temp
+		NSLog(@"%@|%d|%d\n",[NSString stringWithUTF8String:(char *)sqlite3_column_text(_getAllPhrasesStatement, 0)],sqlite3_column_int(_getAllPhrasesStatement, 1),sqlite3_column_int(_getAllPhrasesStatement, 2));
+		
 		[items addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(_getAllPhrasesStatement, 0)]];
 	}
 	

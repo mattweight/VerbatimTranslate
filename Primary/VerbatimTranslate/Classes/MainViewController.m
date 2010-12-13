@@ -107,7 +107,7 @@
 }
 
 - (void)cancelTranslation:(id)sender {
-	// TODO - MATT please cleanup...
+	// TODO - MATT please cleanup... (probably want the previous translation to be displayed...)
 	
 	[themeController.inputBubbleController.view removeFromSuperview];
 	[themeController.inputBubbleController.autoSuggestController.view removeFromSuperview];
