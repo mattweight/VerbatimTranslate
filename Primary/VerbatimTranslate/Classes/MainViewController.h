@@ -21,5 +21,6 @@
 
 - (IBAction)showInfo:(id)sender;
 - (void)displayTranslation:(id)sender;
+- (void)cancelTranslation:(id)sender;
 
 @end

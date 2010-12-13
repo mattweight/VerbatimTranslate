@@ -22,6 +22,8 @@
 
 - (void)submitText:(NSString *)text;
 - (void)_filterSuggestionsWithString:(NSString *)filterString;
+- (void)_onCancelButton:(id)sender;
+- (void)_onClearButton:(id)sender;
 
 @end
 

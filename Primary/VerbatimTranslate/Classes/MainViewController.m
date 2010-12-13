@@ -38,7 +38,7 @@
 		[theme release];
 		theme = nil;
 		
-		[themeController.inputBubbleController.bubbleTextView setText:@"Tap here to begin typing.."];
+		[themeController.inputBubbleController.bubbleTextView setText:NSLocalizedString(@"Tap here to begin typing..", nil)];
 		[themeController.inputBubbleController animate];
 	}
 
@@ -56,6 +56,13 @@
 											 selector:@selector(displayTranslation:)
 												 name:@"__TRANSLATE_COMPLETE__"
 											   object:nil];
+
+	[[NSNotificationCenter defaultCenter] addObserver:self 
+											 selector:@selector(cancelTranslation:)
+												 name:@"__TRANSLATE_CANCEL__"
+											   object:nil];
+	
+
 }
 
 /*
@@ -99,9 +106,30 @@
 	newTheme = nil;
 }
 
+- (void)cancelTranslation:(id)sender {
+	// TODO - MATT please cleanup...
+	
+	[themeController.inputBubbleController.view removeFromSuperview];
+	[themeController.inputBubbleController.autoSuggestController.view removeFromSuperview];
+	[themeController.outputBubbleController.view removeFromSuperview];
+	[themeController.outputBubbleController.autoSuggestController.view removeFromSuperview];
+	
+	[themeController release];
+	themeController = nil;
+	
+	ThemeController* newTheme = [[ThemeController alloc] init];
+	[newTheme.inputBubbleController.bubbleTextView setText:NSLocalizedString(@"Tap here to begin typing..", nil)];
+	[bgImageView addSubview:newTheme.inputBubbleController.view];
+	
+	[newTheme.inputBubbleController animate];
+	themeController = [newTheme retain];
+	[newTheme release];
+	newTheme = nil;
+}
+
 - (IBAction)showInfo:(id)sender {
 	InfoViewController * infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
-	infoController.title = @"Verbatim Translate";	// TODO - do in IB
+	infoController.title = NSLocalizedString(@"Verbatim Translate", nil);	// TODO - do in IB
 	
 	// TODO - do in IB
 	UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:infoController];

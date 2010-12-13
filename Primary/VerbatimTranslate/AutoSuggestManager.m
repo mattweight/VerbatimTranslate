@@ -23,7 +23,6 @@
 
 @end
 
-// TODO - finish autosuggest UI
 // TODO - need to create phrase/history tables (if necessary) - probably on language change
 // TODO - nuke the precompiled statements when language is changed
 // TODO - method for compiling statements (streamlined)

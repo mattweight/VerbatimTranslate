@@ -1,0 +1,382 @@
+<html>
+<body>
+<style>
+body {
+	background-color: #e1e1e1;
+	font-size: 11px;
+	font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+	color:#666;
+	padding:0px;
+	margin:0px;
+}
+.label {
+	margin-top: 7px;
+	display: block;
+	padding: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.inputField, #textareaField, #inputButton {
+	color:#666;
+	font-size:14px;
+	font-weight:bold;
+}
+.inputField {
+	width:100%;
+	height:25px;
+}
+</style>
+<script type="text/javascript">
+function checkForm(form) {
+	var errorCode = '';
+	if (!isNameValid(form.name.value)) errorCode += '1';
+	if (!isEmailValid(form.email.value)) errorCode += '2';
+	if (!isPhoneValid(form.phone.value)) errorCode += '3';
+	if (errorCode) {
+		var message;
+		switch (parseInt(errorCode)) {
+			case 1:
+				message = "Please enter your name.";
+				break;
+			
+			case 12:
+				message = "Please enter your name and a valid email address.";
+				break;
+			
+			case 13:
+				message = "Please enter your name and a valid phone number.";
+				break;
+			
+			case 123:
+				message = "Please enter your name, a valid email address, and a valid phone number.";
+				break;
+			
+			case 2:
+				message = "Please enter a valid email address.";
+				break;
+		
+			case 23:
+				message = "Please enter a valid email address and a valid phone number.";
+				break;
+			
+			case 3:
+				message = "Please enter a valid phone number.";
+				break;
+		}
+		nativeAlert(message);
+		return false;
+	}
+	return true;
+}
+
+function isNameValid(name) {
+	return (name != "");
+}
+
+function isEmailValid(email) {
+    var emailFilter = /^.+@.+\..{2,3}$/;
+    var illegalChars = /[\(\)\<\>\,\;\:\\\"\[\]]/;
+	return (email != "" && emailFilter.test(email) && !email.match(illegalChars));
+}
+
+function isPhoneValid(phone) {
+	return (phone != "" && !isNaN(parseInt(phone.replace(/[\(\)\.\-\ ]/g, ''))));
+}
+
+// this is so 'quoteView.html' is not the title of the alert
+function nativeAlert(message) {
+	location = "native|" + message;	// intercepted in native code
+}
+</script>
+<div id="qform" style="margin:0;padding:18px"> 
+    <div style="text-align:center">Please provide the following information and you will be contacted shortly.</div>
+	<form id='quickquote' name='quickquote' action='http://www.verbatimsolutions.com/submit.php' method='post' style="margin:0" onsubmit="return checkForm(this)">
+    <span class='label'><B>Name: </B></span> 
+      <input type='text' name='name' class="inputField">
+      <span class='label'><B>Email: </B></span> 
+      <input type='text' name='email' class="inputField"> 
+      <span class='label'><B>Phone: </B></span> 
+      <input type='text' name='phone' class="inputField"> 
+      <br> 
+      <span class='label'><B>Source Language:</B></span> 
+      <select name='sourcelang' class="inputField"> 
+        <option value='English'>English</option> 
+        <option value='Spanish'>Spanish</option> 
+        <option value='German'>German</option> 
+        <option value='Chinese'>Chinese</option> 
+        <option value='French'>French</option> 
+        <option value='Italian'>Italian</option> 
+        <option value='Portuguese'>Portuguese</option> 
+        <option value='Russian'>Russian</option> 
+        <option value='Japanese'>Japanese</option> 
+        <option value='Korean'>Korean</option> 
+        <option value='Dutch'>Dutch</option> 
+        <option value='Danish'>Danish</option> 
+        <option value='Swedish'>Swedish</option> 
+        <option value='__________'>__________</option> 
+        <option value=''></option> 
+        <option value='Afrikaans'>Afrikaans</option> 
+        <option value='Albanian'>Albanian</option> 
+        <option value='Amharic'>Amharic</option> 
+        <option value='Arabic'>Arabic</option> 
+        <option value='Azerbaijani'>Azerbaijani</option> 
+        <option value='Aztec'>Aztec</option> 
+        <option value='Basque'>Basque</option> 
+        <option value='Bengali'>Bengali</option> 
+        <option value='Bosnian'>Bosnian</option> 
+        <option value='Breton'>Breton</option> 
+        <option value='Bulgarian'>Bulgarian</option> 
+        <option value='Byelorussian'>Byelorussian</option> 
+        <option value='Catalan'>Catalan</option> 
+        <option value='Chechen'>Chechen</option> 
+        <option value='Chinese'>Chinese</option> 
+        <option value='Creek'>Creek</option> 
+        <option value='Croatian'>Croatian</option> 
+        <option value='Czech'>Czech</option> 
+        <option value='Dakota'>Dakota</option> 
+        <option value='Danish'>Danish</option> 
+        <option value='Dinka'>Dinka</option> 
+        <option value='Dutch'>Dutch</option> 
+        <option value='English'>English</option> 
+        <option value='Esperanto'>Esperanto</option> 
+        <option value='Estonian'>Estonian</option> 
+        <option value='Farsi'>Farsi</option> 
+        <option value='Finnish'>Finnish</option> 
+        <option value='Flemish'>Flemish</option> 
+        <option value='French'>French</option> 
+        <option value='Gaelic'>Gaelic</option> 
+        <option value='Georgian'>Georgian</option> 
+        <option value='German'>German</option> 
+        <option value='Greek'>Greek</option> 
+        <option value='Guarani'>Guarani</option> 
+        <option value='Gujarati'>Gujarati</option> 
+        <option value='Haitian-Creole'>Haitian-Creole</option> 
+        <option value='Hausa'>Hausa</option> 
+        <option value='Hebrew'>Hebrew</option> 
+        <option value='Herero'>Herero</option> 
+        <option value='Hindi'>Hindi</option> 
+        <option value='Hmong'>Hmong</option> 
+        <option value='Hungarian'>Hungarian</option> 
+        <option value='Icelandic'>Icelandic</option> 
+        <option value='Igbo'>Igbo</option> 
+        <option value='Indonesian'>Indonesian</option> 
+        <option value='Irish'>Irish</option> 
+        <option value='Italian'>Italian</option> 
+        <option value='Japanese'>Japanese</option> 
+        <option value='Javanese'>Javanese</option> 
+        <option value='Kabyle'>Kabyle</option> 
+        <option value='Khmer'>Khmer</option> 
+        <option value='Korean'>Korean</option> 
+        <option value='Kurdish'>Kurdish</option> 
+        <option value='Latin'>Latin</option> 
+        <option value='Latvian'>Latvian</option> 
+        <option value='Lithuanian'>Lithuanian</option> 
+        <option value='Macedonian'>Macedonian</option> 
+        <option value='Malagasy'>Malagasy</option> 
+        <option value='Malay'>Malay</option> 
+        <option value='Malayalam'>Malayalam</option> 
+        <option value='Maltese'>Maltese</option> 
+        <option value='Maori'>Maori</option> 
+        <option value='Marathi'>Marathi</option> 
+        <option value='Masai'>Masai</option> 
+        <option value='Mayan'>Mayan</option> 
+        <option value='Mongolian'>Mongolian</option> 
+        <option value='Ndebele'>Ndebele</option> 
+        <option value='North'>North</option> 
+        <option value='Ndebele'>Ndebele</option> 
+        <option value='South Nepali'>South Nepali</option> 
+        <option value='Norwegian'>Norwegian</option> 
+        <option value='Panjabi'>Panjabi</option> 
+        <option value='Persian'>Persian</option> 
+        <option value='Polish'>Polish</option> 
+        <option value='Portuguese'>Portuguese</option> 
+        <option value='Pushto'>Pushto</option> 
+        <option value='Rajasthani'>Rajasthani</option> 
+        <option value='Romanian'>Romanian</option> 
+        <option value='Russian'>Russian</option> 
+        <option value='Sanskrit'>Sanskrit</option> 
+        <option value='Serbian'>Serbian</option> 
+        <option value='Serbo-Croat'>Serbo-Croat</option> 
+        <option value='Sesotho/S. Sotho'>Sesotho/S. Sotho</option> 
+        <option value='Shona'>Shona</option> 
+        <option value='Sign Language'>Sign Language</option> 
+        <option value='Singhalese'>Singhalese</option> 
+        <option value='Sino-Tibetan'>Sino-Tibetan</option> 
+        <option value='Si'>Si</option> 
+        <option value='Swati/Swazi'>Swati/Swazi</option> 
+        <option value='Slovak'>Slovak</option> 
+        <option value='Slovenian'>Slovenian</option> 
+        <option value='Spanish'>Spanish</option> 
+        <option value='Swahili'>Swahili</option> 
+        <option value='Swedish'>Swedish</option> 
+        <option value='Tagalog'>Tagalog</option> 
+        <option value='Tahitian'>Tahitian</option> 
+        <option value='Tamil'>Tamil</option> 
+        <option value='Tatar'>Tatar</option> 
+        <option value='Telugu'>Telugu</option> 
+        <option value='Thai'>Thai</option> 
+        <option value='Tibetan'>Tibetan</option> 
+        <option value='Tsonga'>Tsonga</option> 
+        <option value='Tswana'>Tswana</option> 
+        <option value='Turkish'>Turkish</option> 
+        <option value='Ukrainian'>Ukrainian</option> 
+        <option value='Urdu'>Urdu</option> 
+        <option value='Venda'>Venda</option> 
+        <option value='Vietnamese'>Vietnamese</option> 
+        <option value='Welsh'>Welsh</option> 
+        <option value='Yiddish'>Yiddish</option> 
+        <option value='Yoruba'>Yoruba</option> 
+        <option value='Zhuang/Chuang'>Zhuang/Chuang</option> 
+        <option value='Zuluzzz'>Zuluzzz</option> 
+        <option value='Other'>Other</option> 
+      </select> 
+      <br> 
+      <span class='label'><B>Target Language:</B></span>
+      <select name='targetlang[]' class="inputField" multiple="multiple" size="4"> 
+        <option value='English'>English</option> 
+        <option value='Spanish'>Spanish</option> 
+        <option value='German'>German</option> 
+        <option value='Chinese'>Chinese</option> 
+        <option value='French'>French</option> 
+        <option value='Italian'>Italian</option> 
+        <option value='Portuguese'>Portuguese</option> 
+        <option value='Russian'>Russian</option> 
+        <option value='Japanese'>Japanese</option> 
+        <option value='Korean'>Korean</option> 
+        <option value='Dutch'>Dutch</option> 
+        <option value='Danish'>Danish</option> 
+        <option value='Swedish'>Swedish</option> 
+        <option value='__________'>__________</option> 
+        <option value=''></option> 
+        <option value='Afrikaans'>Afrikaans</option> 
+        <option value='Albanian'>Albanian</option> 
+        <option value='Amharic'>Amharic</option> 
+        <option value='Arabic'>Arabic</option> 
+        <option value='Azerbaijani'>Azerbaijani</option> 
+        <option value='Aztec'>Aztec</option> 
+        <option value='Basque'>Basque</option> 
+        <option value='Bengali'>Bengali</option> 
+        <option value='Bosnian'>Bosnian</option> 
+        <option value='Breton'>Breton</option> 
+        <option value='Bulgarian'>Bulgarian</option> 
+        <option value='Byelorussian'>Byelorussian</option> 
+        <option value='Catalan'>Catalan</option> 
+        <option value='Chechen'>Chechen</option> 
+        <option value='Chinese'>Chinese</option> 
+        <option value='Creek'>Creek</option> 
+        <option value='Croatian'>Croatian</option> 
+        <option value='Czech'>Czech</option> 
+        <option value='Dakota'>Dakota</option> 
+        <option value='Danish'>Danish</option> 
+        <option value='Dinka'>Dinka</option> 
+        <option value='Dutch'>Dutch</option> 
+        <option value='English'>English</option> 
+        <option value='Esperanto'>Esperanto</option> 
+        <option value='Estonian'>Estonian</option> 
+        <option value='Farsi'>Farsi</option> 
+        <option value='Finnish'>Finnish</option> 
+        <option value='Flemish'>Flemish</option> 
+        <option value='French'>French</option> 
+        <option value='Gaelic'>Gaelic</option> 
+        <option value='Georgian'>Georgian</option> 
+        <option value='German'>German</option> 
+        <option value='Greek'>Greek</option> 
+        <option value='Guarani'>Guarani</option> 
+        <option value='Gujarati'>Gujarati</option> 
+        <option value='Haitian-Creole'>Haitian-Creole</option> 
+        <option value='Hausa'>Hausa</option> 
+        <option value='Hebrew'>Hebrew</option> 
+        <option value='Herero'>Herero</option> 
+        <option value='Hindi'>Hindi</option> 
+        <option value='Hmong'>Hmong</option> 
+        <option value='Hungarian'>Hungarian</option> 
+        <option value='Icelandic'>Icelandic</option> 
+        <option value='Igbo'>Igbo</option> 
+        <option value='Indonesian'>Indonesian</option> 
+        <option value='Irish'>Irish</option> 
+        <option value='Italian'>Italian</option> 
+        <option value='Japanese'>Japanese</option> 
+        <option value='Javanese'>Javanese</option> 
+        <option value='Kabyle'>Kabyle</option> 
+        <option value='Khmer'>Khmer</option> 
+        <option value='Korean'>Korean</option> 
+        <option value='Kurdish'>Kurdish</option> 
+        <option value='Latin'>Latin</option> 
+        <option value='Latvian'>Latvian</option> 
+        <option value='Lithuanian'>Lithuanian</option> 
+        <option value='Macedonian'>Macedonian</option> 
+        <option value='Malagasy'>Malagasy</option> 
+        <option value='Malay'>Malay</option> 
+        <option value='Malayalam'>Malayalam</option> 
+        <option value='Maltese'>Maltese</option> 
+        <option value='Maori'>Maori</option> 
+        <option value='Marathi'>Marathi</option> 
+        <option value='Masai'>Masai</option> 
+        <option value='Mayan'>Mayan</option> 
+        <option value='Mongolian'>Mongolian</option> 
+        <option value='Ndebele'>Ndebele</option> 
+        <option value='North'>North</option> 
+        <option value='Ndebele'>Ndebele</option> 
+        <option value='South Nepali'>South Nepali</option> 
+        <option value='Norwegian'>Norwegian</option> 
+        <option value='Panjabi'>Panjabi</option> 
+        <option value='Persian'>Persian</option> 
+        <option value='Polish'>Polish</option> 
+        <option value='Portuguese'>Portuguese</option> 
+        <option value='Pushto'>Pushto</option> 
+        <option value='Rajasthani'>Rajasthani</option> 
+        <option value='Romanian'>Romanian</option> 
+        <option value='Russian'>Russian</option> 
+        <option value='Sanskrit'>Sanskrit</option> 
+        <option value='Serbian'>Serbian</option> 
+        <option value='Serbo-Croat'>Serbo-Croat</option> 
+        <option value='Sesotho/S. Sotho'>Sesotho/S. Sotho</option> 
+        <option value='Shona'>Shona</option> 
+        <option value='Sign Language'>Sign Language</option> 
+        <option value='Singhalese'>Singhalese</option> 
+        <option value='Sino-Tibetan'>Sino-Tibetan</option> 
+        <option value='Si'>Si</option> 
+        <option value='Swati/Swazi'>Swati/Swazi</option> 
+        <option value='Slovak'>Slovak</option> 
+        <option value='Slovenian'>Slovenian</option> 
+        <option value='Spanish'>Spanish</option> 
+        <option value='Swahili'>Swahili</option> 
+        <option value='Swedish'>Swedish</option> 
+        <option value='Tagalog'>Tagalog</option> 
+        <option value='Tahitian'>Tahitian</option> 
+        <option value='Tamil'>Tamil</option> 
+        <option value='Tatar'>Tatar</option> 
+        <option value='Telugu'>Telugu</option> 
+        <option value='Thai'>Thai</option> 
+        <option value='Tibetan'>Tibetan</option> 
+        <option value='Tsonga'>Tsonga</option> 
+        <option value='Tswana'>Tswana</option> 
+        <option value='Turkish'>Turkish</option> 
+        <option value='Ukrainian'>Ukrainian</option> 
+        <option value='Urdu'>Urdu</option> 
+        <option value='Venda'>Venda</option> 
+        <option value='Vietnamese'>Vietnamese</option> 
+        <option value='Welsh'>Welsh</option> 
+        <option value='Yiddish'>Yiddish</option> 
+        <option value='Yoruba'>Yoruba</option> 
+        <option value='Zhuang/Chuang'>Zhuang/Chuang</option> 
+        <option value='Zuluzzz'>Zuluzzz</option> 
+        <option value='Other'>Other</option> 
+      </select> 
+      <br>
+      <span class='label'><B> Comments:</B></span> 
+      <textarea name='projinfo' id="textareaField" style="width:100%" rows='3'></textarea> 
+      <input type='hidden' name='subject' value='Quick Quote'>
+	  <input type='hidden' name='myvsbotblock_hidden' value='2008vs04vs17'> 
+	  <input type='hidden' name='myvsbotblock_input' value='20080417'> 
+      <input type='hidden' name='env_report' value='10.10.10.10,ua-string'> 
+      <input type='hidden' name='random' value='ggghg5678' />
+      <input type='hidden' name='ts' value='' /> 
+	  <div style="text-align:center;padding-top:8px">
+		<input name="submit" type="submit" id="inputButton" style="width:100px" value="Get Quote" />
+	  </div>
+    </form>
+  </div>
+</body>
+</html>

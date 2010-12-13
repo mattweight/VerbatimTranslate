@@ -29,16 +29,41 @@ body {
 </style>
 <script type="text/javascript">
 function checkForm(form) {
-	var errors = [];
-	if (!isNameValid(form.name.value)) errors.push("your name");
-	if (!isEmailValid(form.email.value)) errors.push("a valid email address");
-	if (!isPhoneValid(form.phone.value)) errors.push("a valid phone number");
-	var numErrors = errors.length;
-	if (numErrors > 0) {
+	var errorCode = '';
+	if (!isNameValid(form.name.value)) errorCode += '1';
+	if (!isEmailValid(form.email.value)) errorCode += '2';
+	if (!isPhoneValid(form.phone.value)) errorCode += '3';
+	if (errorCode) {
 		var message;
-		if (numErrors == 1) message = "Please enter " + errors[0] + ".";
-		if (numErrors == 2) message = "Please enter " + errors[0] + " and " + errors[1] + ".";
-		if (numErrors == 3) message = "Please enter " + errors[0] + ", " + errors[1] + ", and " + errors[2] + ".";
+		switch (parseInt(errorCode)) {
+			case 1:
+				message = "Por favor meta su nombre.";
+				break;
+			
+			case 12:
+				message = "Por favor meta su nombre y una direccion de email valida.";
+				break;
+			
+			case 13:
+				message = "Por favor meta su nombre y un numero de telefono valido.";
+				break;
+			
+			case 123:
+				message = "Por favor meta su nombre, una direccion de email valida, y un numero de telefono valido.";
+				break;
+			
+			case 2:
+				message = "Por favor meta una direccion de email valida.";
+				break;
+		
+			case 23:
+				message = "Por favor meta una direccion de email valida y un numero de telefono valido.";
+				break;
+			
+			case 3:
+				message = "Por favor meta un numero de telefono valido.";
+				break;
+		}
 		nativeAlert(message);
 		return false;
 	}
@@ -65,16 +90,16 @@ function nativeAlert(message) {
 }
 </script>
 <div id="qform" style="margin:0;padding:18px"> 
-    <div style="text-align:center">Please provide the following information and you will be contacted shortly.</div>
+    <div style="text-align:center">Por favor, de la informacion siguiente y sera contactado pronto.</div>
 	<form id='quickquote' name='quickquote' action='http://www.verbatimsolutions.com/submit.php' method='post' style="margin:0" onsubmit="return checkForm(this)">
-    <span class='label'><B>Name: </B></span> 
+    <span class='label'><B>Nombre: </B></span> 
       <input type='text' name='name' class="inputField">
       <span class='label'><B>Email: </B></span> 
       <input type='text' name='email' class="inputField"> 
-      <span class='label'><B>Phone: </B></span> 
+      <span class='label'><B>Numero de Telefono: </B></span> 
       <input type='text' name='phone' class="inputField"> 
       <br> 
-      <span class='label'><B>Source Language:</B></span> 
+      <span class='label'><B>Idioma de Fuente:</B></span> 
       <select name='sourcelang' class="inputField"> 
         <option value='English'>English</option> 
         <option value='Spanish'>Spanish</option> 
@@ -207,7 +232,7 @@ function nativeAlert(message) {
         <option value='Other'>Other</option> 
       </select> 
       <br> 
-      <span class='label'><B>Target Language:</B></span>
+      <span class='label'><B>Idioma de Destinacion:</B></span>
       <select name='targetlang[]' class="inputField" multiple="multiple" size="4"> 
         <option value='English'>English</option> 
         <option value='Spanish'>Spanish</option> 
@@ -340,7 +365,7 @@ function nativeAlert(message) {
         <option value='Other'>Other</option> 
       </select> 
       <br>
-      <span class='label'><B> Comments:</B></span> 
+      <span class='label'><B> Platica:</B></span> 
       <textarea name='projinfo' id="textareaField" style="width:100%" rows='3'></textarea> 
       <input type='hidden' name='subject' value='Quick Quote'>
 	  <input type='hidden' name='myvsbotblock_hidden' value='2008vs04vs17'> 
@@ -349,7 +374,7 @@ function nativeAlert(message) {
       <input type='hidden' name='random' value='ggghg5678' />
       <input type='hidden' name='ts' value='' /> 
 	  <div style="text-align:center;padding-top:8px">
-		<input name="submit" type="submit" id="inputButton" style="width:100px" value="Get Quote" />
+		<input name="submit" type="submit" id="inputButton" value="Conseguir Cita" />
 	  </div>
     </form>
   </div>

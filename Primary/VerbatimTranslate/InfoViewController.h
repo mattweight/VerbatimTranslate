@@ -9,26 +9,18 @@
 #import <UIKit/UIKit.h>
 
 
-@interface InfoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource, UIAlertViewDelegate> {
+@interface InfoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate> {
 	UITableView * _tableView;
-	UIPickerView * _languagePicker;
-	UIToolbar * _languageToolbar;
-	UIBarButtonItem * _setLanguageButton;
+	UILabel * _aboutLabel;
+	UITextView * _aboutText;
 	NSArray * _settings;
-	NSArray * _languages;
-	NSString * _appLanguage;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
-@property (nonatomic, retain) IBOutlet UIPickerView * languagePicker;
-@property (nonatomic, retain) IBOutlet UIToolbar * languageToolbar;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem * setLanguageButton;
-@property (nonatomic, retain) NSString * appLanguage;
+@property (nonatomic, retain) IBOutlet UILabel * aboutLabel;
+@property (nonatomic, retain) IBOutlet UITextView * aboutText;
 
 - (IBAction)showMainView:(id)sender;
-- (IBAction)setNewAppLanguage:(id)sender;
 - (void)showQuoteView;
-- (void)showLanguagePicker;
-- (void)dismissLanguagePicker;
 - (void)showHistoryWarning;
 @end

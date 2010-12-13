@@ -11,32 +11,18 @@
 #import "AutoSuggestManager.h"
 
 #define kSettingsRequestQuote			0
-#define kSettingsSetLanguage			1
-#define kSettingsClearHistory			2
+#define kSettingsClearHistory			1
 #define kAlertViewTagClearHistory		1
 #define kAlertViewButtonClearHistoryOK	1
 
 @implementation InfoViewController
 
 @synthesize tableView = _tableView;
-@synthesize languageToolbar = _languageToolbar;
-@synthesize setLanguageButton = _setLanguageButton;
-@synthesize languagePicker = _languagePicker;
-@synthesize appLanguage = _appLanguage;
+@synthesize aboutLabel = _aboutLabel;
+@synthesize aboutText = _aboutText;
 
 - (IBAction)showMainView:(id)sender {
-	if (self.languagePicker.center.y < 460) {	// TODO - fix
-		[self dismissLanguagePicker];
-	}
 	[[self parentViewController] dismissModalViewControllerAnimated:YES];
-}
-
-- (IBAction)setNewAppLanguage:(id)sender {
-	self.appLanguage = [_languages objectAtIndex:[self.languagePicker selectedRowInComponent:0]];
-	[[NSUserDefaults standardUserDefaults] setValue:self.appLanguage forKey:@"appLanguage"];
-	[[NSUserDefaults standardUserDefaults] synchronize];
-	[self dismissLanguagePicker];
-	[self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,17 +34,13 @@
 	
 	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
 	if (cell == nil) {
-		UITableViewCellStyle cellStyle = (indexPath.row == kSettingsSetLanguage) ? UITableViewCellStyleValue1 : UITableViewCellStyleDefault;
-		cell = [[[UITableViewCell alloc] initWithStyle:cellStyle reuseIdentifier:kCellID] autorelease];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
 	}
 	
 	cell.selectionStyle = UITableViewCellSelectionStyleGray;
 	if (indexPath.row == kSettingsRequestQuote) {
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	} else if (indexPath.row == kSettingsSetLanguage) {
-		cell.detailTextLabel.text = self.appLanguage;
-	}
-	
+	}	
 	cell.textLabel.text = [_settings objectAtIndex:indexPath.row];
 	return cell;
 }
@@ -67,10 +49,6 @@
 	switch (indexPath.row) {
 		case kSettingsRequestQuote:
 			[self showQuoteView];
-			break;
-			
-		case kSettingsSetLanguage:
-			[self showLanguagePicker];
 			break;
 			
 		case kSettingsClearHistory:
@@ -85,9 +63,9 @@
 - (void)showQuoteView {
 	// setup view controller
 	QuoteViewController * quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:[NSBundle mainBundle]];
-	quoteViewController.title = @"Professional Quote";
+	quoteViewController.title = NSLocalizedString(@"Professional Quote", nil);
 	UIBarButtonItem * backButton = [[UIBarButtonItem alloc]
-									 initWithTitle:@"Back"
+									 initWithTitle:NSLocalizedString(@"Back", nil)
 									 style:UIBarButtonItemStyleBordered
 									 target:nil
 									 action:nil];
@@ -99,69 +77,24 @@
 	[quoteViewController release];
 }
 
-- (void)showLanguagePicker {
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:0.5];
-
-	// TODO - should be in it's own view/vc
-	
-	float moveValue = self.languagePicker.bounds.size.height + self.languageToolbar.bounds.size.height;
-	
-	// move toolbar
-	CGPoint toolbarCenter = self.languageToolbar.center;
-	toolbarCenter.y -= moveValue;
-	self.languageToolbar.center = toolbarCenter;
-
-	// move picker
-	CGPoint pickerCenter = self.languagePicker.center;
-	pickerCenter.y -= moveValue;
-	self.languagePicker.center = pickerCenter;
-		
-	[UIView commitAnimations];
-}
-
-- (void)dismissLanguagePicker {
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:0.5];
-	
-	// TODO - should be in it's own view/vc
-	// TODO - should be merged with above method (very similar)
-	// TODO - in .xib, button is currently centered by fixed left spacer (will not work when words are localized)
-	
-	float moveValue = self.languagePicker.bounds.size.height + self.languageToolbar.bounds.size.height;
-	
-	// move toolbar
-	CGPoint toolbarCenter = self.languageToolbar.center;
-	toolbarCenter.y += moveValue;
-	self.languageToolbar.center = toolbarCenter;
-	
-	// move picker
-	CGPoint pickerCenter = self.languagePicker.center;
-	pickerCenter.y += moveValue;
-	self.languagePicker.center = pickerCenter;
-	
-	[UIView commitAnimations];	
-}
-
 - (void)showHistoryWarning {
 	// show warning
-	NSString * message = @"Are you sure you want to clear all translation history?  Your previous translations will not show up as suggestions anymore.";
-	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Verbatim Translate" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+	NSString * message = NSLocalizedString(@"Are you sure you want to clear all translation history?  Your previous translations will not show up as suggestions anymore.", nil);
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbatim Translate", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
 	alert.tag = kAlertViewTagClearHistory;
 	[alert show];
 	[alert release];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (alertView.tag == kAlertViewTagClearHistory && buttonIndex == kAlertViewButtonClearHistoryOK) {
 		// clear history
 		AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
 		[autoSuggest clearHistory];
 		
 		// show confirmation message
-		NSString * message = @"All translation history has been cleared.";
-		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Verbatim Translate" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		NSString * message = NSLocalizedString(@"All translation history has been cleared.", nil);
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbatim Translate", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 		return;
@@ -172,49 +105,22 @@
 	[self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView;
-{
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component;
-{
-    return [_languages count];
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
-{
-    return [_languages objectAtIndex:row];
-}
-
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-		_settings = [[NSArray arrayWithObjects:@"Request Professional Quote", @"Set Interface Language", @"Clear Translation History", nil] retain];
-		_languages = [[NSArray arrayWithObjects:@"English", @"Spanish", @"Korean", @"Japanese", @"Chinese", nil] retain];
-		_appLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@"appLanguage"];
-		if (!_appLanguage) {
-			_appLanguage = @"English";
-		}
+		_settings = [[NSArray arrayWithObjects:NSLocalizedString(@"Request Professional Quote", nil), NSLocalizedString(@"Clear Translation History", nil), nil] retain];
 	}
     return self;
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	// find key
-	int index = 0;
-	for (int i = 0; i < [_languages count]; i++) {
-		if ([[_languages objectAtIndex:i] isEqualToString:_appLanguage]) {
-			index = i;
-			break;
-		}
-	}
-    [self.languagePicker selectRow:index inComponent:0 animated:NO];
+	_aboutLabel.text = NSLocalizedString(@"About Verbatim Digital™", nil);
+	_aboutText.text = NSLocalizedString(@"This is where you put all your info about the company and whatever else you want to put here in the about section.  Go ahead and give us the text and we'll put it in there.  I need something else to say so that it can fill up the space.  This app is going to be great.  This text will all be localized to the language of choice when selected above.", nil);
     
 	// TODO - do in IB
 	UIBarButtonItem * doneButton = [[UIBarButtonItem alloc]
-									initWithTitle:@"Done"
+									initWithTitle:NSLocalizedString(@"Done", nil)
 									style:UIBarButtonItemStyleBordered
 									target:self
 									action:@selector(showMainView:)];
@@ -256,10 +162,9 @@
 
 - (void)dealloc {
 	[_tableView release];
-	[_languagePicker release];
+	[_aboutLabel release];
+	[_aboutText release];
 	[_settings release];
-    [_languages release];
-	[_appLanguage release];
 	[super dealloc];
 }
 

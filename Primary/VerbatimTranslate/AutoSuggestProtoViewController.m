@@ -37,6 +37,12 @@
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
 	}
 	
+	// set selected color to custom gray
+	UIView * cellSelectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+	cellSelectedBackgroundView.backgroundColor = [UIColor darkGrayColor];
+	cell.selectedBackgroundView = cellSelectedBackgroundView;
+	[cellSelectedBackgroundView release];
+	
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:12];
 	cell.textLabel.text = [_suggestions objectAtIndex:indexPath.row];
 	return cell;
@@ -89,9 +95,6 @@
 	NSLog(@"The response is %@", resp);
 
 	NSString* message = [[[respString JSONValue] objectForKey:@"responseData"] objectForKey:@"translatedText"];
-	//NSString * message = [NSString stringWithFormat:@"\"%@\" will now be placed in the translation bubble, and then translated.", text];
-	//UIAlertView * alert = [[[UIAlertView alloc] initWithTitle:@"Verbatim" message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil] autorelease];
-	//[alert show];
 	
 	// FIXME - Time to cheat. Too late tonight to do it right..
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
@@ -107,17 +110,22 @@
 																						 object:nil]];
 }
 
-- (void)alertView:(UIAlertView *)alert_view clickedButtonAtIndex:(NSInteger)button_index {
-	// clear currently selected row
-	[_suggestionsTable deselectRowAtIndexPath:[_suggestionsTable indexPathForSelectedRow] animated:YES];
-		
-	_textInput.text = @"";
-}
-
 - (void)_filterSuggestionsWithString:(NSString *)filterString {
 	AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
 	self.suggestions = [autoSuggest getAllPhrases:filterString];
+
 	[_suggestionsTable reloadData];
+	
+	if ([self.suggestions count] > 0) {
+		// make sure table is visible
+		_suggestionsTable.hidden = NO;
+		
+		// scroll to top after each key press (user may have scrolled down and then pressed key)
+		[_suggestionsTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+	} else {
+		// do not show table at all if there are no suggestions
+		_suggestionsTable.hidden = YES;
+	}
 }
 
 /*
@@ -140,9 +148,30 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	// add accessory toolbar to keyboard (cancel/clear)
+	UIToolbar * toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+	toolbar.barStyle = UIBarStyleBlackOpaque;
+	UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(_onCancelButton:)];
+	UIBarButtonItem * clearButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Clear", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(_onClearButton:)];
+	NSArray * items = [NSArray arrayWithObjects:cancelButton, clearButton, nil];
+	[cancelButton release];
+	[clearButton release];
+	[toolbar setItems:items animated:NO];
+	_textInput.inputAccessoryView = toolbar;
+	[toolbar release];
+	
 	[_textInput becomeFirstResponder];
 }
 
+- (void)_onCancelButton:(id)sender {
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"__TRANSLATE_CANCEL__" 
+																						 object:nil]];
+}
+
+- (void)_onClearButton:(id)sender {
+	_textInput.text = @"";
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

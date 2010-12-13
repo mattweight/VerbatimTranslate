@@ -15,6 +15,8 @@
 
 @synthesize webView = _webView;
 
+// TODO - handle no internet case (error message if it can't connect...)
+
 /*
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -28,7 +30,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	_webView.delegate = self;
-	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"quoteView" ofType:@"html"] isDirectory:NO]]];
+	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"quoteView" ofType:@"html" inDirectory:nil forLocalization:[self _getSystemLanguage]] isDirectory:NO]]];
 	[super viewDidLoad];
 }
 
@@ -48,7 +50,7 @@
 	} else if ([pageName isEqualToString:@"thankyou.php"]) {	// successful submission - show custom thank you page (not default thank you page)
 		[self _clearSpinner];
 		[self _clearTimer];
-		[webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"thankyou" ofType:@"html"] isDirectory:NO]]];
+		[webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"thankyou" ofType:@"html" inDirectory:nil forLocalization:[self _getSystemLanguage]] isDirectory:NO]]];
 		return NO;
 	} else {	// anything else - error out
 		[self _clearSpinner];
@@ -63,13 +65,13 @@
 }
 
 - (void)_displayErrorMessage:(NSString *)message {
-	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Verbatim Translate" message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbatim Translate", nil) message:message delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
 	[alert show];
 	[alert release];	
 }
 
 - (void)_displayDefaultErrorMessage {
-	[self _displayErrorMessage:@"We're sorry, an error has occurred.  Please try again."];
+	[self _displayErrorMessage:NSLocalizedString(@"We're sorry, an error has occurred.  Please try again.", nil)];
 }
 
 - (void)_showSpinner {
@@ -97,6 +99,12 @@
 	[_webView stopLoading];
 	[self _clearSpinner];
 	[self _displayDefaultErrorMessage];
+}
+
+- (NSString *)_getSystemLanguage {
+	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	NSArray * languages = [defaults objectForKey:@"AppleLanguages"];
+	return [languages objectAtIndex:0];
 }
 
 /*

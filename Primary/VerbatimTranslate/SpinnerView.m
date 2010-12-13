@@ -19,7 +19,7 @@
 		
 		// text
 		UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(8, 8, 84, 20)];
-		label.text = @"Submitting...";
+		label.text = NSLocalizedString(@"Submitting...", nil);
 		label.font = [UIFont systemFontOfSize:15];
 		label.textColor = [UIColor whiteColor];
 		label.backgroundColor = self.backgroundColor;

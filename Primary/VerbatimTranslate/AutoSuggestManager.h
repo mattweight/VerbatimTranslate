@@ -8,8 +8,6 @@
 
 #import <sqlite3.h>
 
-// TODO - misnomer (history / common phrases could exist without auto-suggest)
-// TODO - "phrase" should be "suggestion"?
 @interface AutoSuggestManager : NSObject {
 
 @private
