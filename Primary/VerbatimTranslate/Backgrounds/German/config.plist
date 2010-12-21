@@ -28,11 +28,11 @@
 	<key>services</key>
 	<dict>
 		<key>babelfish</key>
-		<string>en</string>
+		<string>de</string>
 		<key>google-translate</key>
-		<string>en</string>
+		<string>de</string>
 		<key>yahoo-translate</key>
-		<string>en</string>
+		<string>de</string>
 	</dict>
 </dict>
 </plist>

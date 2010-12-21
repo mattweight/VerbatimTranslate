@@ -11,10 +11,12 @@
 
 @interface FlagTableViewCell : UITableViewCell {
 	UIImageView* flagImageView;
+	UILabel* flagLabel;
 	NSInteger flagID;
 }
 
 @property (nonatomic, retain) UIImageView* flagImageView;
+@property (nonatomic, retain) UILabel* flagLabel;
 
 - (void)setFlagID:(NSInteger)newFlagID;
 - (NSInteger)getFlagID;

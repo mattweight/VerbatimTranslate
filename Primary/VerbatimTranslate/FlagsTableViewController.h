@@ -11,6 +11,11 @@
 
 @interface FlagsTableViewController : UITableViewController {
 	CGPoint origPoint;
+	NSArray* languageNames;
+	UITableView* flagTableView;
 }
+
+@property (readonly, retain) NSArray* languageNames;
+@property (nonatomic, retain) UITableView* flagTableView;
 
 @end

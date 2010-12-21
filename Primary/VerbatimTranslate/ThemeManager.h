@@ -40,6 +40,8 @@
 
 + (ThemeManager*)sharedThemeManager;
 
-- (void)nextThemeUsingName:(NSString*)languageName error:(NSError**)theError;
+- (Theme*)nextThemeUsingName:(NSString*)languageName error:(NSError**)theError;
+
+- (NSString*)flagImagePathUsingName:(NSString*)languageName;
 
 @end

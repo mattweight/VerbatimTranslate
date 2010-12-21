@@ -15,9 +15,8 @@
 #import "AutoSuggestManager.h"
 #import "JSON.h"
 
-#import "VerbatimTranslateAppDelegate.h"
-#import "MainViewController.h"
-#import "ThemeController.h"
+#import "ThemeManager.h"
+#import "VerbatimConstants.h"
 
 @implementation AutoSuggestProtoViewController
 
@@ -72,12 +71,9 @@
 
 - (void)submitText:(NSString *)text {
 	// Get the web service language keyword..
-	VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)[[UIApplication sharedApplication] delegate];
-	MainViewController* mainController = (MainViewController*)appDelegate.mainViewController;
-	NSDictionary* outService = (NSDictionary*)[(NSDictionary*)mainController.themeController.outputLanguage objectForKey:@"services"];
-	NSString* outputKeyword = [outService objectForKey:@"google-translate"];
+	ThemeManager* manager = [ThemeManager sharedThemeManager];
+	NSString* outputKeyword = [manager.currentTheme.services objectForKey:@"google-translate"];
 	NSLog(@"Output keyword is: %@", outputKeyword);
-	
 	NSMutableString* translateURLString = [NSMutableString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&langpair="];
 	[translateURLString appendString:@"en"];
 	[translateURLString appendString:@"%7C"];
@@ -106,7 +102,7 @@
 	AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
 	[autoSuggest addToHistory:text to:nil toLanguage:nil];
 	
-	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"__TRANSLATE_COMPLETE__" 
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:TRANSLATION_DID_COMPLETE_NOTIFICATION
 																						 object:nil]];
 }
 
@@ -165,7 +161,7 @@
 }
 
 - (void)_onCancelButton:(id)sender {
-	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"__TRANSLATE_CANCEL__" 
+	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:TRANSLATION_DID_CANCEL_NOTIFICATION
 																						 object:nil]];
 }
 

@@ -85,7 +85,7 @@ static ThemeController* singletonController = nil;
 
 - (id)init {
 	if (self = [super init]) {
-		[self updateUsing:nil];
+	//	[self updateUsing:nil];
 	}
 	return self;
 }
@@ -95,8 +95,6 @@ static ThemeController* singletonController = nil;
 - (void)updateUsing:(NSDictionary*)updateDictionary {
 	NSFileManager* fMan = [NSFileManager defaultManager];
 	NSString* mainPath = [[NSBundle mainBundle] resourcePath];
-	
-	NSLog(@"I am updating with: %@", [updateDictionary description]);
 	
 	if (updateDictionary == nil) {
 		NSString* dictFile = [[NSUserDefaults standardUserDefaults] stringForKey:THEME_PLIST_FILENAME_KEY];

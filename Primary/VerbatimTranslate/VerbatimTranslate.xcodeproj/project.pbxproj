@@ -63,10 +63,10 @@
 		7059160612C07ED2009B6F2A /* quoteView.html in Resources */ = {isa = PBXBuildFile; fileRef = 7059160512C07ED2009B6F2A /* quoteView.html */; };
 		7060C90B12C08EBA00055569 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7060C90A12C08EBA00055569 /* Reachability.m */; };
 		7060C91712C090A500055569 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7060C91612C090A500055569 /* SystemConfiguration.framework */; };
-		7060CA8212C096DE00055569 /* Backgrounds in Resources */ = {isa = PBXBuildFile; fileRef = 7060C9C412C096DE00055569 /* Backgrounds */; };
 		70C1073912801072007BA298 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C1073812801072007BA298 /* Icon.png */; };
 		70C61BC51289325E00F0E0BE /* ChineseSimplified40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */; };
 		70C61C5612893CB500F0E0BE /* SpanishLatinAmerica40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */; };
+		70CC4FCE12C0BBBA0037B88B /* Backgrounds in Resources */ = {isa = PBXBuildFile; fileRef = 70CC4F0812C0BBBA0037B88B /* Backgrounds */; };
 		70CDC97212C088E8007F860F /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CDC97112C088E8007F860F /* ThemeManager.m */; };
 		70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E85048127EA62C000FCCA8 /* default-theme.plist */; };
 		70E8506A127EA8F5000FCCA8 /* WordBubbleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */; };
@@ -153,10 +153,10 @@
 		7060C90912C08EBA00055569 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7060C90A12C08EBA00055569 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7060C91612C090A500055569 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		7060C9C412C096DE00055569 /* Backgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backgrounds; sourceTree = "<group>"; };
 		70C1073812801072007BA298 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChineseSimplified40.plist; sourceTree = "<group>"; };
 		70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpanishLatinAmerica40.plist; sourceTree = "<group>"; };
+		70CC4F0812C0BBBA0037B88B /* Backgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backgrounds; sourceTree = "<group>"; };
 		70CDC97012C088E8007F860F /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
 		70CDC97112C088E8007F860F /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
 		70CDC97312C08906007F860F /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
@@ -228,6 +228,7 @@
 				70E8EED3127FFE1A00323D92 /* JSON */,
 				702C61BF127F897D002BB9C6 /* Auto Suggest */,
 				7028E029127E1F960034EE04 /* Word Bubble */,
+				70E84F14127E8099000FCCA8 /* VerbatimConstants.h */,
 				1D3623240D0F684500981E51 /* VerbatimTranslateAppDelegate.h */,
 				1D3623250D0F684500981E51 /* VerbatimTranslateAppDelegate.m */,
 				289233A80DB2D0DB0083E9F9 /* MainViewController.h */,
@@ -236,7 +237,6 @@
 				7028DFB7127E19B50034EE04 /* ThemeController.m */,
 				70CDC97012C088E8007F860F /* ThemeManager.h */,
 				70CDC97112C088E8007F860F /* ThemeManager.m */,
-				70E84F14127E8099000FCCA8 /* VerbatimConstants.h */,
 				7037479212828EA600421C51 /* FlagsTableViewController.h */,
 				7037479312828EA600421C51 /* FlagsTableViewController.m */,
 				7037498D128299C600421C51 /* FlagTableViewCell.h */,
@@ -270,7 +270,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7060C9C412C096DE00055569 /* Backgrounds */,
+				70CC4F0812C0BBBA0037B88B /* Backgrounds */,
 				7060C76412C08BED00055569 /* Images */,
 				7060C75412C08B8B00055569 /* Nibs */,
 				70E85034127EA3FD000FCCA8 /* Theme PLists */,
@@ -513,7 +513,7 @@
 				70C61BC51289325E00F0E0BE /* ChineseSimplified40.plist in Resources */,
 				70C61C5612893CB500F0E0BE /* SpanishLatinAmerica40.plist in Resources */,
 				7059160612C07ED2009B6F2A /* quoteView.html in Resources */,
-				7060CA8212C096DE00055569 /* Backgrounds in Resources */,
+				70CC4FCE12C0BBBA0037B88B /* Backgrounds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

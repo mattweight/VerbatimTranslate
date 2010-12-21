@@ -9,7 +9,7 @@
 #import "ThemeController.h"
 #import "FlagsTableViewController.h"
 
-@interface MainViewController : UIViewController {
+@interface MainViewController : UIViewController <UIAlertViewDelegate> {
 	IBOutlet UIImageView* bgImageView;
 	ThemeController* themeController;
 	FlagsTableViewController* flagController;
@@ -22,5 +22,6 @@
 - (IBAction)showInfo:(id)sender;
 - (void)displayTranslation:(id)sender;
 - (void)cancelTranslation:(id)sender;
+- (void)updateTheme:(NSNotification*)notif;
 
 @end

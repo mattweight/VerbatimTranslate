@@ -8,16 +8,20 @@
 
 #import "FlagsTableViewController.h"
 #import "FlagTableViewCell.h"
-#import "ThemeController.h"
+#import "ThemeManager.h"
 
 #import "VerbatimTranslateAppDelegate.h"
 #import "MainViewController.h"
 
 #import "math.h"
 
-static inline double radians (double degrees) {return degrees * M_PI/180;}
-
 @implementation FlagsTableViewController
+
+@synthesize languageNames;
+@synthesize flagTableView;
+
+static int numRows = 9999;
+static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -25,11 +29,18 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (id)initWithStyle:(UITableViewStyle)style {
 	if (self = [super initWithStyle:UITableViewStylePlain]) {
 		UITableView* tabView = (UITableView*)self.view;
-		[tabView setFrame:CGRectMake(0.0, 0.0, 40.0, 320.0)];
+		[tabView setFrame:CGRectMake(0.0, 0.0, 56.0, 320.0)];
 		[tabView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-		[tabView setBackgroundColor:[UIColor lightGrayColor]];
-		[tabView setAlpha:0.8];
+		[tabView setBackgroundColor:[UIColor whiteColor]];
+		[tabView setShowsVerticalScrollIndicator:NO];
+		[tabView setShowsHorizontalScrollIndicator:NO];
+		[tabView setAlpha:1.0];
 		[tabView setTransform:CGAffineTransformMakeRotation(radians(90))];
+		flagTableView = [tabView retain];
+		NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
+		NSArray* results = [[[ThemeManager sharedThemeManager].languageInfo allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+		languageNames = [[NSArray alloc] initWithArray:results];
+		NSLog(@"language names: %@", [languageNames description]);
 	}
 	return self;
 }
@@ -48,11 +59,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [super viewWillAppear:animated];
 }
 */
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
+	NSLog(@"Flag table DID appear");
     [super viewDidAppear:animated];
 }
 */
+
 /*
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -82,7 +96,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 9999;
+    return numRows; // large number for the continuous spinner
 }
 
 
@@ -92,26 +106,17 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[FlagTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		/*
-		[[(FlagTableViewCell*)cell flagImageView] setImage:];
-		NSLog(@"content width  view: %02f", cell.contentView.frame.size.width);
-		NSLog(@"content height view: %02f", cell.contentView.frame.size.height);
-		[cell setFrame:CGRectMake(0.0, 0.0, 40.0, 30.0)];
-		[cell setBackgroundColor:[UIColor whiteColor]];
-		[cell.imageView setBackgroundColor:[UIColor whiteColor]];
-		[cell.imageView setFrame:CGRectMake(0.0, 0.0, 27.0, 40.0)];
-		[cell.imageView setCenter:cell.center];
-		*/
-		
+		[cell setFrame:CGRectMake(0.0, 0.0, 80.0, 60.0)];
+		[cell setSelectionStyle:UITableViewCellSelectionStyleGray];
     }
     
     // Configure the cell...
-	if (!(indexPath.row % 2)) {
-		[[(FlagTableViewCell*)cell flagImageView] setImage:[UIImage imageNamed:@"ChineseSimplified40.png"]];
-	}
-	else {
-		[[(FlagTableViewCell*)cell flagImageView] setImage:[UIImage imageNamed:@"SpanishLatinAmerica40.png"]];
-	}
+	int index = (int)(indexPath.row % [languageNames count]);
+	NSString* languageName = [[languageNames objectAtIndex:index] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSString* flagPath = [[ThemeManager sharedThemeManager] flagImagePathUsingName:languageName];
+	UIImage* flagImage = [UIImage imageWithContentsOfFile:flagPath];
+	[[(FlagTableViewCell*)cell flagImageView] setImage:flagImage];
+	[[(FlagTableViewCell*)cell flagLabel] setText:languageName];
 	
     return cell;
 }
@@ -182,20 +187,12 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 		[tableView setScrollEnabled:NO];
 	}
 	
-	VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)[[UIApplication sharedApplication] delegate];
-	MainViewController* mainController = (MainViewController*)appDelegate.mainViewController;
-	[mainController.themeController setNeedsThemeUpdate:YES];
-	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-	
-	if (!(indexPath.row % 2)) {
-		[defaults setObject:@"ChineseSimplified40.plist" forKey:THEME_PLIST_FILENAME_KEY];
-	}
-	else {
-		[defaults setObject:@"SpanishLatinAmerica40.plist" forKey:THEME_PLIST_FILENAME_KEY];
-	}
-	
-	[defaults synchronize];
-	[mainController viewWillAppear:YES];
+	int index = (int)(indexPath.row % [languageNames count]);
+	NSString* languageName = [[languageNames objectAtIndex:index] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSNotification* updateNotification = [NSNotification notificationWithName:THEME_UPDATE_NOTIFICATION
+																	   object:nil
+																	 userInfo:[NSDictionary dictionaryWithObject:languageName forKey:@"language"]];
+	[[NSNotificationCenter defaultCenter] postNotification:updateNotification];
 }
 
 
@@ -216,6 +213,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 
 - (void)dealloc {
+	[languageNames release];
+	languageNames = nil;
+	[flagTableView release];
+	flagTableView = nil;
     [super dealloc];
 }
 

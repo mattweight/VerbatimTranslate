@@ -32,6 +32,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 
 - (id)init {
 	if (self = [super init]) {
+		NSLog(@"Seeding the randomizer");
 		srandomdev();
 		
 		NSFileManager* fMan = [NSFileManager defaultManager];
@@ -49,7 +50,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 				return self;
 			}
 
-			languageInfo = [NSMutableDictionary dictionary];
+			languageInfo = [[[NSMutableDictionary alloc] init] retain];
 			NSString* currItem = nil;
 			for (currItem in allLanguages) {
 				NSString* langDir = [self.basePath stringByAppendingFormat:@"/%@", currItem];
@@ -104,7 +105,24 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 	return self;
 }
 
-- (void)nextThemeUsingName:(NSString*)languageName error:(NSError**)theError {
+- (NSString*)flagImagePathUsingName:(NSString*)languageName {
+	NSString* selectLanguage = [languageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSArray* themes = (NSArray*)[languageInfo objectForKey:selectLanguage];
+	if (themes == nil) {
+		NSLog(@"Missing flag information on: %@", selectLanguage);
+		return nil;
+	}
+
+	NSString* flagPath = [self.basePath stringByAppendingFormat:@"/%@/flag.jpg", languageName];
+	BOOL isDir;
+	if (![[NSFileManager defaultManager] fileExistsAtPath:flagPath isDirectory:&isDir]) {
+		NSLog(@"Missing flag image at path: %@", flagPath);
+	}
+	
+	return flagPath;
+}
+
+- (Theme*)nextThemeUsingName:(NSString*)languageName error:(NSError**)theError {
 	NSString* selectLanguage = [languageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSArray* themes = (NSArray*)[languageInfo objectForKey:selectLanguage];
 	if (themes == nil) {
@@ -118,12 +136,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 	else {
 		int newRand = (int)(random() % (long)[themes count]);
 		Theme* selectedTheme = [themes objectAtIndex:newRand];
-		NSLog(@"selected theme: %@ %@ %@ %@", 
-			  selectedTheme.imageFilename,
-			  [selectedTheme.bubble1Coordinates description],
-			  [selectedTheme.bubble2Coordinates description],
-			  [selectedTheme.services description]);
+		currentTheme = selectedTheme;
+		return selectedTheme;
 	}
+	return nil;
 }
 					
 - (void)dealloc {

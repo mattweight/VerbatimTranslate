@@ -35,9 +35,9 @@
 
 - (void)doPreLoad:(id)sender {
 	NSAutoreleasePool* arPool = [[NSAutoreleasePool alloc] init];
-	ThemeManager* manager = [ThemeManager sharedThemeManager];
-	NSError* preloadError = nil;
-	[manager nextThemeUsingName:@"French EU" error:&preloadError];
+	[ThemeManager sharedThemeManager];
+//	NSError* preloadError = nil;
+//	[manager nextThemeUsingName:@"French EU" error:&preloadError];
 	[arPool drain];
 	[self performSelectorOnMainThread:@selector(didFinishPreLoad:)
 						   withObject:nil
@@ -46,8 +46,9 @@
 
 - (void)didFinishPreLoad:(NSNotification*)notif {
 	[window addSubview:mainViewController.view];
-	[loadingView removeFromSuperview];
-	loadingView = nil;
+	[self.loadingView removeFromSuperview];
+	[self.loadingView release];
+	self.loadingView = nil;
 }
 
 //Called by Reachability whenever status changes.
