@@ -33,4 +33,6 @@ typedef unsigned short ANIMATION_STEP;
 
 #define DEFAULT_THEME_PLIST_FILENAME   @"default-theme.plist"
 
+#define COORDINATE_MAP_ARRAY [NSArray arrayWithObjects:@"top-arrow", @"arrow-center-x", @"center-x", @"center-y", nil]
+
 #endif // __VERBATIM_CONSTANTS_H__
