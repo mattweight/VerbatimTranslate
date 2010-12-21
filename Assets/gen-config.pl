@@ -21,14 +21,17 @@ foreach my $subdir (@$dirs) {
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>background-images</key>
+	<key>backgrounds</key>
 		<dict>
 EOD
 
     foreach my $image_file (@$image_files) {
         next if $image_file eq 'flag.jpg';
         print CONFIG qq#		<key><![CDATA[$image_file]]></key>\n#;
-        print CONFIG qq#		<string>0,124.0,160.0,65.0</string>\n#;
+        print CONFIG qq#		<array>\n#;
+        print CONFIG qq#			<string>1,124.0,160.0,65.0</string>\n#;
+        print CONFIG qq#			<string>0,300.0,160.0,265.0</string>\n#;
+        print CONFIG qq#		</array>\n#;
     }
     print CONFIG $tail;
     print "Wrote $ENV{PWD}/$subdir/config.plist\n";
@@ -36,33 +39,14 @@ EOD
 
 __DATA__
 	</dict>
-	<key>input-language</key>
+	<key>services</key>
 	<dict>
-		<key>human-readable</key>
-		<string>English (US)</string>
-		<key>services</key>
-		<dict>
-			<key>babelfish</key>
-			<string>en</string>
-			<key>google-translate</key>
-			<string>en</string>
-			<key>yahoo-translate</key>
-			<string>en</string>
-		</dict>
-	</dict>
-	<key>output-language</key>
-	<dict>
-		<key>human-readable</key>
-		<string>Chinese (Simplified)</string>
-		<key>services</key>
-		<dict>
-			<key>babelfish</key>
-			<string>zh-CN</string>
-			<key>google-translate</key>
-			<string>zh-CN</string>
-			<key>yahoo-translate</key>
-			<string>zh-CN</string>
-		</dict>
+		<key>babelfish</key>
+		<string>en</string>
+		<key>google-translate</key>
+		<string>en</string>
+		<key>yahoo-translate</key>
+		<string>en</string>
 	</dict>
 </dict>
 </plist>
