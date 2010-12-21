@@ -7,16 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
 @class MainViewController;
 
-@interface VerbatimTranslateAppDelegate : NSObject <UIApplicationDelegate> {
+@interface VerbatimTranslateAppDelegate : NSObject <UIApplicationDelegate, UIAlertViewDelegate> {
     UIWindow *window;
     MainViewController *mainViewController;
+	UIAlertView* networkAlert;
+	UIView* loadingView;
 }
 
+@property (nonatomic, retain) IBOutlet UIView* loadingView;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet MainViewController *mainViewController;
+
+- (void)doPreLoad:(id)sender;
+- (void)didFinishPreLoad:(NSNotification*)notif;
 
 @end
 

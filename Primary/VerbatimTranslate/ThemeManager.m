@@ -10,6 +10,8 @@
 #import "VerbatimConstants.h"
 #import "SynthesizeSingleton.h"
 
+#include <stdlib.h>
+
 @implementation Theme
 
 @synthesize imageFilename;
@@ -30,9 +32,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 
 - (id)init {
 	if (self = [super init]) {
+		srandomdev();
+		
 		NSFileManager* fMan = [NSFileManager defaultManager];
 		basePath = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Backgrounds"] retain];
-		if (![fMan fileExistsAtPath:basePath isDirectory:YES]) {
+		BOOL isDir;
+		
+		if (![fMan fileExistsAtPath:basePath isDirectory:&isDir] && isDir) {
 			NSLog(@"Big problem - missing base path: %@", basePath);
 			return self;
 		}
@@ -43,12 +49,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 				return self;
 			}
 
+			languageInfo = [NSMutableDictionary dictionary];
 			NSString* currItem = nil;
 			for (currItem in allLanguages) {
-				if (![currItem hasPrefix:@"."] && [fMan fileExistsAtPath:currItem isDirectory:YES]) {
+				NSString* langDir = [self.basePath stringByAppendingFormat:@"/%@", currItem];
+				[fMan fileExistsAtPath:langDir isDirectory:&isDir];
+				if (![currItem hasPrefix:@"."] && isDir) {
 					// Validate the config.plist and flag
-					NSString* configPath = [self.basePath stringByAppendingPathComponent:@"config.plist"];
-					if ([fMan fileExistsAtPath:configPath isDirectory:NO]) {
+					NSString* configPath = [langDir stringByAppendingPathComponent:@"config.plist"];
+					if ([fMan fileExistsAtPath:configPath isDirectory:&isDir] && !isDir) {
 						NSDictionary* configInfo = [NSDictionary dictionaryWithContentsOfFile:configPath];
 						NSDictionary* serviceInfo = [configInfo objectForKey:@"services"];
 						if (serviceInfo == nil && [[serviceInfo allKeys] count] == 0) {
@@ -61,7 +70,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 							break;
 						}
 						
-						NSMutableArray* container = [NSMutableArray array];						
+						NSMutableArray* container = [NSMutableArray array];
 						NSString* bgFilename = nil;
 						for (bgFilename in [backgroundInfo allKeys]) {
 							NSArray* bubbleInfo = [backgroundInfo objectForKey:bgFilename];
@@ -84,7 +93,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 							[newTheme setServices:serviceInfo];
 							[container addObject:newTheme];
 						}
-						[languages setValue:container forKey:currItem];
+//						NSString* storedKey = [currItem stringByReplacingOccurrencesOfString:@"""" withString:@""];
+//						[languageInfo setValue:container forKey:[storedKey stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+						[languageInfo setValue:container forKey:[currItem stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 					}
 				}
 			}
@@ -93,7 +104,26 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 	return self;
 }
 
-- (void)nextThemeUsingName:(NSString*)languageName {
+- (void)nextThemeUsingName:(NSString*)languageName error:(NSError**)theError {
+	NSString* selectLanguage = [languageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSArray* themes = (NSArray*)[languageInfo objectForKey:selectLanguage];
+	if (themes == nil) {
+		UIAlertView* missingAlert = [[[UIAlertView alloc] initWithTitle:@"Missing Theme Information!"
+																message:[NSString stringWithFormat:@"Missing theme information for '%@'. Please close and restart. If this problem continues, please uninstall and re-install.", languageName]
+															   delegate:self
+													  cancelButtonTitle:@"OK"
+													  otherButtonTitles:nil] autorelease];
+		[missingAlert show];
+	}
+	else {
+		int newRand = (int)(random() % (long)[themes count]);
+		Theme* selectedTheme = [themes objectAtIndex:newRand];
+		NSLog(@"selected theme: %@ %@ %@ %@", 
+			  selectedTheme.imageFilename,
+			  [selectedTheme.bubble1Coordinates description],
+			  [selectedTheme.bubble2Coordinates description],
+			  [selectedTheme.services description]);
+	}
 }
 					
 - (void)dealloc {

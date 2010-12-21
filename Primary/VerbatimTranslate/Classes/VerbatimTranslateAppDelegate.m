@@ -8,29 +8,69 @@
 
 #import "VerbatimTranslateAppDelegate.h"
 #import "MainViewController.h"
+#import "ThemeManager.h"
 
 @implementation VerbatimTranslateAppDelegate
 
-
 @synthesize window;
 @synthesize mainViewController;
-
+@synthesize loadingView;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-
-    // Override point for customization after application launch.  
-	//[(MainViewController*)mainViewController initViews];
-
-    // Add the main view controller's view to the window and display.
-    [window addSubview:mainViewController.view];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(reachabilityChanged:)
+                                                 name: kReachabilityChangedNotification
+                                               object: nil];
+	
+	[window addSubview:loadingView];
     [window makeKeyAndVisible];
+
+	[self performSelectorInBackground:@selector(doPreLoad:) withObject:nil];
 
     return YES;
 }
 
+- (void)doPreLoad:(id)sender {
+	NSAutoreleasePool* arPool = [[NSAutoreleasePool alloc] init];
+	ThemeManager* manager = [ThemeManager sharedThemeManager];
+	NSError* preloadError = nil;
+	[manager nextThemeUsingName:@"French EU" error:&preloadError];
+	[arPool drain];
+	[self performSelectorOnMainThread:@selector(didFinishPreLoad:)
+						   withObject:nil
+						waitUntilDone:NO];
+}
+
+- (void)didFinishPreLoad:(NSNotification*)notif {
+	[window addSubview:mainViewController.view];
+	[loadingView removeFromSuperview];
+	loadingView = nil;
+}
+
+//Called by Reachability whenever status changes.
+- (void) reachabilityChanged: (NSNotification* )note {
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+    NetworkStatus netStatus = [curReach currentReachabilityStatus];
+    BOOL connectionRequired = [curReach connectionRequired];
+	
+    if (netStatus == kNotReachable && connectionRequired) {
+        if (![networkAlert isVisible]) {   
+            if (networkAlert != nil) {
+                [networkAlert release];
+            }
+            networkAlert = [[UIAlertView alloc] initWithTitle:@"No Network!"
+                                                      message:@"An internet connection is required to continue."
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+            [networkAlert show];
+        }
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
@@ -44,8 +84,6 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
-	NSLog(@"Exiting!");
-	exit(0);
 //	[self applicationWillTerminate:application];
 }
 

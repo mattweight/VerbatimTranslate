@@ -40,6 +40,6 @@
 
 + (ThemeManager*)sharedThemeManager;
 
-- (void)nextThemeUsingName:(NSString*)languageName error:(NSError*)theError;
+- (void)nextThemeUsingName:(NSString*)languageName error:(NSError**)theError;
 
 @end
