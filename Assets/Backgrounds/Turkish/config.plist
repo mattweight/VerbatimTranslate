@@ -13,11 +13,11 @@
 	<key>services</key>
 	<dict>
 		<key>babelfish</key>
-		<string>en</string>
+		<string>tr</string>
 		<key>google-translate</key>
-		<string>en</string>
+		<string>tr</string>
 		<key>yahoo-translate</key>
-		<string>en</string>
+		<string>tr</string>
 	</dict>
 </dict>
 </plist>

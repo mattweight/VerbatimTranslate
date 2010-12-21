@@ -23,9 +23,9 @@
 	<key>services</key>
 	<dict>
 		<key>babelfish</key>
-		<string>en</string>
+		<string>sv</string>
 		<key>google-translate</key>
-		<string>en</string>
+		<string>sv</string>
 		<key>yahoo-translate</key>
 		<string>en</string>
 	</dict>
