@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "InfoViewController.h"
+#import "InfoViewController.h"	
 #import "FlagTableViewCell.h"
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
@@ -17,6 +17,9 @@
 @synthesize bgImageView;
 @synthesize themeController;
 @synthesize flagController;
+@synthesize inController;
+@synthesize outController;
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -48,7 +51,6 @@
 		}
 	}
 	else {
-		
 		languageName = (NSString*)[uInfo objectForKey:@"language"];
 		if (languageName == nil) {
 			languageName = [[NSUserDefaults standardUserDefaults] stringForKey:CURRENT_LANGUAGE_STORE_KEY];
@@ -107,14 +109,15 @@
 	theme = nil;
 	
 	BOOL isTopArrow = [[newTheme.bubble1Coordinates objectForKey:@"top-arrow"] boolValue];
-	WordBubbleController* inBub = themeController.inputBubbleController;
-	WordBubbleController* outBub = themeController.outputBubbleController;
+	WordBubbleController* inBub = inController;
+	WordBubbleController* outBub = outController;
 	
 	CGPoint bubbleCenter = CGPointMake([[newTheme.bubble1Coordinates objectForKey:@"center-x"] floatValue],
 									   [[newTheme.bubble1Coordinates objectForKey:@"center-y"] floatValue]);
 	[inBub.view setCenter:bubbleCenter];
 										
 	if (isTopArrow) {
+		NSLog(@"isTopArrow...");
 		CGPoint arrowCenter = CGPointMake([[newTheme.bubble1Coordinates objectForKey:@"arrow-center-x"] floatValue],
 										  inBub.topArrowImageView.center.y);
 		[inBub.bottomArrowImageView setHidden:YES];

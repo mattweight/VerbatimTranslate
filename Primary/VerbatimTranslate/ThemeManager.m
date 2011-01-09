@@ -38,7 +38,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 		NSFileManager* fMan = [NSFileManager defaultManager];
 		basePath = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Backgrounds"] retain];
 		BOOL isDir;
-		
+
 		if (![fMan fileExistsAtPath:basePath isDirectory:&isDir] && isDir) {
 			NSLog(@"Big problem - missing base path: %@", basePath);
 			return self;

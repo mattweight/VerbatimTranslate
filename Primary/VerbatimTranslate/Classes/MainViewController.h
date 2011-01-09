@@ -8,16 +8,21 @@
 
 #import "ThemeController.h"
 #import "FlagsTableViewController.h"
+#import "WordBubbleController.h"
 
 @interface MainViewController : UIViewController <UIAlertViewDelegate> {
 	IBOutlet UIImageView* bgImageView;
 	ThemeController* themeController;
 	FlagsTableViewController* flagController;
+	WordBubbleController* inController;
+	WordBubbleController* outController;
 }
 
 @property (nonatomic, retain) UIImageView* bgImageView;
 @property (nonatomic, retain) ThemeController* themeController;
 @property (nonatomic, retain) FlagsTableViewController* flagController;
+@property (nonatomic, retain) IBOutlet WordBubbleController* inController;
+@property (nonatomic, retain) IBOutlet WordBubbleController* outController;
 
 - (IBAction)showInfo:(id)sender;
 - (void)displayTranslation:(id)sender;
