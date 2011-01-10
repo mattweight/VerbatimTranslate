@@ -14,6 +14,7 @@
 	IBOutlet UIImageView* imgView;
 	IBOutlet UIImageView* topArrowView;
 	IBOutlet UIImageView* bottomArrowView;
+	CGPoint originalCenter;
 	ANIMATION_STEP animationStep;
 	BOOL forceStop;
 	NSObject* caller;

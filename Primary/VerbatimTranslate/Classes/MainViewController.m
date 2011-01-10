@@ -15,7 +15,6 @@
 @implementation MainViewController
 
 @synthesize bgImageView;
-@synthesize themeController;
 @synthesize flagController;
 @synthesize inController;
 @synthesize outController;
@@ -37,7 +36,12 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(cancelTranslation:)
 												 name:TRANSLATION_DID_CANCEL_NOTIFICATION
-											   object:nil];	
+											   object:nil];
+	[self.view addSubview:inController.view];
+	[self.view addSubview:outController.view];
+	[inController reset];
+	[outController reset];
+	[self updateTheme:nil];
 }
 
 - (void)updateTheme:(NSNotification*)notif {
@@ -94,65 +98,51 @@
 		[fController release];
 		fController = nil;
 	}	
-	
-	if (themeController != nil && [themeController.inputBubbleController isViewLoaded]) {
-		[themeController.inputBubbleController.view removeFromSuperview];
-	}
-	if (themeController != nil && [themeController.outputBubbleController isViewLoaded]) {
-		[themeController.outputBubbleController.view removeFromSuperview];
-	}
-		
-	ThemeController* theme = [[ThemeController alloc] init];
-	[bgImageView addSubview:theme.inputBubbleController.view];
-	themeController = [theme retain];
-	[theme release];
-	theme = nil;
+
+	[inController reset];
 	
 	BOOL isTopArrow = [[newTheme.bubble1Coordinates objectForKey:@"top-arrow"] boolValue];
-	WordBubbleController* inBub = inController;
-	WordBubbleController* outBub = outController;
-	
 	CGPoint bubbleCenter = CGPointMake([[newTheme.bubble1Coordinates objectForKey:@"center-x"] floatValue],
 									   [[newTheme.bubble1Coordinates objectForKey:@"center-y"] floatValue]);
-	[inBub.view setCenter:bubbleCenter];
+	[inController.view setCenter:bubbleCenter];
 										
 	if (isTopArrow) {
 		NSLog(@"isTopArrow...");
 		CGPoint arrowCenter = CGPointMake([[newTheme.bubble1Coordinates objectForKey:@"arrow-center-x"] floatValue],
-										  inBub.topArrowImageView.center.y);
-		[inBub.bottomArrowImageView setHidden:YES];
-		[inBub.topArrowImageView setCenter:arrowCenter];
-		[inBub.topArrowImageView setHidden:NO];
+										  inController.topArrowImageView.center.y);
+		[inController.bottomArrowImageView setHidden:YES];
+		[inController.topArrowImageView setCenter:arrowCenter];
+		[inController.topArrowImageView setHidden:NO];
 	}
 	else {
 		CGPoint arrowCenter = CGPointMake([[newTheme.bubble1Coordinates objectForKey:@"arrow-center-x"] floatValue],
-										  inBub.bottomArrowImageView.center.y);
-		[inBub.topArrowImageView setHidden:YES];
-		[inBub.bottomArrowImageView setCenter:arrowCenter];
-		[inBub.bottomArrowImageView setHidden:NO];
+										  inController.bottomArrowImageView.center.y);
+		[inController.topArrowImageView setHidden:YES];
+		[inController.bottomArrowImageView setCenter:arrowCenter];
+		[inController.bottomArrowImageView setHidden:NO];
 	}
 
 	isTopArrow = [[newTheme.bubble2Coordinates objectForKey:@"top-arrow"] boolValue];
 	bubbleCenter = CGPointMake([[newTheme.bubble2Coordinates objectForKey:@"center-x"] floatValue],
 							   [[newTheme.bubble2Coordinates objectForKey:@"center-y"] floatValue]);
-	[outBub.view setCenter:bubbleCenter];
+	[outController.view setCenter:bubbleCenter];
 	if (isTopArrow) {
 		CGPoint arrowCenter = CGPointMake([[newTheme.bubble2Coordinates objectForKey:@"arrow-center-x"] floatValue],
-										  outBub.topArrowImageView.center.y);
-		[outBub.bottomArrowImageView setHidden:YES];
-		[outBub.topArrowImageView setCenter:arrowCenter];
-		[outBub.topArrowImageView setHidden:NO];
+										  outController.topArrowImageView.center.y);
+		[outController.bottomArrowImageView setHidden:YES];
+		[outController.topArrowImageView setCenter:arrowCenter];
+		[outController.topArrowImageView setHidden:NO];
 	}
 	else {
 		CGPoint arrowCenter = CGPointMake([[newTheme.bubble2Coordinates objectForKey:@"arrow-center-x"] floatValue],
-										  outBub.bottomArrowImageView.center.y);
-		[outBub.topArrowImageView setHidden:YES];
-		[outBub.bottomArrowImageView setCenter:arrowCenter];
-		[outBub.bottomArrowImageView setHidden:NO];
+										  outController.bottomArrowImageView.center.y);
+		[outController.topArrowImageView setHidden:YES];
+		[outController.bottomArrowImageView setCenter:arrowCenter];
+		[outController.bottomArrowImageView setHidden:NO];
 	}
-	
-	[themeController.inputBubbleController.bubbleTextView setText:NSLocalizedString(@"Tap here to begin typing..", nil)];
-	[themeController.inputBubbleController animate];
+
+	[inController.bubbleTextView setText:NSLocalizedString(@"Tap here to begin typing..", nil)];
+	[inController animate];
 	
 	// Update the flag controller position
 	int index; // magic magic numbers
@@ -186,47 +176,32 @@
 
 }
 
+// TODO - Move any re-loading into the load/unload methods
+/*
 - (void)viewWillAppear:(BOOL)animated {
 	NSLog(@"MainViewController view will appear!");
 	[self updateTheme:[NSNotification notificationWithName:THEME_UPDATE_NOTIFICATION object:nil]];
-}
-
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-	[themeController.inputBubbleController release];
-	[themeController.outputBubbleController release];
-	[themeController release];
-	themeController = nil;
-	[flagController release];
-	flagController = nil;
 }
 */
 
 - (void)displayTranslation:(id)sender {
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-	NSString* origText = (NSString*)[defaults stringForKey:@"__VERBATIM_DIGITAL_ORIGINAL_TEXT__"];
-	NSString* transText = (NSString*)[defaults stringForKey:@"__VERBATIM_DIGITAL_TRANSLATED_TEXT__"];
-	
-	[themeController.inputBubbleController.view removeFromSuperview];
-	[themeController.inputBubbleController.autoSuggestController.view removeFromSuperview];
-	[themeController.outputBubbleController.view removeFromSuperview];
-	[themeController.outputBubbleController.autoSuggestController.view removeFromSuperview];
-	
-	[themeController release];
-	themeController = nil;
+	NSString* origText = (NSString*)[defaults stringForKey:VERBATIM_ORIGINAL_TEXT];
+	NSString* transText = (NSString*)[defaults stringForKey:VERBATIM_TRANSLATED_TEXT];
 
-	ThemeController* newTheme = [[ThemeController alloc] init];
-	[newTheme.inputBubbleController.bubbleTextView setText:origText];
-	[newTheme.outputBubbleController.bubbleTextView setText:transText];
+	[inController.autoSuggestController.view removeFromSuperview];
+	//[outController.autoSuggestController.view removeFromSuperview];
+	/*
+	[inController.view removeFromSuperview];
+	[outController.view removeFromSuperview];
+	*/
+
+	[inController.bubbleTextView setText:origText];
+	[outController.bubbleTextView setText:transText];
 	
-	[bgImageView addSubview:newTheme.inputBubbleController.view];
-	[bgImageView addSubview:newTheme.outputBubbleController.view];
-	
-	[newTheme.inputBubbleController animate];
-	[newTheme.outputBubbleController animate];
-	themeController = [newTheme retain];
-	[newTheme release];
-	newTheme = nil;
+	NSLog(@"bubbletext view input: %@ --> %@", inController.bubbleTextView.text, origText);
+	//[inController animate];
+	[outController animate];
 }
 
 - (void)cancelTranslation:(id)sender {

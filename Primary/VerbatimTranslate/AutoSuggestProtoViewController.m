@@ -94,8 +94,8 @@
 	
 	// FIXME - Time to cheat. Too late tonight to do it right..
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-	[defaults setObject:message forKey:@"__VERBATIM_DIGITAL_TRANSLATED_TEXT__"];
-	[defaults setObject:text forKey:@"__VERBATIM_DIGITAL_ORIGINAL_TEXT__"];
+	[defaults setObject:message forKey:VERBATIM_TRANSLATED_TEXT];
+	[defaults setObject:text forKey:VERBATIM_ORIGINAL_TEXT];
 	[defaults synchronize];
 
 	// add text to history

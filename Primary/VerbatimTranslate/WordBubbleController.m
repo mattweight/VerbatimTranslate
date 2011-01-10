@@ -18,6 +18,23 @@
 @synthesize bubbleImageView;
 @synthesize autoSuggestController;
 
+- (void)reset {
+	WordBubbleView* bubbleView = (WordBubbleView*)self.view;
+	[bubbleView setBackgroundColor:[UIColor clearColor]];
+	[bubbleImageView setBackgroundColor:[UIColor clearColor]];
+	
+	// TODO this will be driven by the serialized animation schema.
+	[bubbleView setAnimationStep:0]; // Starting point means shorties
+	[bubbleView setForceStop:YES];
+	[bubbleTextView setBackgroundColor:[UIColor clearColor]];
+	[bubbleView setAlpha:0.90];
+	
+	// TODO Just to keep the aspect ration full-sized, so we shrink instead of grow the first time
+	//      Need to do this the more correct way.
+	[bubbleView animate];
+	[bubbleView setCaller:self];
+}
+
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nil])) {

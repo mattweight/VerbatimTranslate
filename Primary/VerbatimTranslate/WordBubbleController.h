@@ -28,8 +28,8 @@
 
 - (IBAction)expandTextInput:(id)sender;
 - (void)displayAutoSuggestView:(id)sender;
-
 - (void)animate;
+- (void)reset;
 
 // TODO This will be the primary interface for creating word bubble objects. 
 // The mainCenter is where the whole view will be positioned on the super view
