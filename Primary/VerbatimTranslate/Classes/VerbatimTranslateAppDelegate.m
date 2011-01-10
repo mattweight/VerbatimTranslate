@@ -21,11 +21,13 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(reachabilityChanged:)
-                                                 name: kReachabilityChangedNotification
-                                               object: nil];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+	
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(displayActivityView)
@@ -39,9 +41,9 @@
 	
 	[window addSubview:loadingView];
     [window makeKeyAndVisible];
-
+	
 	[self performSelectorInBackground:@selector(doPreLoad:) withObject:nil];
-
+	
     return YES;
 }
 
@@ -58,8 +60,8 @@
 - (void)doPreLoad:(id)sender {
 	NSAutoreleasePool* arPool = [[NSAutoreleasePool alloc] init];
 	[ThemeManager sharedThemeManager];
-//	NSError* preloadError = nil;
-//	[manager nextThemeUsingName:@"French EU" error:&preloadError];
+	//	NSError* preloadError = nil;
+	//	[manager nextThemeUsingName:@"French EU" error:&preloadError];
 	[arPool drain];
 	[self performSelectorOnMainThread:@selector(didFinishPreLoad:)
 						   withObject:nil
@@ -105,7 +107,7 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
-//	[self applicationWillTerminate:application];
+	//	[self applicationWillTerminate:application];
 }
 
 

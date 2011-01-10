@@ -15,7 +15,6 @@
 		280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754C0DD40C5E005A515E /* MainWindow.xib */; };
 		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
-		7023B952127E1510008FCABE /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7023B950127E1510008FCABE /* WordViewController.xib */; };
 		7023B956127E1526008FCABE /* mariachi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B954127E1526008FCABE /* mariachi.png */; };
 		7023B957127E1526008FCABE /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B955127E1526008FCABE /* panda.png */; };
 		7028DFB9127E19B50034EE04 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028DFB7127E19B50034EE04 /* ThemeController.m */; };
@@ -63,6 +62,7 @@
 		7059160612C07ED2009B6F2A /* quoteView.html in Resources */ = {isa = PBXBuildFile; fileRef = 7059160512C07ED2009B6F2A /* quoteView.html */; };
 		7060C90B12C08EBA00055569 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7060C90A12C08EBA00055569 /* Reachability.m */; };
 		7060C91712C090A500055569 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7060C91612C090A500055569 /* SystemConfiguration.framework */; };
+		70A2267412DB124E003BC9F9 /* BackgroundFake.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A2267312DB124E003BC9F9 /* BackgroundFake.xib */; };
 		70C1073912801072007BA298 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C1073812801072007BA298 /* Icon.png */; };
 		70C61BC51289325E00F0E0BE /* ChineseSimplified40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */; };
 		70C61C5612893CB500F0E0BE /* SpanishLatinAmerica40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */; };
@@ -96,7 +96,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* VerbatimTranslate_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimTranslate_Prefix.pch; sourceTree = "<group>"; };
 		7023B935127E1444008FCABE /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		7023B950127E1510008FCABE /* WordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordViewController.xib; sourceTree = "<group>"; };
 		7023B954127E1526008FCABE /* mariachi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariachi.png; sourceTree = "<group>"; };
 		7023B955127E1526008FCABE /* panda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda.png; sourceTree = "<group>"; };
 		7028DFB6127E19B50034EE04 /* ThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeController.h; sourceTree = "<group>"; };
@@ -153,6 +152,7 @@
 		7060C90912C08EBA00055569 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7060C90A12C08EBA00055569 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7060C91612C090A500055569 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		70A2267312DB124E003BC9F9 /* BackgroundFake.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundFake.xib; sourceTree = "<group>"; };
 		70C1073812801072007BA298 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChineseSimplified40.plist; sourceTree = "<group>"; };
 		70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpanishLatinAmerica40.plist; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 		7060C75412C08B8B00055569 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
-				7023B950127E1510008FCABE /* WordViewController.xib */,
+				70A2267312DB124E003BC9F9 /* BackgroundFake.xib */,
 				70E85069127EA8F5000FCCA8 /* WordBubbleController.xib */,
 				CA668C1512845B3A00B52C92 /* QuoteViewController.xib */,
 				280E754C0DD40C5E005A515E /* MainWindow.xib */,
@@ -466,7 +466,6 @@
 			files = (
 				280E754E0DD40C5E005A515E /* MainView.xib in Resources */,
 				280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */,
-				7023B952127E1510008FCABE /* WordViewController.xib in Resources */,
 				7023B956127E1526008FCABE /* mariachi.png in Resources */,
 				7023B957127E1526008FCABE /* panda.png in Resources */,
 				70E85049127EA62C000FCCA8 /* default-theme.plist in Resources */,
@@ -514,6 +513,7 @@
 				70C61C5612893CB500F0E0BE /* SpanishLatinAmerica40.plist in Resources */,
 				7059160612C07ED2009B6F2A /* quoteView.html in Resources */,
 				70CC4FCE12C0BBBA0037B88B /* Backgrounds in Resources */,
+				70A2267412DB124E003BC9F9 /* BackgroundFake.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
