@@ -12,12 +12,6 @@
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
 
-@interface MainViewController()
-
-- (void)displayActivityView;
-
-@end
-
 @implementation MainViewController
 
 @synthesize bgImageView;
@@ -25,7 +19,6 @@
 @synthesize currentLanguage;
 @synthesize inController;
 @synthesize outController;
-@synthesize activityView;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -35,11 +28,6 @@
 												 name:THEME_UPDATE_NOTIFICATION
 											   object:nil];
 
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(displayActivityView)
-												 name:TRANSLATION_DID_BEGIN_NOTIFICATION
-											   object:nil];
-	
 	[[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(displayTranslation:)
 												 name:TRANSLATION_DID_COMPLETE_NOTIFICATION
@@ -49,19 +37,19 @@
 											 selector:@selector(cancelTranslation:)
 												 name:TRANSLATION_DID_CANCEL_NOTIFICATION
 											   object:nil];
+
 	[self.view addSubview:inController.view];
+	[outController.view setAlpha:0.0];
+	[outController.view setUserInteractionEnabled:NO];
 	[self.view addSubview:outController.view];
 	[inController reset];
+	[outController.view setAlpha:0.0];
 	[outController reset];
-	[outController.view setUserInteractionEnabled:NO];
 	[self updateTheme:nil];
 }
 
-- (void)displayActivityView {
-	[self.view addSubview:activityView];
-}
-
 - (void)updateTheme:(NSNotification*)notif {
+	[outController.view setAlpha:0.0];
 	NSDictionary* uInfo = (NSDictionary*)[notif userInfo];
 	NSString* languageName = [NSString string];
 	NSString* storedLanguage = [[NSUserDefaults standardUserDefaults] stringForKey:CURRENT_LANGUAGE_STORE_KEY];
@@ -120,6 +108,8 @@
 	}	
 
 	[inController reset];
+
+	
 	[(WordBubbleView*)outController.view setAnimationStep:MAX_ANIMATION_STEP];
 	[(WordBubbleView*)outController.view setForceStop:YES];
 	[outController animate];
@@ -207,23 +197,23 @@
 */
 
 - (void)displayTranslation:(id)sender {
-	[activityView removeFromSuperview];
+	[[NSNotificationCenter defaultCenter] postNotificationName:REMOVE_ACTIVITY_VIEW
+														object:nil];
 	
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	NSString* origText = (NSString*)[defaults stringForKey:VERBATIM_ORIGINAL_TEXT];
 	NSString* transText = (NSString*)[defaults stringForKey:VERBATIM_TRANSLATED_TEXT];
 
 	[inController.autoSuggestController.view removeFromSuperview];
-	//[outController.autoSuggestController.view removeFromSuperview];
 
 	[inController.bubbleTextView setText:origText];
 	[outController.bubbleTextView setText:transText];
 	
-	//NSLog(@"bubbletext view input: %@ --> %@", inController.bubbleTextView.text, origText);
-	//[(WordBubbleView*)inController.view setAnimationStep:0];
 	[(WordBubbleView*)inController.view reverseTextViewExpansion];
-	//[inController animate];
-	//[inController animate];
+	[(WordBubbleView*)inController.view setAnimationStep:0];
+	[inController animate];
+	
+	[outController.view setAlpha:0.90];
 	[(WordBubbleView*)outController.view setAnimationStep:0];
 	[outController animate];
 }

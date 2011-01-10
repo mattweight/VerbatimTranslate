@@ -20,6 +20,7 @@
 
 @interface AutoSuggestProtoViewController()
 
+
 - (void)getTranslation:(NSString*)origText;
 
 @end
@@ -54,6 +55,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[self.textInput resignFirstResponder];
 	[self submitText:[_suggestions objectAtIndex:indexPath.row]];
 }
 
@@ -69,6 +71,7 @@
 	// check for return key press
     if ([text isEqualToString:@"\n"]) {
 		[self submitText:textView.text];
+		[textView resignFirstResponder];
         return NO;
     }
 	
@@ -76,14 +79,12 @@
 }
 
 - (void)submitText:(NSString *)text {
-	[[NSNotificationCenter defaultCenter] postNotificationName:TRANSLATION_DID_BEGIN_NOTIFICATION object:nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:DISPLAY_ACTIVITY_VIEW object:nil];
 	[self getTranslation:text];
 	//[self performSelectorInBackground:@selector(getTranslation:) withObject:text];
 }
 
 - (void)getTranslation:(NSString *)text {
-	NSAutoreleasePool* arPool = [[NSAutoreleasePool alloc] init];
-	
 	// Get the web service language keyword..
 	ThemeManager* manager = [ThemeManager sharedThemeManager];
 	NSString* outputKeyword = [manager.currentTheme.services objectForKey:@"google-translate"];
@@ -96,25 +97,51 @@
 	[translateURLString appendString:[text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	NSLog(@"The request url is %@", translateURLString);
 	
+	if (_translateData != nil && [_translateData retainCount] > 0) {
+		[_translateData release];
+	}
+	_translateData = [[NSMutableData alloc] init];
+	
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	[defaults setObject:text forKey:VERBATIM_ORIGINAL_TEXT];
+	[defaults synchronize];
+	
+	// add text to history
+	AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
+	[autoSuggest addToHistory:text to:nil toLanguage:nil];	
+
 	NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:translateURLString]];
-	NSURLResponse* resp = [[NSURLResponse alloc] init];
-	NSData* dataResp = [NSURLConnection sendSynchronousRequest:req returningResponse:&resp error:nil];
-	NSString* respString = [[NSString alloc] initWithData:dataResp encoding:NSUTF8StringEncoding];
+	NSURLConnection* connect = [NSURLConnection connectionWithRequest:req delegate:self];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	[connection cancel];
+	UIAlertView* failedAlert = [[[UIAlertView alloc] initWithTitle:@"Translation Failure"
+														   message:[NSString stringWithFormat:@"Error: %@", [error description]]
+														  delegate:self
+												 cancelButtonTitle:@"OK"
+												 otherButtonTitles:nil] autorelease];
+	[failedAlert show];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+	[_translateData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	NSString* respString = [[NSString alloc] initWithData:_translateData encoding:NSUTF8StringEncoding];
+	[_translateData release];
+	_translateData = nil;
+	
 	NSString* message = [[[respString JSONValue] objectForKey:@"responseData"] objectForKey:@"translatedText"];
 	
 	// FIXME - Time to cheat. Too late tonight to do it right..
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	[defaults setObject:message forKey:VERBATIM_TRANSLATED_TEXT];
-	[defaults setObject:text forKey:VERBATIM_ORIGINAL_TEXT];
 	[defaults synchronize];
-
-	// add text to history
-	AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
-	[autoSuggest addToHistory:text to:nil toLanguage:nil];
 	
 	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:TRANSLATION_DID_COMPLETE_NOTIFICATION
 																						 object:nil]];
-	[arPool release];
 }
 
 - (void)_filterSuggestionsWithString:(NSString *)filterString {

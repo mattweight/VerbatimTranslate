@@ -13,6 +13,7 @@
 @private
 	UITextView* _textInput;
 	UITableView* _suggestionsTable;
+	NSMutableData* _translateData;
 	NSArray* _suggestions;
 }
 

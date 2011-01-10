@@ -9,12 +9,14 @@
 #import "VerbatimTranslateAppDelegate.h"
 #import "MainViewController.h"
 #import "ThemeManager.h"
+#import "VerbatimConstants.h"
 
 @implementation VerbatimTranslateAppDelegate
 
 @synthesize window;
 @synthesize mainViewController;
 @synthesize loadingView;
+@synthesize loadingLabel;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -25,12 +27,32 @@
                                                  name: kReachabilityChangedNotification
                                                object: nil];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(displayActivityView)
+												 name:DISPLAY_ACTIVITY_VIEW
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(removeActivityView)
+												 name:REMOVE_ACTIVITY_VIEW
+											   object:nil];
+	
 	[window addSubview:loadingView];
     [window makeKeyAndVisible];
 
 	[self performSelectorInBackground:@selector(doPreLoad:) withObject:nil];
 
     return YES;
+}
+
+- (void)displayActivityView {
+	[self.loadingView setCenter:window.center];
+	[self.loadingLabel setText:@"Translating.."];
+	[window addSubview:self.loadingView];
+}
+
+- (void)removeActivityView {
+	[self.loadingView removeFromSuperview];
 }
 
 - (void)doPreLoad:(id)sender {
@@ -47,8 +69,6 @@
 - (void)didFinishPreLoad:(NSNotification*)notif {
 	[window addSubview:mainViewController.view];
 	[self.loadingView removeFromSuperview];
-	[self.loadingView release];
-	self.loadingView = nil;
 }
 
 //Called by Reachability whenever status changes.

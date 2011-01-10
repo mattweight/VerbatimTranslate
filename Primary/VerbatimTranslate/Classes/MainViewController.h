@@ -14,7 +14,6 @@
 	FlagsTableViewController* flagController;
 	WordBubbleController* inController;
 	WordBubbleController* outController;
-	UIView* activityView;
 	NSString* currentLanguage;
 }
 
@@ -22,7 +21,6 @@
 @property (nonatomic, retain) FlagsTableViewController* flagController;
 @property (nonatomic, retain) IBOutlet WordBubbleController* inController;
 @property (nonatomic, retain) IBOutlet WordBubbleController* outController;
-@property (nonatomic, retain) IBOutlet UIView* activityView;
 @property (nonatomic, retain) NSString* currentLanguage;
 
 

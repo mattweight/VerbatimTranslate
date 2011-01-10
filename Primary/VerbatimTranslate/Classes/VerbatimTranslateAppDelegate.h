@@ -16,14 +16,18 @@
     MainViewController *mainViewController;
 	UIAlertView* networkAlert;
 	UIView* loadingView;
+	UILabel* loadingLabel;
 }
 
 @property (nonatomic, retain) IBOutlet UIView* loadingView;
+@property (nonatomic, retain) IBOutlet UILabel* loadingLabel;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet MainViewController *mainViewController;
 
 - (void)doPreLoad:(id)sender;
 - (void)didFinishPreLoad:(NSNotification*)notif;
+- (void)displayActivityView;
+- (void)removeActivityView;
 
 @end
 

@@ -81,6 +81,7 @@
 	[UIView setAnimationDuration:duration];
 	if (forceStop) {
 		forceStop = NO;
+		[self setHidden:NO];
 	}
 	else {
 		[UIView setAnimationDelegate:self];
@@ -96,7 +97,7 @@
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDelegate:self];
 	[UIView setAnimationBeginsFromCurrentState:YES];
-	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationDuration:0.005];
 	[UIView setAnimationDidStopSelector:@selector(finalizeRestore)];
 	[self setFrame:originalViewFrame];
 	[imgView setAlpha:1.0];
@@ -146,7 +147,7 @@
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDelegate:self];
 	[UIView setAnimationBeginsFromCurrentState:YES];
-	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationDuration:0.3];
 	[UIView setAnimationDidStopSelector:@selector(finalizeExpanding)];
 	//[imgView setBackgroundColor:[UIColor whiteColor]];
 	[self setAlpha:1.0];
