@@ -8,6 +8,11 @@
 
 #import "WordBubbleView.h"
 
+@interface WordBubbleView()
+
+- (void)finalizeRestore;
+
+@end
 
 @implementation WordBubbleView
 
@@ -87,22 +92,68 @@
 	animationStep++;
 }
 
+- (void)reverseTextViewExpansion {
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationDidStopSelector:@selector(finalizeRestore)];
+	[self setFrame:originalViewFrame];
+	[imgView setAlpha:1.0];
+	[textViewRef setFrame:originalTextFrame];
+	[UIView commitAnimations];
+ 
+	NSLog(@"Setting view alpha back to: %.02f AND %.02f", originalViewAlpha, originalTextAlpha);
+	[self setAlpha:originalViewAlpha];
+	//[textViewRef setAlpha:originalTextAlpha];
+	//[textViewRef setBackgroundColor:[UIColor grayColor]];
+	
+	[self setBackgroundColor:[UIColor clearColor]];
+	[textViewRef setBackgroundColor:[UIColor clearColor]];
+	[imgView setHidden:NO];
+	if (isTopArrow) {
+		[topArrowView setHidden:NO];
+	}
+	else {
+		[bottomArrowView setHidden:NO];
+	}
+}
+
+- (void)finalizeRestore {
+	NSLog(@"finalizeRestore..");
+}
+
 - (void)expandTextViewToFrame:(CGRect)textFrame {
 	NSLog(@"Expanding text view here: %.02f", textFrame.size.width);
+	if ([topArrowView isHidden]) {
+		isTopArrow = NO;
+	}
+	else {
+		isTopArrow = YES;
+	}
+	originalTextFrame = CGRectMake(textViewRef.frame.origin.x, textViewRef.frame.origin.y,
+								   textViewRef.frame.size.width, textViewRef.frame.size.height);
+	originalViewFrame = CGRectMake(self.bounds.origin.x, self.bounds.origin.y,
+								   self.bounds.size.width, self.bounds.size.height);
+	originalViewAlpha = self.alpha;
+	originalTextAlpha = textViewRef.alpha;
+	
 	[topArrowView setHidden:YES];
 	[bottomArrowView setHidden:YES];
-	[imgView setHidden:YES];
-	[self setBackgroundColor:[UIColor whiteColor]];
+	//[imgView setHidden:YES];
+	//[self setBackgroundColor:[UIColor whiteColor]];
+	
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDelegate:self];
 	[UIView setAnimationBeginsFromCurrentState:YES];
 	[UIView setAnimationDuration:0.5];
 	[UIView setAnimationDidStopSelector:@selector(finalizeExpanding)];
-	[imgView setBackgroundColor:[UIColor whiteColor]];
+	//[imgView setBackgroundColor:[UIColor whiteColor]];
 	[self setAlpha:1.0];
+	[imgView setAlpha:0.0];
 	[self setBackgroundColor:[UIColor whiteColor]];
 	[textViewRef setBackgroundColor:[UIColor whiteColor]];
-	[textViewRef setAlpha:1.0];
+	//[textViewRef setAlpha:1.0];
 	[textViewRef setText:@""];
 
 	// textFrame.size.width + 40.0, textFrame.size.height + 40.0)];

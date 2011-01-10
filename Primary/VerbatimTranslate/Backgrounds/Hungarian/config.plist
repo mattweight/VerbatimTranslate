@@ -6,22 +6,22 @@
 		<dict>
 		<key><![CDATA[chruchspires.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[hungariangirl.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[hungariansteer.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[kingandhorse.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 	</dict>

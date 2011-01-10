@@ -6,23 +6,25 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "ThemeController.h"
 #import "FlagsTableViewController.h"
 #import "WordBubbleController.h"
 
 @interface MainViewController : UIViewController <UIAlertViewDelegate> {
 	IBOutlet UIImageView* bgImageView;
-	ThemeController* themeController;
 	FlagsTableViewController* flagController;
 	WordBubbleController* inController;
 	WordBubbleController* outController;
+	UIView* activityView;
+	NSString* currentLanguage;
 }
 
 @property (nonatomic, retain) UIImageView* bgImageView;
-@property (nonatomic, retain) ThemeController* themeController;
 @property (nonatomic, retain) FlagsTableViewController* flagController;
 @property (nonatomic, retain) IBOutlet WordBubbleController* inController;
 @property (nonatomic, retain) IBOutlet WordBubbleController* outController;
+@property (nonatomic, retain) IBOutlet UIView* activityView;
+@property (nonatomic, retain) NSString* currentLanguage;
+
 
 - (IBAction)showInfo:(id)sender;
 - (void)displayTranslation:(id)sender;

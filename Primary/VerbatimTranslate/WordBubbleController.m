@@ -75,7 +75,7 @@
 - (void)displayAutoSuggestView:(id)sender {
 	NSLog(@"We are showing it RIGHT NOW!");
 	[autoSuggestController.view setHidden:NO];
-	[self.view removeFromSuperview];
+	//[self.view removeFromSuperview];
 }
 
 - (void)animate {

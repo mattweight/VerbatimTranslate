@@ -18,6 +18,12 @@
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
 
+@interface AutoSuggestProtoViewController()
+
+- (void)getTranslation:(NSString*)origText;
+
+@end
+
 @implementation AutoSuggestProtoViewController
 
 @synthesize textInput = _textInput;
@@ -70,6 +76,14 @@
 }
 
 - (void)submitText:(NSString *)text {
+	[[NSNotificationCenter defaultCenter] postNotificationName:TRANSLATION_DID_BEGIN_NOTIFICATION object:nil];
+	[self getTranslation:text];
+	//[self performSelectorInBackground:@selector(getTranslation:) withObject:text];
+}
+
+- (void)getTranslation:(NSString *)text {
+	NSAutoreleasePool* arPool = [[NSAutoreleasePool alloc] init];
+	
 	// Get the web service language keyword..
 	ThemeManager* manager = [ThemeManager sharedThemeManager];
 	NSString* outputKeyword = [manager.currentTheme.services objectForKey:@"google-translate"];
@@ -86,10 +100,6 @@
 	NSURLResponse* resp = [[NSURLResponse alloc] init];
 	NSData* dataResp = [NSURLConnection sendSynchronousRequest:req returningResponse:&resp error:nil];
 	NSString* respString = [[NSString alloc] initWithData:dataResp encoding:NSUTF8StringEncoding];
-
-	NSLog(@"the data is %@", respString);
-	NSLog(@"The response is %@", resp);
-
 	NSString* message = [[[respString JSONValue] objectForKey:@"responseData"] objectForKey:@"translatedText"];
 	
 	// FIXME - Time to cheat. Too late tonight to do it right..
@@ -104,6 +114,7 @@
 	
 	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:TRANSLATION_DID_COMPLETE_NOTIFICATION
 																						 object:nil]];
+	[arPool release];
 }
 
 - (void)_filterSuggestionsWithString:(NSString *)filterString {

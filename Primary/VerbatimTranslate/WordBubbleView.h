@@ -14,8 +14,13 @@
 	IBOutlet UIImageView* imgView;
 	IBOutlet UIImageView* topArrowView;
 	IBOutlet UIImageView* bottomArrowView;
-	CGPoint originalCenter;
 	ANIMATION_STEP animationStep;
+
+	CGRect originalViewFrame;
+	CGRect originalTextFrame;
+	CGFloat originalViewAlpha;
+	CGFloat originalTextAlpha;
+	BOOL isTopArrow;
 	BOOL forceStop;
 	NSObject* caller;
 }
@@ -27,6 +32,7 @@
 @property (nonatomic, retain) UIImageView* bottomArrowView;
 
 - (void)animate;
+- (void)reverseAnimate;
 
 - (void)setAnimationStep:(ANIMATION_STEP)currentStep;
 - (ANIMATION_STEP)getAnimationStep;

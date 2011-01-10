@@ -6,27 +6,27 @@
 		<dict>
 		<key><![CDATA[kremlin.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[stackingdolls.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[statuelantern.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[statuepair.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[stbasil.jpg]]></key>
 		<array>
-			<string>1,124.0,160.0,65.0</string>
+			<string>0,75.0,160.0,65.0</string>
 			<string>0,300.0,160.0,265.0</string>
 		</array>
 	</dict>

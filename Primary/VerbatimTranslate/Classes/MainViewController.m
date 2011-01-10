@@ -12,13 +12,20 @@
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
 
+@interface MainViewController()
+
+- (void)displayActivityView;
+
+@end
+
 @implementation MainViewController
 
 @synthesize bgImageView;
 @synthesize flagController;
+@synthesize currentLanguage;
 @synthesize inController;
 @synthesize outController;
-
+@synthesize activityView;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -28,6 +35,11 @@
 												 name:THEME_UPDATE_NOTIFICATION
 											   object:nil];
 
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(displayActivityView)
+												 name:TRANSLATION_DID_BEGIN_NOTIFICATION
+											   object:nil];
+	
 	[[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(displayTranslation:)
 												 name:TRANSLATION_DID_COMPLETE_NOTIFICATION
@@ -41,26 +53,29 @@
 	[self.view addSubview:outController.view];
 	[inController reset];
 	[outController reset];
+	[outController.view setUserInteractionEnabled:NO];
 	[self updateTheme:nil];
+}
+
+- (void)displayActivityView {
+	[self.view addSubview:activityView];
 }
 
 - (void)updateTheme:(NSNotification*)notif {
 	NSDictionary* uInfo = (NSDictionary*)[notif userInfo];
-	NSString* languageName = nil;
+	NSString* languageName = [NSString string];
+	NSString* storedLanguage = [[NSUserDefaults standardUserDefaults] stringForKey:CURRENT_LANGUAGE_STORE_KEY];
 	
-	if (uInfo == nil) {
-		languageName = [[NSUserDefaults standardUserDefaults] stringForKey:CURRENT_LANGUAGE_STORE_KEY];
-		if (languageName == nil) {
-			languageName = DEFAULT_LANGUAGE_NAME;
-		}
+	if (uInfo == nil && storedLanguage == nil) {
+		languageName = DEFAULT_LANGUAGE_NAME;
 	}
 	else {
 		languageName = (NSString*)[uInfo objectForKey:@"language"];
-		if (languageName == nil) {
-			languageName = [[NSUserDefaults standardUserDefaults] stringForKey:CURRENT_LANGUAGE_STORE_KEY];
-			if (languageName == nil) {
-				languageName = DEFAULT_LANGUAGE_NAME;
-			}
+		if (languageName == nil && storedLanguage != nil) {
+			languageName = storedLanguage;
+		}
+		else if (languageName == nil && storedLanguage == nil) {
+			languageName = DEFAULT_LANGUAGE_NAME;
 		}
 	}
 	
@@ -69,6 +84,11 @@
 		return;
 	}
 	
+	if ([currentLanguage isEqualToString:languageName]) {
+		return;
+	}
+	
+	currentLanguage = languageName;
 	ThemeManager* manager = [ThemeManager sharedThemeManager];
 	Theme* newTheme = [manager nextThemeUsingName:languageName error:nil];
 	if (newTheme == nil) {
@@ -100,6 +120,9 @@
 	}	
 
 	[inController reset];
+	[(WordBubbleView*)outController.view setAnimationStep:MAX_ANIMATION_STEP];
+	[(WordBubbleView*)outController.view setForceStop:YES];
+	[outController animate];
 	
 	BOOL isTopArrow = [[newTheme.bubble1Coordinates objectForKey:@"top-arrow"] boolValue];
 	CGPoint bubbleCenter = CGPointMake([[newTheme.bubble1Coordinates objectForKey:@"center-x"] floatValue],
@@ -173,7 +196,6 @@
 		[defaults synchronize];
 	}
 	NSLog(@"Done");
-
 }
 
 // TODO - Move any re-loading into the load/unload methods
@@ -185,22 +207,24 @@
 */
 
 - (void)displayTranslation:(id)sender {
+	[activityView removeFromSuperview];
+	
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	NSString* origText = (NSString*)[defaults stringForKey:VERBATIM_ORIGINAL_TEXT];
 	NSString* transText = (NSString*)[defaults stringForKey:VERBATIM_TRANSLATED_TEXT];
 
 	[inController.autoSuggestController.view removeFromSuperview];
 	//[outController.autoSuggestController.view removeFromSuperview];
-	/*
-	[inController.view removeFromSuperview];
-	[outController.view removeFromSuperview];
-	*/
 
 	[inController.bubbleTextView setText:origText];
 	[outController.bubbleTextView setText:transText];
 	
-	NSLog(@"bubbletext view input: %@ --> %@", inController.bubbleTextView.text, origText);
+	//NSLog(@"bubbletext view input: %@ --> %@", inController.bubbleTextView.text, origText);
+	//[(WordBubbleView*)inController.view setAnimationStep:0];
+	[(WordBubbleView*)inController.view reverseTextViewExpansion];
 	//[inController animate];
+	//[inController animate];
+	[(WordBubbleView*)outController.view setAnimationStep:0];
 	[outController animate];
 }
 
