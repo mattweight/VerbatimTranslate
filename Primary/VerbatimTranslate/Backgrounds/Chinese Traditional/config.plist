@@ -6,23 +6,23 @@
 		<dict>
 		<key><![CDATA[claysoldiers.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>0,105.0,159.0,140.0</string>
+			<string>1,196.0,167.0,307.0</string>
 		</array>
 		<key><![CDATA[greatwall.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>0,135.0,155.0,103.0</string>
+			<string>1,175.0,167.0,361.0</string>
 		</array>
 		<key><![CDATA[lanterns.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>0,152.0,167.0,87.0</string>
+			<string>1,186.0,158.0,373.0</string>
 		</array>
 		<key><![CDATA[panda.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>0,132.0,147.0,71.0</string>
+			<string>0,64.0,159.0,358.0</string>
 		</array>
 	</dict>
 	<key>services</key>
