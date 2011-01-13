@@ -7,27 +7,27 @@
 		<key><![CDATA[blankets.jpg]]></key>
 		<array>
 			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>1,220.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[doors.jpg]]></key>
 		<array>
 			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>1,220.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[llamas.jpg]]></key>
 		<array>
 			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>1,220.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[mariachi.jpg]]></key>
 		<array>
 			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>1,220.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[masks.jpg]]></key>
 		<array>
 			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>1,220.0,160.0,265.0</string>
 		</array>
 	</dict>
 	<key>services</key>

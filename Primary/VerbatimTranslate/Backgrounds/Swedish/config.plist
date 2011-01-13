@@ -7,17 +7,17 @@
 		<key><![CDATA[buildingfront.jpg]]></key>
 		<array>
 			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>1,220.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[church.jpg]]></key>
 		<array>
 			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>1,220.0,160.0,265.0</string>
 		</array>
 		<key><![CDATA[cityandboats.jpg]]></key>
 		<array>
 			<string>0,75.0,160.0,65.0</string>
-			<string>0,300.0,160.0,265.0</string>
+			<string>1,220.0,160.0,265.0</string>
 		</array>
 	</dict>
 	<key>services</key>
