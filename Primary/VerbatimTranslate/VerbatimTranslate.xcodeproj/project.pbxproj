@@ -59,7 +59,6 @@
 		70374930128296A400421C51 /* ChineseSimplified40.png in Resources */ = {isa = PBXBuildFile; fileRef = 703748FE128296A400421C51 /* ChineseSimplified40.png */; };
 		7037498F128299C600421C51 /* FlagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037498E128299C600421C51 /* FlagTableViewCell.m */; };
 		7059160412C07EC7009B6F2A /* SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7059160312C07EC7009B6F2A /* SpinnerView.m */; };
-		7059160612C07ED2009B6F2A /* quoteView.html in Resources */ = {isa = PBXBuildFile; fileRef = 7059160512C07ED2009B6F2A /* quoteView.html */; };
 		7060C90B12C08EBA00055569 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7060C90A12C08EBA00055569 /* Reachability.m */; };
 		7060C91712C090A500055569 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7060C91612C090A500055569 /* SystemConfiguration.framework */; };
 		70A2267412DB124E003BC9F9 /* BackgroundFake.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A2267312DB124E003BC9F9 /* BackgroundFake.xib */; };
@@ -80,6 +79,9 @@
 		CA668C1212845AF900B52C92 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA668C0E12845AF900B52C92 /* InfoViewController.xib */; };
 		CA668C1312845AF900B52C92 /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA668C1012845AF900B52C92 /* QuoteViewController.m */; };
 		CA668C1712845B3A00B52C92 /* QuoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA668C1512845B3A00B52C92 /* QuoteViewController.xib */; };
+		CAB849D812DED07E00ADE109 /* quoteView.html in Resources */ = {isa = PBXBuildFile; fileRef = CAB849D612DED07E00ADE109 /* quoteView.html */; };
+		CAB849DD12DED09B00ADE109 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAB849D912DED09B00ADE109 /* Localizable.strings */; };
+		CAB849DE12DED09B00ADE109 /* thankyou.html in Resources */ = {isa = PBXBuildFile; fileRef = CAB849DB12DED09B00ADE109 /* thankyou.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,7 +150,6 @@
 		7037498E128299C600421C51 /* FlagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlagTableViewCell.m; sourceTree = "<group>"; };
 		7059160212C07EC7009B6F2A /* SpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinnerView.h; sourceTree = "<group>"; };
 		7059160312C07EC7009B6F2A /* SpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinnerView.m; sourceTree = "<group>"; };
-		7059160512C07ED2009B6F2A /* quoteView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = quoteView.html; sourceTree = "<group>"; };
 		7060C90912C08EBA00055569 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7060C90A12C08EBA00055569 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7060C91612C090A500055569 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -180,6 +181,12 @@
 		CA668C0F12845AF900B52C92 /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
 		CA668C1012845AF900B52C92 /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
 		CA668C1512845B3A00B52C92 /* QuoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteViewController.xib; sourceTree = "<group>"; };
+		CAB849D712DED07E00ADE109 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = en; path = en.lproj/quoteView.html; sourceTree = "<group>"; };
+		CAB849DA12DED09B00ADE109 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAB849DC12DED09B00ADE109 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = en; path = en.lproj/thankyou.html; sourceTree = "<group>"; };
+		CAB849DF12DED0BF00ADE109 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAB849E012DED0BF00ADE109 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = es.lproj/quoteView.html; sourceTree = "<group>"; };
+		CAB849E112DED0BF00ADE109 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = es.lproj/thankyou.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,7 +283,9 @@
 				70E85034127EA3FD000FCCA8 /* Theme PLists */,
 				7023BA83127E1549008FCABE /* Misc */,
 				7023B9BC127E153C008FCABE /* Flags */,
-				7059160512C07ED2009B6F2A /* quoteView.html */,
+				CAB849D912DED09B00ADE109 /* Localizable.strings */,
+				CAB849DB12DED09B00ADE109 /* thankyou.html */,
+				CAB849D612DED07E00ADE109 /* quoteView.html */,
 				70C1073812801072007BA298 /* Icon.png */,
 				702C61D8127F8A1B002BB9C6 /* verbatim.sql */,
 				8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */,
@@ -449,6 +458,7 @@
 				French,
 				German,
 				en,
+				es,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -511,9 +521,11 @@
 				CA668C1712845B3A00B52C92 /* QuoteViewController.xib in Resources */,
 				70C61BC51289325E00F0E0BE /* ChineseSimplified40.plist in Resources */,
 				70C61C5612893CB500F0E0BE /* SpanishLatinAmerica40.plist in Resources */,
-				7059160612C07ED2009B6F2A /* quoteView.html in Resources */,
 				70CC4FCE12C0BBBA0037B88B /* Backgrounds in Resources */,
 				70A2267412DB124E003BC9F9 /* BackgroundFake.xib in Resources */,
+				CAB849D812DED07E00ADE109 /* quoteView.html in Resources */,
+				CAB849DD12DED09B00ADE109 /* Localizable.strings in Resources */,
+				CAB849DE12DED09B00ADE109 /* thankyou.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +558,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CAB849D612DED07E00ADE109 /* quoteView.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB849D712DED07E00ADE109 /* en */,
+				CAB849E012DED0BF00ADE109 /* es */,
+			);
+			name = quoteView.html;
+			sourceTree = "<group>";
+		};
+		CAB849D912DED09B00ADE109 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB849DA12DED09B00ADE109 /* en */,
+				CAB849DF12DED0BF00ADE109 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CAB849DB12DED09B00ADE109 /* thankyou.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB849DC12DED09B00ADE109 /* en */,
+				CAB849E112DED0BF00ADE109 /* es */,
+			);
+			name = thankyou.html;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
