@@ -14,14 +14,14 @@
 	FlagsTableViewController* flagController;
 	WordBubbleController* inController;
 	WordBubbleController* outController;
-	NSString* currentLanguage;
+	NSMutableString* currentLanguage;
 }
 
 @property (nonatomic, retain) UIImageView* bgImageView;
 @property (nonatomic, retain) FlagsTableViewController* flagController;
 @property (nonatomic, retain) IBOutlet WordBubbleController* inController;
 @property (nonatomic, retain) IBOutlet WordBubbleController* outController;
-@property (nonatomic, retain) NSString* currentLanguage;
+@property (nonatomic, retain) NSMutableString* currentLanguage;
 
 
 - (IBAction)showInfo:(id)sender;

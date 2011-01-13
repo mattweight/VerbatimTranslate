@@ -12,6 +12,12 @@
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
 
+@interface MainViewController()
+
+- (void)updateSourceLanguage:(NSNotification*)notif;
+
+@end
+
 @implementation MainViewController
 
 @synthesize bgImageView;
@@ -23,6 +29,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(updateTheme:)
 												 name:THEME_UPDATE_NOTIFICATION
@@ -38,6 +45,11 @@
 												 name:TRANSLATION_DID_CANCEL_NOTIFICATION
 											   object:nil];
 
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(updateSourceLanguage:)
+												 name:VERBATIM_APP_SOURCE_LANGUAGE
+											   object:nil];
+	
 	[self.view addSubview:inController.view];
 	[outController.view setAlpha:0.0];
 	[outController.view setUserInteractionEnabled:NO];
@@ -46,6 +58,14 @@
 	[outController.view setAlpha:0.0];
 	[outController reset];
 	[self updateTheme:nil];
+	
+	currentLanguage = [[NSMutableString alloc] init];
+	[currentLanguage setString:[[NSUserDefaults standardUserDefaults] stringForKey:CURRENT_LANGUAGE_STORE_KEY]];
+}
+
+
+- (void)updateSourceLanguage:(NSNotification*)notif {
+	
 }
 
 - (void)updateTheme:(NSNotification*)notif {
@@ -67,16 +87,22 @@
 		}
 	}
 	
+	NSLog(@"update theme using language: %@", languageName);
+	
 	if (languageName == nil) {
 		NSLog(@"No stored language name, no default language - nothing passed in? buh?");
 		return;
 	}
+
+	NSLog(@"currentLanguage: %@", currentLanguage);
 	
 	if ([currentLanguage isEqualToString:languageName]) {
+		NSLog(@"selected language is the same as current lanugage. Skipping..");
 		return;
 	}
 	
-	currentLanguage = languageName;
+	[currentLanguage setString:languageName];
+	
 	ThemeManager* manager = [ThemeManager sharedThemeManager];
 	Theme* newTheme = [manager nextThemeUsingName:languageName error:nil];
 	if (newTheme == nil) {
@@ -95,8 +121,10 @@
 		return;
 	}
 	
+	NSLog(@"Getting the bgImage..");
 	UIImage* bgImage = [UIImage imageWithContentsOfFile:fullBGImagePath];
 	[bgImageView setImage:bgImage];
+	NSLog(@"\t* bgImage: %@", bgImage);
 	
 	if (flagController == nil) {
 		FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -170,9 +198,11 @@
 	}
 	if (iPath != nil) {
 		NSLog(@"Should be using real row: %02d", index);
-		[flagController.flagTableView scrollToRowAtIndexPath:iPath
-											atScrollPosition:UITableViewScrollPositionTop
-													animated:NO];
+		if ([flagController.languageNames count] >= iPath.row) {
+			[flagController.flagTableView scrollToRowAtIndexPath:iPath
+												atScrollPosition:UITableViewScrollPositionTop
+														animated:NO];
+		}
 	}
 	
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];

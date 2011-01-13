@@ -30,7 +30,7 @@
                                                object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(displayActivityView)
+											 selector:@selector(displayActivityView:)
 												 name:DISPLAY_ACTIVITY_VIEW
 											   object:nil];
 	
@@ -47,14 +47,19 @@
     return YES;
 }
 
-- (void)displayActivityView {
+- (void)displayActivityView:(NSNotification*)notify {
 	[self.loadingView setCenter:window.center];
-	[self.loadingLabel setText:@"Translating.."];
+	if ([notify userInfo] != nil) {
+		if ([[notify userInfo] objectForKey:@"load-text"] != nil) {
+			[self.loadingLabel setText:[[notify userInfo] objectForKey:@"load-text"]];
+		}
+	}
 	[window addSubview:self.loadingView];
 }
 
 - (void)removeActivityView {
 	[self.loadingView removeFromSuperview];
+	[self.loadingLabel setText:@""];
 }
 
 - (void)doPreLoad:(id)sender {

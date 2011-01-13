@@ -161,7 +161,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 }
 */
 
-
 #pragma mark -
 #pragma mark Table view delegate
 
@@ -169,7 +168,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 	//NSLog([NSString stringWithFormat:@"table view origin: %02f X %02f", tableView.frame.origin.x, tableView.frame.origin.y]);
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+
+	NSLog(@"Flag frame selection");
 	if (tableView.frame.origin.x != 0.0) {
+		NSLog(@"frame location != 0.0");
 		origPoint = CGPointMake(tableView.frame.origin.x, tableView.frame.origin.y);
 		[tableView setFrame:CGRectMake(0.0, 
 									   tableView.frame.origin.y, 
@@ -186,9 +188,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 									   tableView.frame.size.height)];
 		[tableView setScrollEnabled:NO];
 	}
-	
+
+	NSLog(@"Getting language index..");
 	int index = (int)(indexPath.row % [languageNames count]);
+	NSLog(@"\t Index: %d", index);
+	
 	NSString* languageName = [[languageNames objectAtIndex:index] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSLog(@"\t Language Name: %@", languageName);
 	NSNotification* updateNotification = [NSNotification notificationWithName:THEME_UPDATE_NOTIFICATION
 																	   object:nil
 																	 userInfo:[NSDictionary dictionaryWithObject:languageName forKey:@"language"]];
