@@ -6,8 +6,28 @@
 		<dict>
 		<key><![CDATA[lanterns.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,96.0,147.0,102.0</string>
+			<string>0,99.0,174.0,330.0</string>
+		</array>
+		<key><![CDATA[mosque.png]]></key>
+		<array>
+			<string>0,119.0,174.0,145.0</string>
+			<string>0,94.0,146.0,334.0</string>
+		</array>
+		<key><![CDATA[pipes.png]]></key>
+		<array>
+			<string>1,144.0,171.0,151.0</string>
+			<string>1,111.0,149.0,383.0</string>
+		</array>
+		<key><![CDATA[spices.png]]></key>
+		<array>
+			<string>0,156.0,149.0,85.0</string>
+			<string>0,91.0,171.0,332.0</string>
+		</array>
+		<key><![CDATA[tea.png]]></key>
+		<array>
+			<string>1,159.0,147.0,124.0</string>
+			<string>1,203.0,172.0,301.0</string>
 		</array>
 	</dict>
 	<key>services</key>

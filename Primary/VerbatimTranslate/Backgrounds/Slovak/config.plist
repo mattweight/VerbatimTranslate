@@ -6,18 +6,18 @@
 		<dict>
 		<key><![CDATA[castle.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,106.0,145.0,81.0</string>
+			<string>1,128.0,174.0,324.0</string>
 		</array>
 		<key><![CDATA[staircase.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,89.0,142.0,59.0</string>
+			<string>1,253.0,178.0,318.0</string>
 		</array>
 		<key><![CDATA[teaservice.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,151.0,180.0,67.0</string>
+			<string>1,195.0,147.0,356.0</string>
 		</array>
 	</dict>
 	<key>services</key>

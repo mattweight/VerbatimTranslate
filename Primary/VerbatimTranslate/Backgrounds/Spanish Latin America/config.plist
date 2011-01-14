@@ -6,28 +6,28 @@
 		<dict>
 		<key><![CDATA[blankets.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,76.0,157.0,101.0</string>
+			<string>1,209.0,172.0,382.0</string>
 		</array>
 		<key><![CDATA[doors.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,114.0,171.0,78.0</string>
+			<string>1,195.0,150.0,364.0</string>
 		</array>
 		<key><![CDATA[llamas.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>1,181.0,167.0,224.0</string>
+			<string>1,187.0,150.0,395.0</string>
 		</array>
 		<key><![CDATA[mariachi.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,169.0,147.0,79.0</string>
+			<string>1,220.0,173.0,343.0</string>
 		</array>
 		<key><![CDATA[masks.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,146.0,172.0,62.0</string>
+			<string>1,220.0,150.0,377.0</string>
 		</array>
 	</dict>
 	<key>services</key>
