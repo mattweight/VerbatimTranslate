@@ -128,14 +128,14 @@
 	NSLog(@"Expanding text view here: %.02f", textFrame.size.width);
 	if ([topArrowView isHidden]) {
 		isTopArrow = NO;
-	}
+	}	
 	else {
 		isTopArrow = YES;
 	}
 	originalTextFrame = CGRectMake(textViewRef.frame.origin.x, textViewRef.frame.origin.y,
 								   textViewRef.frame.size.width, textViewRef.frame.size.height);
-	originalViewFrame = CGRectMake(self.bounds.origin.x, self.bounds.origin.y,
-								   self.bounds.size.width, self.bounds.size.height);
+	originalViewFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y,
+								   self.frame.size.width, self.frame.size.height);
 	originalViewAlpha = self.alpha;
 	originalTextAlpha = textViewRef.alpha;
 	
