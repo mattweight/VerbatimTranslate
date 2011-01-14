@@ -51,7 +51,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">churchdoors.jpg</string>
+							<string key="NSResourceName">woodenshoes.jpg</string>
 						</object>
 					</object>
 					<object class="IBUIView" id="797363988">
@@ -74,8 +74,8 @@
 							</object>
 							<object class="IBUIImageView" id="284889162">
 								<reference key="NSNextResponder" ref="797363988"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{47, 2}, {32, 32}}</string>
+								<int key="NSvFlags">301</int>
+								<string key="NSFrame">{{120, 2}, {32, 32}}</string>
 								<reference key="NSSuperview" ref="797363988"/>
 								<float key="IBUIAlpha">0.48591548204421997</float>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -87,8 +87,8 @@
 							</object>
 							<object class="IBUIImageView" id="18941928">
 								<reference key="NSNextResponder" ref="797363988"/>
-								<int key="NSvFlags">301</int>
-								<string key="NSFrame">{{117, 158}, {32, 32}}</string>
+								<int key="NSvFlags">319</int>
+								<string key="NSFrame">{{87, 159}, {32, 32}}</string>
 								<reference key="NSSuperview" ref="797363988"/>
 								<float key="IBUIAlpha">0.48591548204421997</float>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -101,7 +101,7 @@
 							<object class="IBUITextView" id="1041609042">
 								<reference key="NSNextResponder" ref="797363988"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{33, 20}, {256, 107}}</string>
+								<string key="NSFrame">{{24, 43}, {256, 107}}</string>
 								<reference key="NSSuperview" ref="797363988"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -124,7 +124,7 @@
 								</object>
 							</object>
 						</object>
-						<string key="NSFrame">{{-6, 51}, {306, 192}}</string>
+						<string key="NSFrame">{{7, 5}, {306, 192}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -152,7 +152,7 @@
 							<object class="IBUIImageView" id="746058588">
 								<reference key="NSNextResponder" ref="872592207"/>
 								<int key="NSvFlags">301</int>
-								<string key="NSFrame">{{172, 1}, {32, 32}}</string>
+								<string key="NSFrame">{{178, 1}, {32, 32}}</string>
 								<reference key="NSSuperview" ref="872592207"/>
 								<float key="IBUIAlpha">0.5</float>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -161,8 +161,8 @@
 							</object>
 							<object class="IBUIImageView" id="378800100">
 								<reference key="NSNextResponder" ref="872592207"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{229, 158}, {32, 32}}</string>
+								<int key="NSvFlags">319</int>
+								<string key="NSFrame">{{161, 158}, {32, 32}}</string>
 								<reference key="NSSuperview" ref="872592207"/>
 								<float key="IBUIAlpha">0.5</float>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -193,7 +193,7 @@
 								</object>
 							</object>
 						</object>
-						<string key="NSFrame">{{6, 262}, {306, 192}}</string>
+						<string key="NSFrame">{{7, 223}, {306, 192}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -395,9 +395,9 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="797363988"/>
-							<reference ref="872592207"/>
 							<reference ref="765953079"/>
+							<reference ref="872592207"/>
+							<reference ref="797363988"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -456,8 +456,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="1050004570"/>
 							<reference ref="284889162"/>
-							<reference ref="18941928"/>
 							<reference ref="1041609042"/>
+							<reference ref="18941928"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -488,8 +488,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="378800100"/>
 							<reference ref="465420082"/>
-							<reference ref="746058588"/>
 							<reference ref="1032422832"/>
+							<reference ref="746058588"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -567,11 +567,11 @@
 					<string>{{991, 651}, {306, 192}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABB8AAAwxgAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABA4AAAw2AAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCUAAAwlwAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDCQAAwzwAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -609,12 +609,12 @@
 					<string>{{900, 547}, {306, 192}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABAoAAAw+mAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABA4AAAw9eAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">AUI8AABAoAAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDNAAAwfgAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -883,7 +883,7 @@
 				<string>Arrow1_nostroke.png</string>
 				<string>Arrow2_nostroke.png</string>
 				<string>Bubble_nostroke.png</string>
-				<string>churchdoors.jpg</string>
+				<string>woodenshoes.jpg</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>

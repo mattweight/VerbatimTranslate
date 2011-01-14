@@ -86,9 +86,7 @@
 			languageName = DEFAULT_LANGUAGE_NAME;
 		}
 	}
-	
 	NSLog(@"update theme using language: %@", languageName);
-	
 	if (languageName == nil) {
 		NSLog(@"No stored language name, no default language - nothing passed in? buh?");
 		return;

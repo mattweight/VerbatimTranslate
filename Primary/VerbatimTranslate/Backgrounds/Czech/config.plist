@@ -11,18 +11,18 @@
 		</array>
 		<key><![CDATA[clockfaces.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>1,136.0,159.0,158.0</string>
+			<string>0,177.0,159.0,305.0</string>
 		</array>
 		<key><![CDATA[historicbuilding.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,124.0,160.0,140.0</string>
+			<string>1,196.0,160.0,344.0</string>
 		</array>
 		<key><![CDATA[lanternandspire.jpg]]></key>
 		<array>
-			<string>0,75.0,160.0,65.0</string>
-			<string>1,220.0,160.0,265.0</string>
+			<string>0,45.0,147.0,133.0</string>
+			<string>1,247.0,167.0,371.0</string>
 		</array>
 	</dict>
 	<key>services</key>

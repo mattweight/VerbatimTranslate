@@ -61,8 +61,8 @@
 		7059160412C07EC7009B6F2A /* SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7059160312C07EC7009B6F2A /* SpinnerView.m */; };
 		7060C90B12C08EBA00055569 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7060C90A12C08EBA00055569 /* Reachability.m */; };
 		7060C91712C090A500055569 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7060C91612C090A500055569 /* SystemConfiguration.framework */; };
+		706D13CA12E03C96008FD573 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 706D13C912E03C96008FD573 /* Icon.png */; };
 		70A2267412DB124E003BC9F9 /* BackgroundFake.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A2267312DB124E003BC9F9 /* BackgroundFake.xib */; };
-		70C1073912801072007BA298 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70C1073812801072007BA298 /* Icon.png */; };
 		70C61BC51289325E00F0E0BE /* ChineseSimplified40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */; };
 		70C61C5612893CB500F0E0BE /* SpanishLatinAmerica40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */; };
 		70CC4FCE12C0BBBA0037B88B /* Backgrounds in Resources */ = {isa = PBXBuildFile; fileRef = 70CC4F0812C0BBBA0037B88B /* Backgrounds */; };
@@ -153,8 +153,8 @@
 		7060C90912C08EBA00055569 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7060C90A12C08EBA00055569 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7060C91612C090A500055569 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		706D13C912E03C96008FD573 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		70A2267312DB124E003BC9F9 /* BackgroundFake.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundFake.xib; sourceTree = "<group>"; };
-		70C1073812801072007BA298 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		70C61BC41289325E00F0E0BE /* ChineseSimplified40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChineseSimplified40.plist; sourceTree = "<group>"; };
 		70C61C5512893CB500F0E0BE /* SpanishLatinAmerica40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpanishLatinAmerica40.plist; sourceTree = "<group>"; };
 		70CC4F0812C0BBBA0037B88B /* Backgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backgrounds; sourceTree = "<group>"; };
@@ -277,6 +277,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				706D13C912E03C96008FD573 /* Icon.png */,
 				70CC4F0812C0BBBA0037B88B /* Backgrounds */,
 				7060C76412C08BED00055569 /* Images */,
 				7060C75412C08B8B00055569 /* Nibs */,
@@ -286,7 +287,6 @@
 				CAB849D912DED09B00ADE109 /* Localizable.strings */,
 				CAB849DB12DED09B00ADE109 /* thankyou.html */,
 				CAB849D612DED07E00ADE109 /* quoteView.html */,
-				70C1073812801072007BA298 /* Icon.png */,
 				702C61D8127F8A1B002BB9C6 /* verbatim.sql */,
 				8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */,
 				7023B935127E1444008FCABE /* Entitlements.plist */,
@@ -485,7 +485,6 @@
 				70E850CB127EAF53000FCCA8 /* wordbubblearrowreverse.png in Resources */,
 				702C61BE127F8970002BB9C6 /* AutoSuggestProtoViewController.xib in Resources */,
 				702C61D9127F8A1B002BB9C6 /* verbatim.sql in Resources */,
-				70C1073912801072007BA298 /* Icon.png in Resources */,
 				70374900128296A400421C51 /* Turkey40.png in Resources */,
 				70374902128296A400421C51 /* Swedish40.png in Resources */,
 				70374904128296A400421C51 /* SpanishLatinAmerica40.png in Resources */,
@@ -526,6 +525,7 @@
 				CAB849D812DED07E00ADE109 /* quoteView.html in Resources */,
 				CAB849DD12DED09B00ADE109 /* Localizable.strings in Resources */,
 				CAB849DE12DED09B00ADE109 /* thankyou.html in Resources */,
+				706D13CA12E03C96008FD573 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +594,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "~/Projects/Verbatim/Primary/VerbatimTranslate/Entitlements.plist";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Verbatim Digital";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Verbatim Digital";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -602,6 +604,8 @@
 				GCC_PREFIX_HEADER = VerbatimTranslate_Prefix.pch;
 				INFOPLIST_FILE = "VerbatimTranslate-Info.plist";
 				PRODUCT_NAME = VerbatimTranslate;
+				PROVISIONING_PROFILE = "A806698C-B620-48DB-8C04-BE347765CE34";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A806698C-B620-48DB-8C04-BE347765CE34";
 			};
 			name = Debug;
 		};
@@ -609,12 +613,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "~/Projects/Verbatim/Primary/VerbatimTranslate/Entitlements.plist";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Verbatim Digital";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Verbatim Digital";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VerbatimTranslate_Prefix.pch;
 				INFOPLIST_FILE = "VerbatimTranslate-Info.plist";
 				PRODUCT_NAME = VerbatimTranslate;
+				PROVISIONING_PROFILE = "A806698C-B620-48DB-8C04-BE347765CE34";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A806698C-B620-48DB-8C04-BE347765CE34";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -624,16 +632,16 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Matt WEIGHT";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matt WEIGHT";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Verbatim Digital";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Verbatim Digital";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "51954C3E-8BBB-44C9-9E11-BA1CD3D983E1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "51954C3E-8BBB-44C9-9E11-BA1CD3D983E1";
+				PROVISIONING_PROFILE = "A806698C-B620-48DB-8C04-BE347765CE34";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A806698C-B620-48DB-8C04-BE347765CE34";
 				SDKROOT = iphoneos;
 			};
 			name = Distribution;
@@ -643,15 +651,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Matt WEIGHT";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matt WEIGHT";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Verbatim Digital";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Verbatim Digital";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VerbatimTranslate_Prefix.pch;
 				INFOPLIST_FILE = "VerbatimTranslate-Info.plist";
 				PRODUCT_NAME = VerbatimTranslate;
-				PROVISIONING_PROFILE = "51954C3E-8BBB-44C9-9E11-BA1CD3D983E1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "51954C3E-8BBB-44C9-9E11-BA1CD3D983E1";
+				PROVISIONING_PROFILE = "A806698C-B620-48DB-8C04-BE347765CE34";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A806698C-B620-48DB-8C04-BE347765CE34";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
@@ -660,12 +668,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Verbatim Digital";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Verbatim Digital";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				PREBINDING = NO;
+				PROVISIONING_PROFILE = "A806698C-B620-48DB-8C04-BE347765CE34";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A806698C-B620-48DB-8C04-BE347765CE34";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -674,13 +686,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Verbatim Digital";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Verbatim Digital";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
+				PROVISIONING_PROFILE = "A806698C-B620-48DB-8C04-BE347765CE34";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A806698C-B620-48DB-8C04-BE347765CE34";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
