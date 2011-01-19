@@ -40,6 +40,9 @@
 		// connect to database
 		[self _createWritableCopyOfDatabaseIfNeeded];
 		sqlite3_open([[self _getWritableDBPath] UTF8String], &_db);
+		
+		//temp
+		self.sourceLanguage = @"en";	// TODO - change to source language stored in NSUserDefaults (probably done external to the class)
 	}
 	return self;
 }

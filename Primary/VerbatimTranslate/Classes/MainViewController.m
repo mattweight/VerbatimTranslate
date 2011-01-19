@@ -11,6 +11,7 @@
 #import "FlagTableViewCell.h"
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
+#import "AutoSuggestManager.h"
 
 @interface MainViewController()
 
@@ -123,6 +124,10 @@
 	UIImage* bgImage = [UIImage imageWithContentsOfFile:fullBGImagePath];
 	[bgImageView setImage:bgImage];
 	NSLog(@"\t* bgImage: %@", bgImage);
+	
+	// update auto-suggest destination language
+	AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
+	autoSuggest.destLanguage = [newTheme.services objectForKey:@"google-translate"];
 	
 	if (flagController == nil) {
 		FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
