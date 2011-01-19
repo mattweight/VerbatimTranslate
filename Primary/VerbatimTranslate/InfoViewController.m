@@ -89,7 +89,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (alertView.tag == kAlertViewTagClearHistory && buttonIndex == kAlertViewButtonClearHistoryOK) {
 		// clear history
-		AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
+		AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstance];
 		[autoSuggest clearHistory];
 		
 		// show confirmation message

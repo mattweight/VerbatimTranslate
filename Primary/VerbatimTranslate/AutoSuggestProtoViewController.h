@@ -8,23 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AutoSuggestProtoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, UIAlertViewDelegate> {
+@interface AutoSuggestProtoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate> {
 
 @private
 	UITextView* _textInput;
 	UITableView* _suggestionsTable;
 	NSMutableData* _translateData;
 	NSArray* _suggestions;
+	NSArray* _historyPhraseIds;
 }
 
 @property (nonatomic, retain) IBOutlet UITextView* textInput;
 @property (nonatomic, retain) IBOutlet UITableView* suggestionsTable;
 @property (nonatomic, retain) NSArray* suggestions;
-
-- (void)submitText:(NSString *)text;
-- (void)_filterSuggestionsWithString:(NSString *)filterString;
-- (void)_onCancelButton:(id)sender;
-- (void)_onClearButton:(id)sender;
+@property (nonatomic, retain) NSArray* historyPhraseIds;
 
 @end
-

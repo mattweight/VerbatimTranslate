@@ -11,28 +11,28 @@
 @interface AutoSuggestManager : NSObject {
 
 @private
-	NSString * _language;
+	NSString * _sourceLanguage;
+	NSString * _destLanguage;
 	sqlite3 * _db;
 	
 	// pre-compiled sql statements
 	sqlite3_stmt * _getAllPhrasesStatement;
-	sqlite3_stmt * _getHistoryStatement;
 	sqlite3_stmt * _checkPhraseStatement;
+	sqlite3_stmt * _addTranslatedHistoryStatement;
+	sqlite3_stmt * _getTranslatedHistoryStatement;
 	sqlite3_stmt * _updateToHistoryStatement;
 	sqlite3_stmt * _addHistoryStatement;
 	sqlite3_stmt * _clearHistoryStatement;
 }
 
-@property (nonatomic, retain) NSString * language;
+@property (nonatomic, retain) NSString * sourceLanguage;
+@property (nonatomic, retain) NSString * destLanguage;
 
-+ (AutoSuggestManager *)sharedInstanceWithLanguage:(NSString *)language;
-- (id)initWithLanguage:(NSString *)language;
-- (void)addToHistory:(NSString *)from to:(NSString *)to toLanguage:(NSString *)toLanguage;
-- (void)downloadCommonPhrases:(NSString *)toLanguage;
-- (NSMutableArray *)getAllPhrases:(NSString *)filterString;
-- (NSMutableArray *)getAllPhrases;
-- (NSMutableArray *)getHistory;
-- (NSString *)getHistoryTranslation:(NSString *)from;
++ (AutoSuggestManager *)sharedInstance;
+- (id)init;
+- (NSDictionary *)getAllPhrases:(NSString *)filterString;
+- (NSString *)getTranslatedPhrase:(long long)originalPhraseId;
+- (void)addToHistory:(NSString *)originalText translatedText:(NSString *)translatedText;
 - (void)clearHistory;
 
 @end
