@@ -76,7 +76,8 @@
 
 - (void)_showSpinner {
 	_spinnerView = [[SpinnerView alloc] initWithFrame:CGRectMake(self.view.center.x - (kSpinnerSize / 2), self.view.center.y - (kSpinnerSize / 2), kSpinnerSize, kSpinnerSize)];
-	[self.view addSubview:_spinnerView];	
+	[self.view addSubview:_spinnerView];
+	[self.navigationItem setHidesBackButton:YES animated:YES];	// do not allow user to leave the screen while submitting quote (otherwise crash happens when response returns)
 }
 
 - (void)_clearSpinner {
@@ -85,6 +86,7 @@
 		[_spinnerView release];
 		_spinnerView = nil;
 	}
+	[self.navigationItem setHidesBackButton:NO animated:YES];	// show back button again now that we have received a response
 }
 
 - (void)_clearTimer {
