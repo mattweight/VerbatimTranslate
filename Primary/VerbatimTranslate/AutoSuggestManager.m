@@ -104,7 +104,7 @@
 
 	// compile statement if necessary
     if (_checkPhraseStatement == nil) {
-		NSString * sql = [NSString stringWithFormat:@"SELECT rowid, type FROM original_phrases_%@ WHERE phrase = ?", _sourceLanguage];
+		NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM original_phrases_%@ WHERE phrase = ?", _sourceLanguage];
         if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_checkPhraseStatement, NULL) != SQLITE_OK) {
 			// TODO - add preparation error
         }
@@ -112,17 +112,10 @@
 	
 	// execute the query
 	sqlite3_int64 phraseRowId = 0;
-	BOOL textAlreadyInHistory = NO;
 	sqlite3_bind_text(_checkPhraseStatement, 1, [originalText UTF8String], -1, SQLITE_TRANSIENT);
 	if (sqlite3_step(_checkPhraseStatement) == SQLITE_ROW) {
 		phraseRowId = sqlite3_column_int64(_checkPhraseStatement, 0);
 		
-		// mark as history type so that we don't insert into history table down below
-		int phraseType = sqlite3_column_int(_checkPhraseStatement, 1);
-		if (phraseType == kPhraseTypeHistory) {
-			textAlreadyInHistory = YES;
-		}
-
 		// compile statement if necessary
 		if (_updateToHistoryStatement == nil) {
 			NSString * sql = [NSString stringWithFormat:@"UPDATE original_phrases_%@ SET type = %d, time = strftime('%%s','now') WHERE rowid = ?", _sourceLanguage, kPhraseTypeHistory];
@@ -152,7 +145,27 @@
 	sqlite3_reset(_checkPhraseStatement);
 	
 	// add translation to history (if applicable)
-	if (phraseRowId != 0 && !textAlreadyInHistory) {
+	if (phraseRowId != 0) {
+		BOOL translatedTextAlreadyInHistory = NO;
+		
+		// compile statement if necessary
+		if (_checkTranslatedHistoryStatement == nil) {
+			NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM translated_phrases_%@_%@ WHERE originalPhraseId = ?", _sourceLanguage, _destLanguage];
+			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_checkTranslatedHistoryStatement, NULL) != SQLITE_OK) {
+				// TODO - add preparation error
+			}
+		}
+		
+		sqlite3_bind_int64(_checkTranslatedHistoryStatement, 1, phraseRowId);
+		if (sqlite3_step(_checkTranslatedHistoryStatement) == SQLITE_ROW) {
+			translatedTextAlreadyInHistory = YES;
+		}
+		sqlite3_reset(_checkTranslatedHistoryStatement);
+		
+		if (translatedTextAlreadyInHistory) {
+			return;	// skip adding translation to history if already translated for current destination language
+		}
+		
 		// compile statement if necessary
 		if (_addTranslatedHistoryStatement == nil) {
 			NSString * sql = [NSString stringWithFormat:@"INSERT INTO translated_phrases_%@_%@ VALUES (?, ?)", _sourceLanguage, _destLanguage];
@@ -277,15 +290,20 @@
         _checkPhraseStatement = nil;
     }
 
+	if (_checkTranslatedHistoryStatement) {
+        sqlite3_finalize(_checkTranslatedHistoryStatement);
+        _checkTranslatedHistoryStatement = nil;
+    }
+	
 	if (_addTranslatedHistoryStatement) {
         sqlite3_finalize(_addTranslatedHistoryStatement);
         _addTranslatedHistoryStatement = nil;
-    }	
+    }
 	
 	if (_getTranslatedHistoryStatement) {
         sqlite3_finalize(_getTranslatedHistoryStatement);
         _getTranslatedHistoryStatement = nil;
-    }	
+    }
 	
 	if (_updateToHistoryStatement) {
         sqlite3_finalize(_updateToHistoryStatement);

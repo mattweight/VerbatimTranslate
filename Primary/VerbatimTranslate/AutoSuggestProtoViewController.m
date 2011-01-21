@@ -58,18 +58,20 @@
 	// dismiss keyboard
 	[self.textInput resignFirstResponder];
 
-	// determine whether it is in history cache or not
+	// determine whether the phrase is in history cache or not
 	long long historyPhraseId = [[_historyPhraseIds objectAtIndex:indexPath.row] longLongValue];
 	if (historyPhraseId != 0) {
-		// get original text
+		// now determine whether the history phrase has already been translated in the current destination language
 		NSString * originalText = [_suggestions objectAtIndex:indexPath.row];
-
-		// get translated text
 		AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
 		NSString * translatedText = [autoSuggest getTranslatedPhrase:historyPhraseId];
-		
-		// commit original & translated
-		[self _commitText:originalText translatedText:translatedText];
+		if (translatedText != nil) {
+			// phrase has been translated in current destination language - commit immediately
+			[self _commitText:originalText translatedText:translatedText];
+		} else {
+			// phrase has not yet been translated in current destination language - translate then commit
+			[self _translateAndCommitText:originalText];
+		}
 	} else {
 		[self _translateAndCommitText:[_suggestions objectAtIndex:indexPath.row]];
 	}	

@@ -18,6 +18,7 @@
 	// pre-compiled sql statements
 	sqlite3_stmt * _getAllPhrasesStatement;
 	sqlite3_stmt * _checkPhraseStatement;
+	sqlite3_stmt * _checkTranslatedHistoryStatement;
 	sqlite3_stmt * _addTranslatedHistoryStatement;
 	sqlite3_stmt * _getTranslatedHistoryStatement;
 	sqlite3_stmt * _updateToHistoryStatement;
