@@ -126,8 +126,10 @@
 	NSLog(@"\t* bgImage: %@", bgImage);
 	
 	// update auto-suggest destination language
-	AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
-	autoSuggest.destLanguage = [newTheme.services objectForKey:@"google-translate"];
+	@try {
+		AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
+		autoSuggest.destLanguage = [newTheme.services objectForKey:@"google-translate"];
+	} @catch (NSException * e) {}
 	
 	if (flagController == nil) {
 		FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];

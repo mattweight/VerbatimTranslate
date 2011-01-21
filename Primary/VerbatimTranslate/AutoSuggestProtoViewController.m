@@ -12,6 +12,7 @@
 
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
+#import "VerbatimTranslateAppDelegate.h"
 
 @interface AutoSuggestProtoViewController (private)
 
@@ -63,14 +64,19 @@
 	if (historyPhraseId != 0) {
 		// now determine whether the history phrase has already been translated in the current destination language
 		NSString * originalText = [_suggestions objectAtIndex:indexPath.row];
-		AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
-		NSString * translatedText = [autoSuggest getTranslatedPhrase:historyPhraseId];
-		if (translatedText != nil) {
-			// phrase has been translated in current destination language - commit immediately
-			[self _commitText:originalText translatedText:translatedText];
-		} else {
-			// phrase has not yet been translated in current destination language - translate then commit
-			[self _translateAndCommitText:originalText];
+		@try {
+			AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
+			NSString * translatedText = [autoSuggest getTranslatedPhrase:historyPhraseId];
+			if (translatedText != nil) {
+				// phrase has been translated in current destination language - commit immediately
+				[self _commitText:originalText translatedText:translatedText];
+			} else {
+				// phrase has not yet been translated in current destination language - translate then commit
+				[self _translateAndCommitText:originalText];
+			}
+		} @catch (NSException* e) {
+			VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)([UIApplication sharedApplication].delegate);
+			[appDelegate displayGenericError];
 		}
 	} else {
 		[self _translateAndCommitText:[_suggestions objectAtIndex:indexPath.row]];
@@ -172,30 +178,37 @@
 	[defaults synchronize];
 	
 	// add text to history
-	AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
-	[autoSuggest addToHistory:originalText translatedText:translatedText];
+	@try {
+		AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
+		[autoSuggest addToHistory:originalText translatedText:translatedText];
+	} @catch (NSException* e) {}
 
 	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:TRANSLATION_DID_COMPLETE_NOTIFICATION
 																						 object:nil]];
 }
 
 - (void)_filterSuggestionsWithString:(NSString *)filterString {
-	AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstance];
-	NSDictionary * phraseInfo = [autoSuggest getAllPhrases:filterString];
-	self.suggestions = [phraseInfo objectForKey:@"phrases"];
-	self.historyPhraseIds = [phraseInfo objectForKey:@"historyPhraseIds"];
+	@try {
+		AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstance];
+		NSDictionary * phraseInfo = [autoSuggest getAllPhrases:filterString];
+		self.suggestions = [phraseInfo objectForKey:@"phrases"];
+		self.historyPhraseIds = [phraseInfo objectForKey:@"historyPhraseIds"];
 	
-	[_suggestionsTable reloadData];
+		[_suggestionsTable reloadData];
 	
-	if ([self.suggestions count] > 0) {
-		// make sure table is visible
-		_suggestionsTable.hidden = NO;
+		if ([self.suggestions count] > 0) {
+			// make sure table is visible
+			_suggestionsTable.hidden = NO;
 		
-		// scroll to top after each key press (user may have scrolled down and then pressed key)
-		[_suggestionsTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
-	} else {
-		// do not show table at all if there are no suggestions
-		_suggestionsTable.hidden = YES;
+			// scroll to top after each key press (user may have scrolled down and then pressed key)
+			[_suggestionsTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+		} else {
+			// do not show table at all if there are no suggestions
+			_suggestionsTable.hidden = YES;
+		}
+	} @catch (NSException* e) {
+		VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)([UIApplication sharedApplication].delegate);
+		[appDelegate displayGenericError];
 	}
 }
 

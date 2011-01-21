@@ -26,8 +26,9 @@
 
 - (void)doPreLoad:(id)sender;
 - (void)didFinishPreLoad:(NSNotification*)notif;
-- (void)displayActivityView;
+- (void)displayActivityView:(NSNotification*)notify;
 - (void)removeActivityView;
+- (void)displayGenericError;
 
 @end
 

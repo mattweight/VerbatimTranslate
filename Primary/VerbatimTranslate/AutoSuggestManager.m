@@ -20,6 +20,7 @@
 - (void)_createTables;
 - (NSString *)_getWritableDBPath;
 - (void)_createWritableCopyOfDatabaseIfNeeded;
+- (void)_raiseDBException;
 - (void)_closeDatabase;
 - (void)_finalizePrecompiledStatements;
 
@@ -39,7 +40,9 @@
 	if (self = [super init]) {
 		// connect to database
 		[self _createWritableCopyOfDatabaseIfNeeded];
-		sqlite3_open([[self _getWritableDBPath] UTF8String], &_db);
+		if (sqlite3_open([[self _getWritableDBPath] UTF8String], &_db) != SQLITE_OK) {
+			[self _raiseDBException];
+		}
 		
 		//temp
 		self.sourceLanguage = @"en";	// TODO - change to source language stored in NSUserDefaults (probably done external to the class)
@@ -72,7 +75,7 @@
     if (_getAllPhrasesStatement == nil) {
 		NSString * sql = [NSString stringWithFormat:@"SELECT rowid, phrase, type FROM original_phrases_%@ WHERE phrase LIKE ? ORDER BY type ASC, time DESC LIMIT %d", _sourceLanguage, kPhraseLimit];
         if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_getAllPhrasesStatement, NULL) != SQLITE_OK) {
-			// TODO - preparation error...
+			[self _raiseDBException];
         }
     }
 	
@@ -104,15 +107,15 @@
 
 	// compile statement if necessary
     if (_checkPhraseStatement == nil) {
-		NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM original_phrases_%@ WHERE phrase = ?", _sourceLanguage];
+		NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM original_phrases_%@ WHERE lower(phrase) = ?", _sourceLanguage];
         if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_checkPhraseStatement, NULL) != SQLITE_OK) {
-			// TODO - add preparation error
+			[self _raiseDBException];
         }
     }
 	
 	// execute the query
 	sqlite3_int64 phraseRowId = 0;
-	sqlite3_bind_text(_checkPhraseStatement, 1, [originalText UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_text(_checkPhraseStatement, 1, [[originalText lowercaseString] UTF8String], -1, SQLITE_TRANSIENT);
 	if (sqlite3_step(_checkPhraseStatement) == SQLITE_ROW) {
 		phraseRowId = sqlite3_column_int64(_checkPhraseStatement, 0);
 		
@@ -120,7 +123,7 @@
 		if (_updateToHistoryStatement == nil) {
 			NSString * sql = [NSString stringWithFormat:@"UPDATE original_phrases_%@ SET type = %d, time = strftime('%%s','now') WHERE rowid = ?", _sourceLanguage, kPhraseTypeHistory];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_updateToHistoryStatement, NULL) != SQLITE_OK) {
-				// TODO - add preparation error
+				[self _raiseDBException];
 			}
 		}
 		
@@ -132,7 +135,7 @@
 		if (_addHistoryStatement == nil) {
 			NSString * sql = [NSString stringWithFormat:@"INSERT INTO original_phrases_%@ VALUES (?, %d, strftime('%%s','now'))", _sourceLanguage, kPhraseTypeHistory];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_addHistoryStatement, NULL) != SQLITE_OK) {
-				// TODO - add preparation error
+				[self _raiseDBException];
 			}
 		}
 		
@@ -152,7 +155,7 @@
 		if (_checkTranslatedHistoryStatement == nil) {
 			NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM translated_phrases_%@_%@ WHERE originalPhraseId = ?", _sourceLanguage, _destLanguage];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_checkTranslatedHistoryStatement, NULL) != SQLITE_OK) {
-				// TODO - add preparation error
+				[self _raiseDBException];
 			}
 		}
 		
@@ -170,7 +173,7 @@
 		if (_addTranslatedHistoryStatement == nil) {
 			NSString * sql = [NSString stringWithFormat:@"INSERT INTO translated_phrases_%@_%@ VALUES (?, ?)", _sourceLanguage, _destLanguage];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_addTranslatedHistoryStatement, NULL) != SQLITE_OK) {
-				// TODO - add preparation error
+				[self _raiseDBException];
 			}
 		}
 		
@@ -188,8 +191,8 @@
 	if (_getTranslatedHistoryStatement == nil) {
 		NSString * sql = [NSString stringWithFormat:@"SELECT translation FROM translated_phrases_%@_%@ WHERE originalPhraseId = ?", _sourceLanguage, _destLanguage];
 		if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_getTranslatedHistoryStatement, NULL) != SQLITE_OK) {
-			// TODO - add preparation error
-		}		
+			[self _raiseDBException];
+		}
 	}
 		
 	sqlite3_bind_int64(_getTranslatedHistoryStatement, 1, (sqlite3_int64)originalPhraseId);
@@ -204,12 +207,9 @@
 - (void)clearHistory {
 	// compile statement if necessary
 	if (_clearHistoryStatement == nil) {
-		// TODO - only delete history types or common phrases too?  If only history types, do we restore common phrases that are history types back to common phrase types?
-		// TODO - nuke all languages
-		// TODO - need to also delete history tables
 		NSString * sql = [NSString stringWithFormat:@"DELETE FROM original_phrases_%@", _sourceLanguage];
 		if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_clearHistoryStatement, NULL) != SQLITE_OK) {
-			// TODO - add preparation error
+			[self _raiseDBException];
 		}
 	}
 	
@@ -269,9 +269,14 @@
 		// create a writable db copy (necessary for changing the db contents)
 		NSString * bundledDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:kDBFilename];
 		if (![fileManager copyItemAtPath:bundledDBPath toPath:writableDBPath error:nil]) {
-			// TODO - add copy error
+			[self _raiseDBException];
 		}
 	}
+}
+
+- (void)_raiseDBException
+{
+	[NSException raise:@"db_error" format:@"db_error"];
 }
 
 - (void)_closeDatabase {

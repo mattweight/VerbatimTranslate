@@ -9,6 +9,7 @@
 #import "InfoViewController.h"
 #import "QuoteViewController.h"
 #import "AutoSuggestManager.h"
+#import "VerbatimTranslateAppDelegate.h"
 
 #define kSettingsRequestQuote			0
 #define kSettingsClearHistory			1
@@ -89,8 +90,17 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (alertView.tag == kAlertViewTagClearHistory && buttonIndex == kAlertViewButtonClearHistoryOK) {
 		// clear history
-		AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstance];
-		[autoSuggest clearHistory];
+		@try {
+			AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstance];
+			[autoSuggest clearHistory];
+		} @catch (NSException * e) {
+			VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)([UIApplication sharedApplication].delegate);
+			[appDelegate displayGenericError];
+
+			// deselect selection
+			NSIndexPath * tableSelection = [self.tableView indexPathForSelectedRow];
+			[self.tableView deselectRowAtIndexPath:tableSelection animated:NO];			
+		}
 		
 		// show confirmation message
 		NSString * message = NSLocalizedString(@"All translation history has been cleared.", nil);
