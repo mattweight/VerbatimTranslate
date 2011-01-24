@@ -6,22 +6,22 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-// TODO - scrolling on the textview
-// TODO - cancel button of some sort (to go back to the bubble)
-// TODO - what happens if there are zero suggestions? (darken it out, etc?)
-// TODO - need to scroll to top (of table view) after each letter is pressed?
-
 #import "AutoSuggestProtoViewController.h"
 #import "AutoSuggestManager.h"
 #import "JSON.h"
 
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
+#import "VerbatimTranslateAppDelegate.h"
 
-@interface AutoSuggestProtoViewController()
+@interface AutoSuggestProtoViewController (private)
 
-
-- (void)getTranslation:(NSString*)origText;
+- (void)_translateAndCommitText:(NSString *)text;
+- (void)_getTranslation:(NSString *)text;
+- (void)_commitText:(NSString *)originalText translatedText:(NSString *)translatedText;
+- (void)_filterSuggestionsWithString:(NSString *)filterString;
+- (void)_onCancelButton:(id)sender;
+- (void)_onClearButton:(id)sender;
 
 @end
 
@@ -30,6 +30,7 @@
 @synthesize textInput = _textInput;
 @synthesize suggestionsTable = _suggestionsTable;
 @synthesize suggestions = _suggestions;
+@synthesize	historyPhraseIds = _historyPhraseIds;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	return [_suggestions count];
@@ -55,8 +56,31 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	// dismiss keyboard
 	[self.textInput resignFirstResponder];
-	[self submitText:[_suggestions objectAtIndex:indexPath.row]];
+
+	// determine whether the phrase is in history cache or not
+	long long historyPhraseId = [[_historyPhraseIds objectAtIndex:indexPath.row] longLongValue];
+	if (historyPhraseId != 0) {
+		// now determine whether the history phrase has already been translated in the current destination language
+		NSString * originalText = [_suggestions objectAtIndex:indexPath.row];
+		@try {
+			AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
+			NSString * translatedText = [autoSuggest getTranslatedPhrase:historyPhraseId];
+			if (translatedText != nil) {
+				// phrase has been translated in current destination language - commit immediately
+				[self _commitText:originalText translatedText:translatedText];
+			} else {
+				// phrase has not yet been translated in current destination language - translate then commit
+				[self _translateAndCommitText:originalText];
+			}
+		} @catch (NSException* e) {
+			VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)([UIApplication sharedApplication].delegate);
+			[appDelegate displayGenericError];
+		}
+	} else {
+		[self _translateAndCommitText:[_suggestions objectAtIndex:indexPath.row]];
+	}	
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
@@ -70,27 +94,31 @@
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
 	// check for return key press
     if ([text isEqualToString:@"\n"]) {
-		[self submitText:textView.text];
+		// dismiss keyboard
 		[textView resignFirstResponder];
-        return NO;
+	
+		[self _translateAndCommitText:textView.text];
+		return NO;
     }
 	
     return YES;
 }
 
-- (void)submitText:(NSString *)text {
+// private methods
+
+- (void)_translateAndCommitText:(NSString *)text {
 	NSNotification* notify = [NSNotification notificationWithName:DISPLAY_ACTIVITY_VIEW
 														   object:nil
 														 userInfo:[NSDictionary dictionaryWithObject:@"Translating.." forKey:@"load-text"]];
 	[[NSNotificationCenter defaultCenter] postNotification:notify];
-	[self getTranslation:text];
-	//[self performSelectorInBackground:@selector(getTranslation:) withObject:text];
+	[self _getTranslation:text];
+	//[self performSelectorInBackground:@selector(_getTranslation:) withObject:text];
 }
 
-- (void)getTranslation:(NSString *)text {
+- (void)_getTranslation:(NSString *)text {
 	// Get the web service language keyword..
 	ThemeManager* manager = [ThemeManager sharedThemeManager];
-	NSString* outputKeyword = [manager.currentTheme.services objectForKey:@"google-translate"];
+	NSString * outputKeyword = [manager.currentTheme.services objectForKey:@"google-translate"];
 	NSLog(@"Output keyword is: %@", outputKeyword);
 	NSMutableString* translateURLString = [NSMutableString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&langpair="];
 	[translateURLString appendString:@"en"];
@@ -109,10 +137,6 @@
 	[defaults setObject:text forKey:VERBATIM_ORIGINAL_TEXT];
 	[defaults synchronize];
 	
-	// add text to history
-	AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
-	[autoSuggest addToHistory:text to:nil toLanguage:nil];	
-
 	NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:translateURLString]];
 	NSURLConnection* connect = [NSURLConnection connectionWithRequest:req delegate:self];
 }
@@ -132,36 +156,59 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	// get translated text
 	NSString* respString = [[NSString alloc] initWithData:_translateData encoding:NSUTF8StringEncoding];
 	[_translateData release];
 	_translateData = nil;
+	NSString* translatedText = [[[respString JSONValue] objectForKey:@"responseData"] objectForKey:@"translatedText"];
 	
-	NSString* message = [[[respString JSONValue] objectForKey:@"responseData"] objectForKey:@"translatedText"];
+	// get original text
+	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+	NSString* originalText = [defaults objectForKey:VERBATIM_ORIGINAL_TEXT];
 	
+	// commit original & translated
+	[self _commitText:originalText translatedText:translatedText];
+}
+
+- (void)_commitText:(NSString *)originalText translatedText:(NSString *)translatedText {
 	// FIXME - Time to cheat. Too late tonight to do it right..
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-	[defaults setObject:message forKey:VERBATIM_TRANSLATED_TEXT];
+	[defaults setObject:originalText forKey:VERBATIM_ORIGINAL_TEXT];
+	[defaults setObject:translatedText forKey:VERBATIM_TRANSLATED_TEXT];
 	[defaults synchronize];
 	
+	// add text to history
+	@try {
+		AutoSuggestManager* autoSuggest = [AutoSuggestManager sharedInstance];
+		[autoSuggest addToHistory:originalText translatedText:translatedText];
+	} @catch (NSException* e) {}
+
 	[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:TRANSLATION_DID_COMPLETE_NOTIFICATION
 																						 object:nil]];
 }
 
 - (void)_filterSuggestionsWithString:(NSString *)filterString {
-	AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstanceWithLanguage:@"en_US"];
-	self.suggestions = [autoSuggest getAllPhrases:filterString];
-
-	[_suggestionsTable reloadData];
+	@try {
+		AutoSuggestManager * autoSuggest = [AutoSuggestManager sharedInstance];
+		NSDictionary * phraseInfo = [autoSuggest getAllPhrases:filterString];
+		self.suggestions = [phraseInfo objectForKey:@"phrases"];
+		self.historyPhraseIds = [phraseInfo objectForKey:@"historyPhraseIds"];
 	
-	if ([self.suggestions count] > 0) {
-		// make sure table is visible
-		_suggestionsTable.hidden = NO;
+		[_suggestionsTable reloadData];
+	
+		if ([self.suggestions count] > 0) {
+			// make sure table is visible
+			_suggestionsTable.hidden = NO;
 		
-		// scroll to top after each key press (user may have scrolled down and then pressed key)
-		[_suggestionsTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
-	} else {
-		// do not show table at all if there are no suggestions
-		_suggestionsTable.hidden = YES;
+			// scroll to top after each key press (user may have scrolled down and then pressed key)
+			[_suggestionsTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+		} else {
+			// do not show table at all if there are no suggestions
+			_suggestionsTable.hidden = YES;
+		}
+	} @catch (NSException* e) {
+		VerbatimTranslateAppDelegate* appDelegate = (VerbatimTranslateAppDelegate*)([UIApplication sharedApplication].delegate);
+		[appDelegate displayGenericError];
 	}
 }
 
@@ -234,7 +281,8 @@
 	[_textInput release];
 	[_suggestionsTable release];
 	[_suggestions release];
-    [super dealloc];
+    [_historyPhraseIds release];
+	[super dealloc];
 }
 
 @end

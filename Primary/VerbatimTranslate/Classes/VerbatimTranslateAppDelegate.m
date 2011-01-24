@@ -62,6 +62,13 @@
 	[self.loadingLabel setText:@""];
 }
 
+- (void)displayGenericError {
+	NSString * message = NSLocalizedString(@"We're sorry, an error has occurred.  Please try again.", nil);
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbatim Translate", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
+
 - (void)doPreLoad:(id)sender {
 	NSAutoreleasePool* arPool = [[NSAutoreleasePool alloc] init];
 	[ThemeManager sharedThemeManager];
