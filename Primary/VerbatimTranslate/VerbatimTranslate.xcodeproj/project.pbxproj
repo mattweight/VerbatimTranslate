@@ -15,6 +15,7 @@
 		280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754C0DD40C5E005A515E /* MainWindow.xib */; };
 		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
+		7008FA0312ED86F400A85D71 /* taxis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7008FA0212ED86F400A85D71 /* taxis.jpg */; };
 		7023B956127E1526008FCABE /* mariachi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B954127E1526008FCABE /* mariachi.png */; };
 		7023B957127E1526008FCABE /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = 7023B955127E1526008FCABE /* panda.png */; };
 		7028DFB9127E19B50034EE04 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028DFB7127E19B50034EE04 /* ThemeController.m */; };
@@ -97,6 +98,7 @@
 		289233A90DB2D0DB0083E9F9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* VerbatimTranslate_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbatimTranslate_Prefix.pch; sourceTree = "<group>"; };
+		7008FA0212ED86F400A85D71 /* taxis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taxis.jpg; sourceTree = "<group>"; };
 		7023B935127E1444008FCABE /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		7023B954127E1526008FCABE /* mariachi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariachi.png; sourceTree = "<group>"; };
 		7023B955127E1526008FCABE /* panda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda.png; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7008FA0212ED86F400A85D71 /* taxis.jpg */,
 				706D13C912E03C96008FD573 /* Icon.png */,
 				70CC4F0812C0BBBA0037B88B /* Backgrounds */,
 				7060C76412C08BED00055569 /* Images */,
@@ -526,6 +529,7 @@
 				CAB849DD12DED09B00ADE109 /* Localizable.strings in Resources */,
 				CAB849DE12DED09B00ADE109 /* thankyou.html in Resources */,
 				706D13CA12E03C96008FD573 /* Icon.png in Resources */,
+				7008FA0312ED86F400A85D71 /* taxis.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

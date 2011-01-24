@@ -21,12 +21,17 @@
 @synthesize tableView = _tableView;
 @synthesize aboutLabel = _aboutLabel;
 @synthesize aboutText = _aboutText;
+@synthesize borderTableView;
+@synthesize sourceFlagController;
 
 - (IBAction)showMainView:(id)sender {
 	[[self parentViewController] dismissModalViewControllerAnimated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	if ([tableView isEqual:borderTableView]) {
+		return 1;
+	}
 	return [_settings count];
 }
 
@@ -35,7 +40,27 @@
 	
 	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
 	if (cell == nil) {
+		[tableView setBackgroundColor:[UIColor clearColor]];
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID] autorelease];
+		[cell.backgroundView setBackgroundColor:[UIColor clearColor]];
+		//[cell setBackgroundColor:[UIColor whiteColor]];
+	}
+	
+	if ([tableView isEqual:borderTableView]) {
+		[cell setFrame:CGRectMake(0.0, 0.0, 300, 210.0)];
+		NSLog(@"content view: %02f X %02f", cell.frame.size.width, cell.frame.size.height);
+		UITextView* aboutView = [[UITextView alloc] initWithFrame:CGRectMake(0.0, 0.0, (cell.frame.size.width - 20.0), (cell.frame.size.height - 10.0))];
+		[aboutView setScrollEnabled:NO];
+		[aboutView setTextAlignment:UITextAlignmentCenter];
+		[aboutView setBackgroundColor:[UIColor clearColor]];
+		[aboutView setFont:[UIFont systemFontOfSize:13.0]];
+		[aboutView setEditable:NO];
+		[aboutView setCenter:cell.center];
+		aboutView.text = NSLocalizedString(@"About Verbatim Digital\n\nThis is where you put all your info about the company and whatever else you want to put here in the about section.  Go ahead and give us the text and we'll put it in there.  I need something else to say so that it can fill up the space.  This app is going to be great.  This text will all be localized to the language of choice when selected above.", nil);
+		[cell addSubview:aboutView];
+		[aboutView release];
+		aboutView = nil;
+		return cell;
 	}
 	
 	cell.selectionStyle = UITableViewCellSelectionStyleGray;
@@ -47,6 +72,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	if ([tableView isEqual:borderTableView]) {
+		return;
+	}
 	switch (indexPath.row) {
 		case kSettingsRequestQuote:
 			[self showQuoteView];
@@ -119,6 +147,15 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
 		_settings = [[NSArray arrayWithObjects:NSLocalizedString(@"Request Professional Quote", nil), NSLocalizedString(@"Clear Translation History", nil), nil] retain];
+		[borderTableView setRowHeight:182.0];
+		if (sourceFlagController == nil) {
+			FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+			[fController.view setCenter:CGPointMake(-116.0, 142.0)];
+			[self.view addSubview:fController.view];
+			sourceFlagController = [fController retain];
+			[fController release];
+			fController = nil;
+		}		
 	}
     return self;
 }
