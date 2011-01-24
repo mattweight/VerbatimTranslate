@@ -30,6 +30,11 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (id)initWithStyle:(UITableViewStyle)style {
 	if (self = [super initWithStyle:UITableViewStylePlain]) {
+		// load languages first as setting up the below table view uses them in cellForRowAtIndexPath
+		NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
+		NSArray* results = [[[ThemeManager sharedThemeManager].languageInfo allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+		languageNames = [[NSArray alloc] initWithArray:results];
+		
 		self.selectedRowNumber = [[NSNumber numberWithInteger:[[NSUserDefaults standardUserDefaults] integerForKey:VERBATIM_SELECTED_DEST_FLAG_ROW]] retain];
 		UITableView* tabView = (UITableView*)self.view;
 		[tabView setFrame:CGRectMake(0.0, 0.0, 56.0, 320.0)];
@@ -40,9 +45,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 		[tabView setAlpha:1.0];
 		[tabView setTransform:CGAffineTransformMakeRotation(radians(90))];
 		flagTableView = [tabView retain];
-		NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
-		NSArray* results = [[[ThemeManager sharedThemeManager].languageInfo allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-		languageNames = [[NSArray alloc] initWithArray:results];
 	}
 	return self;
 }
