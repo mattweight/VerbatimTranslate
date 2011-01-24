@@ -192,17 +192,19 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 	}
 
 	NSLog(@"Getting language index..");
-	int index = (int)(indexPath.row % [languageNames count]);
-	NSLog(@"\t Index: %d", index);
-	
-	NSString* languageName = [[languageNames objectAtIndex:index] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-	NSLog(@"\t Language Name: %@", languageName);
-	NSNotification* updateNotification = [NSNotification notificationWithName:THEME_UPDATE_NOTIFICATION
-																	   object:nil
-																	 userInfo:[NSDictionary dictionaryWithObject:languageName forKey:@"language"]];
-	[[NSNotificationCenter defaultCenter] postNotification:updateNotification];
-
-	NSLog(@"\n\n\n\n\n\n\n\tindex path row: %d\n\n\n\n\n\n\n", indexPath.row);
+	if ([languageNames count] > 0) {
+		int index = (int)(indexPath.row % [languageNames count]);
+		NSLog(@"\t Index: %d", index);
+		
+		NSString* languageName = [[languageNames objectAtIndex:index] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSLog(@"\t Language Name: %@", languageName);
+		NSNotification* updateNotification = [NSNotification notificationWithName:THEME_UPDATE_NOTIFICATION
+																		   object:nil
+																		 userInfo:[NSDictionary dictionaryWithObject:languageName forKey:@"language"]];
+		[[NSNotificationCenter defaultCenter] postNotification:updateNotification];
+		
+		NSLog(@"\n\n\n\n\n\n\n\tindex path row: %d\n\n\n\n\n\n\n", indexPath.row);
+	}
 	[[NSUserDefaults standardUserDefaults] setInteger:indexPath.row forKey:VERBATIM_SELECTED_DEST_FLAG_ROW];
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
