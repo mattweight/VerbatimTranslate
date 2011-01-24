@@ -81,7 +81,7 @@
 - (void)submitText:(NSString *)text {
 	NSNotification* notify = [NSNotification notificationWithName:DISPLAY_ACTIVITY_VIEW
 														   object:nil
-														 userInfo:[NSDictionary dictionaryWithObject:@"Loading.." forKey:@"load-text"]];
+														 userInfo:[NSDictionary dictionaryWithObject:@"Translating.." forKey:@"load-text"]];
 	[[NSNotificationCenter defaultCenter] postNotification:notify];
 	[self getTranslation:text];
 	//[self performSelectorInBackground:@selector(getTranslation:) withObject:text];

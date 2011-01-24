@@ -13,9 +13,11 @@
 	CGPoint origPoint;
 	NSArray* languageNames;
 	UITableView* flagTableView;
+	NSNumber* selectedRowNumber;
 }
 
 @property (readonly, retain) NSArray* languageNames;
 @property (nonatomic, retain) UITableView* flagTableView;
+@property (nonatomic, retain) NSNumber* selectedRowNumber;
 
 @end

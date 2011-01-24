@@ -12,6 +12,7 @@
 
 #import "VerbatimTranslateAppDelegate.h"
 #import "MainViewController.h"
+#import "VerbatimConstants.h"
 
 #import "math.h"
 
@@ -19,6 +20,7 @@
 
 @synthesize languageNames;
 @synthesize flagTableView;
+@synthesize selectedRowNumber;
 
 static int numRows = 9999;
 static inline double radians (double degrees) {return degrees * M_PI/180;}
@@ -28,6 +30,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 - (id)initWithStyle:(UITableViewStyle)style {
 	if (self = [super initWithStyle:UITableViewStylePlain]) {
+		self.selectedRowNumber = [[NSNumber numberWithInteger:[[NSUserDefaults standardUserDefaults] integerForKey:VERBATIM_SELECTED_DEST_FLAG_ROW]] retain];
 		UITableView* tabView = (UITableView*)self.view;
 		[tabView setFrame:CGRectMake(0.0, 0.0, 56.0, 320.0)];
 		[tabView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -40,19 +43,19 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 		NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
 		NSArray* results = [[[ThemeManager sharedThemeManager].languageInfo allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
 		languageNames = [[NSArray alloc] initWithArray:results];
-		NSLog(@"language names: %@", [languageNames description]);
 	}
 	return self;
 }
 
-/*
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	
+	NSIndexPath* startIndex = [NSIndexPath indexPathForRow:[self.selectedRowNumber unsignedIntegerValue] inSection:0];
+	[self.view selectRowAtIndexPath:startIndex
+						   animated:NO
+					 scrollPosition:UITableViewScrollPositionTop];
+	NSLog(@"\n\n\n\n\nflags view selected index: %d\n\n\n\n\n", [self.selectedRowNumber integerValue]);
 }
-*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -66,7 +69,6 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [super viewDidAppear:animated];
 }
 */
-
 /*
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -199,6 +201,10 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 																	   object:nil
 																	 userInfo:[NSDictionary dictionaryWithObject:languageName forKey:@"language"]];
 	[[NSNotificationCenter defaultCenter] postNotification:updateNotification];
+
+	NSLog(@"\n\n\n\n\n\n\n\tindex path row: %d\n\n\n\n\n\n\n", indexPath.row);
+	[[NSUserDefaults standardUserDefaults] setInteger:indexPath.row forKey:VERBATIM_SELECTED_DEST_FLAG_ROW];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 

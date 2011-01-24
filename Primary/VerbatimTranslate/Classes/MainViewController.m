@@ -184,25 +184,27 @@
 	[inController animate];
 	
 	// Update the flag controller position
-	int index; // magic magic numbers
-	NSIndexPath* iPath = nil;
-	for (index = (9998 / 2); index < 6000; index++) {
-		int langIndex = (index % [flagController.languageNames count]);
-		NSString* currLang = [flagController.languageNames objectAtIndex:langIndex];
-		if ([currLang isEqualToString:languageName]) {
-			iPath = [NSIndexPath indexPathForRow:index inSection:0];
-			break;
+	if (notif != nil) {
+		int index; // magic magic numbers
+		NSIndexPath* iPath = nil;
+		for (index = (9998 / 2); index < 6000; index++) {
+			int langIndex = (index % [flagController.languageNames count]);
+			NSString* currLang = [flagController.languageNames objectAtIndex:langIndex];
+			if ([currLang isEqualToString:languageName]) {
+				iPath = [NSIndexPath indexPathForRow:index inSection:0];
+				break;
+			}
+		}
+		if (iPath != nil) {
+			NSLog(@"Should be using real row: %02d", index);
+			if ([flagController.languageNames count] >= iPath.row) {
+				[flagController.flagTableView scrollToRowAtIndexPath:iPath
+													atScrollPosition:UITableViewScrollPositionTop
+															animated:NO];
+			}
 		}
 	}
-	if (iPath != nil) {
-		NSLog(@"Should be using real row: %02d", index);
-		if ([flagController.languageNames count] >= iPath.row) {
-			[flagController.flagTableView scrollToRowAtIndexPath:iPath
-												atScrollPosition:UITableViewScrollPositionTop
-														animated:NO];
-		}
-	}
-	
+		
 	NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
 	if ([defaults stringForKey:CURRENT_LANGUAGE_STORE_KEY] && 
 		[[defaults stringForKey:CURRENT_LANGUAGE_STORE_KEY] isEqualToString:languageName]) {
