@@ -76,6 +76,7 @@
 		70E8EED0127FFE1500323D92 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECB127FFE1500323D92 /* NSObject+SBJSON.m */; };
 		70E8EED1127FFE1500323D92 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECD127FFE1500323D92 /* NSString+SBJSON.m */; };
 		70E8EED2127FFE1500323D92 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECF127FFE1500323D92 /* SBJSON.m */; };
+		CA60A17A12EEAC72008CCC02 /* commonPhrases.csv in Resources */ = {isa = PBXBuildFile; fileRef = CA60A17812EEAC72008CCC02 /* commonPhrases.csv */; };
 		CA668C1112845AF900B52C92 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA668C0D12845AF900B52C92 /* InfoViewController.m */; };
 		CA668C1212845AF900B52C92 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA668C0E12845AF900B52C92 /* InfoViewController.xib */; };
 		CA668C1312845AF900B52C92 /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA668C1012845AF900B52C92 /* QuoteViewController.m */; };
@@ -177,6 +178,7 @@
 		70E8EECE127FFE1500323D92 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
 		70E8EECF127FFE1500323D92 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VerbatimTranslate-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CA60A17912EEAC72008CCC02 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = en; path = en.lproj/commonPhrases.csv; sourceTree = "<group>"; };
 		CA668C0C12845AF900B52C92 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		CA668C0D12845AF900B52C92 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		CA668C0E12845AF900B52C92 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				CAB849D912DED09B00ADE109 /* Localizable.strings */,
 				CAB849DB12DED09B00ADE109 /* thankyou.html */,
 				CAB849D612DED07E00ADE109 /* quoteView.html */,
+				CA60A17812EEAC72008CCC02 /* commonPhrases.csv */,
 				702C61D8127F8A1B002BB9C6 /* verbatim.sql */,
 				8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */,
 				7023B935127E1444008FCABE /* Entitlements.plist */,
@@ -530,6 +533,7 @@
 				CAB849DE12DED09B00ADE109 /* thankyou.html in Resources */,
 				706D13CA12E03C96008FD573 /* Icon.png in Resources */,
 				7008FA0312ED86F400A85D71 /* taxis.jpg in Resources */,
+				CA60A17A12EEAC72008CCC02 /* commonPhrases.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +568,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CA60A17812EEAC72008CCC02 /* commonPhrases.csv */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA60A17912EEAC72008CCC02 /* en */,
+			);
+			name = commonPhrases.csv;
+			sourceTree = "<group>";
+		};
 		CAB849D612DED07E00ADE109 /* quoteView.html */ = {
 			isa = PBXVariantGroup;
 			children = (

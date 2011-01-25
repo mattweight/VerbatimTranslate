@@ -23,7 +23,8 @@
 	sqlite3_stmt * _getTranslatedHistoryStatement;
 	sqlite3_stmt * _updateToHistoryStatement;
 	sqlite3_stmt * _addHistoryStatement;
-	sqlite3_stmt * _clearHistoryStatement;
+	sqlite3_stmt * _getTablesStatement;
+	sqlite3_stmt * _importCommonPhrasesStatement;
 }
 
 @property (nonatomic, retain) NSString * sourceLanguage;

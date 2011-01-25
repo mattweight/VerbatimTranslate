@@ -16,10 +16,12 @@
 
 @interface AutoSuggestManager (private)
 
+
 - (void)_setNewLanguage:(NSString *)newLanguage withLanguageVar:(NSString **)languageVar;
 - (void)_createTables;
 - (NSString *)_getWritableDBPath;
 - (void)_createWritableCopyOfDatabaseIfNeeded;
+- (void)_importEnglishCommonPhrases;
 - (void)_raiseDBException;
 - (void)_closeDatabase;
 - (void)_finalizePrecompiledStatements;
@@ -205,16 +207,51 @@
 }
 
 - (void)clearHistory {
+	// go through each table and delete/drop as necessary
+	
 	// compile statement if necessary
-	if (_clearHistoryStatement == nil) {
-		NSString * sql = [NSString stringWithFormat:@"DELETE FROM original_phrases_%@", _sourceLanguage];
-		if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_clearHistoryStatement, NULL) != SQLITE_OK) {
+	if (_getTablesStatement == nil) {
+		NSString * sql = [NSString stringWithFormat:@"SELECT name FROM sqlite_master WHERE type = 'table'"];
+		if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_getTablesStatement, NULL) != SQLITE_OK) {
 			[self _raiseDBException];
 		}
 	}
 	
-	sqlite3_step(_clearHistoryStatement);
-	sqlite3_reset(_clearHistoryStatement);	
+	NSMutableArray * tableNames = [NSMutableArray array];
+	while (sqlite3_step(_getTablesStatement) == SQLITE_ROW) {
+		[tableNames addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(_getTablesStatement, 0)]];
+	}
+	sqlite3_reset(_getTablesStatement);
+	
+	// go through all tables and delete/drop
+	NSString * currentTranslationHistoryTableName = [NSString stringWithFormat:@"translated_phrases_%@_%@", _sourceLanguage, _destLanguage];
+	for (int i = 0; i < [tableNames count]; i++) {
+		NSString * tableName = [tableNames objectAtIndex:i];
+		NSRange originalPhrasesRange = [tableName rangeOfString:@"original_phrases_"];
+		NSRange translatedPhrasesRange = [tableName rangeOfString:@"translated_phrases_"];
+		if (originalPhrasesRange.location != NSNotFound || [tableName isEqualToString:currentTranslationHistoryTableName]) {
+			// do not drop the current translation history table because we will still need it when the user returns to the main view (translation history tables are only created on dest language switch)
+			sqlite3_stmt* deleteTableStatement = nil;
+			NSString * sql = [NSString stringWithFormat:@"DELETE FROM %@", tableName];
+			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &deleteTableStatement, NULL) != SQLITE_OK) {
+				[self _raiseDBException];
+			}
+			 
+			sqlite3_step(deleteTableStatement);
+			sqlite3_finalize(deleteTableStatement);
+		} else if (translatedPhrasesRange.location != NSNotFound) {
+			sqlite3_stmt* dropTableStatement = nil;
+			NSString * sql = [NSString stringWithFormat:@"DROP TABLE %@", tableName];
+			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &dropTableStatement, NULL) != SQLITE_OK) {
+				[self _raiseDBException];
+			}
+			
+			sqlite3_step(dropTableStatement);
+			sqlite3_finalize(dropTableStatement);
+		}
+	}
+	
+	[self _importEnglishCommonPhrases];
 }
 
 // private methods
@@ -274,6 +311,30 @@
 	}
 }
 
+- (void)_importEnglishCommonPhrases {
+	NSString* commonPhrasesFilePath = [[NSBundle mainBundle] pathForResource:@"commonPhrases" ofType:@"csv" inDirectory:nil forLocalization:@"en"];
+	NSError* error;
+	NSString* commonPhrasesString = [NSString stringWithContentsOfFile:commonPhrasesFilePath encoding:NSUTF8StringEncoding error:&error];
+	if (commonPhrasesString != nil) {
+		NSArray* commonPhrases = [commonPhrasesString componentsSeparatedByString:@","];
+
+		// compile statement if necessary
+		if (_importCommonPhrasesStatement == nil) {
+			NSString * sql = [NSString stringWithFormat:@"INSERT INTO original_phrases_en VALUES (?, %d, 0)", kPhraseTypeCommon];
+			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_importCommonPhrasesStatement, NULL) != SQLITE_OK) {
+				[self _raiseDBException];
+			}
+		}
+		
+		for (int i = 0; i < [commonPhrases count]; i++) {
+			NSString* commonPhrase = [commonPhrases objectAtIndex:i];
+			sqlite3_bind_text(_importCommonPhrasesStatement, 1, [commonPhrase UTF8String], -1, SQLITE_TRANSIENT);
+			sqlite3_step(_importCommonPhrasesStatement);
+			sqlite3_reset(_importCommonPhrasesStatement);
+		}
+	}
+}
+
 - (void)_raiseDBException
 {
 	[NSException raise:@"db_error" format:@"db_error"];
@@ -320,10 +381,15 @@
         _addHistoryStatement = nil;
     }
 
-	if (_clearHistoryStatement) {
-        sqlite3_finalize(_clearHistoryStatement);
-        _clearHistoryStatement = nil;
-    }	
+	if (_getTablesStatement) {
+        sqlite3_finalize(_getTablesStatement);
+        _getTablesStatement = nil;
+    }
+
+	if (_importCommonPhrasesStatement) {
+        sqlite3_finalize(_importCommonPhrasesStatement);
+        _importCommonPhrasesStatement = nil;
+    }
 }
 
 - (void)dealloc {
