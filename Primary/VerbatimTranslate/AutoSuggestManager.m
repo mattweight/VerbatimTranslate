@@ -45,9 +45,6 @@
 		if (sqlite3_open([[self _getWritableDBPath] UTF8String], &_db) != SQLITE_OK) {
 			[self _raiseDBException];
 		}
-		
-		//temp
-		self.sourceLanguage = @"en";	// TODO - change to source language stored in NSUserDefaults (probably done external to the class)
 	}
 	return self;
 }

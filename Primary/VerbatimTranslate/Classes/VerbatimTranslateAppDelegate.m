@@ -10,6 +10,8 @@
 #import "MainViewController.h"
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
+#import "l10n.h"
+#import "AutoSuggestManager.h"
 
 @implementation VerbatimTranslateAppDelegate
 
@@ -38,6 +40,10 @@
 											 selector:@selector(removeActivityView)
 												 name:REMOVE_ACTIVITY_VIEW
 											   object:nil];
+
+	// setup language, string tables, etc
+	[l10n initialize];
+	[AutoSuggestManager sharedInstance].sourceLanguage = [l10n getLanguage];
 	
 	[window addSubview:loadingView];
     [window makeKeyAndVisible];

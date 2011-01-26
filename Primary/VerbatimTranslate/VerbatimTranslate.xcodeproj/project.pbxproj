@@ -77,6 +77,7 @@
 		70E8EED1127FFE1500323D92 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECD127FFE1500323D92 /* NSString+SBJSON.m */; };
 		70E8EED2127FFE1500323D92 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E8EECF127FFE1500323D92 /* SBJSON.m */; };
 		CA60A17A12EEAC72008CCC02 /* commonPhrases.csv in Resources */ = {isa = PBXBuildFile; fileRef = CA60A17812EEAC72008CCC02 /* commonPhrases.csv */; };
+		CA60A21612F066ED008CCC02 /* l10n.m in Sources */ = {isa = PBXBuildFile; fileRef = CA60A21512F066ED008CCC02 /* l10n.m */; };
 		CA668C1112845AF900B52C92 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA668C0D12845AF900B52C92 /* InfoViewController.m */; };
 		CA668C1212845AF900B52C92 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA668C0E12845AF900B52C92 /* InfoViewController.xib */; };
 		CA668C1312845AF900B52C92 /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA668C1012845AF900B52C92 /* QuoteViewController.m */; };
@@ -179,6 +180,8 @@
 		70E8EECF127FFE1500323D92 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* VerbatimTranslate-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VerbatimTranslate-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		CA60A17912EEAC72008CCC02 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = en; path = en.lproj/commonPhrases.csv; sourceTree = "<group>"; };
+		CA60A21412F066ED008CCC02 /* l10n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = l10n.h; sourceTree = "<group>"; };
+		CA60A21512F066ED008CCC02 /* l10n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = l10n.m; sourceTree = "<group>"; };
 		CA668C0C12845AF900B52C92 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		CA668C0D12845AF900B52C92 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		CA668C0E12845AF900B52C92 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				7037479312828EA600421C51 /* FlagsTableViewController.m */,
 				7037498D128299C600421C51 /* FlagTableViewCell.h */,
 				7037498E128299C600421C51 /* FlagTableViewCell.m */,
+				CA60A21412F066ED008CCC02 /* l10n.h */,
+				CA60A21512F066ED008CCC02 /* l10n.m */,
 			);
 			name = "Main View";
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 				7059160412C07EC7009B6F2A /* SpinnerView.m in Sources */,
 				70CDC97212C088E8007F860F /* ThemeManager.m in Sources */,
 				7060C90B12C08EBA00055569 /* Reachability.m in Sources */,
+				CA60A21612F066ED008CCC02 /* l10n.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
