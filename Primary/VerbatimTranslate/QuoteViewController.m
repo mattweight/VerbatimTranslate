@@ -71,6 +71,7 @@
 }
 
 - (void)_displayDefaultErrorMessage {
+	// TODO - use app delegate version of this method
 	[self _displayErrorMessage:NSLocalizedString(@"We're sorry, an error has occurred.  Please try again.", nil)];
 }
 

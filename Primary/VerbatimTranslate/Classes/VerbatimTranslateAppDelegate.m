@@ -97,10 +97,10 @@
             if (networkAlert != nil) {
                 [networkAlert release];
             }
-            networkAlert = [[UIAlertView alloc] initWithTitle:@"No Network!"
-                                                      message:@"An internet connection is required to continue."
+            networkAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbi™ Translate", nil)
+                                                      message:NSLocalizedString(@"An internet connection is required to continue.", nil)
                                                      delegate:self
-                                            cancelButtonTitle:@"OK"
+                                            cancelButtonTitle:NSLocalizedString(@"OK", nil)
                                             otherButtonTitles:nil];
             [networkAlert show];
         }

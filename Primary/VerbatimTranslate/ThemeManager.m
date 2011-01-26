@@ -126,10 +126,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 	NSString* selectLanguage = [languageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSArray* themes = (NSArray*)[languageInfo objectForKey:selectLanguage];
 	if (themes == nil) {
-		UIAlertView* missingAlert = [[[UIAlertView alloc] initWithTitle:@"Missing Theme Information!"
-																message:[NSString stringWithFormat:@"Missing theme information for '%@'. Please close and restart. If this problem continues, please uninstall and re-install.", languageName]
+		UIAlertView* missingAlert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbi™ Translate", nil)
+																message:[NSString stringWithFormat:NSLocalizedString(@"Missing theme information for '%@'. Please close and restart. If this problem continues, please uninstall and re-install.", nil), languageName]
 															   delegate:self
-													  cancelButtonTitle:@"OK"
+													  cancelButtonTitle:NSLocalizedString(@"OK", nil)
 													  otherButtonTitles:nil] autorelease];
 		[missingAlert show];
 	}

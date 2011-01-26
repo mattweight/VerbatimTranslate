@@ -111,10 +111,10 @@
 	NSString* fullBGImagePath = [manager.basePath stringByAppendingFormat:@"/%@/%@", languageName, newTheme.imageFilename];
 	BOOL isDir;
 	if (![[NSFileManager defaultManager] fileExistsAtPath:fullBGImagePath isDirectory:&isDir]) {
-		UIAlertView* noBGAlert = [[[UIAlertView alloc] initWithTitle:@"No Background?"
-															 message:@"We're missing a background for the selected language. Please restart the application. If the problem persists, please uninstall and re-install."
+		UIAlertView* noBGAlert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbi™ Translate", nil)
+															 message:NSLocalizedString(@"We're missing a background for the selected language. Please restart the application. If the problem persists, please uninstall and re-install.", nil)
 															delegate:self
-												   cancelButtonTitle:@"OK"
+												   cancelButtonTitle:NSLocalizedString(@"OK", nil)
 												   otherButtonTitles:nil] autorelease];
 		[noBGAlert show];
 		return;
@@ -263,9 +263,9 @@
 
 - (IBAction)showInfo:(id)sender {
 	InfoViewController * infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
-	infoController.title = NSLocalizedString(@"Verbatim Translate", nil);	// TODO - do in IB
+	infoController.title = NSLocalizedString(@"Verbatim Translate", nil);
 	
-	// TODO - do in IB
+	// insert navigation controller
 	UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:infoController];
     navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 	navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
