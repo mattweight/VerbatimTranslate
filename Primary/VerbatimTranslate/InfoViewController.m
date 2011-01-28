@@ -10,11 +10,14 @@
 #import "QuoteViewController.h"
 #import "AutoSuggestManager.h"
 #import "VerbatimTranslateAppDelegate.h"
+#import "VerbatimConstants.h"
+#import "l10n.h"
 
-#define kSettingsRequestQuote			0
-#define kSettingsClearHistory			1
-#define kAlertViewTagClearHistory		1
-#define kAlertViewButtonClearHistoryOK	1
+#define kSettingsRequestQuote				0
+#define kSettingsClearHistory				1
+#define kAlertViewTagClearHistory			1
+#define kAlertViewButtonClearHistoryOK		1
+#define kSourceLanguageActivityViewDuration	1
 
 @implementation InfoViewController
 
@@ -56,7 +59,7 @@
 		[aboutView setFont:[UIFont systemFontOfSize:13.0]];
 		[aboutView setEditable:NO];
 		[aboutView setCenter:cell.center];
-		aboutView.text = NSLocalizedString(@"About Verbatim Digital\n\nThis is where you put all your info about the company and whatever else you want to put here in the about section.  Go ahead and give us the text and we'll put it in there.  I need something else to say so that it can fill up the space.  This app is going to be great.  This text will all be localized to the language of choice when selected above.", nil);
+		aboutView.text = _(@"About Verbatim Digital\n\nThis is where you put all your info about the company and whatever else you want to put here in the about section.  Go ahead and give us the text and we'll put it in there.  I need something else to say so that it can fill up the space.  This app is going to be great.  This text will all be localized to the language of choice when selected above.");
 		[cell addSubview:aboutView];
 		[aboutView release];
 		aboutView = nil;
@@ -92,9 +95,9 @@
 - (void)showQuoteView {
 	// setup view controller
 	QuoteViewController * quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:[NSBundle mainBundle]];
-	quoteViewController.title = NSLocalizedString(@"Professional Quote", nil);
+	quoteViewController.title = _(@"Professional Quote");
 	UIBarButtonItem * backButton = [[UIBarButtonItem alloc]
-									 initWithTitle:NSLocalizedString(@"Back", nil)
+									 initWithTitle:_(@"Back")
 									 style:UIBarButtonItemStyleBordered
 									 target:nil
 									 action:nil];
@@ -108,8 +111,8 @@
 
 - (void)showHistoryWarning {
 	// show warning
-	NSString * message = NSLocalizedString(@"Are you sure you want to clear all translation history?  Your previous translations will not show up as suggestions anymore.", nil);
-	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbatim Translate", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
+	NSString * message = _(@"Are you sure you want to clear all translation history?  Your previous translations will not show up as suggestions anymore.");
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:_(@"Verbatim Translate") message:message delegate:self cancelButtonTitle:_(@"Cancel") otherButtonTitles:_(@"OK"), nil];
 	alert.tag = kAlertViewTagClearHistory;
 	[alert show];
 	[alert release];
@@ -131,8 +134,8 @@
 		}
 		
 		// show confirmation message
-		NSString * message = NSLocalizedString(@"All translation history has been cleared.", nil);
-		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbatim Translate", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+		NSString * message = _(@"All translation history has been cleared.");
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:_(@"Verbatim Translate") message:message delegate:self cancelButtonTitle:_(@"OK") otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 		return;
@@ -146,7 +149,7 @@
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-		_settings = [[NSArray arrayWithObjects:NSLocalizedString(@"Request Professional Quote", nil), NSLocalizedString(@"Clear Translation History", nil), nil] retain];
+		_settings = [[NSArray arrayWithObjects:_(@"Request Professional Quote"), _(@"Clear Translation History"), nil] retain];
 		[borderTableView setRowHeight:182.0];
 		if (sourceFlagController == nil) {
 			FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -162,12 +165,11 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	_aboutLabel.text = NSLocalizedString(@"About Verbatim Digital™", nil);
-	_aboutText.text = NSLocalizedString(@"This is where you put all your info about the company and whatever else you want to put here in the about section.  Go ahead and give us the text and we'll put it in there.  I need something else to say so that it can fill up the space.  This app is going to be great.  This text will all be localized to the language of choice when selected above.", nil);
+	_aboutLabel.text = _(@"About Verbatim Digital™");
+	_aboutText.text = _(@"This is where you put all your info about the company and whatever else you want to put here in the about section.  Go ahead and give us the text and we'll put it in there.  I need something else to say so that it can fill up the space.  This app is going to be great.  This text will all be localized to the language of choice when selected above.");
     
-	// TODO - do in IB
 	UIBarButtonItem * doneButton = [[UIBarButtonItem alloc]
-									initWithTitle:NSLocalizedString(@"Done", nil)
+									initWithTitle:_(@"Done")
 									style:UIBarButtonItemStyleBordered
 									target:self
 									action:@selector(showMainView:)];
@@ -183,6 +185,28 @@
 	[self.tableView deselectRowAtIndexPath:table_selection animated:NO];
 
 	[super viewWillAppear:animated];
+}
+
+- (void)_changeSourceLanguage:(NSString *)language {
+	// set autoSuggest source language (switch suggestion tables)
+	@try {
+		[AutoSuggestManager sharedInstance].sourceLanguage = language;
+	} @catch (NSException* e) {}
+	
+	// set l10n source language (static text language)
+	[l10n setLanguage:language];
+	
+	// reload view for static text to update to new language (activity view)
+	NSNotification* notify = [NSNotification notificationWithName:DISPLAY_ACTIVITY_VIEW
+														   object:nil
+														 userInfo:[NSDictionary dictionaryWithObject:_(@"Changing Language..") forKey:@"load-text"]];
+	[[NSNotificationCenter defaultCenter] postNotification:notify];
+	[NSTimer scheduledTimerWithTimeInterval:kSourceLanguageActivityViewDuration target:self selector:@selector(_removeActivityView:) userInfo:nil repeats:NO];
+}
+
+- (void)_removeActivityView:(NSTimer *)timer {
+	[[NSNotificationCenter defaultCenter] postNotificationName:REMOVE_ACTIVITY_VIEW
+														object:nil];
 }
 
 /*

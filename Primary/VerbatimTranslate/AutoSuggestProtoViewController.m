@@ -13,6 +13,7 @@
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
 #import "VerbatimTranslateAppDelegate.h"
+#import "l10n.h"
 
 @interface AutoSuggestProtoViewController (private)
 
@@ -109,7 +110,7 @@
 - (void)_translateAndCommitText:(NSString *)text {
 	NSNotification* notify = [NSNotification notificationWithName:DISPLAY_ACTIVITY_VIEW
 														   object:nil
-														 userInfo:[NSDictionary dictionaryWithObject:@"Translating.." forKey:@"load-text"]];
+														 userInfo:[NSDictionary dictionaryWithObject:_(@"Translating..") forKey:@"load-text"]];
 	[[NSNotificationCenter defaultCenter] postNotification:notify];
 	[self _getTranslation:text];
 	//[self performSelectorInBackground:@selector(_getTranslation:) withObject:text];
@@ -121,7 +122,7 @@
 	NSString * outputKeyword = [manager.currentTheme.services objectForKey:@"google-translate"];
 	NSLog(@"Output keyword is: %@", outputKeyword);
 	NSMutableString* translateURLString = [NSMutableString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&langpair="];
-	[translateURLString appendString:@"en"];
+	[translateURLString appendString:[l10n getLanguage]];
 	[translateURLString appendString:@"%7C"];
 	[translateURLString appendString:outputKeyword];
 	[translateURLString appendString:@"&q="];
@@ -143,10 +144,10 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
 	[connection cancel];
-	UIAlertView* failedAlert = [[[UIAlertView alloc] initWithTitle:@"Translation Failure"
-														   message:[NSString stringWithFormat:@"Error: %@", [error description]]
+	UIAlertView* failedAlert = [[[UIAlertView alloc] initWithTitle:_(@"Translation Failure")
+														   message:[NSString stringWithFormat:_(@"Error: %@"), [error description]]
 														  delegate:self
-												 cancelButtonTitle:@"OK"
+												 cancelButtonTitle:_(@"OK")
 												 otherButtonTitles:nil] autorelease];
 	[failedAlert show];
 }
@@ -236,8 +237,8 @@
 	// add accessory toolbar to keyboard (cancel/clear)
 	UIToolbar * toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
 	toolbar.barStyle = UIBarStyleBlackOpaque;
-	UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(_onCancelButton:)];
-	UIBarButtonItem * clearButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Clear", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(_onClearButton:)];
+	UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithTitle:_(@"Cancel") style:UIBarButtonItemStyleBordered target:self action:@selector(_onCancelButton:)];
+	UIBarButtonItem * clearButton = [[UIBarButtonItem alloc] initWithTitle:_(@"Clear") style:UIBarButtonItemStyleBordered target:self action:@selector(_onClearButton:)];
 	NSArray * items = [NSArray arrayWithObjects:cancelButton, clearButton, nil];
 	[cancelButton release];
 	[clearButton release];

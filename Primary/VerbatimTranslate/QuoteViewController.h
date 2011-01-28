@@ -25,6 +25,5 @@
 - (void)_clearSpinner;
 - (void)_submissionTimeout:(NSTimer *)timer;
 - (void)_clearTimer;
-- (NSString *)_getSystemLanguage;	// TODO - move to centralized object
 
 @end

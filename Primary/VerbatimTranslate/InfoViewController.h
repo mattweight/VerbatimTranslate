@@ -27,4 +27,7 @@
 - (IBAction)showMainView:(id)sender;
 - (void)showQuoteView;
 - (void)showHistoryWarning;
+- (void)_changeSourceLanguage:(NSString *)language;
+- (void)_removeActivityView:(NSTimer *)timer;
+
 @end

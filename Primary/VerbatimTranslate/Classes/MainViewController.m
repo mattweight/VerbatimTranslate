@@ -12,6 +12,7 @@
 #import "ThemeManager.h"
 #import "VerbatimConstants.h"
 #import "AutoSuggestManager.h"
+#import "l10n.h"
 
 @interface MainViewController()
 
@@ -111,10 +112,10 @@
 	NSString* fullBGImagePath = [manager.basePath stringByAppendingFormat:@"/%@/%@", languageName, newTheme.imageFilename];
 	BOOL isDir;
 	if (![[NSFileManager defaultManager] fileExistsAtPath:fullBGImagePath isDirectory:&isDir]) {
-		UIAlertView* noBGAlert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbi™ Translate", nil)
-															 message:NSLocalizedString(@"We're missing a background for the selected language. Please restart the application. If the problem persists, please uninstall and re-install.", nil)
+		UIAlertView* noBGAlert = [[[UIAlertView alloc] initWithTitle:_(@"Verbi™ Translate")
+															 message:_(@"We're missing a background for the selected language. Please restart the application. If the problem persists, please uninstall and re-install.")
 															delegate:self
-												   cancelButtonTitle:NSLocalizedString(@"OK", nil)
+												   cancelButtonTitle:_(@"OK")
 												   otherButtonTitles:nil] autorelease];
 		[noBGAlert show];
 		return;
@@ -187,7 +188,7 @@
 		[outController.bottomArrowImageView setHidden:NO];
 	}
 
-	[inController.bubbleTextView setText:NSLocalizedString(@"Tap here to begin typing..", nil)];
+	[inController.bubbleTextView setText:_(@"Tap here to begin typing..")];
 	[inController animate];
 	
 	// Update the flag controller position
@@ -263,7 +264,7 @@
 
 - (IBAction)showInfo:(id)sender {
 	InfoViewController * infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
-	infoController.title = NSLocalizedString(@"Verbatim Translate", nil);
+	infoController.title = _(@"Verbatim Translate");
 	
 	// insert navigation controller
 	UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:infoController];

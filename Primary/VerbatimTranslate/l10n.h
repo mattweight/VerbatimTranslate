@@ -11,7 +11,7 @@
 
 @interface l10n : NSObject {}
 
-+ (void)initialize;
++ (void)initLanguage;
 + (void)setLanguage:(NSString *)language;
 + (NSString *)getLanguage;
 + (NSString *)getString:(NSString *)key;

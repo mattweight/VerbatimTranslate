@@ -7,7 +7,7 @@
 //
 
 #import "SpinnerView.h"
-
+#import "l10n.h"
 
 @implementation SpinnerView
 
@@ -19,7 +19,7 @@
 		
 		// text
 		UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(8, 8, 84, 20)];
-		label.text = NSLocalizedString(@"Submitting...", nil);
+		label.text = _(@"Submitting..");
 		label.font = [UIFont systemFontOfSize:15];
 		label.textColor = [UIColor whiteColor];
 		label.backgroundColor = self.backgroundColor;

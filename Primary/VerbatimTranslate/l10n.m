@@ -18,8 +18,7 @@
 
 static NSBundle* _bundle = nil;
 
-+ (void)initialize {
-	NSLog(@"Language on startup: %@", [self getLanguage]);
++ (void)initLanguage {
 	[self _setBundle:[self getLanguage]];
 }
 

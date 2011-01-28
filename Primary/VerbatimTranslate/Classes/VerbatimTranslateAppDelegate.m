@@ -41,10 +41,6 @@
 												 name:REMOVE_ACTIVITY_VIEW
 											   object:nil];
 
-	// setup language, string tables, etc
-	[l10n initialize];
-	[AutoSuggestManager sharedInstance].sourceLanguage = [l10n getLanguage];
-	
 	[window addSubview:loadingView];
     [window makeKeyAndVisible];
 	
@@ -69,14 +65,21 @@
 }
 
 - (void)displayGenericError {
-	NSString * message = NSLocalizedString(@"We're sorry, an error has occurred.  Please try again.", nil);
-	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbatim Translate", nil) message:message delegate:self cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+	NSString * message = _(@"We're sorry, an error has occurred.  Please try again.");
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:_(@"Verbatim Translate") message:message delegate:self cancelButtonTitle:_(@"OK") otherButtonTitles:nil];
 	[alert show];
 	[alert release];
 }
 
 - (void)doPreLoad:(id)sender {
 	NSAutoreleasePool* arPool = [[NSAutoreleasePool alloc] init];
+	
+	// setup language, string tables, etc
+	[l10n initLanguage];
+	@try {
+		[AutoSuggestManager sharedInstance].sourceLanguage = [l10n getLanguage];
+	} @catch (NSException* e) {}
+	
 	[ThemeManager sharedThemeManager];
 	//	NSError* preloadError = nil;
 	//	[manager nextThemeUsingName:@"French EU" error:&preloadError];
@@ -103,10 +106,10 @@
             if (networkAlert != nil) {
                 [networkAlert release];
             }
-            networkAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Verbi™ Translate", nil)
-                                                      message:NSLocalizedString(@"An internet connection is required to continue.", nil)
+            networkAlert = [[UIAlertView alloc] initWithTitle:_(@"Verbi™ Translate")
+                                                      message:_(@"An internet connection is required to continue.")
                                                      delegate:self
-                                            cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                            cancelButtonTitle:_(@"OK")
                                             otherButtonTitles:nil];
             [networkAlert show];
         }
