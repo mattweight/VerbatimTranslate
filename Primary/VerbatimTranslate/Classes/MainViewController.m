@@ -112,7 +112,7 @@
 	NSString* fullBGImagePath = [manager.basePath stringByAppendingFormat:@"/%@/%@", languageName, newTheme.imageFilename];
 	BOOL isDir;
 	if (![[NSFileManager defaultManager] fileExistsAtPath:fullBGImagePath isDirectory:&isDir]) {
-		UIAlertView* noBGAlert = [[[UIAlertView alloc] initWithTitle:_(@"Verbi™ Translate")
+		UIAlertView* noBGAlert = [[[UIAlertView alloc] initWithTitle:ALERT_TITLE
 															 message:_(@"We're missing a background for the selected language. Please restart the application. If the problem persists, please uninstall and re-install.")
 															delegate:self
 												   cancelButtonTitle:_(@"OK")
@@ -264,7 +264,7 @@
 
 - (IBAction)showInfo:(id)sender {
 	InfoViewController * infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
-	infoController.title = _(@"Verbatim Translate");
+	infoController.title = _(@"Verbi™ Translate");
 	
 	// insert navigation controller
 	UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:infoController];

@@ -20,6 +20,9 @@ typedef unsigned short ANIMATION_STEP;
 // This is the maximum number of bounces allowed
 #define MAX_BUBBLE_BOUNCE 1.4
 
+// alert title
+#define ALERT_TITLE _(@"Verbi™ Translate")
+
 // Key NAMES
 #define DEFAULT_KEY_PREFIX @"VERBATIM_TRANSLATE"
 #define KEY_NAME(x) [NSString stringWithFormat:@"%@_%@", DEFAULT_KEY_PREFIX, x]

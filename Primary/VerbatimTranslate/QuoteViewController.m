@@ -8,6 +8,7 @@
 
 #import "QuoteViewController.h"
 #import "l10n.h"
+#import "VerbatimConstants.h"
 
 #define kSubmissionTimeoutSeconds	30
 #define kSpinnerSize				100
@@ -66,7 +67,7 @@
 }
 
 - (void)_displayErrorMessage:(NSString *)message {
-	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:_(@"Verbatim Translate") message:message delegate:self cancelButtonTitle:nil otherButtonTitles:_(@"OK"), nil];
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:ALERT_TITLE message:message delegate:self cancelButtonTitle:nil otherButtonTitles:_(@"OK"), nil];
 	[alert show];
 	[alert release];	
 }

@@ -22,8 +22,6 @@
 @implementation InfoViewController
 
 @synthesize tableView = _tableView;
-@synthesize aboutLabel = _aboutLabel;
-@synthesize aboutText = _aboutText;
 @synthesize borderTableView;
 @synthesize sourceFlagController;
 
@@ -59,7 +57,7 @@
 		[aboutView setFont:[UIFont systemFontOfSize:13.0]];
 		[aboutView setEditable:NO];
 		[aboutView setCenter:cell.center];
-		aboutView.text = _(@"About Verbatim Digital\n\nThis is where you put all your info about the company and whatever else you want to put here in the about section.  Go ahead and give us the text and we'll put it in there.  I need something else to say so that it can fill up the space.  This app is going to be great.  This text will all be localized to the language of choice when selected above.");
+		aboutView.text = [NSString stringWithFormat:@"%@\n\n%@", _(@"About Verbatim Solutions"), _(@"Verbi™ is powered by Verbatim Solutions, a leading professional translation services provider.  Verbi™ provides you quick machine translations and is not a substitute for certified, professional translation services.  For a professional translation provided by one of our certified translators please contact us at")];
 		[cell addSubview:aboutView];
 		[aboutView release];
 		aboutView = nil;
@@ -97,7 +95,7 @@
 	QuoteViewController * quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:[NSBundle mainBundle]];
 	quoteViewController.title = _(@"Professional Quote");
 	UIBarButtonItem * backButton = [[UIBarButtonItem alloc]
-									 initWithTitle:_(@"Back")
+									 initWithTitle:_(@"Verbi")
 									 style:UIBarButtonItemStyleBordered
 									 target:nil
 									 action:nil];
@@ -112,7 +110,7 @@
 - (void)showHistoryWarning {
 	// show warning
 	NSString * message = _(@"Are you sure you want to clear all translation history?  Your previous translations will not show up as suggestions anymore.");
-	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:_(@"Verbatim Translate") message:message delegate:self cancelButtonTitle:_(@"Cancel") otherButtonTitles:_(@"OK"), nil];
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:ALERT_TITLE message:message delegate:self cancelButtonTitle:_(@"Cancel") otherButtonTitles:_(@"OK"), nil];
 	alert.tag = kAlertViewTagClearHistory;
 	[alert show];
 	[alert release];
@@ -135,7 +133,7 @@
 		
 		// show confirmation message
 		NSString * message = _(@"All translation history has been cleared.");
-		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:_(@"Verbatim Translate") message:message delegate:self cancelButtonTitle:_(@"OK") otherButtonTitles:nil];
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:ALERT_TITLE message:message delegate:self cancelButtonTitle:_(@"OK") otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 		return;
@@ -165,9 +163,6 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	_aboutLabel.text = _(@"About Verbatim Digital™");
-	_aboutText.text = _(@"This is where you put all your info about the company and whatever else you want to put here in the about section.  Go ahead and give us the text and we'll put it in there.  I need something else to say so that it can fill up the space.  This app is going to be great.  This text will all be localized to the language of choice when selected above.");
-    
 	UIBarButtonItem * doneButton = [[UIBarButtonItem alloc]
 									initWithTitle:_(@"Done")
 									style:UIBarButtonItemStyleBordered
@@ -199,7 +194,7 @@
 	// reload view for static text to update to new language (activity view)
 	NSNotification* notify = [NSNotification notificationWithName:DISPLAY_ACTIVITY_VIEW
 														   object:nil
-														 userInfo:[NSDictionary dictionaryWithObject:_(@"Changing Language..") forKey:@"load-text"]];
+														 userInfo:nil];
 	[[NSNotificationCenter defaultCenter] postNotification:notify];
 	[NSTimer scheduledTimerWithTimeInterval:kSourceLanguageActivityViewDuration target:self selector:@selector(_removeActivityView:) userInfo:nil repeats:NO];
 }
@@ -233,8 +228,6 @@
 
 - (void)dealloc {
 	[_tableView release];
-	[_aboutLabel release];
-	[_aboutText release];
 	[_settings release];
 	[super dealloc];
 }

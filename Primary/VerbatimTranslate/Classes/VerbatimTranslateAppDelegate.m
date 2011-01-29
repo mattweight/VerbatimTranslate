@@ -66,7 +66,7 @@
 
 - (void)displayGenericError {
 	NSString * message = _(@"We're sorry, an error has occurred.  Please try again.");
-	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:_(@"Verbatim Translate") message:message delegate:self cancelButtonTitle:_(@"OK") otherButtonTitles:nil];
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:ALERT_TITLE message:message delegate:self cancelButtonTitle:_(@"OK") otherButtonTitles:nil];
 	[alert show];
 	[alert release];
 }
@@ -106,7 +106,7 @@
             if (networkAlert != nil) {
                 [networkAlert release];
             }
-            networkAlert = [[UIAlertView alloc] initWithTitle:_(@"Verbi™ Translate")
+            networkAlert = [[UIAlertView alloc] initWithTitle:ALERT_TITLE
                                                       message:_(@"An internet connection is required to continue.")
                                                      delegate:self
                                             cancelButtonTitle:_(@"OK")

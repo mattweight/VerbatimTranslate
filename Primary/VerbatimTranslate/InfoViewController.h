@@ -12,15 +12,11 @@
 @interface InfoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate> {
 	UITableView * _tableView;
 	UITableView* borderTableView;
-	UILabel * _aboutLabel;
-	UITextView * _aboutText;
 	NSArray * _settings;
 	FlagsTableViewController* sourceFlagController;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
-@property (nonatomic, retain) IBOutlet UILabel * aboutLabel;
-@property (nonatomic, retain) IBOutlet UITextView * aboutText;
 @property (nonatomic, retain) IBOutlet UITableView* borderTableView;
 @property (nonatomic, retain) IBOutlet FlagsTableViewController* sourceFlagController;
 

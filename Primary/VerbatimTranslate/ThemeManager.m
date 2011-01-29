@@ -127,7 +127,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 	NSString* selectLanguage = [languageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSArray* themes = (NSArray*)[languageInfo objectForKey:selectLanguage];
 	if (themes == nil) {
-		UIAlertView* missingAlert = [[[UIAlertView alloc] initWithTitle:_(@"Verbi™ Translate")
+		UIAlertView* missingAlert = [[[UIAlertView alloc] initWithTitle:ALERT_TITLE
 																message:[NSString stringWithFormat:_(@"Missing theme information for '%@'. Please close and restart. If this problem continues, please uninstall and re-install."), languageName]
 															   delegate:self
 													  cancelButtonTitle:_(@"OK")

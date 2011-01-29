@@ -144,8 +144,8 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
 	[connection cancel];
-	UIAlertView* failedAlert = [[[UIAlertView alloc] initWithTitle:_(@"Translation Failure")
-														   message:[NSString stringWithFormat:_(@"Error: %@"), [error description]]
+	UIAlertView* failedAlert = [[[UIAlertView alloc] initWithTitle:ALERT_TITLE
+														   message:[NSString stringWithFormat:@"%@  (%@)", _(@"We're sorry, an error has occurred.  Please try again."), [error description]]
 														  delegate:self
 												 cancelButtonTitle:_(@"OK")
 												 otherButtonTitles:nil] autorelease];
