@@ -10,6 +10,7 @@
 #import "QuoteViewController.h"
 #import "AutoSuggestManager.h"
 #import "VerbatimTranslateAppDelegate.h"
+#import "MainViewController.h"
 #import "VerbatimConstants.h"
 #import "l10n.h"
 
@@ -18,6 +19,7 @@
 #define kAlertViewTagClearHistory			1
 #define kAlertViewButtonClearHistoryOK		1
 #define kSourceLanguageActivityViewDuration	1
+#define kAboutViewTag						1
 
 @implementation InfoViewController
 
@@ -48,16 +50,24 @@
 	}
 	
 	if ([tableView isEqual:borderTableView]) {
+		// remove the previous about subview first (for when the source language is changed on the fly, and the text needs to be re-inserted)
+		for (UIView* subview in cell.subviews) {
+			if (subview.tag == kAboutViewTag) {
+				[subview removeFromSuperview];
+			}
+		}		
+		
 		[cell setFrame:CGRectMake(0.0, 0.0, 300, 210.0)];
 		NSLog(@"content view: %02f X %02f", cell.frame.size.width, cell.frame.size.height);
-		UITextView* aboutView = [[UITextView alloc] initWithFrame:CGRectMake(0.0, 0.0, (cell.frame.size.width - 20.0), (cell.frame.size.height - 10.0))];
-		[aboutView setScrollEnabled:NO];
+		UITextView* aboutView = [[UITextView alloc] initWithFrame:CGRectMake(0.0, 0.0, (cell.frame.size.width - 20.0), (cell.frame.size.height - 30.0))];
+		[aboutView setScrollEnabled:YES];
 		[aboutView setTextAlignment:UITextAlignmentCenter];
 		[aboutView setBackgroundColor:[UIColor clearColor]];
 		[aboutView setFont:[UIFont systemFontOfSize:13.0]];
 		[aboutView setEditable:NO];
-		[aboutView setCenter:cell.center];
-		aboutView.text = [NSString stringWithFormat:@"%@\n\n%@", _(@"About Verbatim Solutions"), _(@"Verbi™ is powered by Verbatim Solutions, a leading professional translation services provider.  Verbi™ provides you quick machine translations and is not a substitute for certified, professional translation services.  For a professional translation provided by one of our certified translators please contact us at")];
+		[aboutView setCenter:CGPointMake(cell.center.x, cell.center.y - 13)];
+		aboutView.text = [self _getAboutViewText];
+		aboutView.tag = kAboutViewTag;	// for removing the subview later (see above)
 		[cell addSubview:aboutView];
 		[aboutView release];
 		aboutView = nil;
@@ -147,7 +157,7 @@
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-		_settings = [[NSArray arrayWithObjects:_(@"Request Professional Quote"), _(@"Clear Translation History"), nil] retain];
+		_settings = [[self _getSettingsArray] retain];
 		[borderTableView setRowHeight:182.0];
 		if (sourceFlagController == nil) {
 			FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -191,17 +201,39 @@
 	// set l10n source language (static text language)
 	[l10n setLanguage:language];
 	
-	// reload view for static text to update to new language (activity view)
-	NSNotification* notify = [NSNotification notificationWithName:DISPLAY_ACTIVITY_VIEW
-														   object:nil
-														 userInfo:nil];
-	[[NSNotificationCenter defaultCenter] postNotification:notify];
-	[NSTimer scheduledTimerWithTimeInterval:kSourceLanguageActivityViewDuration target:self selector:@selector(_removeActivityView:) userInfo:nil repeats:NO];
+	// update all visible static text to new language
+	[self _updateVisibleText];
 }
 
-- (void)_removeActivityView:(NSTimer *)timer {
-	[[NSNotificationCenter defaultCenter] postNotificationName:REMOVE_ACTIVITY_VIEW
+- (void)_updateVisibleText {
+	// nav bar
+	self.navigationItem.leftBarButtonItem.title = _(@"Done");
+	self.title = _(@"Verbi™ Translate");
+	
+	// top settings table
+	[_settings release];
+	_settings = [[self _getSettingsArray] retain];
+	[_tableView reloadData];
+	
+	// about view
+	[borderTableView reloadData];
+	
+	// top bubble view (main view)
+	[[NSNotificationCenter defaultCenter] postNotificationName:THEME_UPDATE_NOTIFICATION
 														object:nil];
+}
+
+- (NSArray *)_getSettingsArray {
+	return [NSArray arrayWithObjects:_(@"Request Professional Quote"), _(@"Clear Translation History"), nil];
+}
+
+- (NSString *)_getAboutViewText {
+	return [NSString stringWithFormat:@"%@\n\n%@\n\n%@info@verbatimsolutions.com\n%@800.573.5702\n%@verbatimsolutions.com",
+									_(@"About Verbatim Solutions"),
+									_(@"Verbi™ is powered by Verbatim Solutions, a leading professional translation services provider.  Verbi™ provides you quick machine translations and is not a substitute for certified, professional translation services.  For a professional translation provided by one of our certified translators please contact us at"),
+									_(@"Mail: "),
+									_(@"Call: "),
+									_(@"Online: ")];
 }
 
 /*

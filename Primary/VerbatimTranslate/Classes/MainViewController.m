@@ -96,10 +96,11 @@
 
 	NSLog(@"currentLanguage: %@", currentLanguage);
 	
-	if ([currentLanguage isEqualToString:languageName]) {
+	// removing so that cancel / change source language will refresh the view
+	/*if ([currentLanguage isEqualToString:languageName]) {
 		NSLog(@"selected language is the same as current lanugage. Skipping..");
 		return;
-	}
+	}*/
 	
 	[currentLanguage setString:languageName];
 	
