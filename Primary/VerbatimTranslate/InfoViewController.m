@@ -228,12 +228,12 @@
 }
 
 - (NSString *)_getAboutViewText {
-	return [NSString stringWithFormat:@"%@\n\n%@\n\n%@info@verbatimsolutions.com\n%@800.573.5702\n%@verbatimsolutions.com",
+	return [NSString stringWithFormat:@"%@\n\n%@\n\n%@ info@verbatimsolutions.com\n%@ 800.573.5702\n%@ verbatimsolutions.com",
 									_(@"About Verbatim Solutions"),
 									_(@"Verbi™ is powered by Verbatim Solutions, a leading professional translation services provider.  Verbi™ provides you quick machine translations and is not a substitute for certified, professional translation services.  For a professional translation provided by one of our certified translators please contact us at"),
-									_(@"Mail: "),
-									_(@"Call: "),
-									_(@"Online: ")];
+									_(@"Mail:"),
+									_(@"Call:"),
+									_(@"Online:")];
 }
 
 /*
