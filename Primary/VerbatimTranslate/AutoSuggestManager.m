@@ -72,7 +72,7 @@
 	
 	// compile statement if necessary
     if (_getAllPhrasesStatement == nil) {
-		NSString * sql = [NSString stringWithFormat:@"SELECT rowid, phrase, type FROM original_phrases_%@ WHERE phrase LIKE ? ORDER BY type ASC, time DESC LIMIT %d", _sourceLanguage, kPhraseLimit];
+		NSString * sql = [NSString stringWithFormat:@"SELECT rowid, phrase, type FROM [original_phrases_%@] WHERE phrase LIKE ? ORDER BY type ASC, time DESC LIMIT %d", _sourceLanguage, kPhraseLimit];
         if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_getAllPhrasesStatement, NULL) != SQLITE_OK) {
 			[self _raiseDBException];
         }
@@ -106,7 +106,7 @@
 
 	// compile statement if necessary
     if (_checkPhraseStatement == nil) {
-		NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM original_phrases_%@ WHERE lower(phrase) = ?", _sourceLanguage];
+		NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM [original_phrases_%@] WHERE lower(phrase) = ?", _sourceLanguage];
         if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_checkPhraseStatement, NULL) != SQLITE_OK) {
 			[self _raiseDBException];
         }
@@ -120,7 +120,7 @@
 		
 		// compile statement if necessary
 		if (_updateToHistoryStatement == nil) {
-			NSString * sql = [NSString stringWithFormat:@"UPDATE original_phrases_%@ SET type = %d, time = strftime('%%s','now') WHERE rowid = ?", _sourceLanguage, kPhraseTypeHistory];
+			NSString * sql = [NSString stringWithFormat:@"UPDATE [original_phrases_%@] SET type = %d, time = strftime('%%s','now') WHERE rowid = ?", _sourceLanguage, kPhraseTypeHistory];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_updateToHistoryStatement, NULL) != SQLITE_OK) {
 				[self _raiseDBException];
 			}
@@ -132,7 +132,7 @@
 	} else {
 		// compile statement if necessary
 		if (_addHistoryStatement == nil) {
-			NSString * sql = [NSString stringWithFormat:@"INSERT INTO original_phrases_%@ VALUES (?, %d, strftime('%%s','now'))", _sourceLanguage, kPhraseTypeHistory];
+			NSString * sql = [NSString stringWithFormat:@"INSERT INTO [original_phrases_%@] VALUES (?, %d, strftime('%%s','now'))", _sourceLanguage, kPhraseTypeHistory];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_addHistoryStatement, NULL) != SQLITE_OK) {
 				[self _raiseDBException];
 			}
@@ -152,7 +152,7 @@
 		
 		// compile statement if necessary
 		if (_checkTranslatedHistoryStatement == nil) {
-			NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM translated_phrases_%@_%@ WHERE originalPhraseId = ?", _sourceLanguage, _destLanguage];
+			NSString * sql = [NSString stringWithFormat:@"SELECT rowid FROM [translated_phrases_%@_%@] WHERE originalPhraseId = ?", _sourceLanguage, _destLanguage];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_checkTranslatedHistoryStatement, NULL) != SQLITE_OK) {
 				[self _raiseDBException];
 			}
@@ -170,7 +170,7 @@
 		
 		// compile statement if necessary
 		if (_addTranslatedHistoryStatement == nil) {
-			NSString * sql = [NSString stringWithFormat:@"INSERT INTO translated_phrases_%@_%@ VALUES (?, ?)", _sourceLanguage, _destLanguage];
+			NSString * sql = [NSString stringWithFormat:@"INSERT INTO [translated_phrases_%@_%@] VALUES (?, ?)", _sourceLanguage, _destLanguage];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_addTranslatedHistoryStatement, NULL) != SQLITE_OK) {
 				[self _raiseDBException];
 			}
@@ -188,7 +188,7 @@
 	
 	// compile statement if necessary
 	if (_getTranslatedHistoryStatement == nil) {
-		NSString * sql = [NSString stringWithFormat:@"SELECT translation FROM translated_phrases_%@_%@ WHERE originalPhraseId = ?", _sourceLanguage, _destLanguage];
+		NSString * sql = [NSString stringWithFormat:@"SELECT translation FROM [translated_phrases_%@_%@] WHERE originalPhraseId = ?", _sourceLanguage, _destLanguage];
 		if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &_getTranslatedHistoryStatement, NULL) != SQLITE_OK) {
 			[self _raiseDBException];
 		}
@@ -229,7 +229,7 @@
 		if (originalPhrasesRange.location != NSNotFound || [tableName isEqualToString:currentTranslationHistoryTableName]) {
 			// do not drop the current translation history table because we will still need it when the user returns to the main view (translation history tables are only created on dest language switch)
 			sqlite3_stmt* deleteTableStatement = nil;
-			NSString * sql = [NSString stringWithFormat:@"DELETE FROM %@", tableName];
+			NSString * sql = [NSString stringWithFormat:@"DELETE FROM [%@]", tableName];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &deleteTableStatement, NULL) != SQLITE_OK) {
 				[self _raiseDBException];
 			}
@@ -238,7 +238,7 @@
 			sqlite3_finalize(deleteTableStatement);
 		} else if (translatedPhrasesRange.location != NSNotFound) {
 			sqlite3_stmt* dropTableStatement = nil;
-			NSString * sql = [NSString stringWithFormat:@"DROP TABLE %@", tableName];
+			NSString * sql = [NSString stringWithFormat:@"DROP TABLE [%@]", tableName];
 			if (sqlite3_prepare_v2(_db, [sql UTF8String], -1, &dropTableStatement, NULL) != SQLITE_OK) {
 				[self _raiseDBException];
 			}
@@ -276,13 +276,13 @@
 - (void)_createTables {
 	// phrase table
 	if (_sourceLanguage) {
-		NSString * phraseTableSql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS original_phrases_%@ (phrase varchar(500), type tinyint, time int)", _sourceLanguage];
+		NSString * phraseTableSql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS [original_phrases_%@] (phrase varchar(500), type tinyint, time int)", _sourceLanguage];
 		sqlite3_exec(_db, [phraseTableSql UTF8String], NULL, NULL, NULL);
 	}
 	
 	// history table
 	if (_sourceLanguage && _destLanguage) {
-		NSString * historyTableSql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS translated_phrases_%@_%@ (originalPhraseId int64, translation varchar(1000))", _sourceLanguage, _destLanguage];
+		NSString * historyTableSql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS [translated_phrases_%@_%@] (originalPhraseId int64, translation varchar(1000))", _sourceLanguage, _destLanguage];
 		sqlite3_exec(_db, [historyTableSql UTF8String], NULL, NULL, NULL);
 	}
 }

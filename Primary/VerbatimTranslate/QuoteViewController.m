@@ -17,8 +17,6 @@
 
 @synthesize webView = _webView;
 
-// TODO - handle no internet case (error message if it can't connect...)
-
 /*
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -63,7 +61,7 @@
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-	// TODO - add error handling here just in case something doesn't load correctly?  If something is added here, whenever the request is stopped (thankyou.php, timeout) an error is displayed...
+	// do not do anything here because any return 'NO' above calls this method, and we want to let it go through.
 }
 
 - (void)_displayErrorMessage:(NSString *)message {
@@ -73,7 +71,6 @@
 }
 
 - (void)_displayDefaultErrorMessage {
-	// TODO - use app delegate version of this method
 	[self _displayErrorMessage:_(@"We're sorry, an error has occurred.  Please try again.")];
 }
 

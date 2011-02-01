@@ -1,0 +1,376 @@
+<html>
+<body>
+<style>
+body {
+	background-color: #e1e1e1;
+	font-size: 11px;
+	font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+	color:#666;
+	padding:0px;
+	margin:0px;
+}
+.label {
+	margin-top: 7px;
+	display: block;
+	padding: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.inputField, #textareaField, #inputButton {
+	color:#666;
+	font-size:14px;
+	font-weight:bold;
+}
+.inputField {
+	width:100%;
+	height:25px;
+}
+</style>
+<script type="text/javascript">
+function checkForm(form) {
+	var errorCode = '';
+	if (!isNameValid(form.name.value)) errorCode += '1';
+	if (!isEmailValid(form.email.value)) errorCode += '2';
+	if (!isPhoneValid(form.phone.value)) errorCode += '3';
+	if (errorCode) {
+		var message;
+		switch (parseInt(errorCode)) {
+			case 1:
+				message = "%1%";
+				break;
+			
+			case 12:
+				message = "%2%";
+				break;
+			
+			case 13:
+				message = "%3%";
+				break;
+			
+			case 123:
+				message = "%4%";
+				break;
+			
+			case 2:
+				message = "%5%";
+				break;
+		
+			case 23:
+				message = "%6%";
+				break;
+			
+			case 3:
+				message = "%7%";
+				break;
+		}
+		nativeAlert(message);
+		return false;
+	}
+	return true;
+}
+
+function isNameValid(name) {
+	return (name != "");
+}
+
+function isEmailValid(email) {
+    var emailFilter = /^.+@.+\..{2,3}$/;
+    var illegalChars = /[\(\)\<\>\,\;\:\\\"\[\]]/;
+	return (email != "" && emailFilter.test(email) && !email.match(illegalChars));
+}
+
+function isPhoneValid(phone) {
+	return (phone != "" && !isNaN(parseInt(phone.replace(/[\(\)\.\-\ ]/g, ''))));
+}
+
+// this is so 'quoteView.html' is not the title of the alert
+function nativeAlert(message) {
+	location = "native|" + message;	// intercepted in native code
+}
+</script>
+<div id="qform" style="margin:0;padding:18px"> 
+    <div style="text-align:center">%8%</div>
+	<form id='quickquote' name='quickquote' action='http://www.verbatimsolutions.com/submit.php' method='post' style="margin:0" onsubmit="return checkForm(this)">
+    <span class='label'><B>%9%: </B></span> 
+      <input type='text' name='name' class="inputField">
+      <span class='label'><B>%10%: </B></span> 
+      <input type='text' name='email' class="inputField"> 
+      <span class='label'><B>%11%: </B></span> 
+      <input type='text' name='phone' class="inputField"> 
+      <br> 
+      <span class='label'><B>%12%:</B></span> 
+      <select name='sourcelang' class="inputField"> 
+        <option value='English'>%13%</option> 
+        <option value='Spanish'>%14%</option> 
+        <option value='German'>%15%</option> 
+        <option value='Chinese'>%16%</option> 
+        <option value='French'>%17%</option> 
+        <option value='Italian'>%18%</option> 
+        <option value='Portuguese'>%19%</option> 
+        <option value='Russian'>%20%</option> 
+        <option value='Japanese'>%21%</option> 
+        <option value='Korean'>%22%</option> 
+        <option value='Dutch'>%23%</option> 
+        <option value='Danish'>%24%</option> 
+        <option value='Swedish'>%25%</option> 
+        <option value='__________'>__________</option> 
+        <option value=''></option> 
+        <option value='Afrikaans'>%26%</option> 
+        <option value='Albanian'>%27%</option> 
+        <option value='Amharic'>%28%</option> 
+        <option value='Arabic'>%29%</option> 
+        <option value='Azerbaijani'>%30%</option> 
+        <option value='Aztec'>%31%</option> 
+        <option value='Basque'>%32%</option> 
+        <option value='Bengali'>%33%</option> 
+        <option value='Bosnian'>%34%</option> 
+        <option value='Breton'>%35%</option> 
+        <option value='Bulgarian'>%36%</option> 
+        <option value='Byelorussian'>%37%</option> 
+        <option value='Catalan'>%38%</option> 
+        <option value='Chechen'>%39%</option> 
+        <option value='Chinese'>%40%</option> 
+        <option value='Creek'>%41%</option> 
+        <option value='Croatian'>%42%</option> 
+        <option value='Czech'>%43%</option> 
+        <option value='Dakota'>%44%</option> 
+        <option value='Danish'>%45%</option> 
+        <option value='Dinka'>%46%</option> 
+        <option value='Dutch'>%47%</option> 
+        <option value='English'>%48%</option> 
+        <option value='Esperanto'>%49%</option> 
+        <option value='Estonian'>%50%</option> 
+        <option value='Farsi'>%51%</option> 
+        <option value='Finnish'>%52%</option> 
+        <option value='Flemish'>%53%</option> 
+        <option value='French'>%54%</option> 
+        <option value='Gaelic'>%55%</option> 
+        <option value='Georgian'>%56%</option> 
+        <option value='German'>%57%</option> 
+        <option value='Greek'>%58%</option> 
+        <option value='Guarani'>%59%</option> 
+        <option value='Gujarati'>%60%</option> 
+        <option value='Haitian-Creole'>%61%</option> 
+        <option value='Hausa'>%62%</option> 
+        <option value='Hebrew'>%63%</option> 
+        <option value='Herero'>%64%</option> 
+        <option value='Hindi'>%65%</option> 
+        <option value='Hmong'>%66%</option> 
+        <option value='Hungarian'>%67%</option> 
+        <option value='Icelandic'>%68%</option> 
+        <option value='Igbo'>%69%</option> 
+        <option value='Indonesian'>%70%</option> 
+        <option value='Irish'>%71%</option> 
+        <option value='Italian'>%72%</option> 
+        <option value='Japanese'>%73%</option> 
+        <option value='Javanese'>%74%</option> 
+        <option value='Kabyle'>%75%</option> 
+        <option value='Khmer'>%76%</option> 
+        <option value='Korean'>%77%</option> 
+        <option value='Kurdish'>%78%</option> 
+        <option value='Latin'>%79%</option> 
+        <option value='Latvian'>%80%</option> 
+        <option value='Lithuanian'>%81%</option> 
+        <option value='Macedonian'>%82%</option> 
+        <option value='Malagasy'>%83%</option> 
+        <option value='Malay'>%84%</option> 
+        <option value='Malayalam'>%85%</option> 
+        <option value='Maltese'>%86%</option> 
+        <option value='Maori'>%87%</option> 
+        <option value='Marathi'>%88%</option> 
+        <option value='Masai'>%89%</option> 
+        <option value='Mayan'>%90%</option> 
+        <option value='Mongolian'>%91%</option> 
+        <option value='Ndebele'>%92%</option> 
+        <option value='North'>%93%</option> 
+        <option value='South Nepali'>%94%</option> 
+        <option value='Norwegian'>%95%</option> 
+        <option value='Panjabi'>%96%</option> 
+        <option value='Persian'>%97%</option> 
+        <option value='Polish'>%98%</option> 
+        <option value='Portuguese'>%99%</option> 
+        <option value='Pushto'>%100%</option> 
+        <option value='Rajasthani'>%101%</option> 
+        <option value='Romanian'>%102%</option> 
+        <option value='Russian'>%103%</option> 
+        <option value='Sanskrit'>%104%</option> 
+        <option value='Serbian'>%105%</option> 
+        <option value='Serbo-Croat'>%106%</option> 
+        <option value='Sesotho/S. Sotho'>%107%</option> 
+        <option value='Shona'>%108%</option> 
+        <option value='Sign Language'>%109%</option> 
+        <option value='Singhalese'>%110%</option> 
+        <option value='Sino-Tibetan'>%111%</option> 
+        <option value='Swati/Swazi'>%112%</option> 
+        <option value='Slovak'>%113%</option> 
+        <option value='Slovenian'>%114%</option> 
+        <option value='Spanish'>%115%</option> 
+        <option value='Swahili'>%116%</option> 
+        <option value='Swedish'>%117%</option> 
+        <option value='Tagalog'>%118%</option> 
+        <option value='Tahitian'>%119%</option> 
+        <option value='Tamil'>%120%</option> 
+        <option value='Tatar'>%121%</option> 
+        <option value='Telugu'>%122%</option> 
+        <option value='Thai'>%123%</option> 
+        <option value='Tibetan'>%124%</option> 
+        <option value='Tsonga'>%125%</option> 
+        <option value='Tswana'>%126%</option> 
+        <option value='Turkish'>%127%</option> 
+        <option value='Ukrainian'>%128%</option> 
+        <option value='Urdu'>%129%</option> 
+        <option value='Venda'>%130%</option> 
+        <option value='Vietnamese'>%131%</option> 
+        <option value='Welsh'>%132%</option> 
+        <option value='Yiddish'>%133%</option> 
+        <option value='Yoruba'>%134%</option> 
+        <option value='Zhuang/Chuang'>%135%</option> 
+        <option value='Zuluzzz'>%136%</option> 
+      </select> 
+      <br> 
+      <span class='label'><B>%137%:</B></span>
+      <select name='targetlang[]' class="inputField" multiple="multiple" size="4"> 
+        <option value='English'>%13%</option> 
+        <option value='Spanish'>%14%</option> 
+        <option value='German'>%15%</option> 
+        <option value='Chinese'>%16%</option> 
+        <option value='French'>%17%</option> 
+        <option value='Italian'>%18%</option> 
+        <option value='Portuguese'>%19%</option> 
+        <option value='Russian'>%20%</option> 
+        <option value='Japanese'>%21%</option> 
+        <option value='Korean'>%22%</option> 
+        <option value='Dutch'>%23%</option> 
+        <option value='Danish'>%24%</option> 
+        <option value='Swedish'>%25%</option> 
+        <option value='__________'>__________</option> 
+        <option value=''></option> 
+        <option value='Afrikaans'>%26%</option> 
+        <option value='Albanian'>%27%</option> 
+        <option value='Amharic'>%28%</option> 
+        <option value='Arabic'>%29%</option> 
+        <option value='Azerbaijani'>%30%</option> 
+        <option value='Aztec'>%31%</option> 
+        <option value='Basque'>%32%</option> 
+        <option value='Bengali'>%33%</option> 
+        <option value='Bosnian'>%34%</option> 
+        <option value='Breton'>%35%</option> 
+        <option value='Bulgarian'>%36%</option> 
+        <option value='Byelorussian'>%37%</option> 
+        <option value='Catalan'>%38%</option> 
+        <option value='Chechen'>%39%</option> 
+        <option value='Chinese'>%40%</option> 
+        <option value='Creek'>%41%</option> 
+        <option value='Croatian'>%42%</option> 
+        <option value='Czech'>%43%</option> 
+        <option value='Dakota'>%44%</option> 
+        <option value='Danish'>%45%</option> 
+        <option value='Dinka'>%46%</option> 
+        <option value='Dutch'>%47%</option> 
+        <option value='English'>%48%</option> 
+        <option value='Esperanto'>%49%</option> 
+        <option value='Estonian'>%50%</option> 
+        <option value='Farsi'>%51%</option> 
+        <option value='Finnish'>%52%</option> 
+        <option value='Flemish'>%53%</option> 
+        <option value='French'>%54%</option> 
+        <option value='Gaelic'>%55%</option> 
+        <option value='Georgian'>%56%</option> 
+        <option value='German'>%57%</option> 
+        <option value='Greek'>%58%</option> 
+        <option value='Guarani'>%59%</option> 
+        <option value='Gujarati'>%60%</option> 
+        <option value='Haitian-Creole'>%61%</option> 
+        <option value='Hausa'>%62%</option> 
+        <option value='Hebrew'>%63%</option> 
+        <option value='Herero'>%64%</option> 
+        <option value='Hindi'>%65%</option> 
+        <option value='Hmong'>%66%</option> 
+        <option value='Hungarian'>%67%</option> 
+        <option value='Icelandic'>%68%</option> 
+        <option value='Igbo'>%69%</option> 
+        <option value='Indonesian'>%70%</option> 
+        <option value='Irish'>%71%</option> 
+        <option value='Italian'>%72%</option> 
+        <option value='Japanese'>%73%</option> 
+        <option value='Javanese'>%74%</option> 
+        <option value='Kabyle'>%75%</option> 
+        <option value='Khmer'>%76%</option> 
+        <option value='Korean'>%77%</option> 
+        <option value='Kurdish'>%78%</option> 
+        <option value='Latin'>%79%</option> 
+        <option value='Latvian'>%80%</option> 
+        <option value='Lithuanian'>%81%</option> 
+        <option value='Macedonian'>%82%</option> 
+        <option value='Malagasy'>%83%</option> 
+        <option value='Malay'>%84%</option> 
+        <option value='Malayalam'>%85%</option> 
+        <option value='Maltese'>%86%</option> 
+        <option value='Maori'>%87%</option> 
+        <option value='Marathi'>%88%</option> 
+        <option value='Masai'>%89%</option> 
+        <option value='Mayan'>%90%</option> 
+        <option value='Mongolian'>%91%</option> 
+        <option value='Ndebele'>%92%</option> 
+        <option value='North'>%93%</option> 
+        <option value='South Nepali'>%94%</option> 
+        <option value='Norwegian'>%95%</option> 
+        <option value='Panjabi'>%96%</option> 
+        <option value='Persian'>%97%</option> 
+        <option value='Polish'>%98%</option> 
+        <option value='Portuguese'>%99%</option> 
+        <option value='Pushto'>%100%</option> 
+        <option value='Rajasthani'>%101%</option> 
+        <option value='Romanian'>%102%</option> 
+        <option value='Russian'>%103%</option> 
+        <option value='Sanskrit'>%104%</option> 
+        <option value='Serbian'>%105%</option> 
+        <option value='Serbo-Croat'>%106%</option> 
+        <option value='Sesotho/S. Sotho'>%107%</option> 
+        <option value='Shona'>%108%</option> 
+        <option value='Sign Language'>%109%</option> 
+        <option value='Singhalese'>%110%</option> 
+        <option value='Sino-Tibetan'>%111%</option> 
+        <option value='Swati/Swazi'>%112%</option> 
+        <option value='Slovak'>%113%</option> 
+        <option value='Slovenian'>%114%</option> 
+        <option value='Spanish'>%115%</option> 
+        <option value='Swahili'>%116%</option> 
+        <option value='Swedish'>%117%</option> 
+        <option value='Tagalog'>%118%</option> 
+        <option value='Tahitian'>%119%</option> 
+        <option value='Tamil'>%120%</option> 
+        <option value='Tatar'>%121%</option> 
+        <option value='Telugu'>%122%</option> 
+        <option value='Thai'>%123%</option> 
+        <option value='Tibetan'>%124%</option> 
+        <option value='Tsonga'>%125%</option> 
+        <option value='Tswana'>%126%</option> 
+        <option value='Turkish'>%127%</option> 
+        <option value='Ukrainian'>%128%</option> 
+        <option value='Urdu'>%129%</option> 
+        <option value='Venda'>%130%</option> 
+        <option value='Vietnamese'>%131%</option> 
+        <option value='Welsh'>%132%</option> 
+        <option value='Yiddish'>%133%</option> 
+        <option value='Yoruba'>%134%</option> 
+        <option value='Zhuang/Chuang'>%135%</option> 
+        <option value='Zuluzzz'>%136%</option> 
+      </select> 
+      <br>
+      <span class='label'><B>%138%:</B></span> 
+      <textarea name='projinfo' id="textareaField" style="width:100%" rows='3'></textarea> 
+      <input type='hidden' name='subject' value='Quick Quote'>
+	  <input type='hidden' name='myvsbotblock_hidden' value='2008vs04vs17'> 
+	  <input type='hidden' name='myvsbotblock_input' value='20080417'> 
+      <input type='hidden' name='env_report' value='10.10.10.10,ua-string'> 
+      <input type='hidden' name='random' value='ggghg5678' />
+      <input type='hidden' name='ts' value='' /> 
+	  <div style="text-align:center;padding-top:8px">
+		<input name="submit" type="submit" id="inputButton" style="width:80%" value="%139%" />
+	  </div>
+    </form>
+  </div>
+</body>
+</html>
