@@ -10,15 +10,17 @@
 #import "FlagsTableViewController.h"
 
 @interface InfoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate> {
-	UITableView * _tableView;
+	UITableView* menuTableView;
 	UITableView* borderTableView;
+	UIImageView* sourceBackgroundView;
 	NSArray * _settings;
 	FlagsTableViewController* sourceFlagController;
 }
 
-@property (nonatomic, retain) IBOutlet UITableView * tableView;
+@property (nonatomic, retain) IBOutlet UITableView* menuTableView;
 @property (nonatomic, retain) IBOutlet UITableView* borderTableView;
 @property (nonatomic, retain) IBOutlet FlagsTableViewController* sourceFlagController;
+@property (nonatomic, retain) IBOutlet UIImageView* sourceBackgroundView;
 
 - (IBAction)showMainView:(id)sender;
 - (void)showQuoteView;

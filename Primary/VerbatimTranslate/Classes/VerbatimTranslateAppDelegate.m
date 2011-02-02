@@ -56,6 +56,7 @@
 			[self.loadingLabel setText:[[notify userInfo] objectForKey:@"load-text"]];
 		}
 	}
+
 	[window addSubview:self.loadingView];
 }
 

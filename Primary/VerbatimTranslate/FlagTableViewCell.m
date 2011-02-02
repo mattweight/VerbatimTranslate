@@ -33,6 +33,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 		imgView = nil;
 	
 		UILabel* imgLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 40.0, 26.0)];
+		[imgLabel setBackgroundColor:[UIColor clearColor]];
 		[imgLabel setFont:[UIFont systemFontOfSize:8.0]];
 		[imgLabel setNumberOfLines:2];
 		[imgLabel setTransform:CGAffineTransformMakeRotation(radians(-90))];

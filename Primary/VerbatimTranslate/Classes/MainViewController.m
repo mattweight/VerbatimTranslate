@@ -134,8 +134,9 @@
 	} @catch (NSException * e) {}
 	
 	if (flagController == nil) {
-		FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+		FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain isDestController:YES];
 		[fController.view setCenter:CGPointMake(-116.0, 400.0)];
+//		[fController.view setAlpha:0.5];
 		[self.view addSubview:fController.view];
 		flagController = [fController retain];
 		[fController release];
@@ -193,20 +194,25 @@
 	[inController animate];
 	
 	// Update the flag controller position
-	if (notif != nil) {
+	NSLog(@"nil language name --> %@", languageName);
+	if (TRUE) {
 		int index; // magic magic numbers
 		NSIndexPath* iPath = nil;
+		NSString* escLangName = [languageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 		for (index = (9998 / 2); index < 6000; index++) {
 			int langIndex = (index % [flagController.languageNames count]);
+			NSLog(@"LangIndex: %d --> languageNames Count: %d", langIndex, [flagController.languageNames count]);
 			NSString* currLang = [flagController.languageNames objectAtIndex:langIndex];
-			if ([currLang isEqualToString:languageName]) {
+			NSLog(@"comparing: [%@] with [%@]", currLang, escLangName);
+			if ([currLang isEqualToString:escLangName]) {
+				NSLog(@"\t\t* the lagnuage index is: %d", index);
 				iPath = [NSIndexPath indexPathForRow:index inSection:0];
 				break;
 			}
 		}
 		if (iPath != nil) {
 			NSLog(@"Should be using real row: %02d", index);
-			if ([flagController.languageNames count] >= iPath.row) {
+			if ([flagController.languageNames count] >= 0) {
 				[flagController.flagTableView scrollToRowAtIndexPath:iPath
 													atScrollPosition:UITableViewScrollPositionTop
 															animated:NO];

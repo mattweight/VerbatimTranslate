@@ -114,7 +114,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ThemeManager);
 		return nil;
 	}
 
-	NSString* flagPath = [self.basePath stringByAppendingFormat:@"/%@/flag.jpg", languageName];
+	NSString* flagPath = [self.basePath stringByAppendingFormat:@"/%@/flag.png", languageName];
 	BOOL isDir;
 	if (![[NSFileManager defaultManager] fileExistsAtPath:flagPath isDirectory:&isDir]) {
 		NSLog(@"Missing flag image at path: %@", flagPath);

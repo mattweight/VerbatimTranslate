@@ -28,7 +28,22 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 #pragma mark -
 #pragma mark View lifecycle
 
-- (id)initWithStyle:(UITableViewStyle)style {
+- (void)setIsDestination:(BOOL)_isDestination {
+	isDestination = _isDestination;
+}
+
+
+- (void)awakeFromNib {
+	[self initWithStyle:UITableViewStylePlain isDestController:isDestination];
+}
+
+- (void)updateTablePosition {
+	
+}
+
+- (id)initWithStyle:(UITableViewStyle)style isDestController:(BOOL)isDest {
+	[self setIsDestination:isDest];
+	
 	if (self = [super initWithStyle:UITableViewStylePlain]) {
 		// load languages first as setting up the below table view uses them in cellForRowAtIndexPath
 		NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
@@ -37,13 +52,13 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 		
 		self.selectedRowNumber = [[NSNumber numberWithInteger:[[NSUserDefaults standardUserDefaults] integerForKey:VERBATIM_SELECTED_DEST_FLAG_ROW]] retain];
 		UITableView* tabView = (UITableView*)self.view;
-		[tabView setFrame:CGRectMake(0.0, 0.0, 56.0, 320.0)];
+		[tabView setTransform:CGAffineTransformMakeRotation(radians(90))];
+		[tabView setFrame:CGRectMake(0.0, 0.0, 320.0, 56.0)];
 		[tabView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-		[tabView setBackgroundColor:[UIColor whiteColor]];
+		[tabView setBackgroundColor:[UIColor lightGrayColor]];
 		[tabView setShowsVerticalScrollIndicator:NO];
 		[tabView setShowsHorizontalScrollIndicator:NO];
-		[tabView setAlpha:1.0];
-		[tabView setTransform:CGAffineTransformMakeRotation(radians(90))];
+		[tabView setAlpha:0.70];
 		flagTableView = [tabView retain];
 	}
 	return self;
@@ -60,34 +75,34 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 }
 
 /*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
+ - (void)viewWillAppear:(BOOL)animated {
+ [super viewWillAppear:animated];
+ }
+ */
 
 /*
-- (void)viewDidAppear:(BOOL)animated {
-	NSLog(@"Flag table DID appear");
-    [super viewDidAppear:animated];
-}
-*/
+ - (void)viewDidAppear:(BOOL)animated {
+ NSLog(@"Flag table DID appear");
+ [super viewDidAppear:animated];
+ }
+ */
 /*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
+ - (void)viewWillDisappear:(BOOL)animated {
+ [super viewWillDisappear:animated];
+ }
+ */
 /*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
+ - (void)viewDidDisappear:(BOOL)animated {
+ [super viewDidDisappear:animated];
+ }
+ */
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 
 #pragma mark -
@@ -110,6 +125,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[FlagTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		[cell setBackgroundColor:[UIColor lightGrayColor]];
 		[cell setFrame:CGRectMake(0.0, 0.0, 80.0, 60.0)];
 		[cell setSelectionStyle:UITableViewCellSelectionStyleGray];
     }
@@ -127,43 +143,43 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }   
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }   
+ }
+ */
 
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark -
 #pragma mark Table view delegate
@@ -172,7 +188,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 	//NSLog([NSString stringWithFormat:@"table view origin: %02f X %02f", tableView.frame.origin.x, tableView.frame.origin.y]);
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
-
+	
 	NSLog(@"Flag frame selection");
 	if (tableView.frame.origin.x != 0.0) {
 		NSLog(@"frame location != 0.0");
@@ -192,25 +208,48 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 									   tableView.frame.size.height)];
 		[tableView setScrollEnabled:NO];
 	}
-
-	NSLog(@"Getting language index..");
-	if ([languageNames count] > 0) {
-		int index = (int)(indexPath.row % [languageNames count]);
-		NSLog(@"\t Index: %d", index);
-		
-		NSString* languageName = [[languageNames objectAtIndex:index] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-		NSLog(@"\t Language Name: %@", languageName);
-		NSNotification* updateNotification = [NSNotification notificationWithName:THEME_UPDATE_NOTIFICATION
-																		   object:nil
-																		 userInfo:[NSDictionary dictionaryWithObject:languageName forKey:@"language"]];
-		[[NSNotificationCenter defaultCenter] postNotification:updateNotification];
-		
-		NSLog(@"\n\n\n\n\n\n\n\tindex path row: %d\n\n\n\n\n\n\n", indexPath.row);
+	
+	if (isDestination) {
+		if ([languageNames count] > 0) {
+			int index = (int)(indexPath.row % [languageNames count]);
+			
+			NSString* languageName = [[languageNames objectAtIndex:index] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+			NSNotification* updateNotification = [NSNotification notificationWithName:THEME_UPDATE_NOTIFICATION
+																			   object:nil
+																			 userInfo:[NSDictionary dictionaryWithObject:languageName forKey:@"language"]];
+			[[NSNotificationCenter defaultCenter] postNotification:updateNotification];
+		}
+		[[NSUserDefaults standardUserDefaults] setInteger:indexPath.row forKey:VERBATIM_SELECTED_DEST_FLAG_ROW];
+		[[NSUserDefaults standardUserDefaults] synchronize];
 	}
-	[[NSUserDefaults standardUserDefaults] setInteger:indexPath.row forKey:VERBATIM_SELECTED_DEST_FLAG_ROW];
-	[[NSUserDefaults standardUserDefaults] synchronize];
+	else {
+		ThemeManager* themeManager = [ThemeManager sharedThemeManager];
+		int index = (int)(indexPath.row % [languageNames count]);
+		NSString* languageName = [[languageNames objectAtIndex:index] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSString* selectLanguage = [languageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSArray* themes = (NSArray*)[themeManager.languageInfo objectForKey:selectLanguage];
+		Theme* selectedTheme = (Theme*)[themes objectAtIndex:0];
+		
+		NSDictionary* langDict = [NSDictionary dictionaryWithObjectsAndKeys:
+								  [selectedTheme.services objectForKey:@"google-translate"],
+								  @"abbrev-lang",
+								  selectLanguage,
+								  @"language",
+								  nil];
+		NSNotification* notify = [NSNotification notificationWithName:VERBATIM_CHANGE_SOURCE
+															   object:nil
+															 userInfo:langDict];
+		[[NSNotificationCenter defaultCenter] postNotification:notify];
+		
+		NSString* fullBGImagePath = [themeManager.basePath stringByAppendingFormat:@"/%@/%@", languageName, selectedTheme.imageFilename];
+		NSDictionary* bgDict = [NSDictionary dictionaryWithObject:fullBGImagePath 
+														   forKey:@"image-name"];
+		NSNotification* bgNotify = [NSNotification notificationWithName:VERBATIM_CHANGE_SOURCE_BACKGROUND
+																 object:nil
+															   userInfo:bgDict];
+		[[NSNotificationCenter defaultCenter] postNotification:bgNotify];
+	}
 }
-
 
 #pragma mark -
 #pragma mark Memory management

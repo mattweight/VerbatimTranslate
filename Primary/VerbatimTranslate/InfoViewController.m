@@ -11,7 +11,9 @@
 #import "AutoSuggestManager.h"
 #import "VerbatimTranslateAppDelegate.h"
 #import "MainViewController.h"
+#import "FlagTableViewCell.h"
 #import "VerbatimConstants.h"
+#import "ThemeManager.h"
 #import "l10n.h"
 
 #define kSettingsRequestQuote				0
@@ -21,11 +23,19 @@
 #define kSourceLanguageActivityViewDuration	1
 #define kAboutViewTag						1
 
+@interface InfoViewController()
+
+- (void)changeSourceCapture:(NSNotification*)notif;
+- (void)changeSourceBGImage:(NSNotification*)notif;
+
+@end
+
 @implementation InfoViewController
 
-@synthesize tableView = _tableView;
+@synthesize menuTableView;
 @synthesize borderTableView;
 @synthesize sourceFlagController;
+@synthesize sourceBackgroundView;
 
 - (IBAction)showMainView:(id)sender {
 	[[self parentViewController] dismissModalViewControllerAnimated:YES];
@@ -58,7 +68,6 @@
 		}		
 		
 		[cell setFrame:CGRectMake(0.0, 0.0, 300, 210.0)];
-		NSLog(@"content view: %02f X %02f", cell.frame.size.width, cell.frame.size.height);
 		UITextView* aboutView = [[UITextView alloc] initWithFrame:CGRectMake(0.0, 0.0, (cell.frame.size.width - 20.0), (cell.frame.size.height - 30.0))];
 		[aboutView setScrollEnabled:YES];
 		[aboutView setTextAlignment:UITextAlignmentCenter];
@@ -75,9 +84,11 @@
 	}
 	
 	cell.selectionStyle = UITableViewCellSelectionStyleGray;
+	//[cell.accessoryType setBackgroundColor:[UIColor clearColor]];
 	if (indexPath.row == kSettingsRequestQuote) {
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	}	
+	}
+	[cell.textLabel setBackgroundColor:[UIColor clearColor]];
 	cell.textLabel.text = [_settings objectAtIndex:indexPath.row];
 	return cell;
 }
@@ -137,8 +148,8 @@
 			[appDelegate displayGenericError];
 
 			// deselect selection
-			NSIndexPath * tableSelection = [self.tableView indexPathForSelectedRow];
-			[self.tableView deselectRowAtIndexPath:tableSelection animated:NO];			
+			NSIndexPath * tableSelection = [self.menuTableView indexPathForSelectedRow];
+			[self.menuTableView deselectRowAtIndexPath:tableSelection animated:NO];			
 		}
 		
 		// show confirmation message
@@ -150,8 +161,8 @@
 	}
 	
 	// deselect selection
-	NSIndexPath * tableSelection = [self.tableView indexPathForSelectedRow];
-	[self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
+	NSIndexPath * tableSelection = [self.menuTableView indexPathForSelectedRow];
+	[self.menuTableView deselectRowAtIndexPath:tableSelection animated:NO];
 }
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -159,14 +170,16 @@
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
 		_settings = [[self _getSettingsArray] retain];
 		[borderTableView setRowHeight:182.0];
-		if (sourceFlagController == nil) {
-			FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain];
-			[fController.view setCenter:CGPointMake(-116.0, 142.0)];
-			[self.view addSubview:fController.view];
-			sourceFlagController = [fController retain];
-			[fController release];
-			fController = nil;
-		}		
+//		[sourceFlagController.view setCenter:self.view.center];
+//		[sourceFlagController.view setCenter:CGPointMake(-116.0, 142.0)];
+		/*
+		NSLog(@"How large is the view? %02f X %02f", self.view.frame.size.width, self.view.frame.size.height);
+		[sourceFlagController.view setCenter:CGPointMake(-116.0, 400.0)];
+		[self.view addSubview:sourceFlagController.view];
+		NSLog(@"source flag superview: %@", [sourceFlagController.view.superview description]);
+		NSLog(@"subviews for source flag view: %@", [sourceFlagController.view.subviews count]);
+		*/
+//		[self.view addSubview:sourceFlagController.view];
 	}
     return self;
 }
@@ -181,15 +194,87 @@
 	self.navigationItem.leftBarButtonItem = doneButton;
 	[doneButton release];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(changeSourceCapture:)
+												 name:VERBATIM_CHANGE_SOURCE
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(changeSourceBGImage:)
+												 name:VERBATIM_CHANGE_SOURCE_BACKGROUND
+											   object:nil];
+
+	/*
+	NSLog(@"source flag controller: %@", [sourceFlagController description]);
+	NSLog(@"view DID load for realsies");
+	NSLog(@"flag controller frame: %02f X %02f bounds: %02f %02f", 
+		  sourceFlagController.view.frame.size.width, 
+		  sourceFlagController.view.frame.size.height, 
+		  sourceFlagController.view.bounds.size.width, 
+		  sourceFlagController.view.bounds.size.height);
+	*/
+
 	[super viewDidLoad];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	// deselect previous selection
-	NSIndexPath * table_selection = [self.tableView indexPathForSelectedRow];
-	[self.tableView deselectRowAtIndexPath:table_selection animated:NO];
+	if (sourceFlagController == nil) {
+		FlagsTableViewController* fController = [[FlagsTableViewController alloc] initWithStyle:UITableViewStylePlain isDestController:NO];
+		[fController.view setCenter:CGPointMake(-116.0, 142.0)];
+		[self.view addSubview:fController.view];
+		sourceFlagController = [fController retain];
+		[fController release];
+	}
 
+	NSString* languageName = [NSString string];
+	NSString* storedLanguage = [[NSUserDefaults standardUserDefaults] stringForKey:CURRENT_SOURCE_LANGUAGE_STORE_KEY];
+	if (storedLanguage != nil) {
+		languageName = storedLanguage;
+	}
+	else {
+		languageName = DEFAULT_SOURCE_LANGUAGE_NAME;
+	}
+	
+	if (TRUE) {
+		int index; // magic magic numbers
+		NSIndexPath* iPath = nil;
+		NSString* escLangName = [languageName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		for (index = (9998 / 2); index < 6000; index++) {
+			int langIndex = (index % [sourceFlagController.languageNames count]);
+			NSString* currLang = [sourceFlagController.languageNames objectAtIndex:langIndex];
+			if ([currLang isEqualToString:escLangName]) {
+				iPath = [NSIndexPath indexPathForRow:index inSection:0];
+				break;
+			}
+		}
+		if (iPath != nil) {
+			if ([sourceFlagController.languageNames count] >= 0) {
+				[sourceFlagController.flagTableView scrollToRowAtIndexPath:iPath
+													atScrollPosition:UITableViewScrollPositionTop
+															animated:NO];
+			}
+		}
+	}
+		
+	// deselect previous selection
+	NSIndexPath * table_selection = [self.menuTableView indexPathForSelectedRow];
+	[self.menuTableView deselectRowAtIndexPath:table_selection animated:NO];
 	[super viewWillAppear:animated];
+}
+
+- (void)changeSourceBGImage:(NSNotification*)notif {
+	NSString* imageName = [[notif userInfo] objectForKey:@"image-name"];
+	UIImage* bgImage = [UIImage imageWithContentsOfFile:imageName];
+	[self.sourceBackgroundView setImage:bgImage];
+}
+
+- (void)changeSourceCapture:(NSNotification*)notif {
+	NSString* abbreviatedLang = [[notif userInfo] objectForKey:@"abbrev-lang"];
+	
+	[[NSUserDefaults standardUserDefaults] setObject:[[notif userInfo] objectForKey:@"language"] forKey:CURRENT_SOURCE_LANGUAGE_STORE_KEY];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+	
+	[self _changeSourceLanguage:abbreviatedLang];
 }
 
 - (void)_changeSourceLanguage:(NSString *)language {
@@ -213,7 +298,7 @@
 	// top settings table
 	[_settings release];
 	_settings = [[self _getSettingsArray] retain];
-	[_tableView reloadData];
+	[menuTableView reloadData];
 	
 	// about view
 	[borderTableView reloadData];
@@ -259,7 +344,7 @@
 
 
 - (void)dealloc {
-	[_tableView release];
+	[menuTableView release];
 	[_settings release];
 	[super dealloc];
 }

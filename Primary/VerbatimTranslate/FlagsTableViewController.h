@@ -14,10 +14,15 @@
 	NSArray* languageNames;
 	UITableView* flagTableView;
 	NSNumber* selectedRowNumber;
+	BOOL isDestination;
 }
 
 @property (readonly, retain) NSArray* languageNames;
 @property (nonatomic, retain) UITableView* flagTableView;
 @property (nonatomic, retain) NSNumber* selectedRowNumber;
+
+- (void)setIsDestination:(BOOL)_isDestination;
+- (id)initWithStyle:(UITableViewStyle)style isDestController:(BOOL)isDest;
+- (void)updateTablePosition;
 
 @end
